@@ -18,15 +18,15 @@ build-depends:
 - freedesktop-sdk.bst:components/sed.bst
 - freedesktop-sdk.bst:components/wayland.bst
 - nirios/deps/qt6-qtbase.bst
-- nirios/deps/qt6-qtdeclarative.bst
 - nirios/deps/qt6-qtsvg.bst
+- nirios/deps/qt6-qtdeclarative.bst
 
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:components/wayland.bst
 - nirios/deps/qt6-qtbase.bst
-- nirios/deps/qt6-qtdeclarative.bst
 - nirios/deps/qt6-qtsvg.bst
+- nirios/deps/qt6-qtdeclarative.bst
 
 variables:
   cmake-local: >-
