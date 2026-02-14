@@ -7,7 +7,7 @@ Requirements:
   - [ ] fira-code
   - [ ] material-symbols-variable
   - [ ] qt6ct (needs qt6-svg) (maybe qt6ct-kde patches?)
-  - [ ] matugen
+  - [x] matugen
   - [x] accountsservice (gnome-build-meta)
   - [x] quickshell
     - [x] cli11
@@ -27,10 +27,9 @@ Requirements:
       - [x] qt6-wayland
 
 Optional:
-  - [x] wl-clipboard (gnome-build-meta)
+  - [x] dgop
   - [ ] khal
   - [ ] cava
   - [ ] dsearch
-  - [ ] dgop
   - [ ] ddcutil
   - [ ] brightnessctl

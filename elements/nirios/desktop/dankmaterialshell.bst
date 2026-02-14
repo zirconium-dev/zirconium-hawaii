@@ -8,7 +8,7 @@ sources:
 - kind: git_repo
   url: github:AvengeMedia/DankMaterialShell.git
   track: master
-  ref: v1.2.0-303-gce75dac81b3b1479d6cab41ffb520c79243113e4
+  ref: v1.2.0-306-gbb8e0d384f3ba1440479f4ceea92dfa0a50bd4a2
 - kind: local
   path: files/dankmaterialshell
 
@@ -337,12 +337,11 @@ depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - gnome-build-meta.bst:core-deps/accountsservice.bst
 - nirios/desktop/quickshell.bst
+- nirios/desktop/matugen.bst
+- nirios/deps/dgop.bst
 
 variables:
   make-args: build
-
-# environment:
-  # DMS_BINARY: "%{dms-binary}"
 
 config:
   install-commands:
