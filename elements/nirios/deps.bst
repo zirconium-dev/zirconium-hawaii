@@ -32,6 +32,7 @@ depends:
   - freedesktop-sdk.bst:components/sudo.bst
   - freedesktop-sdk.bst:components/vim.bst
   - freedesktop-sdk.bst:components/polkit.bst
+  - freedesktop-sdk.bst:components/steam-devices.bst
 
   - nirios/desktop/niri.bst
   - nirios/desktop/quickshell.bst
