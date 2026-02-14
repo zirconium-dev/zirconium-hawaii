@@ -1,6 +1,6 @@
 # Zirconium-Hawaii
 
-<img width="2548" height="1391" alt="image" src="https://github.com/user-attachments/assets/63476716-872a-417a-8756-760fa93422a6" />
+<img width="2551" height="1365" alt="image" src="https://github.com/user-attachments/assets/72c9834c-3923-41f3-ace9-65ffa228e564" />
 
 This repository contains the buildstream to build a FreedesktopSDK based OS with Niri installed as its default compositor.
 
