@@ -1,8 +1,8 @@
-# NiriOS
+# Zirconium-Hawaii
 
 <img width="2548" height="1391" alt="image" src="https://github.com/user-attachments/assets/63476716-872a-417a-8756-760fa93422a6" />
 
-This repository contains the buildstream to build a FreedesktopSDK/GnomeSDK based OS with Niri installed as its default compositor. It's partially based off of the work done in [projectbluefin/egg](https://github.com/projectbluefin/egg), which was also done partially by me.
+This repository contains the buildstream to build a FreedesktopSDK based OS with Niri installed as its default compositor.
 
 ## Information
 
