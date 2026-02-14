@@ -2,13 +2,13 @@
 
 Requirements:
 
-- [ ] DankMaterialShell
-  - [x] accountsservice (gnome-build-meta)
+- [x] DankMaterialShell
   - [ ] inter-font
   - [ ] fira-code
   - [ ] material-symbols-variable
   - [ ] qt6ct (needs qt6-svg) (maybe qt6ct-kde patches?)
   - [ ] matugen
+  - [x] accountsservice (gnome-build-meta)
   - [x] quickshell
     - [x] cli11
     - [x] libdrm (freedesktop-sdk)

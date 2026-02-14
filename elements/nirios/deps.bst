@@ -35,6 +35,7 @@ depends:
 
   - nirios/desktop/niri.bst
   - nirios/desktop/quickshell.bst
+  - nirios/desktop/dankmaterialshell.bst
   - nirios/desktop/foot.bst
   - freedesktop-sdk.bst:components/flatpak.bst
   - freedesktop-sdk.bst:components/pipewire-daemon.bst
