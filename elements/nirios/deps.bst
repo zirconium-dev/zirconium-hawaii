@@ -11,6 +11,7 @@ depends:
   - freedesktop-sdk.bst:components/dracut.bst
   - freedesktop-sdk.bst:components/os-release.bst
   - freedesktop-sdk.bst:components/shadow.bst
+  - freedesktop-sdk.bst:components/procps.bst
   - freedesktop-sdk.bst:components/tzdata.bst
   - freedesktop-sdk.bst:components/iproute2.bst
   - freedesktop-sdk.bst:components/iputils.bst
@@ -39,6 +40,10 @@ depends:
   - nirios/desktop/dankmaterialshell.bst
   - nirios/desktop/foot.bst
   - nirios/cli/chezmoi.bst
+  - core/greetd.bst
+  - config/pam/archlinux-pam-configs.bst
+  - config/greetd/service.bst
+  - config/greetd/dms.bst
   - freedesktop-sdk.bst:components/xwayland.bst
   - freedesktop-sdk.bst:components/flatpak.bst
   - freedesktop-sdk.bst:components/pipewire-daemon.bst

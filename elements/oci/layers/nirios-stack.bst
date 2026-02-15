@@ -15,15 +15,15 @@ public:
       - mkdir /sysroot/ostree
       - ln -s sysroot/ostree ostree
 
-      - rm --verbose --recursive --force /root /home /opt /mnt
+      - rm --verbose --recursive --force /root /home /opt /mnt /var
 
       # These also get created by 10-bootc.conf tmpfiles
       # but we need them to exist for the OCI image to
       # be usable as a container as well
-      - mkdir /var/home
-      - mkdir /var/roothome
-      - mkdir /var/opt
-      - mkdir /var/mnt
+      - mkdir -p /var/home
+      - mkdir -p /var/roothome
+      - mkdir -p /var/opt
+      - mkdir -p /var/mnt
 
       - ln -s var/home /home
       - ln -s var/roothome /root
