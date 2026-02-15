@@ -59,7 +59,7 @@ depends:
   - freedesktop-sdk.bst:components/containers-common.bst
   - freedesktop-sdk.bst:components/skopeo.bst
   - core/bootc.bst
-  - core/bootc-config.bst
+  - config/bootc.bst
   - gnome-build-meta.bst:gnomeos-deps/distrobox.bst
   - gnome-build-meta.bst:gnomeos-deps/just.bst
   - gnome-build-meta.bst:gnomeos-deps/wl-clipboard.bst
