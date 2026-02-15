@@ -34,7 +34,7 @@ variables:
   strip-binaries: ""
   cmake-local: >-
     -DCMAKE_BUILD_TYPE=Release
-    -DDISTRIBUTOR='NiriOS'
+    -DDISTRIBUTOR='Zirconium'
     -DDISTRIBUTOR_DEBUGINFO_AVAILABLE=YES
     -DCRASH_REPORTER=OFF
     -DINSTALL_QML_PREFIX=%{lib}/qt6/qml
