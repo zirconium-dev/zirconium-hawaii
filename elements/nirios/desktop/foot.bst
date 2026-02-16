@@ -11,6 +11,7 @@ build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-meson.bst
 - freedesktop-sdk.bst:bootstrap/ncurses.bst
 - freedesktop-sdk.bst:components/cmake.bst
+- freedesktop-sdk.bst:components/systemd.bst
 - freedesktop-sdk.bst:components/fontconfig.bst
 - freedesktop-sdk.bst:components/pixman.bst
 - freedesktop-sdk.bst:components/python3.bst
