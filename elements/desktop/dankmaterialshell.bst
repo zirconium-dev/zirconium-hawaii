@@ -331,6 +331,7 @@ sources:
 build-depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:public-stacks/buildsystem-make.bst
+- freedesktop-sdk.bst:components/git.bst
 - freedesktop-sdk.bst:components/go.bst
 
 depends:
@@ -341,7 +342,7 @@ depends:
 - deps/dgop.bst
 
 variables:
-  make-args: build
+  make-args: build BUILD_TIME=2011-11-10_15:00:00
 
 config:
   configure-commands:
