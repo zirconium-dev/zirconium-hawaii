@@ -94,9 +94,9 @@ sources:
   url: golang-proxy:go.etcd.io/bbolt/@v/v1.4.3.zip
 - kind: zip
   directory: core/vendor/golang.org/x/exp
-  ref: 8020f32e79d9903c1593e20b8eec3882f9385f897051b18aca7e4741b23cb74b
+  ref: 5ce725cf4401d0a382a6df22ec2ca7f24a90f1117f50be6346680d1ca2b088bf
   base-dir: "*/*/*"
-  url: golang-proxy:golang.org/x/exp/@v/v0.0.0-20260211191109-2735e65f0518.zip
+  url: golang-proxy:golang.org/x/exp/@v/v0.0.0-20260212183809-81e46e3db34a.zip
 - kind: zip
   directory: core/vendor/golang.org/x/image
   ref: 6b380f5fdaa964252d5da2afbc697d464103c65a42b0b5dc001c5e633a917b9e
@@ -119,9 +119,9 @@ sources:
   url: golang-proxy:github.com/clipperhouse/displaywidth/@v/v0.10.0.zip
 - kind: zip
   directory: core/vendor/github.com/clipperhouse/uax29/v2
-  ref: 684a37e245cd36c7a2bfa184ea339dfa1dda3dc828a58e0057147ad8c5531691
+  ref: 67b1278f1ffb4e4d783a390e48fe7396864650138e785d4b4bfca5914333f761
   base-dir: "*/*/*/*"
-  url: golang-proxy:github.com/clipperhouse/uax29/v2/@v/v2.6.0.zip
+  url: golang-proxy:github.com/clipperhouse/uax29/v2/@v/v2.7.0.zip
 - kind: zip
   directory: core/vendor/github.com/cloudflare/circl
   ref: 9aed6385d52ccd66e0a3b8cc093b5f0e7744640485405dd08c8ef89ef6bbeb06
@@ -164,9 +164,9 @@ sources:
   url: golang-proxy:github.com/golang/groupcache/@v/v0.0.0-20241129210726-2c02b8208cf8.zip
 - kind: zip
   directory: core/vendor/github.com/kevinburke/ssh_config
-  ref: 90eecbf28af600720935f122f4b256ac677251542620493b9ea6a4659ecae397
+  ref: cb3e2a23c10382dac238ea51ed1162c75cb7e986532d1ce92a2051469ca24e44
   base-dir: "*/*/*"
-  url: golang-proxy:github.com/kevinburke/ssh_config/@v/v1.4.0.zip
+  url: golang-proxy:github.com/kevinburke/ssh_config/@v/v1.6.0.zip
 - kind: zip
   directory: core/vendor/github.com/klauspost/cpuid/v2
   ref: e6766f75ecfadf12fd045e4bdd9383f2a5bd3f9bd4c88a6db72861c84cf41486
@@ -244,9 +244,9 @@ sources:
   url: golang-proxy:github.com/erikgeiser/coninput/@v/v0.0.0-20211004153227-1c3628e74d0f.zip
 - kind: zip
   directory: core/vendor/github.com/go-git/go-git/v6
-  ref: a50dce34678fbd33b83027f1bc87319fe6aa13b3b5ef26685311d2357e1f0e49
+  ref: ca415ecc0303a9e183e382f3bc946b81929b7c7eba3ea8241a4dbbd276779759
   base-dir: "*/*/*/*"
-  url: golang-proxy:github.com/go-git/go-git/v6/@v/v6.0.0-20260210102253-e4d10f0e569a.zip
+  url: golang-proxy:github.com/go-git/go-git/v6/@v/v6.0.0-20260216160506-e6a3f881772f.zip
 - kind: zip
   directory: core/vendor/github.com/inconshreveable/mousetrap
   ref: 526674de624d7db108cfe7653ef110ccdfd97bc85026254224815567928ed243
