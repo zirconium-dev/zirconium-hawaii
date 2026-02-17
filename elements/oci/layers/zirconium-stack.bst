@@ -24,10 +24,12 @@ public:
       - mkdir -p /var/roothome
       - mkdir -p /var/opt
       - mkdir -p /var/mnt
+      - mkdir -p /var/srv
 
       - ln -s var/home /home
       - ln -s var/roothome /root
       - ln -s var/opt /opt
       - ln -s var/mnt /mnt
+      - ln -s var/srv /srv
 
       - touch /etc/machine-id
