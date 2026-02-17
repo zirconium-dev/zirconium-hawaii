@@ -3,14 +3,14 @@ kind: manual
 public:
   bst:
     overlap-whitelist:
-      - /etc/containers/policy.json
+    - /etc/containers/policy.json
 
 # This is pulling from zirconium-dev/zirconium for various services and shell configurations.
 sources:
 - kind: git_repo
   url: github:zirconium-dev/zirconium.git
   track: main
-  ref: 90e012aa2271850430505f3acc44d4b4e25a9b55
+  ref: 994d8f9e2e32c53c6e72c0b5c6752d49f056246b
 
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
