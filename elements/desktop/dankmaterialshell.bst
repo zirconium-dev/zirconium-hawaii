@@ -8,7 +8,7 @@ sources:
 - kind: git_repo
   url: github:AvengeMedia/DankMaterialShell.git
   track: master
-  ref: v1.4.0-12-g242ead722ae2bd5daee39221a452fccca1691601
+  ref: v1.4.0-27-g8e4a63db6736c49dea5c1ac2bd854280cad30e30
 - kind: local
   path: files/dankmaterialshell
 
@@ -342,6 +342,7 @@ depends:
 - desktop/matugen.bst
 - desktop/ddcutil.bst
 - desktop/brightnessctl.bst
+- deps/qt6-qtmultimedia.bst
 - deps/dgop.bst
 
 variables:
