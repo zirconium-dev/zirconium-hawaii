@@ -1,11 +1,20 @@
+## BASE SYSTEM STUFF
+
+- [ ] uupd
+- [ ] flatpak 1.17 or flatpak-git (flatpak preinstall)
+- [ ] gum (needed for zjust recipes)
+- [ ] bluefin/common (needed for ujust recipe integration in zjust)
+
+## FONTS
+
+- [ ] inter-font
+- [ ] fira-code
+
 ## DankMaterialShell
 
 Requirements:
 
 - [x] DankMaterialShell
-  - [ ] inter-font
-  - [ ] fira-code
-  - [ ] material-symbols-variable
   - [ ] qt6ct (maybe qt6ct-kde patches?)
   - [x] matugen
   - [x] accountsservice (gnome-build-meta)

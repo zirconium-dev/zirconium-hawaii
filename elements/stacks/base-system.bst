@@ -30,11 +30,13 @@ depends:
   - freedesktop-sdk.bst:components/bash-config.bst
   - freedesktop-sdk.bst:components/bash-completion.bst
   - freedesktop-sdk.bst:components/findutils.bst
+  - freedesktop-sdk.bst:components/wget2.bst
   - freedesktop-sdk.bst:components/sed.bst
   - freedesktop-sdk.bst:components/less.bst
   - freedesktop-sdk.bst:components/which.bst
   - freedesktop-sdk.bst:components/man-db.bst
   - freedesktop-sdk.bst:components/man-pages.bst
+  - freedesktop-sdk.bst:components/dmidecode.bst
   - freedesktop-sdk.bst:components/btrfs-progs.bst
   - freedesktop-sdk.bst:components/xfsprogs.bst
   - freedesktop-sdk.bst:components/erofs-utils.bst
