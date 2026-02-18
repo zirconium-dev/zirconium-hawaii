@@ -30,6 +30,10 @@ config:
     - |
       systemd-sysusers --root /layer
 
+    # FIXME: remove this when linux-pam.bst is updated to include this
+    - |
+      chmod 4755 /layer/usr/bin/unix_chkpwd
+
     - |
       glib-compile-schemas /layer/usr/share/glib-2.0/schemas
 
