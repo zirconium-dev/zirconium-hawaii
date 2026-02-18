@@ -336,6 +336,7 @@ build-depends:
 
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
+- freedesktop-sdk.bst:components/libnotify.bst
 - gnome-build-meta.bst:core-deps/accountsservice.bst
 - desktop/quickshell.bst
 - desktop/matugen.bst
