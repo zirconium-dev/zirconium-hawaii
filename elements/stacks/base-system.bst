@@ -17,6 +17,7 @@ depends:
   - freedesktop-sdk.bst:components/iproute2.bst
   - freedesktop-sdk.bst:components/iputils.bst
   - freedesktop-sdk.bst:components/openssh.bst
+  - freedesktop-sdk.bst:components/openssh-systemd.bst
   - freedesktop-sdk.bst:vm/base-filesystem.bst
   - freedesktop-sdk.bst:vm/config/journald.bst
   - freedesktop-sdk.bst:vm/config/networkd.bst
@@ -46,7 +47,7 @@ depends:
   - freedesktop-sdk.bst:components/git-lfs.bst
   - freedesktop-sdk.bst:components/git.bst
 
-  - gnome-build-meta.bst:core/gnome-keyring.bst
+  - gnome-build-meta.bst:core-deps/power-profiles-daemon.bst
   - gnome-build-meta.bst:gnomeos-deps/distrobox.bst
   - gnome-build-meta.bst:gnomeos-deps/toolbox.bst
   - gnome-build-meta.bst:gnomeos-deps/just.bst
