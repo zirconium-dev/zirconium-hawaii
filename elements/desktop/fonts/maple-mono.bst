@@ -2,9 +2,6 @@ kind: manual
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
-- freedesktop-sdk.bst:components/libarchive.bst
-- freedesktop-sdk.bst:components/bzip2.bst
-- freedesktop-sdk.bst:components/xz.bst
 
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
