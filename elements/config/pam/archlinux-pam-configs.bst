@@ -21,5 +21,5 @@ variables:
 
 config:
   install-commands:
-  - install -Dm644 -t "%{install-root}%{sysconfdir}/pam.d" system-login system-local-login system-auth
+  - install -Dm644 -t "%{install-root}%{sysconfdir}/pam.d" system-login system-local-login
   - "%{install-extra}"

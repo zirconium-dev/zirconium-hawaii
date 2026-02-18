@@ -363,7 +363,7 @@ config:
     install -Dm0755 ./core/bin/dms "%{install-root}%{bindir}/dms"
     install -dm0755 "%{install-root}%{datadir}/quickshell/dms"
     cp -r "quickshell/./" "%{install-root}%{datadir}/quickshell/dms"
-    install -Dpm0644 -t "%{install-root}%{prefix}/lib/pam.d/" quickshell/assets/pam/*
+    install -Dpm0644 -t "%{install-root}%{sysconfdir}/pam.d/" quickshell/assets/pam/fprint
     install -Dm0644 -t "%{install-root}%{prefix}/lib/systemd/user/" assets/systemd/dms.service
 
     # dms-greeter
