@@ -39,6 +39,7 @@ depends:
   - freedesktop-sdk.bst:components/xfsprogs.bst
   - freedesktop-sdk.bst:components/erofs-utils.bst
   - freedesktop-sdk.bst:components/dosfstools.bst
+  - freedesktop-sdk.bst:components/pciutils.bst
   - freedesktop-sdk.bst:components/sudo.bst
   - freedesktop-sdk.bst:components/vim.bst
   - freedesktop-sdk.bst:components/polkit.bst
