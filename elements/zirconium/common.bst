@@ -32,6 +32,7 @@ config:
     install -Dm0755 system_files/usr/share/flatpak/preinstall.d/*.preinstall -t "%{install-root}%{prefix}/share/flatpak/preinstall.d"
     install -Dm0755 system_files/usr/share/fish/vendor_conf.d/*.fish -t "%{install-root}%{prefix}/share/fish/vendor_conf.d"
     install -Dm0755 system_files/usr/share/pki/containers/*.pub -t "%{install-root}%{prefix}/share/pki/containers"
+    install -Dm0755 cosign.pub "%{install-root}%{prefix}/share/pki/containers/zirconium.pub"
     install -Dm0755 system_files/etc/profile.d/*.sh -t "%{install-root}%{sysconfdir}/profile.d"
     install -Dm0755 system_files/etc/xdg/* -t "%{install-root}%{sysconfdir}/xdg"
     cp -r "system_files/etc/containers" "%{install-root}%{sysconfdir}/containers"
