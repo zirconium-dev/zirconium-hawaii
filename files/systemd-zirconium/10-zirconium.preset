@@ -1,4 +1,3 @@
 # This is the system preset.
 
-# FIXME: remove this line when rechunker-group-fix is patched
-disable rechunker-group-fix.service
+enable rechunker-group-fix.service
