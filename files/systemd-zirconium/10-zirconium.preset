@@ -1,3 +1,7 @@
 # This is the system preset.
 
 enable rechunker-group-fix.service
+
+# Keeping systemd-networkd enabled with NetworkManger breaks systemd-timesyncd for some reason
+enable NetworkManager.service
+disable systemd-networkd.service
