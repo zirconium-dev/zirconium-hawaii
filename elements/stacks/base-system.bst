@@ -30,6 +30,7 @@ depends:
   - freedesktop-sdk.bst:components/bash-config.bst
   - freedesktop-sdk.bst:components/bash-completion.bst
   - freedesktop-sdk.bst:components/findutils.bst
+  - freedesktop-sdk.bst:components/diffutils.bst
   - freedesktop-sdk.bst:components/wget2.bst
   - freedesktop-sdk.bst:components/sed.bst
   - freedesktop-sdk.bst:components/less.bst
