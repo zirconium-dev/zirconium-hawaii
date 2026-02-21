@@ -1892,6 +1892,7 @@ build-depends:
 - freedesktop-sdk.bst:components/llvm.bst
 - freedesktop-sdk.bst:components/gcc.bst
 - freedesktop-sdk.bst:components/libseat.bst
+- freedesktop-sdk.bst:components/git.bst
 
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
