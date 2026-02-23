@@ -13,10 +13,7 @@ click == 8.2.1
 #
 # The upstream project is known to break API even in patch releases so we
 # must always pin a specific version.
-#
-# Blocker for updating to 0.24.3 is:
-# https://gitlab.com/BuildStream/buildstream-plugins-community/-/issues/82
-dulwich == 0.24.2
+dulwich == 0.22.1
 
 # Required by eos-sb-signer element plugin, used when option `signed_boot` is
 # set to "endless"
