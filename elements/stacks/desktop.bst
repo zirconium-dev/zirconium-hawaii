@@ -13,6 +13,7 @@ depends:
   - config/pam/archlinux-pam-configs.bst
   - config/greetd/service.bst
   - config/greetd/dms.bst
+  - config/default-icons/adwaita.bst
   - freedesktop-sdk.bst:components/xwayland.bst
   - freedesktop-sdk.bst:components/flatpak.bst
   - freedesktop-sdk.bst:components/pipewire-daemon.bst
