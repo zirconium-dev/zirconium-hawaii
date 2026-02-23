@@ -60,7 +60,8 @@ jobs:
             python3-pip python3-venv bubblewrap \
             lzip xz-utils bzip2 gzip \
             git wget curl \
-            ostree
+            ostree \
+            just
           python3 -m venv venv
           source venv/bin/activate
           pip install -r ./utils/requirements.txt
@@ -72,6 +73,12 @@ jobs:
         run: |
           source venv/bin/activate
           sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
+
+      # FIXME: remove this, replace it with something that pulls a specific key
+      - name: Generate necessary keys
+        if: github.event_name != 'pull_request' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+        run: |
+          just generate-keys
 
       - name: Buildstream build
         if: github.event_name != 'pull_request' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
