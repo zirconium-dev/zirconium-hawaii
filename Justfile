@@ -6,6 +6,20 @@ image_tag := env("BUILD_IMAGE_TAG", "latest")
 base_dir := env("BUILD_BASE_DIR", ".")
 filesystem := env("BUILD_FILESYSTEM", "btrfs")
 vendor := "Zirconium"
+bst_image := env("BST_IMAGE", "registry.gitlab.com/freedesktop-sdk/infrastructure/freedesktop-sdk-docker-images/bst2:latest")
+
+bst *ARGS:
+    #!/usr/bin/env bash
+    set -xeuo pipefail
+
+    mkdir -p "$HOME/.cache/buildstream"
+    podman run --rm \
+        --privileged \
+        --device /dev/fuse \
+        -v "{{base_dir}}":/pwd \
+        -v "$HOME/.cache/buildstream:/root/.cache/buildstream:rw" \
+        -w /pwd \
+        "{{bst_image}}" bash -c 'bst --colors {{ARGS}}'
 
 generate-keys $vendor=vendor:
     #!/usr/bin/env bash
