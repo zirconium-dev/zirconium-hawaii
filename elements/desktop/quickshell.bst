@@ -4,20 +4,19 @@ sources:
 - kind: git_repo
   url: outfoxxed:quickshell/quickshell
   track: master
-  ref: v0.2.0-75-g2cf57f43d5f2a5b139d1f1702c83e126e17f27f8
+  ref: v0.2.0-73-g158db16b931d04b43ec84748ee49390ea9f7c3f8
 
 build-depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst
 - freedesktop-sdk.bst:components/sed.bst
+- freedesktop-sdk.bst:components/gcc.bst
 - freedesktop-sdk.bst:components/dummy-gbm.bst
-- freedesktop-sdk.bst:components/pipewire.bst
-- freedesktop-sdk.bst:components/polkit.bst
 - freedesktop-sdk.bst:components/linux-pam.bst
+- freedesktop-sdk.bst:components/pkg-config.bst
 - freedesktop-sdk.bst:components/wayland-protocols.bst
 - deps/cli11.bst
-- deps/jemalloc.bst
-- deps/qt6-qtwayland.bst
+# FIXME: uncomment this when updating past v0.2.0-74. currently, v0.2.0-74 breaks building entirely, i don't know why
+# - freedesktop-sdk.bst:components/vulkan-headers.bst
 
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
