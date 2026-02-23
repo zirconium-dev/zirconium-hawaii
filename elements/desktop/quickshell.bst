@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: outfoxxed:quickshell/quickshell
   track: master
-  ref: v0.2.0-70-gdacfa9de829ac7cb173825f593236bf2c21f637e
+  ref: v0.2.0-75-g2cf57f43d5f2a5b139d1f1702c83e126e17f27f8
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst

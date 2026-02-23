@@ -8,7 +8,7 @@ sources:
 - kind: git_repo
   url: github:AvengeMedia/DankMaterialShell.git
   track: master
-  ref: v1.4.0-67-gf983c67135b55854c210e024e755963f5073ad5e
+  ref: v1.4.0-83-gde54ef871d7502276fc080f0d3fa2675c3c95469
 - kind: local
   path: files/dankmaterialshell
 
@@ -78,6 +78,16 @@ sources:
   base-dir: "*/*/*"
   url: golang-proxy:github.com/stretchr/testify/@v/v1.11.1.zip
 - kind: zip
+  directory: core/vendor/github.com/yeqown/go-qrcode/v2
+  ref: 6d6d8af4e03b8f69e76be64b793fb9715934eb215ca88feeaa79e20ae3b5c512
+  base-dir: "*/*/*/*"
+  url: golang-proxy:github.com/yeqown/go-qrcode/v2/@v/v2.2.5.zip
+- kind: zip
+  directory: core/vendor/github.com/yeqown/go-qrcode/writer/standard
+  ref: d327fce1174a33afef71382be0f411c78a0516a9ecf57aba0d9986545dfb51e6
+  base-dir: "*/*/*/*/*"
+  url: golang-proxy:github.com/yeqown/go-qrcode/writer/standard/@v/v1.3.0.zip
+- kind: zip
   directory: core/vendor/github.com/yuin/goldmark
   ref: f35042db4b1d6f9ca0f893301e7def2b161980446469a08360af34059ff91d79
   base-dir: "*/*/*"
@@ -143,6 +153,11 @@ sources:
   base-dir: "*/*/*"
   url: golang-proxy:github.com/emirpasic/gods/@v/v1.18.1.zip
 - kind: zip
+  directory: core/vendor/github.com/fogleman/gg
+  ref: 792f7a3ea9eea31b7947dabaf9d5a307389245069078e4bf435d76cb0505439c
+  base-dir: "*/*/*"
+  url: golang-proxy:github.com/fogleman/gg/@v/v1.3.0.zip
+- kind: zip
   directory: core/vendor/github.com/go-git/gcfg/v2
   ref: ef81d26f3e5d3d35c1c01c72fab206406234d66e0ce71d026d05c1e3187d22f9
   base-dir: "*/*/*/*"
@@ -157,6 +172,11 @@ sources:
   ref: 20f61151ffe33e64602b3a0db4eaed9ef60a84398a4a495a7434ffb90635751b
   base-dir: "*/*/*"
   url: golang-proxy:github.com/go-logfmt/logfmt/@v/v0.6.1.zip
+- kind: zip
+  directory: core/vendor/github.com/golang/freetype
+  ref: cdcb9e6a14933dcbf167b44dcd5083fc6a2e52c4fae8fb79747c691efeb7d84e
+  base-dir: "*/*/*"
+  url: golang-proxy:github.com/golang/freetype/@v/v0.0.0-20170609003504-e2365dfdc4a0.zip
 - kind: zip
   directory: core/vendor/github.com/golang/groupcache
   ref: 163367355442a630b12b0b452892cd98e99fcfdf7e40b68d358be73479cc1c23
@@ -178,6 +198,11 @@ sources:
   base-dir: "*/*/*"
   url: golang-proxy:github.com/pjbgf/sha1cd/@v/v0.5.0.zip
 - kind: zip
+  directory: core/vendor/github.com/pkg/errors
+  ref: d4c36b8bcd0616290a3913215e0f53b931bd6e00670596f2960df1b44af2bd07
+  base-dir: "*/*/*"
+  url: golang-proxy:github.com/pkg/errors/@v/v0.9.1.zip
+- kind: zip
   directory: core/vendor/github.com/sergi/go-diff
   ref: 63aef1860b251af1421ba0a014a6bb08a60833f13f948f3d88d66754bb484f53
   base-dir: "*/*/*"
@@ -187,6 +212,11 @@ sources:
   ref: cdc804051b06efceea75ee9b0b6349d2f92f17cd46c6193c4a8dfb0f51465a44
   base-dir: "*/*/*"
   url: golang-proxy:github.com/stretchr/objx/@v/v0.5.3.zip
+- kind: zip
+  directory: core/vendor/github.com/yeqown/reedsolomon
+  ref: a834afc29e46619d86583af9115a16bb16b6e4617211a2d02d01a5d39b5bb2f7
+  base-dir: "*/*/*"
+  url: golang-proxy:github.com/yeqown/reedsolomon/@v/v1.0.0.zip
 - kind: zip
   directory: core/vendor/golang.org/x/crypto
   ref: 837297a50ca77a6a18ea2f2936bfe31aaf2ad36d5bcd8c545709da3b6c600fd2

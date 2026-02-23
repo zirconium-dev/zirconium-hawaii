@@ -119,6 +119,9 @@ github.com/emirpasic/gods/utils
 # github.com/erikgeiser/coninput v0.0.0-20211004153227-1c3628e74d0f
 ## explicit; go 1.16
 github.com/erikgeiser/coninput
+# github.com/fogleman/gg v1.3.0
+## explicit
+github.com/fogleman/gg
 # github.com/fsnotify/fsnotify v1.9.0
 ## explicit; go 1.17
 github.com/fsnotify/fsnotify
@@ -198,6 +201,10 @@ github.com/go-logfmt/logfmt
 ## explicit; go 1.20
 github.com/godbus/dbus/v5
 github.com/godbus/dbus/v5/introspect
+# github.com/golang/freetype v0.0.0-20170609003504-e2365dfdc4a0
+## explicit
+github.com/golang/freetype/raster
+github.com/golang/freetype/truetype
 # github.com/golang/groupcache v0.0.0-20241129210726-2c02b8208cf8
 ## explicit; go 1.20
 github.com/golang/groupcache/lru
@@ -243,6 +250,9 @@ github.com/pilebones/go-udev/netlink
 github.com/pjbgf/sha1cd
 github.com/pjbgf/sha1cd/internal
 github.com/pjbgf/sha1cd/ubc
+# github.com/pkg/errors v0.9.1
+## explicit
+github.com/pkg/errors
 # github.com/pmezard/go-difflib v1.0.0
 ## explicit
 github.com/pmezard/go-difflib/difflib
@@ -285,6 +295,17 @@ github.com/stretchr/testify/require
 # github.com/xo/terminfo v0.0.0-20220910002029-abceb7e1c41e
 ## explicit; go 1.19
 github.com/xo/terminfo
+# github.com/yeqown/go-qrcode/v2 v2.2.5
+## explicit; go 1.18
+github.com/yeqown/go-qrcode/v2
+# github.com/yeqown/go-qrcode/writer/standard v1.3.0
+## explicit; go 1.17
+github.com/yeqown/go-qrcode/writer/standard
+github.com/yeqown/go-qrcode/writer/standard/imgkit
+# github.com/yeqown/reedsolomon v1.0.0
+## explicit
+github.com/yeqown/reedsolomon
+github.com/yeqown/reedsolomon/binary
 # github.com/yuin/goldmark v1.7.16
 ## explicit; go 1.22
 github.com/yuin/goldmark
@@ -334,6 +355,11 @@ golang.org/x/exp/slog/internal/buffer
 ## explicit; go 1.24.0
 golang.org/x/image/bmp
 golang.org/x/image/ccitt
+golang.org/x/image/draw
+golang.org/x/image/font
+golang.org/x/image/font/basicfont
+golang.org/x/image/math/f64
+golang.org/x/image/math/fixed
 golang.org/x/image/riff
 golang.org/x/image/tiff
 golang.org/x/image/tiff/lzw
