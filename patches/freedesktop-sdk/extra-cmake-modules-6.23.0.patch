@@ -1,0 +1,10 @@
+diff --git a/elements/components/extra-cmake-modules.bst b/elements/components/extra-cmake-modules.bst
+index d80931e7f..1fdbdd77f 100644
+--- a/elements/components/extra-cmake-modules.bst
++++ b/elements/components/extra-cmake-modules.bst
+@@ -19,4 +19,4 @@ sources:
+   track: v*
+   exclude:
+   - '*rc*'
+-  ref: v6.22.0-0-g3f76d71045e935ced4723c12345162f16cc8cb21
++  ref: v6.23.0-0-gb70177ddb8387484a1e12ab33f6f15979f730074

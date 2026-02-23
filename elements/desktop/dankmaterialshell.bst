@@ -343,6 +343,7 @@ depends:
 - desktop/ddcutil.bst
 - desktop/brightnessctl.bst
 - deps/qt6-qtmultimedia.bst
+- deps/kimageformats.bst
 - deps/dgop.bst
 - cli/cava.bst
 
