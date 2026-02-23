@@ -17,6 +17,7 @@ depends:
   - freedesktop-sdk.bst:components/pipewire-daemon.bst
   - freedesktop-sdk.bst:vm/config/flathub.bst
   - gnome-build-meta.bst:gnomeos-deps/wl-clipboard.bst
+  - gnome-build-meta.bst:gnomeos-deps/fprintd.bst
   - gnome-build-meta.bst:sdk/xwayland-satellite.bst
   - gnome-build-meta.bst:core-deps/xdg-desktop-portal-gnome.bst
   - gnome-build-meta.bst:core-deps/xdg-desktop-portal-gtk.bst
