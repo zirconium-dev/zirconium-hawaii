@@ -5,6 +5,7 @@ depends:
   - desktop/quickshell.bst
   - desktop/dankmaterialshell.bst
   - desktop/foot.bst
+  - desktop/qt6ct.bst
   - cli/chezmoi.bst
   - core/greetd.bst
   - core/xdg-utils.bst
