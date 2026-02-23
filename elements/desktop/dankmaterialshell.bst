@@ -338,6 +338,7 @@ depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:components/libnotify.bst
 - gnome-build-meta.bst:core-deps/accountsservice.bst
+- gnome-build-meta.bst:core-deps/cups-pk-helper.bst
 - desktop/quickshell.bst
 - desktop/matugen.bst
 - desktop/ddcutil.bst
