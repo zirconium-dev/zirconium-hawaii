@@ -1,0 +1,111 @@
+# This action is partially taken from eos-build-meta: https://github.com/endlessm/eos-build-meta/blob/8949bcd0edbd49fe41153e5fb3a23f3016aa61a6/.github/workflows/build.yml
+name: Build filesystem and export to OSTree
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+env:
+  IMAGE_DESC: "Opinionated niri + bootc image"
+  IMAGE_KEYWORDS: "bootc,niri"
+  IMAGE_LOGO_URL: "https://avatars.githubusercontent.com/u/237492973?s=400&v=4"
+  IMAGE_NAME: "${{ github.event.repository.name }}"
+  IMAGE_REGISTRY: "ghcr.io/${{ github.repository_owner }}"
+  DEFAULT_TAG: "latest"
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 600 # 10 hours
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+
+      - name: Configure BuildStream
+        run: |
+          mkdir -p ~/.config
+          cat > ~/.config/buildstream.conf << EOF
+          # BuildStream user configuration
+          scheduler:
+            fetchers: 12
+            builders: 1
+            network-retries: 3
+
+          build:
+            max-jobs: 4
+
+          logging:
+            key-length: 0
+            verbose: true
+            error-lines: 20
+            message-lines: 20
+            debug: false
+            element-format: |
+              %{state: >12} %{full-key} %{name} %{workspace-dirs}
+            message-format: |
+              [%{elapsed}][%{key}][%{element}] %{action} %{message}
+          EOF
+
+      - name: Install BuildStream and dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            python3-pip python3-venv bubblewrap \
+            lzip xz-utils bzip2 gzip \
+            git wget curl \
+            ostree
+          python3 -m venv venv
+          source venv/bin/activate
+          pip install -r ./utils/requirements.txt
+
+      - name: Free disk space
+        uses: hastd/free-disk-space@78ec0490f953d89f024c95d0c293e6307ceac02e # v0.1.1
+
+      - name: Enable unprivileged userns
+        run: |
+          source venv/bin/activate
+          sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
+
+      - name: Buildstream build
+        if: github.event_name != 'pull_request' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+        run: |
+          source venv/bin/activate
+          bst build oci/zirconium.bst
+
+      - name: Export Initial OCI Image
+        if: github.event_name != 'pull_request' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+        run: |
+          source venv/bin/activate
+          bst artifact checkout --tar - oci/zirconium.bst | podman load
+
+      - name: Build final OCI Image
+        if: github.event_name != 'pull_request' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+        run: |
+          podman build --squash-all -t ${IMAGE_REGISTRY}/${IMAGE_NAME}:${DEFAULT_TAG} .
+
+      - name: Login to GitHub Container Registry
+        if: github.event_name != 'pull_request' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LOGIN_USER: ${{ github.actor }}
+        run: |
+          echo "${GITHUB_TOKEN}" | sudo podman login -u "${LOGIN_USER}" --password-stdin "ghcr.io"
+          echo "${GITHUB_TOKEN}" | docker login -u "${LOGIN_USER}" --password-stdin "ghcr.io" # For cosign
+
+      - name: Push to GHCR
+        if: github.event_name != 'pull_request' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+        id: push
+        env:
+          IMAGE_REGISTRY: ${{ env.IMAGE_REGISTRY }}
+          IMAGE_NAME: ${{ env.IMAGE_NAME }}
+        run: |
+          set -x
+          podman push ${IMAGE_REGISTRY}/${IMAGE_NAME}:${DEFAULT_TAG}
+          
