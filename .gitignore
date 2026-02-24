@@ -1,3 +1,5 @@
+cosign.key
+
 # Ignore Python local cache across repo
 **/__pycache__/
 
