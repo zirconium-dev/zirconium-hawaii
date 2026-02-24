@@ -1,5 +1,5 @@
 # This action is partially taken from eos-build-meta: https://github.com/endlessm/eos-build-meta/blob/8949bcd0edbd49fe41153e5fb3a23f3016aa61a6/.github/workflows/build.yml
-name: Build filesystem and export to OSTree
+name: Build container image
 
 on:
   push:
