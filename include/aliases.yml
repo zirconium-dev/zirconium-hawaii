@@ -54,6 +54,7 @@ aliases:
   webkitgtk: https://webkitgtk.org/releases/
   invisible-mirror-archives: https://invisible-mirror.net/archives/
   golang-proxy: https://proxy.golang.org/
+  kojipkgs-fedora: https://kojipkgs.fedoraproject.org/
 
   # git aliases go here
   codeberg: https://codeberg.org/

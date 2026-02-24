@@ -4,7 +4,7 @@ kind: stack
 depends:
   - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
   - freedesktop-sdk.bst:components/util-linux-full.bst
-  - freedesktop-sdk.bst:components/linux.bst
+  - core/linux.bst
   - freedesktop-sdk.bst:components/linux-firmware.bst
   - freedesktop-sdk.bst:components/wireless-regdb-bin.bst
   - freedesktop-sdk.bst:components/systemd.bst
