@@ -37,7 +37,7 @@ jobs:
           # BuildStream user configuration
           scheduler:
             fetchers: 12
-            builders: 1
+            builders: 2
             network-retries: 3
 
           build:
