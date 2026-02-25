@@ -15,7 +15,3 @@ This image includes the following base components:
 - Homebrew (Packages on a user level)
 - Flatpak
 - Distrobox
-
-Some other things that are planned in the near-term
-
-- [ ] Github CI (I want to build the OS on Github and then upload it to GHCR)
