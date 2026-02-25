@@ -178,7 +178,7 @@ jobs:
           set -x
           for i in $(seq "${MAX_RETRIES}"); do
             for TAG in $TAGS; do
-              podman push "${IMAGE_REGISTRY}/${IMAGE_NAME}:$TAG"
+              podman push "${IMAGE_REGISTRY}/${IMAGE_NAME}:$TAG" || sleep $((5 * i))
             done
           done
 
