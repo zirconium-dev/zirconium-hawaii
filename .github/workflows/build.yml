@@ -82,7 +82,7 @@ jobs:
         run: |
           just generate-keys
 
-      - name: Print disk usage after image build
+      - name: Print disk usage before image build
         run: |
           df -h
 
