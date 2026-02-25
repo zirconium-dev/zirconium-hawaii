@@ -1,17 +1,15 @@
-# Zirconium-Hawaii
+# Zirconium Hawaii
 
-<img width="2560" height="1440" alt="image" src="https://github.com/user-attachments/assets/a29ec4c0-bac8-4fde-b862-e22206a16a5a" />
+Zirconium, but based on [Freedesktop SDK](https://gitlab.com/freedesktop-sdk/freedesktop-sdk) instead of Fedora.
 
-This repository contains the buildstream to build a FreedesktopSDK based OS with Niri installed as its default compositor.
+<img width="2560" height="1440" alt="image" src="https://github.com/user-attachments/assets/b911c9ad-15ab-4951-96cb-66e97a267181" />
 
-## Information
+## What is Zirconium Hawaii
 
-This image includes the following base components:
+Zirconium Hawaii is an experiment (initially known as Niri OS) that turned into a real project. It is a distribution that builds its own components in a manner that is both far closer to the source, and is 100% reproducible.
 
-- Freedesktop SDK (Base OS)
-- Bootc (Atomic OS Updater)
-- Niri (Compositor)
-- DankMaterialShell (Basically turns Niri into a desktop environment)
-- Homebrew (Packages on a user level)
-- Flatpak
-- Distrobox
+Zirconium Hawaii can be compared most accurately to [Gnome OS](https://os.gnome.org), which is our biggest inspiration for this project. We use the same build system as Gnome OS, and we even use components **from** Gnome OS!
+
+## How do I use this?
+
+Currently, there isn't an official installation method. Rebasing from Zirconium (Fedora) to Zirconium Hawaii *has* been done successfully, but it is not officially supported, and **will** give you strange issues.
