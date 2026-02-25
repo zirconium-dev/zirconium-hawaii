@@ -177,9 +177,9 @@ jobs:
         run: |
           set -x
           for i in $(seq "${MAX_RETRIES}"); do
-            while IFS= read -r TAG; do
+            for TAG in $TAGS; do
               podman push "${IMAGE_REGISTRY}/${IMAGE_NAME}:$TAG"
-            done <<< "${TAGS}"
+            done
           done
 
       - name: Install Cosign
