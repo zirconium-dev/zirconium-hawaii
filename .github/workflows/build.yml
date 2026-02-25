@@ -153,9 +153,9 @@ jobs:
             BUILD_ARGS+=("--tag" "$IMAGE_REGISTRY/$IMAGE_NAME:$tag")
           done
 
-          for label in $LABELS; do
+          while IFS= read -r label; do
             BUILD_ARGS+=("--label" "$label")
-          done
+          done <<< "$LABELS"
 
           podman build "${BUILD_ARGS[@]}" .
 
