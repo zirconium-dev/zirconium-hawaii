@@ -10,10 +10,11 @@ sources:
 - kind: git_repo
   url: github:zirconium-dev/zirconium.git
   track: main
-  ref: fffa6bc6506cf221d8c28ef25fb81a6be4223405
+  ref: 04c29ffcdc6cb89783acab0ab02b92b21cd42072
 
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
+- freedesktop-sdk.bst:components/containers-common.bst
 - cli/hyfetch.bst
 
 variables:
