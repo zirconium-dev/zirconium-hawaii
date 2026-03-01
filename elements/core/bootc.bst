@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: github:bootc-dev/bootc.git
   track: main
-  ref: v1.13.0-10-g11cba840a4cc6dca9afc528f306ebe1406b647fa
+  ref: v1.13.0-15-gc089dbbdcd417b8826ebe7efa671451da516dc23
 - kind: cargo2
   ref:
   - kind: registry
@@ -28,6 +28,10 @@ sources:
     version: 0.6.21
     sha: 43d5b281e737544384e969a5ccad3f1cdd24b48086a0fc1b2a5262a26b8f4f4a
   - kind: registry
+    name: anstream
+    version: 1.0.0
+    sha: 824a212faf96e9acacdbd09febd34438f8f711fb84e09a8916013cd7815ca28d
+  - kind: registry
     name: anstyle
     version: 1.0.13
     sha: 5192cca8006f1fd4f7237516f40fa183bb07f8fbdfedaa0036de5ea9b0b45e78
@@ -35,6 +39,10 @@ sources:
     name: anstyle-parse
     version: 0.2.7
     sha: 4e7644824f0aa2c7b9384579234ef10eb7efb6a0deb83f9630a49594dd9c15c2
+  - kind: registry
+    name: anstyle-parse
+    version: 1.0.0
+    sha: 52ce7f38b242319f7cabaa6813055467063ecdc9d355bbb4ce0c68908cd8130e
   - kind: registry
     name: anstyle-query
     version: 1.1.5
@@ -104,17 +112,33 @@ sources:
     version: 3.4.5
     sha: b6cf3aea8a5081171859ef57bc1606b1df6999df4f1110f8eef68b30098d1d3a
   - kind: registry
+    name: cap-primitives
+    version: 4.0.2
+    sha: cdadbd7c002d3a484b35243669abdae85a0ebaded5a61117169dc3400f9a7ff0
+  - kind: registry
     name: cap-std
     version: 3.4.5
     sha: b6dc3090992a735d23219de5c204927163d922f42f575a0189b005c62d37549a
+  - kind: registry
+    name: cap-std
+    version: 4.0.2
+    sha: 7281235d6e96d3544ca18bba9049be92f4190f8d923e3caef1b5f66cfa752608
   - kind: registry
     name: cap-std-ext
     version: 4.0.7
     sha: 6fe962d42e07c22aec2618191c3683412735b7e6dcd7bab2eec811ab4697c58e
   - kind: registry
+    name: cap-std-ext
+    version: 5.0.0
+    sha: d201b8b353bc963f2e8c374be7866dba47082ff041fb0db2d7543f2b9c8367ce
+  - kind: registry
     name: cap-tempfile
     version: 3.4.5
     sha: 68d8ad5cfac469e58e632590f033d45c66415ef7a8aa801409884818036706f5
+  - kind: registry
+    name: cap-tempfile
+    version: 4.0.2
+    sha: 42f22d5c0b1147e8bd9105fa004450f673c139d7e632f7edc3980f94a51f20f3
   - kind: registry
     name: cargo-platform
     version: 0.3.2
@@ -529,6 +553,10 @@ sources:
     version: 0.18.4
     sha: 2285ddfe3054097ef4b2fe909ef8c3bcd1ea52a8f0d274416caebeef39f04a65
   - kind: registry
+    name: io-extras
+    version: 0.19.0
+    sha: 20fd6de4ccfcc187e38bc21cfa543cb5a302cb86a8b114eb7f0bf0dc9f8ac00f
+  - kind: registry
     name: io-lifetimes
     version: 2.0.4
     sha: 06432fb54d3be7964ecd3649233cddf80db2832f47fec34c01f65b3d9d774983
@@ -677,9 +705,13 @@ sources:
     version: 0.8.4
     sha: fc3da52b83ce3258fbf29f66ac784b279453c2ac3c22c5805371b921ede0d308
   - kind: registry
+    name: oci-spec
+    version: 0.9.0
+    sha: e8445a2631507cec628a15fdd6154b54a3ab3f20ed4fe9d73a3b8b7a4e1ba03a
+  - kind: registry
     name: ocidir
-    version: 0.6.0
-    sha: 92e746e3e6a7bb57a72ea4f0b8085f84aedaab1d537a5dc5488fd3cd5af0cd67
+    version: 0.7.0
+    sha: 784ff94e3f5a9b89659b8a4442104df6b5e7974c9b355c4f4ae6e9794af1ad2b
   - kind: registry
     name: once_cell
     version: 1.21.3
@@ -1069,17 +1101,25 @@ sources:
     version: 0.9.10+spec-1.1.0
     sha: 0825052159284a1a8b4d6c0c86cbc801f2da5afd2b225fa548c72f2e74002f48
   - kind: registry
+    name: toml
+    version: 1.0.3+spec-1.1.0
+    sha: c7614eaf19ad818347db24addfa201729cf2a9b6fdfd9eb0ab870fcacc606c0c
+  - kind: registry
     name: toml_datetime
     version: 0.7.5+spec-1.1.0
     sha: 92e1cfed4a3038bc5a127e35a2d360f145e1f4b971b551a2ba5fd7aedf7e1347
+  - kind: registry
+    name: toml_datetime
+    version: 1.0.0+spec-1.1.0
+    sha: 32c2555c699578a4f59f0cc68e5116c8d7cabbd45e1409b989d4be085b53f13e
   - kind: registry
     name: toml_edit
     version: 0.23.10+spec-1.0.0
     sha: 84c8b9f757e028cee9fa244aea147aab2a9ec09d5325a9b01e0a49730c2b5269
   - kind: registry
     name: toml_parser
-    version: 1.0.6+spec-1.1.0
-    sha: a3198b4b0a8e11f09dd03e133c0280504d0801269e9afa46362ffde1cbeebf44
+    version: 1.0.9+spec-1.1.0
+    sha: 702d4415e08923e7e1ef96cd5727c0dfed80b4d2fa25db9647fe5eb6f7c5a4c4
   - kind: registry
     name: toml_writer
     version: 1.0.6+spec-1.1.0

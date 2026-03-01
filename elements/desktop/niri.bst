@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: github:yalter/niri.git
   track: main
-  ref: v25.11-118-g2dc6f4482c4eeed75ea8b133d89cad8658d38429
+  ref: v25.11-119-ge708f546153f74acf33eb183b3b2992587a701e5
 - kind: cargo2
   ref:
   - kind: registry

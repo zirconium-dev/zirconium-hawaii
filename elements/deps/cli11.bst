@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: github:CLIUtils/CLI11
   track: v*
-  ref: v2.6.1-0-gbfffd37e1f804ca4fae1caae106935791696b6a9
+  ref: v2.6.2-0-g37bb6edc5317e99af72ef48405e65d9ca5218861
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
