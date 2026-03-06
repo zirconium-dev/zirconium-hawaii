@@ -40,6 +40,10 @@ depends:
   - freedesktop-sdk.bst:components/man-db.bst
   - freedesktop-sdk.bst:components/man-pages.bst
   - freedesktop-sdk.bst:components/dmidecode.bst
+  - freedesktop-sdk.bst:components/tpm2-tss.bst
+  - freedesktop-sdk.bst:components/tpm2-tools.bst
+  - freedesktop-sdk.bst:components/tpm2-pkcs11.bst
+  - freedesktop-sdk.bst:components/libfido2.bst
   - freedesktop-sdk.bst:components/btrfs-progs.bst
   - freedesktop-sdk.bst:components/xfsprogs.bst
   - freedesktop-sdk.bst:components/erofs-utils.bst
