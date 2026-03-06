@@ -56,6 +56,8 @@ depends:
   - freedesktop-sdk.bst:extensions/codecs-extra/ffmpeg.bst
   - freedesktop-sdk.bst:components/git-lfs.bst
   - freedesktop-sdk.bst:components/git.bst
+  - freedesktop-sdk.bst:components/unzip.bst
+  - freedesktop-sdk.bst:components/rsync.bst
 
   - gnome-build-meta.bst:core-deps/power-profiles-daemon.bst
   - gnome-build-meta.bst:gnomeos-deps/distrobox.bst
