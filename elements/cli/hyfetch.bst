@@ -626,7 +626,7 @@ config:
   - |
     install -Dm755 target/release/hyfetch -t "%{install-root}%{bindir}"
 
-    install -Dm0755 hyfetch/scripts/autocomplete.bash -t "%{install-root}%{prefix}/share/bash-completion/completions"
-    install -Dm0755 hyfetch/scripts/autocomplete.zsh -t "%{install-root}%{prefix}/share/zsh/site-functions"
+    install -Dm0644 hyfetch/scripts/autocomplete.bash -t "%{install-root}%{prefix}/share/bash-completion/completions"
+    install -Dm0644 hyfetch/scripts/autocomplete.zsh -t "%{install-root}%{prefix}/share/zsh/site-functions"
   - |
     %{install-extra}
