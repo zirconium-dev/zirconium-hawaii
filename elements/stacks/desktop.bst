@@ -11,6 +11,7 @@ depends:
   - core/xdg-utils.bst
   - desktop/xdg-terminal-exec.bst
   - config/pam/archlinux-pam-configs.bst
+  - config/pam/greetd.bst
   - config/greetd/service.bst
   - config/greetd/dms.bst
   - config/default-icons/adwaita.bst
