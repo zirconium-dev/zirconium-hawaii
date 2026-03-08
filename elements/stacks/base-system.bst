@@ -20,6 +20,7 @@ depends:
   - freedesktop-sdk.bst:components/iputils.bst
   - freedesktop-sdk.bst:components/openssh.bst
   - freedesktop-sdk.bst:components/openssh-systemd.bst
+  - freedesktop-sdk.bst:components/fwupd.bst
   - freedesktop-sdk.bst:vm/base-filesystem.bst
   - freedesktop-sdk.bst:vm/config/journald.bst
   - freedesktop-sdk.bst:vm/config/networkd.bst
