@@ -13,7 +13,7 @@ click == 8.2.1
 #
 # The upstream project is known to break API even in patch releases so we
 # must always pin a specific version.
-dulwich == 0.22.1
+dulwich == 0.24.0
 
 # Required by eos-sb-signer element plugin, used when option `signed_boot` is
 # set to "endless"
