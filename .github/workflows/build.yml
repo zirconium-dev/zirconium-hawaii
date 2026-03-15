@@ -61,8 +61,8 @@ jobs:
           if [[ -n "$CASD_CLIENT_CERT" ]] && [[ -n "$CASD_CLIENT_ΚΕΥ" ]]; then
 
             # Setup certificate for pushing to the cache
-            echo "$CASD_CLIENT_CERT" > $GITHUB_WORKSPACE/client.crt
-            echo "$CASD_CLIENT_KEY" >  $GITHUB_WORKSPACE/client.key
+            echo "$CASD_CLIENT_CERT" > client.crt
+            echo "$CASD_CLIENT_KEY" >  client.key
 
             cat >>  ~/.config/buildstream.conf <<'EOF'
           artifacts:
@@ -75,8 +75,8 @@ jobs:
                 retry-delay: 1000
                 request-timeout: 180
               auth:
-                client-key: $GITHUB_WORKSPACE/client.key
-                client-cert: $GITHUB_WORKSPACE/client.crt
+                client-key: client.key
+                client-cert: client.crt
 
           source-caches:
             servers:
@@ -88,8 +88,8 @@ jobs:
                 retry-delay: 1000
                 request-timeout: 180
               auth:
-                client-key: $GITHUB_WORKSPACE/client.key
-                client-cert: $GITHUB_WORKSPACE/client.crt
+                client-key: client.key
+                client-cert: client.crt
 
           cache:
             storage-service:
@@ -100,8 +100,8 @@ jobs:
                 retry-delay: 1000
                 request-timeout: 180
               auth:
-                client-key: $GITHUB_WORKSPACE/client.key
-                client-cert: $GITHUB_WORKSPACE/client.crt
+                client-key: client.key
+                client-cert: client.crt
 
           remote-execution:
             execution-service:
@@ -112,8 +112,8 @@ jobs:
                 retry-delay: 1000
                 request-timeout: 180
               auth:
-                client-key: $GITHUB_WORKSPACE/client.key
-                client-cert: $GITHUB_WORKSPACE/client.crt
+                client-key: client.key
+                client-cert: client.crt
             action-cache-service:
               url: https://cache.projectbluefin.io:11002
               connection-config:
@@ -122,8 +122,8 @@ jobs:
                 retry-delay: 1000
                 request-timeout: 180
               auth:
-                client-key: $GITHUB_WORKSPACE/client.key
-                client-cert: $GITHUB_WORKSPACE/client.crt
+                client-key: client.key
+                client-cert: client.crt
           EOF
 
           fi
