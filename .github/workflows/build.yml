@@ -31,6 +31,9 @@ jobs:
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
 
       - name: Configure BuildStream
+        env:
+          CASD_CLIENT_CERT: ${{ vars.CASD_CLIENT_CERT }}
+          CASD_CLIENT_KEY: ${{ secrets.CASD_CLIENT_KEY }}
         run: |
           mkdir -p ~/.config
           cat > ~/.config/buildstream.conf << EOF
@@ -54,6 +57,78 @@ jobs:
             message-format: |
               [%{elapsed}][%{key}][%{element}] %{action} %{message}
           EOF
+
+          if [[ -n "$CASD_CLIENT_CERT" ]] && [[ -n "$CASD_CLIENT_ΚΕΥ" ]]; then
+
+            # Setup certificate for pushing to the cache
+            echo "$CASD_CLIENT_CERT" > $GITHUB_WORKSPACE/client.crt
+            echo "$CASD_CLIENT_KEY" >  $GITHUB_WORKSPACE/client.key
+
+            cat >>  ~/.config/buildstream.conf <<'EOF'
+          artifacts:
+            servers:
+            - url: https://cache.projectbluefin.io:11002
+              push: true
+              connection-config:
+                keepalive-time: 60
+                retry-limit: 5
+                retry-delay: 1000
+                request-timeout: 180
+              auth:
+                client-key: $GITHUB_WORKSPACE/client.key
+                client-cert: $GITHUB_WORKSPACE/client.crt
+
+          source-caches:
+            servers:
+            - url: https://cache.projectbluefin.io:11002
+              push: true
+              connection-config:
+                keepalive-time: 60
+                retry-limit: 5
+                retry-delay: 1000
+                request-timeout: 180
+              auth:
+                client-key: $GITHUB_WORKSPACE/client.key
+                client-cert: $GITHUB_WORKSPACE/client.crt
+
+          cache:
+            storage-service:
+              url: https://cache.projectbluefin.io:11002
+              connection-config:
+                keepalive-time: 60
+                retry-limit: 5
+                retry-delay: 1000
+                request-timeout: 180
+              auth:
+                client-key: $GITHUB_WORKSPACE/client.key
+                client-cert: $GITHUB_WORKSPACE/client.crt
+
+          remote-execution:
+            execution-service:
+              url: https://cache.projectbluefin.io:11002
+              connection-config:
+                keepalive-time: 60
+                retry-limit: 5
+                retry-delay: 1000
+                request-timeout: 180
+              auth:
+                client-key: $GITHUB_WORKSPACE/client.key
+                client-cert: $GITHUB_WORKSPACE/client.crt
+            action-cache-service:
+              url: https://cache.projectbluefin.io:11002
+              connection-config:
+                keepalive-time: 60
+                retry-limit: 5
+                retry-delay: 1000
+                request-timeout: 180
+              auth:
+                client-key: $GITHUB_WORKSPACE/client.key
+                client-cert: $GITHUB_WORKSPACE/client.crt
+          EOF
+
+          fi
+
+          cat ~/.config/buildstream.conf
 
       - name: Install BuildStream and dependencies
         run: |
