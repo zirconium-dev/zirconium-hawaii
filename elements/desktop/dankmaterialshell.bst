@@ -8,7 +8,7 @@ sources:
 - kind: git_repo
   url: github:AvengeMedia/DankMaterialShell.git
   track: master
-  ref: v1.4.0-241-gbb08e1233a2a57fc64ee024523cb7010aabb97ce
+  ref: v1.4.0-245-g0e2162cf2969e943e4573d23bc56be7faff91dc6
 - kind: local
   path: files/dankmaterialshell
 
