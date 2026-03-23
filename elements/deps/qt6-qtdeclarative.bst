@@ -9,7 +9,7 @@ sources:
   - "*-rc*"
   - "*-alpha*"
   - "*-lts*"
-  ref: v6.10.2-0-g09c70541c76659bcd8c49f05841b0e778c9ffd4c
+  ref: v6.11.0-0-ge602a097ca314e9610b1fd3b7dbfa467a868731a
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
