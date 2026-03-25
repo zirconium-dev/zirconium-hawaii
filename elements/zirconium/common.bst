@@ -17,6 +17,8 @@ depends:
 - freedesktop-sdk.bst:components/containers-common.bst
 - zirconium/projectbluefin-common.bst
 - cli/hyfetch.bst
+- cli/gum.bst
+- cli/fzf.bst
 
 variables:
   strip-binaries: ""
