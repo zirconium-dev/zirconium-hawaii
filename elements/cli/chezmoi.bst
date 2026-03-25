@@ -12,10 +12,10 @@ sources:
   base-dir: "usr/bin"
   (?):
   - arch == "aarch64":
-      url: github:twpayne/chezmoi/releases/download/v2.70.0/chezmoi_2.70.0_linux_arm64.apk
+      url: github_files:twpayne/chezmoi/releases/download/v2.70.0/chezmoi_2.70.0_linux_arm64.apk
       ref: 28c98e4fbfd6ed9885df71fa2bb2a3606621409d6d3abbfd369e5367da5c27ea
   - arch == "x86_64":
-      url: github:twpayne/chezmoi/releases/download/v2.70.0/chezmoi_2.70.0_linux_amd64.apk
+      url: github_files:twpayne/chezmoi/releases/download/v2.70.0/chezmoi_2.70.0_linux_amd64.apk
       ref: 834a16457f243b6d89920153eafedd5c3d5211cb318c9b6622279b5da6ec2391
 
 build-depends:
