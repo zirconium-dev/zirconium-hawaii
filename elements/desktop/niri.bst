@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: github:yalter/niri.git
   track: main
-  ref: v25.11-127-gb07bde3ee82dd73115e6b949e4f3f63695da35ea
+  ref: v25.11-128-g8f48f56fe19918b5cfa02e5d68a47ebaf7bf3dee
 - kind: cargo2
   url: crates:crates
   ref:
