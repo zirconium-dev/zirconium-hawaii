@@ -6,11 +6,13 @@ depends:
   - desktop/dankmaterialshell.bst
   - desktop/foot.bst
   - desktop/qt6ct.bst
+  - desktop/satty.bst
   - cli/chezmoi.bst
   - core/greetd.bst
   - core/xdg-utils.bst
   - desktop/iio-niri.bst
   - desktop/xdg-terminal-exec.bst
+  - config/satty.bst
   - config/pam/archlinux-pam-configs.bst
   - config/pam/greetd.bst
   - config/greetd/service.bst
