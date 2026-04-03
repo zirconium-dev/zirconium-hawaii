@@ -5,6 +5,8 @@ sources:
   url: github:bootc-dev/bootc.git
   track: v*
   ref: v1.15.0-0-gd8785c6c380db9afee054d39b54e643b26054b73
+- kind: patch_queue
+  path: patches/bootc
 - kind: cargo2
   url: crates:crates
   ref:
@@ -1546,6 +1548,7 @@ sources:
     name: zstd-sys
     version: 2.0.16+zstd.1.5.7
     sha: 91e19ebc2adc8f83e43039e79776e3fda8ca919132d68a1fed6a5faca2683748
+
 build-depends:
 - freedesktop-sdk.bst:components/go-md2man.bst
 - freedesktop-sdk.bst:components/openssl.bst
