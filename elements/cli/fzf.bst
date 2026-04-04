@@ -5,17 +5,17 @@ sources:
 - kind: git_repo
   url: github:junegunn/fzf.git
   track: v*
-  ref: v0.70.0-0-geacef5ea6e39c6be3fff4e231fc6d10ba2ff9491
+  ref: v0.71.0-0-g62899fd74eb4f5a12ca973d30fb356431d68f9c2
 - kind: tar
   directory: "bin"
   base-dir: ""
   (?):
   - arch == "aarch64":
-      url: github_files:junegunn/fzf/releases/download/v0.70.0/fzf-0.70.0-linux_arm64.tar.gz
-      ref: 90a07a13b61f56dd59ccfd0f0bf05070e9cec067713d313fa2607aab2dc0e422
+      url: github_files:junegunn/fzf/releases/download/v0.71.0/fzf-0.71.0-linux_arm64.tar.gz
+      ref: 98b7d322efae9c37e4bfbbab1cbcd8722eb742d9399511f96375feb40cc35d1d
   - arch == "x86_64":
-      url: github_files:junegunn/fzf/releases/download/v0.70.0/fzf-0.70.0-linux_amd64.tar.gz
-      ref: 8fd0e0b93bdf64ba90081ffb6658d77ea5a024c122b36852b1de30f9d2733754
+      url: github_files:junegunn/fzf/releases/download/v0.71.0/fzf-0.71.0-linux_amd64.tar.gz
+      ref: 22639bb38489dbca8acef57850cbb50231ab714d0e8e855ac52fae8b41233df4
 
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
