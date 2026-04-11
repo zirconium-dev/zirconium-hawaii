@@ -23,7 +23,7 @@ index 9989a2a9e..de592d5b8 100644
      -Dmalcontent=disabled
      -Dselinux_module=disabled
 diff --git a/elements/include/flatpak.yml b/elements/include/flatpak.yml
-index 227020845..242a37048 100644
+index 227020845..c99c224f8 100644
 --- a/elements/include/flatpak.yml
 +++ b/elements/include/flatpak.yml
 @@ -1,5 +1,5 @@
@@ -33,4 +33,4 @@ index 227020845..242a37048 100644
 -  track: 1.1[02468]*
 -  ref: 1.16.3-0-gb76f2533c72d65e20bfbc6ef0fb2f6ae9939013d
 +  track: 1.1[13579]*
-+  ref: 1.17.3-0-g13b26a94a3bd6fec309a16982a3a80d83776d7ac
++  ref: 1.17.6-0-g9b21874f1a175a9b7c79175a221fa043e202ca73
