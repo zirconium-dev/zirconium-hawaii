@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: gnome:gnome-build-meta.git
   track: gnome-50
-  ref: 50.0-0-g4a6b73680068becebfa88db80972168009e49aa8
+  ref: 50.0-5-g78f3be5864799f3b5325997e812626619279ba13
 
 config:
   overrides:
