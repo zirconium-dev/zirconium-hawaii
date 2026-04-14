@@ -4,9 +4,7 @@ sources:
 - kind: git_repo
   url: github:bootc-dev/bootc.git
   track: v*
-  ref: v1.15.0-0-gd8785c6c380db9afee054d39b54e643b26054b73
-- kind: patch_queue
-  path: patches/bootc
+  ref: v1.15.1-0-gbd93a1e5e9475642fe0d0084454e4111ee29fa14
 - kind: cargo2
   url: crates:crates
   ref:
@@ -83,10 +81,10 @@ sources:
     version: 0.21.7
     sha: 9d297deb1925b89f2ccc13d7635fa0714f12c87adce1c75356b39ca9b7178567
   - kind: git
-    commit: 33b4bccc89596fb7b95e3975388f13d0828b1960
+    commit: f4dd05a74ccb54084093c9167317a14356ca53e4
     repo: github:bootc-dev/bcvk
     query:
-      rev: 33b4bccc89596fb7b95e3975388f13d0828b1960
+      rev: f4dd05a74ccb54084093c9167317a14356ca53e4
     name: bcvk-qemu
     version: 0.1.0
   - kind: registry
@@ -1066,12 +1064,12 @@ sources:
     sha: e320a6c5ad31d271ad523dcf3ad13e2767ad8b1cb8f047f75a8aeaf8da139da2
   - kind: registry
     name: similar
-    version: 2.7.0
-    sha: bbbb5d9659141646ae647b42fe094daf6c6192d1620870b449d9557f748b2daa
+    version: 3.0.0
+    sha: 26d0b06eba54f0ca0770f970a3e89823e766ca638dd940f8469fa0fa50c75396
   - kind: registry
     name: similar-asserts
-    version: 1.7.0
-    sha: b5b441962c817e33508847a22bd82f03a30cff43642dc2fae8b050566121eb9a
+    version: 2.0.0
+    sha: 997e6ca38e97437973fc9f7f50a50d1274cacd874341a4960fea90067291038c
   - kind: registry
     name: slab
     version: 0.4.11
@@ -1548,7 +1546,6 @@ sources:
     name: zstd-sys
     version: 2.0.16+zstd.1.5.7
     sha: 91e19ebc2adc8f83e43039e79776e3fda8ca919132d68a1fed6a5faca2683748
-
 build-depends:
 - freedesktop-sdk.bst:components/go-md2man.bst
 - freedesktop-sdk.bst:components/openssl.bst

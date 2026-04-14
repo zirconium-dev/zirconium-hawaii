@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: github:jemalloc/jemalloc
   track: "*"
-  ref: 5.3.0-0-g54eaed1d8b56b1aa528be3bdd1877e59c56fa90c
+  ref: 5.3.1-0-g81034ce1f1373e37dc865038e1bc8eeecf559ce8
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
