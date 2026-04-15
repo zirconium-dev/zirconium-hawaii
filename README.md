@@ -2,7 +2,7 @@
 
 Zirconium, but based on [Freedesktop SDK](https://gitlab.com/freedesktop-sdk/freedesktop-sdk) instead of Fedora.
 
-<img width="2560" height="1440" alt="image" src="https://github.com/user-attachments/assets/52a6aa06-1efd-463a-a0d9-9c0c16e4e654" />
+<img width="2560" height="1440" alt="image" src="https://github.com/user-attachments/assets/9ca19c09-ec45-45dc-af26-92e59f744cbb" />
 
 ## What is Zirconium Hawaii
 
