@@ -4,6 +4,8 @@ sources:
 - kind: git_repo
   url: github:rockowitz/ddcutil.git
   track: "*"
+  exclude:
+  - "*-rc*"
   ref: v2.2.6-0-gb06af8def1e61624f7f2231d512d91b4c1ac91e3
 
 build-depends:
