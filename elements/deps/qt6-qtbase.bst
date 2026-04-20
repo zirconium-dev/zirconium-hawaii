@@ -33,6 +33,7 @@ build-depends:
 - freedesktop-sdk.bst:components/perl.bst
 - freedesktop-sdk.bst:components/sqlite.bst
 - freedesktop-sdk.bst:components/openssl.bst
+- freedesktop-sdk.bst:components/vulkan-headers.bst
 - freedesktop-sdk.bst:vm/mesa-default.bst
 - freedesktop-sdk.bst:components/mesa-headers.bst
 - freedesktop-sdk.bst:extensions/mesa/mesa.bst
@@ -70,5 +71,6 @@ variables:
     -DINSTALL_LIBDIR=%{lib}
     -DINSTALL_BINDIR=%{lib}/qt6/bin
     -DINSTALL_LIBEXECDIR=%{lib}/qt6
+    -DINSTALL_INCLUDEDIR=include/qt6
     -DINSTALL_ARCHDATADIR=%{lib}/qt6
     -DINSTALL_MKSPECSDIR=%{lib}/qt6/mkspecs

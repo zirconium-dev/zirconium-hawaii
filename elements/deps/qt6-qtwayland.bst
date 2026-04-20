@@ -17,6 +17,7 @@ build-depends:
 - freedesktop-sdk.bst:components/make.bst
 - freedesktop-sdk.bst:components/sed.bst
 - freedesktop-sdk.bst:components/wayland.bst
+- freedesktop-sdk.bst:components/vulkan-headers.bst
 - deps/qt6-qtbase.bst
 - deps/qt6-qtsvg.bst
 - deps/qt6-qtdeclarative.bst

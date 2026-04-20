@@ -16,6 +16,7 @@ build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst
 - freedesktop-sdk.bst:components/make.bst
 - freedesktop-sdk.bst:components/sed.bst
+- freedesktop-sdk.bst:components/vulkan-headers.bst
 - freedesktop-sdk.bst:components/zlib.bst
 - deps/qt6-qtbase.bst
 - deps/qt6-qtlanguageserver.bst
