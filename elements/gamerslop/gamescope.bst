@@ -34,7 +34,6 @@ sources:
 - kind: git_repo
   directory: src/reshade
   url: github:Joshua-Ashton/reshade
-  track: master
   ref: 696b14cd6006ae9ca174e6164450619ace043283
 
 - kind: local
