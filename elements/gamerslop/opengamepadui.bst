@@ -37,6 +37,6 @@ public:
 config:
   install-commands:
   - |
-    make install PREFIX=%{install-root}%{prefix}
+    make install PREFIX=%{install-root}%{prefix} INSTALL_PREFIX=%{prefix}
   - |
     %{install-extra}
