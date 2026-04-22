@@ -1,8 +1,6 @@
 kind: stack
 
 depends:
-  - stacks/zirconium.bst
-
   - config/gamerslop.bst
   - gamerslop/steam.bst
   - gamerslop/steamos-manager.bst
