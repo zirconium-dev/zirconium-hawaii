@@ -1,6 +1,7 @@
 kind: compose
 
 build-depends:
+  - oci/jackrabbit/manifest.bst
   - oci/jackrabbit/runtime.bst
   - freedesktop-sdk.bst:components/gcc.bst
 
