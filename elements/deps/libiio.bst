@@ -32,9 +32,7 @@ variables:
     -DCMAKE_INSTALL_PREFIX=%{prefix}
     -DCMAKE_INSTALL_SBINDIR=bin
     -DPYTHON_BINDINGS=ON
-    -DSYSTEMD_UNIT_INSTALL_DIR=/usr/lib/systemd/system
     -DUDEV_RULES_INSTALL_DIR=/usr/lib/udev/rules.d
     -DWITH_MAN=ON
-    -DWITH_SYSTEMD=ON
     -DWITH_SERIAL_BACKEND=ON
     -Wno-dev
