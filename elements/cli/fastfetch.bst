@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: github:fastfetch-cli/fastfetch.git
   track: "*"
-  ref: 2.62.0-0-g00cc19e28b75f02abcad708e618eefdbf15085cd
+  ref: 2.62.1-0-g4a61cdb1c9e4044ee959751e00bac1266dc6ebf9
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
