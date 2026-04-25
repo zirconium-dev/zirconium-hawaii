@@ -50,6 +50,7 @@ depends:
   - desktop/fonts/jetbrains-mono.bst
   - desktop/fonts/jetbrains-mono-nerd-font.bst
   - desktop/fonts/maple-mono.bst
+  - desktop/fonts/noto-fonts.bst
 
   - freedesktop-sdk.bst:components/vulkan-icd-loader.bst
   - freedesktop-sdk.bst:components/compat-vulkan-link.bst
