@@ -9,9 +9,9 @@ public:
   bst:
     integration-commands:
       - mkdir /var/tmp
-      # Required for bootc to create the image
-      - rm -rfv /boot
+      - rm -rfv /boot /run
       - mkdir /boot
+      - mkdir /run
       - mkdir /sysroot
       - mkdir /sysroot/ostree
       - ln -s sysroot/ostree ostree
@@ -32,6 +32,7 @@ public:
       - ln -s var/opt /opt
       - ln -s var/mnt /mnt
       - ln -s var/srv /srv
+      - ln -s ../../var/usrlocal usr/local
 
       - touch /etc/machine-id
 
