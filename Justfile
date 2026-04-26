@@ -41,8 +41,10 @@ build *ARGS:
     bst build oci/zirconium/image.bst
     bst artifact checkout --tar - oci/zirconium/image.bst | pkexec podman load
 
-checkout-container:
-    bst artifact checkout --tar - oci/zirconium/image.bst
+checkout-container $element="oci/zirconium/image.bst" $file="oci.tar":
+    #!/usr/bin/env bash
+    set -x
+    bst artifact checkout --tar ${file} ${element}
 
 build-containerfile $image_name=image_name:
     sudo podman build --squash-all -t "${image_name}:latest" .
