@@ -17,4 +17,7 @@ depends:
   - gamerslop/gamescope-session-opengamepadui.bst
   - gamerslop/gamescope-session-ogui-steam.bst
 
+  - gamerslop/scx-scheds.bst
+  - gamerslop/scx-tools.bst
+
   - sysext/jackrabbit/lib32-filter.bst
