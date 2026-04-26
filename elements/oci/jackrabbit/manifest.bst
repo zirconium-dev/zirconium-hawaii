@@ -1,7 +1,7 @@
 kind: collect_manifest
 
 build-depends:
-- oci/jackrabbit/runtime.bst
+- oci/jackrabbit/stack.bst
 
 config:
   path: /usr/manifest.json

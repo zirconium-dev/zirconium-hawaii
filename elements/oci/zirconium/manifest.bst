@@ -1,7 +1,7 @@
 kind: collect_manifest
 
 build-depends:
-- oci/zirconium/runtime.bst
+- oci/zirconium/stack.bst
 
 config:
   path: /usr/manifest.json
