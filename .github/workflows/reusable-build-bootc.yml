@@ -284,8 +284,10 @@ jobs:
           MAX_RETRIES: 3
         run: |
           set -x
-          for TAG in $TAGS; do
-            podman push --retry 3 --retry-delay 10s "${IMAGE_REGISTRY}/${IMAGE_NAME}:$TAG" || sleep $((5 * i))
+          for i in $(seq "${MAX_RETRIES}"); do
+            for TAG in $TAGS; do
+              podman push "${IMAGE_REGISTRY}/${IMAGE_NAME}:$TAG" || sleep $((5 * i))
+            done
           done
 
       - name: Install Cosign
