@@ -50,5 +50,4 @@ config:
       ln -sf ../usr/lib/system-release %{install-root}%{sysconfdir}/system-release
 
     - |
-      install -Dm0644 issue -t %{install-root}%{indep-libdir}
-      ln -sf ../usr/lib/issue %{install-root}%{sysconfdir}/issue
+      install -Dm0644 issue -t %{install-root}%{sysconfdir}
