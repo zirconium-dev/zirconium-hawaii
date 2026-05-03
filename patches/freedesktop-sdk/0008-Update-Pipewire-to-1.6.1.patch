@@ -1,7 +1,7 @@
-From 82031b1fb02126cc722931573979111027caa830 Mon Sep 17 00:00:00 2001
+From 1dbfa6bfa7311b4fead4e520e788b816b920b19c Mon Sep 17 00:00:00 2001
 From: Valentin David <me@valentindavid.com>
 Date: Fri, 17 Apr 2026 10:46:15 +0100
-Subject: [PATCH 08/14] Update Pipewire to 1.6.1
+Subject: [PATCH 8/9] Update Pipewire to 1.6.1
 
 ---
  elements/components/pipewire-base.bst | 2 +-
