@@ -1,0 +1,15 @@
+diff --git a/elements/gnomeos-deps/noto-cjk.bst b/elements/gnomeos-deps/noto-cjk.bst
+index 5ca130efe..b4214b488 100644
+--- a/elements/gnomeos-deps/noto-cjk.bst
++++ b/elements/gnomeos-deps/noto-cjk.bst
+@@ -30,8 +30,8 @@ config:
+     ./generate-config.sh >65-noto-cjk.conf
+ 
+   install-commands:
+-  - install -Dm644 -t '%{install-root}%{datadir}/fonts/noto' sans/NotoSansCJK-{Bold,Regular}.ttc
+-  - install -Dm644 -t '%{install-root}%{datadir}/fonts/noto' serif/OTC/NotoSerifCJK-{Bold,Regular}.ttc
++  - install -Dm644 -t '%{install-root}%{datadir}/fonts/noto' sans/NotoSansCJK-*.ttc
++  - install -Dm644 -t '%{install-root}%{datadir}/fonts/noto' serif/OTC/NotoSerifCJK-*.ttc
+   - |
+     confdir="$(pkg-config --variable=confdir fontconfig)"
+     install -Dm644 -t "%{install-root}${confdir}/conf.available" 65-noto-cjk.conf
