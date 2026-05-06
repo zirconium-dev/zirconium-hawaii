@@ -60,7 +60,6 @@ depends:
 - freedesktop-sdk.bst:extensions/mesa/mesa.bst
 
 variables:
-  strip-binaries: ""
   cmake-local: >-
     -DCMAKE_BUILD_TYPE=Release
     -DFEATURE_journald=ON
@@ -74,3 +73,4 @@ variables:
     -DINSTALL_INCLUDEDIR=include/qt6
     -DINSTALL_ARCHDATADIR=%{lib}/qt6
     -DINSTALL_MKSPECSDIR=%{lib}/qt6/mkspecs
+    -DQT_CREATE_VERSIONED_HARD_LINK=OFF

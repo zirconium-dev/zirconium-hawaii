@@ -34,7 +34,6 @@ depends:
 - deps/qt6-qtbase.bst
 
 variables:
-  strip-binaries: ""
   cmake-local: >-
     -DQT_INSTALL_XDG_DESKTOP_ENTRIES=ON
     -DQLITEHTML_USE_SYSTEM_LITEHTML=ON

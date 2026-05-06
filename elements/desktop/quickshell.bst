@@ -30,7 +30,6 @@ depends:
 - deps/qt6-qtwayland.bst
 
 variables:
-  strip-binaries: ""
   cmake-local: >-
     -DCMAKE_BUILD_TYPE=Release
     -DDISTRIBUTOR='Zirconium'
