@@ -71,6 +71,8 @@ config:
     git_tag="$(git describe --tag)"
     extra_version="-${git_tag#*$"-"}"
     sed -i "s/^EXTRAVERSION.*/EXTRAVERSION = ${extra_version}/" Makefile
+    # Remove the .git directory to get rid of the ugly commit hash at the end of the kernel version
+    rm -rf .git
 
   - |
     cp ogc-kernel-packages/arch/config .config
