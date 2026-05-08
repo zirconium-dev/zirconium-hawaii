@@ -3,11 +3,12 @@ kind: manual
 sources:
 - kind: git_repo
   url: github:OpenGamingCollective/xonedo.git
-  track: v*
-  ref: v0.5.7-ogc1-0-g1a734dedec6c0305a7ee55dda40e1b257e2dfe3b
+  track: master
+  ref: 982cbcb019ae4d2bee5ae69385223409ee555c88
 
 build-depends:
 - freedesktop-sdk.bst:components/git.bst
+- freedesktop-sdk.bst:components/sed.bst
 - freedesktop-sdk.bst:components/stripper.bst
 
 depends:
@@ -15,11 +16,23 @@ depends:
 
 config:
   install-commands:
-    - |
-      version=$(git describe --tags)
-      version=${version##v}
+  - |
+    commitdate=$(git log -1 --format=%cd --date=format:%Y%m%d)
+    commithash=$(git rev-parse --short HEAD)
 
-      mkdir -p "%{install-root}%{prefix}/src/xonedo-${version}"
-      cp -r auth bus driver transport Kbuild dkms.conf "%{install-root}%{prefix}/src/xonedo-${version}/"
-    - |
-      %{install-extra}
+    if git describe --tag &>/dev/null; then
+      version=$(git describe --tag --abbrev=0)
+      version=${version##v}
+    else
+      version="git.${commitdate}.${commithash}"
+    fi
+      
+    sed -i \
+      -e "s|#VERSION#|${version}|g" \
+      -e 's|kernel/drivers/input/joystick|extra|g' \
+      dkms.conf
+
+    mkdir -p "%{install-root}%{prefix}/src/xonedo-${version}"
+    cp -r auth bus driver transport Kbuild dkms.conf "%{install-root}%{prefix}/src/xonedo-${version}/"
+  - |
+    %{install-extra}
