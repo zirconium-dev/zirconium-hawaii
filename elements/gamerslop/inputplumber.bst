@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: github:ShadowBlip/InputPlumber.git
   track: v*
-  ref: v0.76.1-0-g34ac6030311c9b7abeeb16efa0aaac2961ae9e7c
+  ref: v0.77.0-0-ga73eed60a012f0899a9b11dfd7b8036817a4b750
 - kind: cargo2
   url: crates:crates
   git-mirrors:

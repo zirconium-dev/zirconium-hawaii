@@ -8,7 +8,7 @@ sources:
   exclude:
   - '*rc*'
   - '*beta*'
-  ref: go1.26.2-0-g9c8bf0e72a6fb3b415b591b124b59fbb7cf92252
+  ref: go1.26.3-0-g2dc996f71b0ebafb77e64433e58333e049488a3c
 
 build-depends:
 - freedesktop-sdk.bst:bootstrap/go.bst
