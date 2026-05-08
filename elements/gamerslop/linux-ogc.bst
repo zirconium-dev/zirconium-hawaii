@@ -5,13 +5,13 @@ description: Linux kernel with patches from OpenGamingCollective applied (gamers
 sources:
 - kind: git_repo
   url: github:OpenGamingCollective/linux.git
-  track: "v*-ogc1"
-  ref: v6.19.14-ogc1-0-ga550de110771e6b682ef5fcbc610d718cb1e2327
+  track: "v*-ogc*"
+  ref: v6.19.14-ogc2-0-gd6719755b0f09e091f0c5575cf67c6dcbb75ba9c
 - kind: git_repo
   directory: ogc-kernel-packages
   url: github:OpenGamingCollective/kernel-packages.git
-  track: "v*-ogc1"
-  ref: v6.19.14-ogc1-0-g5e2fd3d613c9b6095f4d9c2dbed99cde371fe428
+  track: "v*-ogc*"
+  ref: v6.19.14-ogc2-0-g817e6ddfb0377756e66260bdf968b46484971d27
 - kind: local
   path: files/linux/config-utils.sh
 - kind: local
@@ -23,6 +23,7 @@ build-depends:
 - freedesktop-sdk.bst:components/cpio.bst  # loongarch64 build enabled CONFIG_IKHEADERS by default
 - freedesktop-sdk.bst:components/flex.bst
 - freedesktop-sdk.bst:components/bc.bst
+- freedesktop-sdk.bst:components/git.bst
 - freedesktop-sdk.bst:components/gzip.bst
 - freedesktop-sdk.bst:components/pahole.bst
 - freedesktop-sdk.bst:components/python3.bst
@@ -40,7 +41,6 @@ variables:
   kernel_arch: '%{arch}'
   src-arch: '%{kernel_arch}'
   image-name: '$(make -s image_name)'
-  extra-version: '-ogc'
   optimize-debug: false
   (?):
   - arch == "x86_64":
@@ -67,8 +67,10 @@ environment-nocache:
 config:
   configure-commands:
   - |
-    # Add '-ogc' to the end of the kernel version
-    sed -i 's/^EXTRAVERSION.*/EXTRAVERSION = %{extra-version}/' Makefile
+    # Add the ogc version to the end of the kernel version
+    git_tag="$(git describe --tag)"
+    extra_version="-${git_tag#*$"-"}"
+    sed -i "s/^EXTRAVERSION.*/EXTRAVERSION = ${extra_version}/" Makefile
 
   - |
     cp ogc-kernel-packages/arch/config .config
