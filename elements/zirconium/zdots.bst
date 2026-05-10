@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: github:zirconium-dev/zdots.git
   track: main
-  ref: 967377443c64f03963f3016831c0232db5f9fc4a
+  ref: 183afd39c87c31a1ddc4959220966d30ebf9d95d
 
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst

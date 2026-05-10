@@ -6,7 +6,7 @@ sources:
   track: "*"
   exclude:
   - "*-rc*"
-  ref: v2.2.6-0-gb06af8def1e61624f7f2231d512d91b4c1ac91e3
+  ref: v2.2.7-0-g4edf054c6bfddcc62174bbc453e26c73cfbe7bbf
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
