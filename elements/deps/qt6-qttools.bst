@@ -9,7 +9,7 @@ sources:
   - "*-rc*"
   - "*-alpha*"
   - "*-lts*"
-  ref: v6.11.0-0-g541b0c2127aa3496eb9870389c9a278e157e9b07
+  ref: v6.11.1-0-g947c5f152f4abc06f9e135b411c06a6fbe608aed
 - kind: git_repo
   directory: src/assistant/qlitehtml
   url: qt_playground:qlitehtml.git
