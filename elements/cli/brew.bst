@@ -4,7 +4,7 @@ sources:
 - kind: docker
   url: ghcr:ublue-os/brew
   track: latest
-  ref: bc0ef8a76e0ec2bbccd193f14b14cfa277769fdc702c471a75735ef2d9d30126
+  ref: 92da1c16aa25ea2695dcc3f8bf57ddd37671ed58c35b25298e3e269d79a32151
 
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
