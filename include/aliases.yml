@@ -57,6 +57,7 @@ aliases:
   kojipkgs-fedora: https://kojipkgs.fedoraproject.org/
   xorg-archive: https://www.x.org/archive/
   steampowered: https://repo.steampowered.com/
+  winupdate-catalog: https://catalog.s.download.windowsupdate.com/
 
   # git aliases go here
   codeberg: https://codeberg.org/

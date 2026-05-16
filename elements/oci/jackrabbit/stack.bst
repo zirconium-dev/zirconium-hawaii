@@ -5,6 +5,7 @@ depends:
   - gamerslop/linux-ogc.bst
   - gamerslop/initramfs.bst
   - gamerslop/xonedo-dkms.bst
+  - gamerslop/xonedo-firmware.bst
 
 public:
   bst:
