@@ -31,7 +31,8 @@ jobs:
       id-token: write
     with:
       image-name: "zirconium-hawaii"
-      element: "oci/zirconium/image.bst"
+      element: "oci/zirconium/stack.bst"
+      image-element: "oci/zirconium/image.bst"
       publish: ${{ github.event_name != 'pull_request' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch) }}
 
   # Run this build AFTER build-hawaii. build-hawaii will cache all of the base packages.
@@ -46,5 +47,6 @@ jobs:
       id-token: write
     with:
       image-name: "zirconium-hawaii-jackrabbit"
-      element: "oci/jackrabbit/image.bst"
+      element: "oci/jackrabbit/stack.bst"
+      image-element: "oci/jackrabbit/image.bst"
       publish: ${{ github.event_name != 'pull_request' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch) }}
