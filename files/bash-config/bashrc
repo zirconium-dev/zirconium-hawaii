@@ -17,3 +17,5 @@ if ! shopt -q login_shell ; then
   unset i
 fi
 export PATH="${HOME}/.local/bin:${PATH}"
+
+source /usr/share/zirconium/shell/pure.bash
