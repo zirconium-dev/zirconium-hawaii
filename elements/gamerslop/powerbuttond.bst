@@ -5,6 +5,8 @@ sources:
   url: steamos-gitlab:holo/powerbuttond.git
   track: v*
   ref: v4.2-0-g9392e68883fdb0c40bc01ab39ae75c83a541e413
+- kind: local
+  path: files/powerbuttond
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-make.bst
