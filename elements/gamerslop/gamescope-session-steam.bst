@@ -9,7 +9,7 @@ sources:
 - kind: git_repo
   url: github:OpenGamingCollective/gamescope-session-steam.git
   track: main
-  ref: 72df08d154fefb6354f6bb1a8d8cf587e86ee227
+  ref: 1019f9a2a98b7aaa180c3739901244854b126787
 
 variables:
   strip-binaries: ""
