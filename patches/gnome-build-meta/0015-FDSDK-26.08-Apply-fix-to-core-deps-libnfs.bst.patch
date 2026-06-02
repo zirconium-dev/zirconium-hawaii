@@ -1,4 +1,4 @@
-From 082f6ebd71204b9e2a79bec36a2ae05ccdaa9a31 Mon Sep 17 00:00:00 2001
+From 8556c5655410e1a7508a8202dfb8b91f97de3b2e Mon Sep 17 00:00:00 2001
 From: Hec <hec@heccraft.com>
 Date: Mon, 1 Jun 2026 13:54:02 -0400
 Subject: [PATCH 15/16] FDSDK 26.08: Apply fix to core-deps/libnfs.bst

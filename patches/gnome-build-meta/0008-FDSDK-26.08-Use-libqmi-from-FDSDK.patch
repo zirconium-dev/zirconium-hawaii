@@ -1,4 +1,4 @@
-From b50e4625e3f0957b30666481ae38de97cd6ddc17 Mon Sep 17 00:00:00 2001
+From 1e992ad1f099dc657fbe97dfae3bcd32e80a908f Mon Sep 17 00:00:00 2001
 From: Sam Thursfield <sam.thursfield@codethink.co.uk>
 Date: Tue, 5 May 2026 12:55:11 +0100
 Subject: [PATCH 08/16] FDSDK 26.08: Use libqmi from FDSDK

@@ -1,4 +1,4 @@
-From d6e973543d6cc1a219fcf327e8075de16349ece7 Mon Sep 17 00:00:00 2001
+From 2fb2e7f5786b4cc151be49ccb04f8bad9df16157 Mon Sep 17 00:00:00 2001
 From: Hec <hec@heccraft.com>
 Date: Mon, 1 Jun 2026 14:24:20 -0400
 Subject: [PATCH 16/16] FDSDK 26.08: use components/python3-pyelftools.bst

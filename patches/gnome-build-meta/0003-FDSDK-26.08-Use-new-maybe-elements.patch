@@ -1,4 +1,4 @@
-From 32375264c7b5301e9a23d473de14f9fd944eea71 Mon Sep 17 00:00:00 2001
+From 81b9cffa0cd2b92d5815ed7cfe4bb4a57353a1d5 Mon Sep 17 00:00:00 2001
 From: Sam Thursfield <sam.thursfield@codethink.co.uk>
 Date: Wed, 20 May 2026 12:44:32 +0100
 Subject: [PATCH 03/16] FDSDK 26.08: Use new `-maybe` elements

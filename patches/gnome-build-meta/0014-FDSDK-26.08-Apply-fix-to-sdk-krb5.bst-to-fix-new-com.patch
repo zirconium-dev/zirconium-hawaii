@@ -1,4 +1,4 @@
-From 07aa6790065b7c1ff8c84223479e078d4b0adfef Mon Sep 17 00:00:00 2001
+From 0cf4dbcf33d7d6ab11f1bb6009c9ec3c65047b0d Mon Sep 17 00:00:00 2001
 From: Sam Thursfield <sam.thursfield@codethink.co.uk>
 Date: Mon, 1 Jun 2026 17:27:32 +0100
 Subject: [PATCH 14/16] FDSDK 26.08: Apply fix to sdk/krb5.bst to fix new

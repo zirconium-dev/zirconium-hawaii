@@ -1,4 +1,4 @@
-From 38a65d330cf2a03b0b54b7b23578e9ee70a9cacf Mon Sep 17 00:00:00 2001
+From c615bf7d16c9762825b2f15a0bfbb5ab0692badd Mon Sep 17 00:00:00 2001
 From: Sam Thursfield <sam.thursfield@codethink.co.uk>
 Date: Tue, 5 May 2026 12:53:16 +0100
 Subject: [PATCH 07/16] FDSDK 26.08: Use ModemManager from FDSDK
@@ -6,54 +6,16 @@ Subject: [PATCH 07/16] FDSDK 26.08: Use ModemManager from FDSDK
 ModemManager was not part of FDSDK 25.08, but it is available in the
 upcoming 26.08 release.
 ---
- elements/boards/common/chatty.bst             |  2 +-
- .../boards/common/mobile-dependencies.bst     |  3 +-
- elements/core-deps/ModemManager.bst           | 28 -------------------
- elements/core-deps/NetworkManager.bst         |  2 +-
- elements/core-deps/fwupd.bst                  |  2 +-
- elements/core/calls.bst                       |  2 +-
- elements/core/gnome-control-center.bst        |  2 +-
- elements/core/gnome-settings-daemon.bst       |  2 +-
- elements/gnomeos-deps/81voltd.bst             |  2 +-
- 9 files changed, 9 insertions(+), 36 deletions(-)
+ elements/core-deps/ModemManager.bst     | 28 -------------------------
+ elements/core-deps/NetworkManager.bst   |  2 +-
+ elements/core-deps/fwupd.bst            |  2 +-
+ elements/core/calls.bst                 |  2 +-
+ elements/core/gnome-control-center.bst  |  2 +-
+ elements/core/gnome-settings-daemon.bst |  2 +-
+ elements/gnomeos-deps/81voltd.bst       |  2 +-
+ 7 files changed, 6 insertions(+), 34 deletions(-)
  delete mode 100644 elements/core-deps/ModemManager.bst
 
-diff --git a/elements/boards/common/chatty.bst b/elements/boards/common/chatty.bst
-index 5575eeac8..6b76ffe4a 100644
---- a/elements/boards/common/chatty.bst
-+++ b/elements/boards/common/chatty.bst
-@@ -12,11 +12,11 @@ sources:
-   ref: v0.0.3-0-gd3e0ae0c7f80b1b88fa6c704a89d4c363d3a4ec7
- 
- build-depends:
--- core-deps/ModemManager.bst
- - freedesktop-sdk.bst:components/appstream.bst
- - freedesktop-sdk.bst:components/cmake.bst
- - freedesktop-sdk.bst:components/desktop-file-utils.bst
- - freedesktop-sdk.bst:components/itstool.bst
-+- freedesktop-sdk.bst:components/modemmanager.bst
- - freedesktop-sdk.bst:public-stacks/buildsystem-meson.bst
- 
- depends:
-diff --git a/elements/boards/common/mobile-dependencies.bst b/elements/boards/common/mobile-dependencies.bst
-index 8d5fd8858..dd72b115b 100644
---- a/elements/boards/common/mobile-dependencies.bst
-+++ b/elements/boards/common/mobile-dependencies.bst
-@@ -2,12 +2,13 @@ kind: stack
- description: generic common zone for dependencies related to the PinePhone Pro & PinePhone.
- 
- depends:
-+- freedesktop-sdk.bst:components/modemmanager.bst
-+
- - gnomeos-deps/deps.bst
- - gnomeos/os-release.bst
- 
- - core/meta-gnome-core-mobile.bst
- 
--- core-deps/ModemManager.bst
- - core-deps/feedbackd.bst
- 
- - boards/common/alsa-utils.bst
 diff --git a/elements/core-deps/ModemManager.bst b/elements/core-deps/ModemManager.bst
 deleted file mode 100644
 index c1ff6e88d..000000000

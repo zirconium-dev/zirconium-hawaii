@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: gitlab:freedesktop-sdk/freedesktop-sdk.git
   track: master
-  ref: freedesktop-sdk-25.08rc.3-1973-gec5eeaf241052d285f3fd029ae9fd81278f84cd6
+  ref: freedesktop-sdk-25.08rc.3-1977-ga7c5424629e278f3707df9763ed1e9d739aeb9e1
 - kind: patch_queue
   path: patches/freedesktop-sdk
 
