@@ -1,7 +1,7 @@
-From 78208d859ff028f730382901d472cf35a6fb5856 Mon Sep 17 00:00:00 2001
+From 34b2e454a4dce9a220c21fe05570f9c832d95bdf Mon Sep 17 00:00:00 2001
 From: Valentin David <me@valentindavid.com>
 Date: Fri, 17 Apr 2026 10:48:50 +0100
-Subject: [PATCH 3/9] Add cross-compilers/binutils-x86-64.bst
+Subject: [PATCH 3/6] Add cross-compilers/binutils-x86-64.bst
 
 ---
  elements/cross-compilers/binutils-common.yml |  4 +++-

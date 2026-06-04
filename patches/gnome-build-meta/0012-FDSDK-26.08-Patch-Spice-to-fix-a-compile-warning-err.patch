@@ -1,4 +1,4 @@
-From ebd04257809db98021051543f0ebf1247241d5f9 Mon Sep 17 00:00:00 2001
+From 5e5c37f2893ea0694581347e37cd75fa433c3282 Mon Sep 17 00:00:00 2001
 From: Sam Thursfield <sam.thursfield@codethink.co.uk>
 Date: Tue, 26 May 2026 15:22:49 +0100
 Subject: [PATCH 12/16] FDSDK 26.08: Patch Spice to fix a compile warning/error

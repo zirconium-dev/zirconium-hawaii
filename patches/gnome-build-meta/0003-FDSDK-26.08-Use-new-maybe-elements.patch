@@ -1,4 +1,4 @@
-From 81b9cffa0cd2b92d5815ed7cfe4bb4a57353a1d5 Mon Sep 17 00:00:00 2001
+From ad08d16885a3e27230b672fccadfcf3b2a7ac18d Mon Sep 17 00:00:00 2001
 From: Sam Thursfield <sam.thursfield@codethink.co.uk>
 Date: Wed, 20 May 2026 12:44:32 +0100
 Subject: [PATCH 03/16] FDSDK 26.08: Use new `-maybe` elements
@@ -34,7 +34,7 @@ index e52c3a784..b65d69048 100644
  - freedesktop-sdk.bst:components/python3-pefile.bst
  
 diff --git a/elements/core-deps/fwupd.bst b/elements/core-deps/fwupd.bst
-index 5759a4d38..417ac34ac 100644
+index 60b291ebb..816c6e4e0 100644
 --- a/elements/core-deps/fwupd.bst
 +++ b/elements/core-deps/fwupd.bst
 @@ -16,7 +16,7 @@ build-depends:

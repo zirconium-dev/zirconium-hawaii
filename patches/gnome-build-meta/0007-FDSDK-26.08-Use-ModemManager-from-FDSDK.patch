@@ -1,4 +1,4 @@
-From c615bf7d16c9762825b2f15a0bfbb5ab0692badd Mon Sep 17 00:00:00 2001
+From 9978dcdc0f50a645e25978c243b20ea7ae7accd6 Mon Sep 17 00:00:00 2001
 From: Sam Thursfield <sam.thursfield@codethink.co.uk>
 Date: Tue, 5 May 2026 12:53:16 +0100
 Subject: [PATCH 07/16] FDSDK 26.08: Use ModemManager from FDSDK
@@ -71,7 +71,7 @@ index 914922d40..f5f2a4837 100644
  - freedesktop-sdk.bst:components/polkit.bst
  - freedesktop-sdk.bst:components/systemd-libs.bst
 diff --git a/elements/core-deps/fwupd.bst b/elements/core-deps/fwupd.bst
-index 417ac34ac..63abd24e6 100644
+index 816c6e4e0..8c5629b90 100644
 --- a/elements/core-deps/fwupd.bst
 +++ b/elements/core-deps/fwupd.bst
 @@ -20,7 +20,6 @@ build-depends:
@@ -79,19 +79,19 @@ index 417ac34ac..63abd24e6 100644
  
  depends:
 -- core-deps/ModemManager.bst
- - core-deps/libjcat.bst
  - core-deps/passim.bst
  - sdk/gcab.bst
+ - sdk/glib.bst
 @@ -39,6 +38,7 @@ depends:
- - freedesktop-sdk.bst:components/libmnl.bst
  - freedesktop-sdk.bst:components/libsmbios-maybe.bst
+ - freedesktop-sdk.bst:components/libusb.bst
  - freedesktop-sdk.bst:components/libxmlb.bst
 +- freedesktop-sdk.bst:components/modemmanager.bst
  - freedesktop-sdk.bst:components/polkit.bst
  - freedesktop-sdk.bst:components/pycairo.bst
  - freedesktop-sdk.bst:components/python3-pil.bst
 diff --git a/elements/core/calls.bst b/elements/core/calls.bst
-index 08bca26a4..4080f2da4 100644
+index 3284ae492..a7e26fb37 100644
 --- a/elements/core/calls.bst
 +++ b/elements/core/calls.bst
 @@ -18,7 +18,6 @@ build-depends:
@@ -109,10 +109,10 @@ index 08bca26a4..4080f2da4 100644
 +- freedesktop-sdk.bst:components/modemmanager.bst
  - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 diff --git a/elements/core/gnome-control-center.bst b/elements/core/gnome-control-center.bst
-index a9a3d28e2..10370dfd6 100644
+index 9e406fe09..a040720b1 100644
 --- a/elements/core/gnome-control-center.bst
 +++ b/elements/core/gnome-control-center.bst
-@@ -30,7 +30,6 @@ runtime-depends:
+@@ -29,7 +29,6 @@ runtime-depends:
  - core-deps/power-profiles-daemon.bst
  
  depends:
@@ -120,7 +120,7 @@ index a9a3d28e2..10370dfd6 100644
  - core-deps/NetworkManager.bst
  - core-deps/accountsservice.bst
  - core-deps/colord-gtk.bst
-@@ -59,6 +58,7 @@ depends:
+@@ -58,6 +57,7 @@ depends:
  - sdk/libadwaita.bst
  - freedesktop-sdk.bst:components/gstreamer.bst
  - freedesktop-sdk.bst:components/libwacom.bst
