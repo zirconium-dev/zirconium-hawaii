@@ -1,4 +1,4 @@
-kind: make
+kind: manual
 
 sources:
 - kind: git_repo
@@ -1638,13 +1638,13 @@ build-depends:
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 
-variables:
-  make-args: >-
-    install PREFIX="%{prefix}" DESTDIR="%{install-root}" MULTICALL=y PROFILE=release LN="ln -sf"
+environment:
+  CARGOFLAGS: "--frozen --offline"
 
 config:
   install-commands:
     - |
+      make install PREFIX="%{prefix}" DESTDIR="%{install-root}" MULTICALL=y PROFILE=release LN="ln -sf"
 
 # FIXME: replace coreutils instead of overlaying it
 # requires this fdSDK MR[1] to be merged to remove this entire overlap-whitelist section
