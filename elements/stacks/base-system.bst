@@ -73,3 +73,5 @@ depends:
   - config/systemd/zirconium.bst
   - config/polkit/networkmanager-wheel-nopasswd.bst
   - cli/lsb-release.bst
+
+  - core/uutils-coreutils.bst
