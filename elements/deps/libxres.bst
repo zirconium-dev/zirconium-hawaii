@@ -2,7 +2,7 @@ kind: make
 
 sources:
 - kind: tar
-  url: xorg-archive:individual/lib/libXres-1.2.3.tar.xz
+  url: xorg-freedesktop:releases/individual/lib/libXres-1.2.3.tar.xz
   ref: d2de8f5401d6c86a8992791654547eb8def585dfdc0c08cc16e24ef6aeeb69dc
 
 build-depends:
