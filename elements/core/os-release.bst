@@ -14,7 +14,7 @@ variables:
 
 environment:
   NAME: "Zirconium"
-  CODENAME: "placeholder"
+  CODENAME: "Clockwork"
   HOME_URL: "https://zirconium.gay"
   DOCUMENTATION_URL: "https://github.com/zirconium-dev/zirconium-hawaii"
   SUPPORT_URL: "https://github.com/zirconium-dev/zirconium-hawaii/issues"
