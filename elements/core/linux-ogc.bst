@@ -1,23 +1,24 @@
 # Based off of freedesktop-sdk.bst:components/linux.bst
 kind: make
-description: Linux kernel with patches from OpenGamingCollective applied (gamerslop kernel)
+description: Linux kernel with patches from OpenGamingCollective applied
 
 sources:
 - kind: git_repo
+  ref-format: sha1
   url: github:OpenGamingCollective/linux.git
-  track: "v*-ogc*"
-  ref: v7.0.9-ogc3-0-gdcad54d2480699ac5515a7372a106224d9106acc
+  track: "ogc-*"
+  ref: 0a2171bd25f92af7e27d5afaf3405e3e48f3a1e8
 - kind: git_repo
   directory: ogc-kernel-packages
   url: github:OpenGamingCollective/kernel-packages.git
-  track: "v*-ogc*"
-  ref: v7.0.9-ogc3-0-ga3d9fc18d4ca707d80148301a12073ebca8c2858
+  track: "main"
+  ref: v7.0.9-ogc3-2-g50babbfae2926ce185e52b2874cf784b8a385138
 - kind: git_repo
   directory: archlinux-kernel-config
   url: archlinux_gitlab:archlinux/packaging/packages/linux
   # manually update this track to the version of the linux kernel that ogc is using
-  track: 7.0.9.arch1
-  ref: 7.0.9.arch1-1-0-g9dc647453e526bda4a145e7f33217ce9ad92e0b8
+  track: 7.0.11.arch1-1
+  ref: 7.0.11.arch1-1-0-g6c10cc48bfd03e04710c14ffffacc24c56217c62
 - kind: local
   path: files/linux/config-utils.sh
 - kind: local
@@ -74,11 +75,16 @@ config:
   configure-commands:
   - |
     # Add the ogc version to the end of the kernel version
-    git_tag="$(git describe --tag)"
+    # If we're on a tagged release, remove .git and set the extra version to the tag.
+    # If you keep .git around, your kernel version will include the git hash at the end, which is ugly.
+    if git describe --tag 2>/dev/null | grep -e '-ogc[0-9]' &>/dev/null; then
+      git_tag="$(git describe --tag)"
+      rm -rf .git
+    else
+      git_tag="ogc"
+    fi
     extra_version="-${git_tag#*$"-"}"
-    sed -i "s/^EXTRAVERSION.*/EXTRAVERSION = ${extra_version}/" Makefile
-    # Remove the .git directory to get rid of the ugly commit hash at the end of the kernel version
-    rm -rf .git
+    echo "$extra_version" > localversion.10-ogc
 
   - |
     # put the variables that we need to unset into a file usable by fdSDK's config-utils.sh
