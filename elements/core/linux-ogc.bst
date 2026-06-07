@@ -16,7 +16,7 @@ sources:
   directory: archlinux-kernel-config
   url: archlinux_gitlab:archlinux/packaging/packages/linux
   # manually update this track to the version of the linux kernel that ogc is using
-  track: 7.0.9*
+  track: 7.0.9.arch1
   ref: 7.0.9.arch1-1-0-g9dc647453e526bda4a145e7f33217ce9ad92e0b8
 - kind: local
   path: files/linux/config-utils.sh
