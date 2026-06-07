@@ -1,7 +1,7 @@
-From b184a7294c5713dde04fd37aff9e150732c5335f Mon Sep 17 00:00:00 2001
+From 422039531d839591fd65f7596a17bc8ca0c272fe Mon Sep 17 00:00:00 2001
 From: Sam Thursfield <sam.thursfield@codethink.co.uk>
 Date: Tue, 5 May 2026 12:55:56 +0100
-Subject: [PATCH 09/16] FDSDK 26.08: Use hidapi from FDSDK
+Subject: [PATCH 10/19] FDSDK 26.08: Use hidapi from FDSDK
 
 This wasn't available in FDSDK 25.08, but it will be around in the
 upcoming 26.08 release.

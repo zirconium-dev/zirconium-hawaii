@@ -1,0 +1,94 @@
+From 6f5a4bd2b356087ffb035acfef86101004b5886a Mon Sep 17 00:00:00 2001
+From: Sam Thursfield <sam.thursfield@codethink.co.uk>
+Date: Fri, 5 Jun 2026 12:37:09 +0100
+Subject: [PATCH 17/19] FDSDK 26.08: core-deps/sane-backends: Fix new GCC 16 /
+ C23 errors
+
+These are patches from the 'main' branch which should be in the next
+release.
+
+See: https://gitlab.com/sane-project/backends/-/merge_requests/894/
+---
+ elements/core-deps/sane-backends.bst          |  2 ++
+ ...ix-build-failure-with-GCC-16-and-C23.patch | 26 +++++++++++++++++++
+ ...r-error-triggered-by-ISO-C23-changes.patch | 22 ++++++++++++++++
+ 3 files changed, 50 insertions(+)
+ create mode 100644 patches/sane-backends/0001-gphoto2.c-Fix-build-failure-with-GCC-16-and-C23.patch
+ create mode 100644 patches/sane-backends/0002-gphoto-Fix-for-error-triggered-by-ISO-C23-changes.patch
+
+diff --git a/elements/core-deps/sane-backends.bst b/elements/core-deps/sane-backends.bst
+index 9a26e3391..241752cd7 100644
+--- a/elements/core-deps/sane-backends.bst
++++ b/elements/core-deps/sane-backends.bst
+@@ -7,6 +7,8 @@ sources:
+   ref: 1.4.0-0-gc7e4b5e35e3d614d2b1181d760a717bfc395a203
+ - kind: local
+   path: files/sane-backends/sysusers.conf
++- kind: patch_queue
++  path: patches/sane-backends
+ 
+ build-depends:
+ - freedesktop-sdk.bst:components/python3.bst
+diff --git a/patches/sane-backends/0001-gphoto2.c-Fix-build-failure-with-GCC-16-and-C23.patch b/patches/sane-backends/0001-gphoto2.c-Fix-build-failure-with-GCC-16-and-C23.patch
+new file mode 100644
+index 000000000..6bd2431a7
+--- /dev/null
++++ b/patches/sane-backends/0001-gphoto2.c-Fix-build-failure-with-GCC-16-and-C23.patch
+@@ -0,0 +1,26 @@
++commit d04d17b456d9847021b6df6eb08a3419a75172cf
++Author: Zdenek Dohnal <zdohnal@redhat.com>
++Date:   Wed Jan 7 17:11:27 2026 +0100
++
++    gphoto2.c: Fix build failure with GCC 16 and C23
++    
++    The function `strchr()` in the standard C23 now returns const pointer if
++    const pointer is present as parameter and vice-versa, so if the returned
++    string is about to be modified, non-const parameter has to be used.
++    
++    GCC 16 started to enforce this rule, which made sane-backends to fail
++    during build when GCC 16 + C23 standard are used.
++
++diff --git a/backend/gphoto2.c b/backend/gphoto2.c
++index 758829aee..386cecb20 100644
++--- a/backend/gphoto2.c
+++++ b/backend/gphoto2.c
++@@ -586,7 +586,7 @@ get_info (void)
++ 	  folder_list[n] = strdup (val);
++ 	  if (strchr ((const char *) folder_list[n], ' '))
++ 	    {
++-	      *strchr ((const char *) folder_list[n], ' ') = '\0';
+++	      *strchr (folder_list[n], ' ') = '\0';
++ 	    }
++ 	}
++       if (n == 0)
+diff --git a/patches/sane-backends/0002-gphoto-Fix-for-error-triggered-by-ISO-C23-changes.patch b/patches/sane-backends/0002-gphoto-Fix-for-error-triggered-by-ISO-C23-changes.patch
+new file mode 100644
+index 000000000..c9e5e27ae
+--- /dev/null
++++ b/patches/sane-backends/0002-gphoto-Fix-for-error-triggered-by-ISO-C23-changes.patch
+@@ -0,0 +1,22 @@
++commit ebd4d82bd7a6b8c57870dbfb492e4c186cf584d8
++Author: Ralph Little <skelband@gmail.com>
++Date:   Mon Feb 23 11:52:19 2026 -0800
++
++    gphoto: Fix for error triggered by ISO C23 changes.
++    
++    ISO C23 makes strchr() const sensitive.
++    Argument cast is pointless and therefore removed.
++
++diff --git a/backend/gphoto2.c b/backend/gphoto2.c
++index 386cecb20..45a87c60b 100644
++--- a/backend/gphoto2.c
+++++ b/backend/gphoto2.c
++@@ -584,7 +584,7 @@ get_info (void)
++ 	{
++ 	  gp_list_get_name (dir_list, n, &val);
++ 	  folder_list[n] = strdup (val);
++-	  if (strchr ((const char *) folder_list[n], ' '))
+++	  if (strchr (folder_list[n], ' '))
++ 	    {
++ 	      *strchr (folder_list[n], ' ') = '\0';
++ 	    }
+-- 
+2.54.0
+

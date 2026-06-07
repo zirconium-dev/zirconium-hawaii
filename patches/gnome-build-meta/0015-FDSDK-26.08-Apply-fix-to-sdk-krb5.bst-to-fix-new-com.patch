@@ -1,23 +1,24 @@
-From 16058d790f1558bd890fb43d2c3bf0b5a406bd55 Mon Sep 17 00:00:00 2001
+From e379d4713f5ca463549abba4ce6cd6cb9f1888ed Mon Sep 17 00:00:00 2001
 From: Sam Thursfield <sam.thursfield@codethink.co.uk>
 Date: Mon, 1 Jun 2026 17:27:32 +0100
-Subject: [PATCH 14/16] FDSDK 26.08: Apply fix to sdk/krb5.bst to fix new
+Subject: [PATCH 15/19] FDSDK 26.08: Apply fix to sdk/krb5.bst to fix new
  compile warning
 
 ---
- elements/sdk/krb5.bst                         |   3 +
+ elements/sdk/krb5.bst                         |   4 +
  .../krb5/fix-strchr-conformance-to-c23.patch  | 176 ++++++++++++++++++
- 2 files changed, 179 insertions(+)
+ 2 files changed, 180 insertions(+)
  create mode 100644 patches/krb5/fix-strchr-conformance-to-c23.patch
 
 diff --git a/elements/sdk/krb5.bst b/elements/sdk/krb5.bst
-index 373c2aca7..d762c852b 100644
+index 373c2aca7..3410857dd 100644
 --- a/elements/sdk/krb5.bst
 +++ b/elements/sdk/krb5.bst
-@@ -4,6 +4,9 @@ sources:
+@@ -4,6 +4,10 @@ sources:
  - kind: tar
    url: kerberos:dist/krb5/1.22/krb5-1.22.2.tar.gz
    ref: 3243ffbc8ea4d4ac22ddc7dd2a1dc54c57874c40648b60ff97009763554eaf13
++# This fix is not yet released.
 +- kind: patch
 +  path: patches/krb5/fix-strchr-conformance-to-c23.patch
 +

@@ -1,0 +1,70 @@
+From 91469fe09531c4d16e44dece1ed9dde4b66510df Mon Sep 17 00:00:00 2001
+From: Sam Thursfield <sam.thursfield@codethink.co.uk>
+Date: Sat, 6 Jun 2026 10:30:28 +0100
+Subject: [PATCH 19/19] FDSDK 26.08: core-deps/nodejs.bst: Fix missing #include
+ inside V8
+
+This fixes a build failure seen on aarch64 with GCC 16. The cause is
+a mistake in the V8 JavaScript engine, previously masked because the
+<climits> header was included transiently in previous versions of GCC.
+
+The patch added here is taken from a PR against NodeJS:
+<https://github.com/nodejs/node/pull/63287>
+
+The NodeJS owners haven't merged the PR because they're waiting for a
+fix to land upstream in V8 instead.
+---
+ elements/core-deps/nodejs.bst              |  2 ++
+ patches/nodejs/fix-v8-build-failures.patch | 27 ++++++++++++++++++++++
+ 2 files changed, 29 insertions(+)
+ create mode 100644 patches/nodejs/fix-v8-build-failures.patch
+
+diff --git a/elements/core-deps/nodejs.bst b/elements/core-deps/nodejs.bst
+index a12741042..f963b9c98 100644
+--- a/elements/core-deps/nodejs.bst
++++ b/elements/core-deps/nodejs.bst
+@@ -5,6 +5,8 @@ sources:
+   url: github:nodejs/node.git
+   track: 'v*'
+   ref: v26.2.0-0-gcfd7920d5a2d84905c4292362d01d07870047e93
++- kind: patch
++  path: patches/nodejs/fix-v8-build-failures.patch
+ 
+ build-depends:
+ - freedesktop-sdk.bst:components/gyp.bst
+diff --git a/patches/nodejs/fix-v8-build-failures.patch b/patches/nodejs/fix-v8-build-failures.patch
+new file mode 100644
+index 000000000..fb7679176
+--- /dev/null
++++ b/patches/nodejs/fix-v8-build-failures.patch
+@@ -0,0 +1,27 @@
++From 305813b6039fe2ef5d5f4b246355078c2bb620da Mon Sep 17 00:00:00 2001
++From: tjuhasz <tjuhasz@redhat.com>
++Date: Wed, 13 May 2026 15:26:14 +0200
++Subject: [PATCH] deps: fix V8 build failures by adding climits include
++
++Add explicit #include <climits> to memcopy.h to fix build failures
++caused by recent GCC/Clang versions removing transient inclusions
++of the climits header.
++
++Fixes compilation errors when using newer toolchain versions.
++---
++ deps/v8/src/base/memcopy.h | 1 +
++ 1 file changed, 1 insertion(+)
++
++diff --git a/deps/v8/src/base/memcopy.h b/deps/v8/src/base/memcopy.h
++index b1d8a36b4cfe05..82e9a75c24a8a2 100644
++--- a/deps/v8/src/base/memcopy.h
+++++ b/deps/v8/src/base/memcopy.h
++@@ -5,6 +5,7 @@
++ #ifndef V8_BASE_MEMCOPY_H_
++ #define V8_BASE_MEMCOPY_H_
++ 
+++#include <climits>
++ #include <stdlib.h>
++ 
++ #include <atomic>
++
+-- 
+2.54.0
+

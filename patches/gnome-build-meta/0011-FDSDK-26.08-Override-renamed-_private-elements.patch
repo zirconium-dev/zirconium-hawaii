@@ -1,7 +1,7 @@
-From 0213067d3052e1f41bb3e58c61499323d013baba Mon Sep 17 00:00:00 2001
+From 2b2431e7e73ae8d7771c6fe2969e2b22bc835cbb Mon Sep 17 00:00:00 2001
 From: Sam Thursfield <sam.thursfield@codethink.co.uk>
 Date: Wed, 20 May 2026 12:44:03 +0100
-Subject: [PATCH 10/16] FDSDK 26.08: Override renamed `_private` elements
+Subject: [PATCH 11/19] FDSDK 26.08: Override renamed `_private` elements
 
 There is a common pattern in FDSDK used when a component
 requires multiple elements. This happens when a single repo is built in
@@ -28,11 +28,11 @@ https://gitlab.gnome.org/GNOME/gnome-build-meta/-/merge_requests/4647).
  8 files changed, 10 insertions(+), 10 deletions(-)
 
 diff --git a/elements/core-deps/systemd-base.bst b/elements/core-deps/systemd-base.bst
-index 861beaca4..b1a3b503f 100644
+index 6dff69d1a..5622b670f 100644
 --- a/elements/core-deps/systemd-base.bst
 +++ b/elements/core-deps/systemd-base.bst
 @@ -41,7 +41,7 @@ build-depends:
- - freedesktop-sdk.bst:components/pyelftools.bst
+ - freedesktop-sdk.bst:components/python3-pyelftools.bst
  - freedesktop-sdk.bst:components/libxslt.bst
  - freedesktop-sdk.bst:components/docbook-xsl.bst
 -- freedesktop-sdk.bst:components/cryptsetup-lvm2-stage1.bst
@@ -101,7 +101,7 @@ index 4a69a4f0b..4231dc14d 100644
  runtime-depends:
  - freedesktop-sdk.bst:components/flatpak.bst
 diff --git a/elements/freedesktop-sdk.bst b/elements/freedesktop-sdk.bst
-index 11e039edb..64d4de82d 100644
+index 7f02c1fc1..ed5a0cc75 100644
 --- a/elements/freedesktop-sdk.bst
 +++ b/elements/freedesktop-sdk.bst
 @@ -56,12 +56,12 @@ config:

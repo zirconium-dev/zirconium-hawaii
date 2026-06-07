@@ -1,7 +1,7 @@
-From ad08d16885a3e27230b672fccadfcf3b2a7ac18d Mon Sep 17 00:00:00 2001
+From 95bf0e648e82d54108150328a793f3e7ed149012 Mon Sep 17 00:00:00 2001
 From: Sam Thursfield <sam.thursfield@codethink.co.uk>
 Date: Wed, 20 May 2026 12:44:32 +0100
-Subject: [PATCH 03/16] FDSDK 26.08: Use new `-maybe` elements
+Subject: [PATCH 04/19] FDSDK 26.08: Use new `-maybe` elements
 
 FDSDK 26.08 introduces support for some new architectures where not all
 of the components can be built. The workaround for that is to add

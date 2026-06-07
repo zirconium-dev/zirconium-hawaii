@@ -1,15 +1,17 @@
-From 7825d2313adf517ff7580fd23e9a936524c7d52a Mon Sep 17 00:00:00 2001
-From: Hec <hec@heccraft.com>
-Date: Mon, 1 Jun 2026 14:24:20 -0400
-Subject: [PATCH 16/16] FDSDK 26.08: use components/python3-pyelftools.bst
- instead
+From b2b8b4a57166aebdbe6bbfbb33b54514621cd487 Mon Sep 17 00:00:00 2001
+From: Sam Thursfield <sam.thursfield@codethink.co.uk>
+Date: Fri, 5 Jun 2026 11:43:17 +0100
+Subject: [PATCH 02/19] FDSDK 26.08: Update systemd-base.bst for removed
+ components/pyelfutils.bst element
 
+This element was duplicated in FDSDK under two names, in commit 1d302725239ee0b414f669e1f
+upstream removed the one we were using.
 ---
  elements/core-deps/systemd-base.bst | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/elements/core-deps/systemd-base.bst b/elements/core-deps/systemd-base.bst
-index b1a3b503f..5622b670f 100644
+index 861beaca4..6dff69d1a 100644
 --- a/elements/core-deps/systemd-base.bst
 +++ b/elements/core-deps/systemd-base.bst
 @@ -38,7 +38,7 @@ build-depends:
@@ -20,7 +22,7 @@ index b1a3b503f..5622b670f 100644
 +- freedesktop-sdk.bst:components/python3-pyelftools.bst
  - freedesktop-sdk.bst:components/libxslt.bst
  - freedesktop-sdk.bst:components/docbook-xsl.bst
- - freedesktop-sdk.bst:components/_private/cryptsetup-lvm2-stage1.bst
+ - freedesktop-sdk.bst:components/cryptsetup-lvm2-stage1.bst
 -- 
 2.54.0
 
