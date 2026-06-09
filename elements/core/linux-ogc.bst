@@ -6,8 +6,9 @@ sources:
 - kind: git_repo
   ref-format: sha1
   url: github:OpenGamingCollective/linux.git
-  track: "ogc-*"
-  ref: 0a2171bd25f92af7e27d5afaf3405e3e48f3a1e8
+  # track: "ogc-*"
+  track: "hphilm/ogc/7.0/*-prep"
+  ref: 6f5e59985f096ef7a8e41bb5145609a0aed43728
 - kind: git_repo
   directory: ogc-kernel-packages
   url: github:OpenGamingCollective/kernel-packages.git
@@ -17,8 +18,8 @@ sources:
   directory: archlinux-kernel-config
   url: archlinux_gitlab:archlinux/packaging/packages/linux
   # manually update this track to the version of the linux kernel that ogc is using
-  track: 7.0.11.arch1-1
-  ref: 7.0.11.arch1-1-0-g6c10cc48bfd03e04710c14ffffacc24c56217c62
+  track: 7.0.12.arch1-1
+  ref: 7.0.12.arch1-1-0-ge3f2114ff592bf6917b8cd100f57d758664a6eae
 - kind: local
   path: files/linux/config-utils.sh
 - kind: local
