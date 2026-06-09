@@ -1,13 +1,13 @@
-From f10636bbe8d5ca734d3ec3cd2521fc9fbb333db5 Mon Sep 17 00:00:00 2001
+From ee5643f8a1151163bd4c0f603df966e3184d998d Mon Sep 17 00:00:00 2001
 From: Hec <hec@heccraft.com>
-Date: Thu, 28 May 2026 01:06:40 -0400
-Subject: [PATCH 4/6] Update flatpak to 1.17.7
+Date: Tue, 9 Jun 2026 01:52:50 -0400
+Subject: [PATCH 4/6] Update flatpak to 1.18.0
 
 ---
  elements/components/flatpak-minimal.bst | 1 -
  elements/components/flatpak.bst         | 1 -
- elements/include/flatpak.yml            | 4 ++--
- 3 files changed, 2 insertions(+), 4 deletions(-)
+ elements/include/flatpak.yml            | 2 +-
+ 3 files changed, 1 insertion(+), 3 deletions(-)
 
 diff --git a/elements/components/flatpak-minimal.bst b/elements/components/flatpak-minimal.bst
 index 536b8627c..ea074072e 100644
@@ -34,17 +34,15 @@ index 9989a2a9e..de592d5b8 100644
      -Dmalcontent=disabled
      -Dselinux_module=disabled
 diff --git a/elements/include/flatpak.yml b/elements/include/flatpak.yml
-index b2620c34b..e957d49fd 100644
+index b2620c34b..d854786e9 100644
 --- a/elements/include/flatpak.yml
 +++ b/elements/include/flatpak.yml
-@@ -1,5 +1,5 @@
- sources:
+@@ -2,4 +2,4 @@ sources:
  - kind: git_repo
    url: github:flatpak/flatpak.git
--  track: 1.1[02468]*
+   track: 1.1[02468]*
 -  ref: 1.16.6-0-ge761a8885453c217a931281092a641ebbdd0a0c6
-+  track: 1.1[13579]*
-+  ref: 1.17.7-0-gb4c53a4cfffd5dd471589249e35be6ab9e08b6a5
++  ref: 1.18.0-0-g5de2b58bdafde88515d9d6b9189bd1cfd3b88c46
 -- 
 2.54.0
 

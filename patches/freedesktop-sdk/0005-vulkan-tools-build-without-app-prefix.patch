@@ -1,4 +1,4 @@
-From e5ed59200ce405792289391b8fdc41ef264a609a Mon Sep 17 00:00:00 2001
+From cc7cc803b7a6e9847db8cff65fa2e4a9c9b56766 Mon Sep 17 00:00:00 2001
 From: Hec <hec@heccraft.com>
 Date: Thu, 28 May 2026 01:06:58 -0400
 Subject: [PATCH 5/6] vulkan-tools: build without /app prefix
