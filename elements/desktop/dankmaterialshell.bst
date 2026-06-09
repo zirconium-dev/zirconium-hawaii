@@ -6,14 +6,14 @@ sandbox:
 
 # go modules are loaded here
 (@):
-  - elements/include/dms.yml
+- elements/include/dms.yml
 
 sources:
   (>):
   - kind: git_repo
     url: github:AvengeMedia/DankMaterialShell.git
     track: master
-    ref: v1.4.0-622-g8155970ba2861d1b5e3e25dc3d91bb34643ceedb
+    ref: v1.4.0-627-g8856d458873e6b7aab353314271aef0fc5e7f7aa
   - kind: local
     path: files/dankmaterialshell
 
