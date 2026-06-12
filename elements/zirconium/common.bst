@@ -11,7 +11,7 @@ sources:
 - kind: git_repo
   url: github:zirconium-dev/zirconium.git
   track: main
-  ref: 028351ab712da561f5b803b9329b49407685344b
+  ref: 55909e75b96fb357748d7b93e8d055d570376fe6
 
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
