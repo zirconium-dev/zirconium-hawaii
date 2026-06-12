@@ -1,4 +1,4 @@
-From 29f2c1eeec74be12f4f0119b064e1f2101b4fc8a Mon Sep 17 00:00:00 2001
+From cc77bdcfd2582ae934da026e83f29b629f15341a Mon Sep 17 00:00:00 2001
 From: Sam Thursfield <sam.thursfield@codethink.co.uk>
 Date: Wed, 20 May 2026 11:45:34 +0100
 Subject: [PATCH 01/19] FDSDK 26.08: Update junction and remove obsolete
@@ -24,7 +24,7 @@ Remove patches that are applied upstream in FDSDK master
  delete mode 100644 patches/freedesktop-sdk/0010-Update-linux-to-7.0.10.patch
 
 diff --git a/elements/freedesktop-sdk.bst b/elements/freedesktop-sdk.bst
-index 463f5676c..1defe5109 100644
+index b9e52cd66..7ce5bbb32 100644
 --- a/elements/freedesktop-sdk.bst
 +++ b/elements/freedesktop-sdk.bst
 @@ -3,8 +3,8 @@ kind: junction

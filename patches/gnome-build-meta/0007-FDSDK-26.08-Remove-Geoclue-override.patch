@@ -1,4 +1,4 @@
-From 700d9cf2d466c11d0f551155204c6a1ba98f4900 Mon Sep 17 00:00:00 2001
+From b77d9a21a1603fbb66889a2f0ca2e5fed6e63fef Mon Sep 17 00:00:00 2001
 From: Sam Thursfield <sam.thursfield@codethink.co.uk>
 Date: Fri, 24 Apr 2026 16:34:33 +0100
 Subject: [PATCH 07/19] FDSDK 26.08: Remove Geoclue override
@@ -12,10 +12,10 @@ That is done upstream in the upcoming FDSDK 26.08.
  delete mode 100644 elements/gnomeos-deps/geoclue-base.bst
 
 diff --git a/elements/freedesktop-sdk.bst b/elements/freedesktop-sdk.bst
-index 1defe5109..7f02c1fc1 100644
+index 7ce5bbb32..e7eb1b704 100644
 --- a/elements/freedesktop-sdk.bst
 +++ b/elements/freedesktop-sdk.bst
-@@ -65,5 +65,3 @@ config:
+@@ -64,5 +64,3 @@ config:
      components/xdg-desktop-portal-base.bst: core-deps/xdg-desktop-portal-base.bst
      components/xdg-desktop-portal.bst: core-deps/xdg-desktop-portal.bst
      components/flatpak.bst: core-deps/flatpak.bst

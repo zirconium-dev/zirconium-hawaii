@@ -1,4 +1,4 @@
-From bb1215cf483f1a5a08e8d9fdd94bd6d610f1768d Mon Sep 17 00:00:00 2001
+From 46d6b2dae4b019ca2068dff182c19d69d7e5c7ba Mon Sep 17 00:00:00 2001
 From: Sam Thursfield <sam.thursfield@codethink.co.uk>
 Date: Fri, 24 Apr 2026 12:43:31 +0100
 Subject: [PATCH 05/19] FDSDK 26.08: sdk/mozjs: Fix build failure with Python

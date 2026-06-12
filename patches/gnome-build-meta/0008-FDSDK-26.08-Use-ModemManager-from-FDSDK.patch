@@ -1,4 +1,4 @@
-From f8da9c0f20bb9c0d3022d51a143c7ddad22bfd7d Mon Sep 17 00:00:00 2001
+From 43db095db210cb2b016d8301b15a66ae06a8a0b5 Mon Sep 17 00:00:00 2001
 From: Sam Thursfield <sam.thursfield@codethink.co.uk>
 Date: Tue, 5 May 2026 12:53:16 +0100
 Subject: [PATCH 08/19] FDSDK 26.08: Use ModemManager from FDSDK
@@ -109,7 +109,7 @@ index 3284ae492..a7e26fb37 100644
 +- freedesktop-sdk.bst:components/modemmanager.bst
  - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 diff --git a/elements/core/gnome-control-center.bst b/elements/core/gnome-control-center.bst
-index 9e406fe09..a040720b1 100644
+index 63894ea6d..fe0ac6ef1 100644
 --- a/elements/core/gnome-control-center.bst
 +++ b/elements/core/gnome-control-center.bst
 @@ -29,7 +29,6 @@ runtime-depends:

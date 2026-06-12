@@ -1,4 +1,4 @@
-From fc3b5d8a6e082ea0a10b4742ea0f68535b5736ba Mon Sep 17 00:00:00 2001
+From 67a42ca56fa0e150a6e43660f4d415106a5cda66 Mon Sep 17 00:00:00 2001
 From: Sam Thursfield <sam.thursfield@codethink.co.uk>
 Date: Fri, 5 Jun 2026 11:24:46 +0100
 Subject: [PATCH 16/19] FDSDK 26.08: Fix libnfs build with GLIBC 2.43

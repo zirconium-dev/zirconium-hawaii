@@ -1,4 +1,4 @@
-From 63f9f96f8e66320cd539f8ddc7ce6c91669d3355 Mon Sep 17 00:00:00 2001
+From 588e71eee71587d9068959d3b15b44b4e0768f5c Mon Sep 17 00:00:00 2001
 From: Sam Thursfield <sam.thursfield@codethink.co.uk>
 Date: Tue, 5 May 2026 12:55:11 +0100
 Subject: [PATCH 09/19] FDSDK 26.08: Use libqmi from FDSDK
@@ -62,7 +62,7 @@ index 353335c29..000000000
 -- sdk/glib.bst
 -- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 diff --git a/elements/gnomeos-deps/libssc.bst b/elements/gnomeos-deps/libssc.bst
-index 536ef78e0..0d7ade995 100644
+index 416b9309d..461b1771c 100644
 --- a/elements/gnomeos-deps/libssc.bst
 +++ b/elements/gnomeos-deps/libssc.bst
 @@ -10,6 +10,6 @@ build-depends:
