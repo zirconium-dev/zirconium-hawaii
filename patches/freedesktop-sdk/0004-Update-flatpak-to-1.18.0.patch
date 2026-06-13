@@ -1,7 +1,7 @@
-From ee5643f8a1151163bd4c0f603df966e3184d998d Mon Sep 17 00:00:00 2001
+From b81ea26801c50fefedcf5498be0932365ce5283a Mon Sep 17 00:00:00 2001
 From: Hec <hec@heccraft.com>
 Date: Tue, 9 Jun 2026 01:52:50 -0400
-Subject: [PATCH 4/6] Update flatpak to 1.18.0
+Subject: [PATCH 4/7] Update flatpak to 1.18.0
 
 ---
  elements/components/flatpak-minimal.bst | 1 -
