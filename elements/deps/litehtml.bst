@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: github:litehtml/litehtml
   track: v*
-  ref: v0.9-0-g6ca1ab0419e770e6d35a1ef690238773a1dafcee
+  ref: v0.10-0-g9bc84b8b8d15a4e50f18b327aa30955048b441c2
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst

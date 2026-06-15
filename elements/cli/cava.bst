@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: github:karlstav/cava.git
   track: "*"
-  ref: 0.10.7-0-gbbfbd0566bd3ced82b3d2a195d9c343b31b8b419
+  ref: 1.0.0-0-g15f89867908fa66baaaec8d4b9a2d684a329a0fb
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-make.bst

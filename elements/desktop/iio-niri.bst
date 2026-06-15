@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: github:Zhaith-Izaliel/iio-niri.git
   track: v*
-  ref: v2.1.0-0-g58c5fcc34afd665344a9cfb93b04869728413aee
+  ref: v2.2.0-0-g0275edd1eef875ad3546acd8c45fff7a1dd39cab
 - kind: local
   path: files/iio-niri
 
