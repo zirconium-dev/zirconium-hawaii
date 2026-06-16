@@ -5,6 +5,8 @@ sources:
   url: github:bootc-dev/bootc.git
   track: v*
   ref: v1.16.0-0-gd3f885e3c69f2194059329ac1685273197e6b1f7
+- kind: local
+  path: files/bootc
 - kind: cargo2
   url: crates:crates
   git-mirrors:
@@ -1728,3 +1730,11 @@ depends:
 variables:
   make-install-args: >-
     PREFIX="%{prefix}" LIBDIR="%{lib}" DESTDIR="%{install-root}" install-all
+
+config:
+  install-commands:
+    - |
+      %{make-install}
+
+    - |
+      install -Dm0644 01-systemd.conf 20-bootc.conf -t "%{install-root}%{indep-libdir}/dracut/dracut.conf.d"
