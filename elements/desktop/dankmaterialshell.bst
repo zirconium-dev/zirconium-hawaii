@@ -18,24 +18,25 @@ sources:
     path: files/dankmaterialshell
 
 build-depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:public-stacks/buildsystem-make.bst
 - freedesktop-sdk.bst:components/git.bst
 - freedesktop-sdk.bst:components/go.bst
 
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
+- desktop/quickshell.bst
+- deps/qt6-qtmultimedia.bst
+
+runtime-depends:
+- cli/cava.bst
+- deps/dgop.bst
+- deps/kimageformats.bst
+- desktop/brightnessctl.bst
+- desktop/ddcutil.bst
+- desktop/matugen.bst
 - freedesktop-sdk.bst:components/libnotify.bst
 - gnome-build-meta.bst:core-deps/accountsservice.bst
 - gnome-build-meta.bst:core-deps/cups-pk-helper.bst
-- desktop/quickshell.bst
-- desktop/matugen.bst
-- desktop/ddcutil.bst
-- desktop/brightnessctl.bst
-- deps/qt6-qtmultimedia.bst
-- deps/kimageformats.bst
-- deps/dgop.bst
-- cli/cava.bst
 
 variables:
   make-args: build GOFLAGS="" BUILD_TIME=2011-11-10_15:00:00
