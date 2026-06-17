@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: github:niri-wm/niri.git
   track: main
-  ref: v26.04-32-ga4b5539baa5c5869ebbc9a5d63fd860f8c34ad90
+  ref: v26.04-34-gfdb6d85fc78355762bcf3cf71fe4037681a766f9
 - kind: cargo2
   url: crates:crates
   git-mirrors:
@@ -12,20 +12,20 @@ sources:
   ref:
   - kind: registry
     name: accesskit
-    version: 0.21.1
-    sha: cf203f9d3bd8f29f98833d1fbef628df18f759248a547e7e01cfbf63cda36a99
+    version: 0.24.1
+    sha: d3b7f7f85a7e5f68090000ed7622545829afd484d210358702ae4cb97dd0c320
   - kind: registry
     name: accesskit_atspi_common
-    version: 0.14.2
-    sha: 890d241cf51fc784f0ac5ac34dfc847421f8d39da6c7c91a0fcc987db62a8267
+    version: 0.19.0
+    sha: 7e98018dbef3583d751dbb96e07b8728fb99581360e1c3df408af16f4a80b821
   - kind: registry
     name: accesskit_consumer
-    version: 0.31.0
-    sha: db81010a6895d8707f9072e6ce98070579b43b717193d2614014abd5cb17dd43
+    version: 0.37.0
+    sha: f950720ce064757a1b629caad3a408e8d2c63bb01f29b8a3ff8daa331053ffeb
   - kind: registry
     name: accesskit_unix
-    version: 0.17.2
-    sha: 301e55b39cfc15d9c48943ce5f572204a551646700d0e8efa424585f94fec528
+    version: 0.22.0
+    sha: 5376ba4cc23312587634abb5250b1ce8618f01a55915608209aafd01efb4bf8c
   - kind: registry
     name: adler2
     version: 2.0.1
@@ -156,20 +156,16 @@ sources:
     sha: 628d228f918ac3b82fe590352cc719d30664a0c13ca3a60266fe02c7132d480a
   - kind: registry
     name: atspi
-    version: 0.25.0
-    sha: c83247582e7508838caf5f316c00791eee0e15c0bf743e6880585b867e16815c
+    version: 0.29.0
+    sha: c77886257be21c9cd89a4ae7e64860c6f0eefca799bb79127913052bd0eefb3d
   - kind: registry
     name: atspi-common
-    version: 0.9.0
-    sha: 33dfc05e7cdf90988a197803bf24f5788f94f7c94a69efa95683e8ffe76cfdfb
-  - kind: registry
-    name: atspi-connection
-    version: 0.9.0
-    sha: 4193d51303d8332304056ae0004714256b46b6635a5c556109b319c0d3784938
+    version: 0.13.0
+    sha: 20c5617155740c98003016429ad13fe43ce7a77b007479350a9f8bf95a29f63d
   - kind: registry
     name: atspi-proxies
-    version: 0.9.0
-    sha: d2eebcb9e7e76f26d0bcfd6f0295e1cd1e6f33bedbc5698a971db8dc43d7751c
+    version: 0.13.0
+    sha: 2230e48787ed3eb4088996eab66a32ca20c0b67bbd4fd6cdfe79f04f1f04c9fc
   - kind: registry
     name: autocfg
     version: 1.5.0
@@ -495,6 +491,10 @@ sources:
     version: 0.1.5
     sha: d9c4f5dac5e15c24eb999c26181a6ca40b39fe946cbe4c263c7209467bc83af2
   - kind: registry
+    name: foldhash
+    version: 0.2.0
+    sha: 77ce24cb58228fbb8aa041425bb1050850ac19177686ea6e0f41a70416f56fdb
+  - kind: registry
     name: foreign-types
     version: 0.5.0
     sha: d737d9aa519fb7b749cbc3b962edcf310a8dd1f4b67c91c4f83975dbdd17d965
@@ -666,6 +666,10 @@ sources:
     name: hashbrown
     version: 0.15.5
     sha: 9229cfe53dfd69f0609a49f65461bd93001ea1ef889cd5529dd176593f5338a1
+  - kind: registry
+    name: hashbrown
+    version: 0.16.1
+    sha: 841d1cc9bed7f9236f321df977030373f4a4163ae1a7dbfe1a51a2c1a51d9100
   - kind: registry
     name: hashbrown
     version: 0.17.0
