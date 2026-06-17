@@ -6,9 +6,8 @@ sources:
 - kind: git_repo
   ref-format: sha1
   url: github:OpenGamingCollective/linux.git
-  # track: "ogc-*"
-  track: "hphilm/ogc/7.0/*-prep"
-  ref: 6f5e59985f096ef7a8e41bb5145609a0aed43728
+  track: "ogc-*"
+  ref: 70e7f084332cdf89b64d1532cd42309d33200de2
 - kind: git_repo
   directory: ogc-kernel-packages
   url: github:OpenGamingCollective/kernel-packages.git
