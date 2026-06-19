@@ -1,4 +1,4 @@
-From 67cd72706d3511f5f19c378f28486d03ca51858d Mon Sep 17 00:00:00 2001
+From aa569d9bc8b43c671843913169904be24bc394d6 Mon Sep 17 00:00:00 2001
 From: Jordan Petridis <jpetridis@gnome.org>
 Date: Mon, 4 Aug 2025 20:22:27 +0300
 Subject: [PATCH 2/7] project.conf: Add GNOME CAS servers
