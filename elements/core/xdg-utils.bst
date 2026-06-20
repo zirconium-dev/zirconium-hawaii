@@ -11,7 +11,7 @@ build-depends:
 - freedesktop-sdk.bst:components/docbook-xml.bst
 - freedesktop-sdk.bst:components/docbook-xsl.bst
 - freedesktop-sdk.bst:components/xmlto.bst
-- deps/lynx.bst
+- deps/w3m.bst
 
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
