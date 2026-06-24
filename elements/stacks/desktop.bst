@@ -32,7 +32,10 @@ depends:
   - gnome-build-meta.bst:core-deps/xdg-desktop-portal-gtk.bst
   - gnome-build-meta.bst:core-deps/boltd.bst
   - gnome-build-meta.bst:core/gnome-disk-utility.bst
-  - gnome-build-meta.bst:core/gnome-keyring.bst
+  - gnome-build-meta.bst:gnomeos-deps/oo7-cli.bst
+  - gnome-build-meta.bst:core-deps/oo7-daemon.bst
+  - gnome-build-meta.bst:core-deps/oo7-pam.bst
+  - gnome-build-meta.bst:core-deps/oo7-portal.bst
   - gnome-build-meta.bst:core/nautilus.bst
   - desktop/xdg-terminal-exec-nautilus.bst
   - gnome-build-meta.bst:core/gvfs-daemon.bst
