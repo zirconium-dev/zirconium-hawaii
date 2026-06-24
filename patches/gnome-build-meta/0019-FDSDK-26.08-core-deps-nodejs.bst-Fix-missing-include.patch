@@ -1,4 +1,4 @@
-From 8c3961356f61d1c154f5ee7497b53ef65050bea3 Mon Sep 17 00:00:00 2001
+From 6a28754e4aeeeb2c396bf027d33358db2cc2ee98 Mon Sep 17 00:00:00 2001
 From: Sam Thursfield <sam.thursfield@codethink.co.uk>
 Date: Sat, 6 Jun 2026 10:30:28 +0100
 Subject: [PATCH 19/19] FDSDK 26.08: core-deps/nodejs.bst: Fix missing #include

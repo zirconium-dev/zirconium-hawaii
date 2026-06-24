@@ -1,4 +1,4 @@
-From cc77bdcfd2582ae934da026e83f29b629f15341a Mon Sep 17 00:00:00 2001
+From b7d2ef0771fa8583c10a08dc68a48efe42129892 Mon Sep 17 00:00:00 2001
 From: Sam Thursfield <sam.thursfield@codethink.co.uk>
 Date: Wed, 20 May 2026 11:45:34 +0100
 Subject: [PATCH 01/19] FDSDK 26.08: Update junction and remove obsolete
@@ -7,24 +7,17 @@ Subject: [PATCH 01/19] FDSDK 26.08: Update junction and remove obsolete
 Remove patches that are applied upstream in FDSDK master
 ---
  elements/freedesktop-sdk.bst                  |  4 +-
- ...03-openssh-Use-etc-ssh-as-sysconfdir.patch | 56 -------------------
- ...-openssh-Include-ssh-_config.d-.conf.patch | 53 ------------------
- ...-Disable-event-activation-by-default.patch | 53 ------------------
- ...components-pipewire-base.bst-to-1.6..patch | 55 ------------------
- .../0008-Update-Pipewire-to-1.6.1.patch       | 29 ----------
- .../0009-Update-Pipewire-to-1.6.5.patch       | 30 ----------
- .../0010-Update-linux-to-7.0.10.patch         | 27 ---------
- 8 files changed, 2 insertions(+), 305 deletions(-)
+ ...03-openssh-Use-etc-ssh-as-sysconfdir.patch | 56 ------------------
+ ...-openssh-Include-ssh-_config.d-.conf.patch | 53 -----------------
+ ...-Disable-event-activation-by-default.patch | 53 -----------------
+ .../0007-Update-Pipewire-to-1.6.7.patch       | 57 ++++---------------
+ 5 files changed, 14 insertions(+), 209 deletions(-)
  delete mode 100644 patches/freedesktop-sdk/0003-openssh-Use-etc-ssh-as-sysconfdir.patch
  delete mode 100644 patches/freedesktop-sdk/0004-openssh-Include-ssh-_config.d-.conf.patch
  delete mode 100644 patches/freedesktop-sdk/0005-lvm2-Disable-event-activation-by-default.patch
- delete mode 100644 patches/freedesktop-sdk/0007-Update-elements-components-pipewire-base.bst-to-1.6..patch
- delete mode 100644 patches/freedesktop-sdk/0008-Update-Pipewire-to-1.6.1.patch
- delete mode 100644 patches/freedesktop-sdk/0009-Update-Pipewire-to-1.6.5.patch
- delete mode 100644 patches/freedesktop-sdk/0010-Update-linux-to-7.0.10.patch
 
 diff --git a/elements/freedesktop-sdk.bst b/elements/freedesktop-sdk.bst
-index b9e52cd66..7ce5bbb32 100644
+index d025c59a0..05acf206c 100644
 --- a/elements/freedesktop-sdk.bst
 +++ b/elements/freedesktop-sdk.bst
 @@ -3,8 +3,8 @@ kind: junction
@@ -32,22 +25,22 @@ index b9e52cd66..7ce5bbb32 100644
  - kind: git_repo
    url: gitlab:freedesktop-sdk/freedesktop-sdk.git
 -  track: freedesktop-sdk-25.08*
--  ref: freedesktop-sdk-25.08.12-0-gbb510d9021f4def1a60f032bef1e0ca660b8ec3a
+-  ref: freedesktop-sdk-25.08.13-0-g8446990f0a549bb1f3ceb654af64fc176b274488
 +  track: master
-+  ref: freedesktop-sdk-25.08rc.3-1994-g46b28d7b78d294844b61014a4f9fb7daee8ef3de
++  ref: freedesktop-sdk-25.08rc.3-2101-g69c67eb9198d85a7eed56664c0d9ede6dcf5081e
  - kind: patch_queue
    path: patches/freedesktop-sdk
  
 diff --git a/patches/freedesktop-sdk/0003-openssh-Use-etc-ssh-as-sysconfdir.patch b/patches/freedesktop-sdk/0003-openssh-Use-etc-ssh-as-sysconfdir.patch
 deleted file mode 100644
-index 6c34a4c14..000000000
+index fcbfdb5af..000000000
 --- a/patches/freedesktop-sdk/0003-openssh-Use-etc-ssh-as-sysconfdir.patch
 +++ /dev/null
 @@ -1,56 +0,0 @@
--From ef058b495201a3e29fd9f89b252b475a86e0ec2a Mon Sep 17 00:00:00 2001
+-From cb7355848d5632c17355078ae33508f7766409f8 Mon Sep 17 00:00:00 2001
 -From: Valentin David <me@valentindavid.com>
 -Date: Sun, 26 Oct 2025 11:03:32 +0100
--Subject: [PATCH 03/10] openssh: Use /etc/ssh as sysconfdir
+-Subject: [PATCH 3/7] openssh: Use /etc/ssh as sysconfdir
 -
 -All other distros use that. And there are expectations from systemd
 -for it to be configured so.
@@ -102,14 +95,14 @@ index 6c34a4c14..000000000
 -
 diff --git a/patches/freedesktop-sdk/0004-openssh-Include-ssh-_config.d-.conf.patch b/patches/freedesktop-sdk/0004-openssh-Include-ssh-_config.d-.conf.patch
 deleted file mode 100644
-index bf7895539..000000000
+index 6e8e27abe..000000000
 --- a/patches/freedesktop-sdk/0004-openssh-Include-ssh-_config.d-.conf.patch
 +++ /dev/null
 @@ -1,53 +0,0 @@
--From 86f77bbb2b9aa8b40e1fd3bebe81f0b9d81d433d Mon Sep 17 00:00:00 2001
+-From deba018b7180e08cb01685e422b7b4fc668d5ef4 Mon Sep 17 00:00:00 2001
 -From: Valentin David <me@valentindavid.com>
 -Date: Sun, 26 Oct 2025 16:06:02 +0100
--Subject: [PATCH 04/10] openssh: Include ssh*_config.d/*.conf
+-Subject: [PATCH 4/7] openssh: Include ssh*_config.d/*.conf
 -
 -Most distributions include system-wide configuration fragments from
 -and some software expect it: systemd, libvirt.
@@ -161,14 +154,14 @@ index bf7895539..000000000
 -
 diff --git a/patches/freedesktop-sdk/0005-lvm2-Disable-event-activation-by-default.patch b/patches/freedesktop-sdk/0005-lvm2-Disable-event-activation-by-default.patch
 deleted file mode 100644
-index 093d623ee..000000000
+index 3013de9f2..000000000
 --- a/patches/freedesktop-sdk/0005-lvm2-Disable-event-activation-by-default.patch
 +++ /dev/null
 @@ -1,53 +0,0 @@
--From 2e788774fd148b750fd0bc28abd3f9412a008792 Mon Sep 17 00:00:00 2001
+-From e51fde61ed09195ba684340c0b3be5f4c6fd9cad Mon Sep 17 00:00:00 2001
 -From: Valentin David <me@valentindavid.com>
 -Date: Sat, 24 Jan 2026 12:13:27 +0100
--Subject: [PATCH 05/10] lvm2: Disable event activation by default
+-Subject: [PATCH 5/7] lvm2: Disable event activation by default
 -
 -Because lvm2 does not have a distro wide configuration in /usr and all
 -is in /etc, configuring it is not compatible with systemd-sysupdate
@@ -218,24 +211,27 @@ index 093d623ee..000000000
 --- 
 -2.54.0
 -
-diff --git a/patches/freedesktop-sdk/0007-Update-elements-components-pipewire-base.bst-to-1.6..patch b/patches/freedesktop-sdk/0007-Update-elements-components-pipewire-base.bst-to-1.6..patch
-deleted file mode 100644
-index feb1d9b6b..000000000
---- a/patches/freedesktop-sdk/0007-Update-elements-components-pipewire-base.bst-to-1.6..patch
-+++ /dev/null
-@@ -1,55 +0,0 @@
--From 3a7e4a38ebae9c70f288bd3ed4fc9bed679febdc Mon Sep 17 00:00:00 2001
+diff --git a/patches/freedesktop-sdk/0007-Update-Pipewire-to-1.6.7.patch b/patches/freedesktop-sdk/0007-Update-Pipewire-to-1.6.7.patch
+index ebb422e55..5a4eb7998 100644
+--- a/patches/freedesktop-sdk/0007-Update-Pipewire-to-1.6.7.patch
++++ b/patches/freedesktop-sdk/0007-Update-Pipewire-to-1.6.7.patch
+@@ -1,54 +1,21 @@
+-From 34bfea9f255123a4c828b1697fe0af53f765365e Mon Sep 17 00:00:00 2001
 -From: freedesktop_sdk_updater <freedesktop_sdk_updater@libreml.com>
 -Date: Thu, 19 Feb 2026 17:09:11 +0000
--Subject: [PATCH 07/10] Update elements/components/pipewire-base.bst to 1.6.0-0
--
--Updates elements/components/pipewire-base.bst to 1.6.0-0 (700cea7)
-----
-- elements/components/pipewire-base.bst | 6 +++++-
-- 1 file changed, 5 insertions(+), 1 deletion(-)
--
++From 7692238e17543ba582c17d911e3d1cb8dec7b6b3 Mon Sep 17 00:00:00 2001
++From: Hec <hec@heccraft.com>
++Date: Fri, 19 Jun 2026 19:00:26 -0400
+ Subject: [PATCH 7/7] Update Pipewire to 1.6.7
+ 
+ ---
+- elements/components/pipewire-base.bst | 7 ++++++-
+- 1 file changed, 6 insertions(+), 1 deletion(-)
++ elements/components/_private/pipewire-base.bst | 2 +-
++ 1 file changed, 1 insertion(+), 1 deletion(-)
+ 
 -diff --git a/elements/components/pipewire-base.bst b/elements/components/pipewire-base.bst
--index a09759fdf..f73a623c9 100644
+-index a09759fdf..9b4ee6c76 100644
 ---- a/elements/components/pipewire-base.bst
 -+++ b/elements/components/pipewire-base.bst
 -@@ -49,20 +49,24 @@ variables:
@@ -263,7 +259,7 @@ index feb1d9b6b..000000000
 -           patchelf --remove-rpath "${module}"
 -         fi
 -       done
--@@ -135,11 +139,11 @@ public:
+-@@ -135,11 +139,12 @@ public:
 -       - '%{debugdir}%{libdir}/pipewire-0.3/libpipewire-module-spa-node-factory.so.debug'
 -       - '%{debugdir}%{libdir}/pipewire-0.3/libpipewire-module-spa-node.so.debug'
 -       - '%{debugdir}%{libdir}/pipewire-0.3/libpipewire-module-zeroconf-discover.so.debug'
@@ -272,117 +268,20 @@ index feb1d9b6b..000000000
 -     product: pipewire
 - 
 - sources:
-- - kind: git_repo
--   url: freedesktop:PipeWire/pipewire.git
++diff --git a/elements/components/_private/pipewire-base.bst b/elements/components/_private/pipewire-base.bst
++index 781cebb62..35eb70ab2 100644
++--- a/elements/components/_private/pipewire-base.bst
+++++ b/elements/components/_private/pipewire-base.bst
++@@ -147,4 +147,4 @@ sources:
+  - kind: git_repo
+    url: freedesktop:PipeWire/pipewire.git
 --  ref: 1.4.9-0-gfd60e04525f3a04d90bf50085222e0cc9139b4a4
--+  ref: 1.6.0-0-g700cea78dbe7564131d51b21a7795e2567ee048a
---- 
--2.54.0
--
-diff --git a/patches/freedesktop-sdk/0008-Update-Pipewire-to-1.6.1.patch b/patches/freedesktop-sdk/0008-Update-Pipewire-to-1.6.1.patch
-deleted file mode 100644
-index 851908582..000000000
---- a/patches/freedesktop-sdk/0008-Update-Pipewire-to-1.6.1.patch
-+++ /dev/null
-@@ -1,29 +0,0 @@
--From 776fb10df9928814588584b8c0befe718f95374a Mon Sep 17 00:00:00 2001
--From: Valentin David <me@valentindavid.com>
--Date: Fri, 17 Apr 2026 10:46:15 +0100
--Subject: [PATCH 08/10] Update Pipewire to 1.6.1
--
-----
-- elements/components/pipewire-base.bst | 2 +-
-- 1 file changed, 1 insertion(+), 1 deletion(-)
--
--diff --git a/elements/components/pipewire-base.bst b/elements/components/pipewire-base.bst
--index f73a623c9..a38e15d02 100644
----- a/elements/components/pipewire-base.bst
--+++ b/elements/components/pipewire-base.bst
--@@ -139,11 +139,11 @@ public:
--       - '%{debugdir}%{libdir}/pipewire-0.3/libpipewire-module-spa-node-factory.so.debug'
--       - '%{debugdir}%{libdir}/pipewire-0.3/libpipewire-module-spa-node.so.debug'
--       - '%{debugdir}%{libdir}/pipewire-0.3/libpipewire-module-zeroconf-discover.so.debug'
-- 
--   cpe:
--     product: pipewire
-- 
-- sources:
-- - kind: git_repo
--   url: freedesktop:PipeWire/pipewire.git
---  ref: 1.6.0-0-g700cea78dbe7564131d51b21a7795e2567ee048a
--+  ref: 1.6.1-0-gb7341d068947225fcdf62d39277606e8516d7f52
---- 
--2.54.0
--
-diff --git a/patches/freedesktop-sdk/0009-Update-Pipewire-to-1.6.5.patch b/patches/freedesktop-sdk/0009-Update-Pipewire-to-1.6.5.patch
-deleted file mode 100644
-index 77ee7a79b..000000000
---- a/patches/freedesktop-sdk/0009-Update-Pipewire-to-1.6.5.patch
-+++ /dev/null
-@@ -1,30 +0,0 @@
--From 93657e4a9eb97bd9a76c2efec2cd7b0d941ecc4f Mon Sep 17 00:00:00 2001
--From: Jordan Petridis <jpetridis@gnome.org>
--Date: Thu, 21 May 2026 23:30:12 +0300
--Subject: [PATCH 09/10] Update Pipewire to 1.6.5
--
-----
-- elements/components/pipewire-base.bst | 3 ++-
-- 1 file changed, 2 insertions(+), 1 deletion(-)
--
--diff --git a/elements/components/pipewire-base.bst b/elements/components/pipewire-base.bst
--index a38e15d02..e5b14429c 100644
----- a/elements/components/pipewire-base.bst
--+++ b/elements/components/pipewire-base.bst
--@@ -139,11 +139,12 @@ public:
--       - '%{debugdir}%{libdir}/pipewire-0.3/libpipewire-module-spa-node-factory.so.debug'
--       - '%{debugdir}%{libdir}/pipewire-0.3/libpipewire-module-spa-node.so.debug'
--       - '%{debugdir}%{libdir}/pipewire-0.3/libpipewire-module-zeroconf-discover.so.debug'
-- 
--   cpe:
--     product: pipewire
-- 
-- sources:
-- - kind: git_repo
--   url: freedesktop:PipeWire/pipewire.git
---  ref: 1.6.1-0-gb7341d068947225fcdf62d39277606e8516d7f52
 -+  track: "*.*.*"
--+  ref: 1.6.5-0-g55848f4260a2d2302f9f6bd304d82616976ef9af
---- 
--2.54.0
--
-diff --git a/patches/freedesktop-sdk/0010-Update-linux-to-7.0.10.patch b/patches/freedesktop-sdk/0010-Update-linux-to-7.0.10.patch
-deleted file mode 100644
-index 0185516fe..000000000
---- a/patches/freedesktop-sdk/0010-Update-linux-to-7.0.10.patch
-+++ /dev/null
-@@ -1,27 +0,0 @@
--From bfa901a1cd695df7362e81d1689518e29f74ddf7 Mon Sep 17 00:00:00 2001
--From: Jordan Petridis <jpetridis@gnome.org>
--Date: Sun, 24 May 2026 20:03:11 +0300
--Subject: [PATCH 10/10] Update linux to 7.0.10
--
-----
-- elements/include/linux.yml | 2 +-
-- 1 file changed, 1 insertion(+), 1 deletion(-)
--
--diff --git a/elements/include/linux.yml b/elements/include/linux.yml
--index 81f82350a..ccef862e6 100644
----- a/elements/include/linux.yml
--+++ b/elements/include/linux.yml
--@@ -1,9 +1,9 @@
-- sources:
-- - kind: git_repo
--   url: kernel:linux/kernel/git/stable/linux.git
--   track: v*
--   exclude:
--   - '*-rc*'
---  ref: v7.0.7-0-g4d7dbcd7f2c86c830517b827cbc2bc633a489818
--+  ref: v7.0.10-0-g7e98da22115d049ca74373caddd43e0952becfef
-- - kind: patch_queue
--   path: patches/linux
---- 
--2.54.0
--
++   track: '*.[02468].*'
++-  ref: 1.6.6-0-ga1c1d9f9f128ec987f23a0140a1704b8f8781787
+ +  ref: 1.6.7-0-g3b2cb4fb037bf6033b87d3c87ee917b2f686d309
+ -- 
+ 2.54.0
 -- 
 2.54.0
 

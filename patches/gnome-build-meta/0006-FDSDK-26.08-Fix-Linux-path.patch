@@ -1,4 +1,4 @@
-From 6ee4191db311991c6d2377fa90b8c9e56ec9a788 Mon Sep 17 00:00:00 2001
+From c56a04ca5ec9d173777fb3c648e7ae14e10c100d Mon Sep 17 00:00:00 2001
 From: Sam Thursfield <sam.thursfield@codethink.co.uk>
 Date: Fri, 24 Apr 2026 13:08:51 +0100
 Subject: [PATCH 06/19] FDSDK 26.08: Fix Linux path
@@ -23,7 +23,7 @@ index ebdfa7cb1..87b265ff7 100644
    - |
      openssl x509 -inform PEM -outform DER -in "linux-module-cert.crt" -out "linux-module-cert.cer"
 diff --git a/elements/gnomeos/signed-boot.bst b/elements/gnomeos/signed-boot.bst
-index bbfda4eaf..b67cd9231 100644
+index dd6859d4a..07a5a8f27 100644
 --- a/elements/gnomeos/signed-boot.bst
 +++ b/elements/gnomeos/signed-boot.bst
 @@ -120,7 +120,7 @@ config:

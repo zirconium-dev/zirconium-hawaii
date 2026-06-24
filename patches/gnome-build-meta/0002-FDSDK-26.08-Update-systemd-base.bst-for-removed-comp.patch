@@ -1,4 +1,4 @@
-From 6398e53db8c2eb0c713e012aef62339ceca7c213 Mon Sep 17 00:00:00 2001
+From 70b1dc52f274602fdd82c485c8a7867ad621cfa9 Mon Sep 17 00:00:00 2001
 From: Sam Thursfield <sam.thursfield@codethink.co.uk>
 Date: Fri, 5 Jun 2026 11:43:17 +0100
 Subject: [PATCH 02/19] FDSDK 26.08: Update systemd-base.bst for removed

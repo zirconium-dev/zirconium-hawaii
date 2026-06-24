@@ -1,4 +1,4 @@
-From b82f317b522249a513e240f1811ec6e4d994238b Mon Sep 17 00:00:00 2001
+From 331d97e5093c5d555f5665f23ed6258b21918ca4 Mon Sep 17 00:00:00 2001
 From: Sam Thursfield <sam.thursfield@codethink.co.uk>
 Date: Fri, 22 May 2026 11:42:38 +0100
 Subject: [PATCH 12/19] FDSDK 26.08: Increase ESP size to 240MB

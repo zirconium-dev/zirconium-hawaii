@@ -1,4 +1,4 @@
-From 67924e7e1e0c18c5e53abb47cc9a5dc203afd87b Mon Sep 17 00:00:00 2001
+From 0f27b2e1a407e25d217c96fa069a9954ab452036 Mon Sep 17 00:00:00 2001
 From: Sam Thursfield <sam.thursfield@codethink.co.uk>
 Date: Wed, 20 May 2026 12:44:32 +0100
 Subject: [PATCH 04/19] FDSDK 26.08: Use new `-maybe` elements
@@ -60,7 +60,7 @@ index 7238b3a5b..ab7dd2395 100644
  # Currently for sysprof-ebpf but useful in general
  - freedesktop-sdk.bst:components/bpf.bst
 diff --git a/elements/gnomeos-deps/deps.bst b/elements/gnomeos-deps/deps.bst
-index ab9731c5b..627b5363b 100644
+index 27cde7024..041e78655 100644
 --- a/elements/gnomeos-deps/deps.bst
 +++ b/elements/gnomeos-deps/deps.bst
 @@ -94,7 +94,7 @@ depends:
@@ -138,7 +138,7 @@ index 261017c7f..8ec19675d 100644
  variables:
    strip-binaries: ''
 diff --git a/elements/gnomeos/signed-boot.bst b/elements/gnomeos/signed-boot.bst
-index 67767cc37..bbfda4eaf 100644
+index b3b9cc73b..dd6859d4a 100644
 --- a/elements/gnomeos/signed-boot.bst
 +++ b/elements/gnomeos/signed-boot.bst
 @@ -13,7 +13,7 @@ build-depends:

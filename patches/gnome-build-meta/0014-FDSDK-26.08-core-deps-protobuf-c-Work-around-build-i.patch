@@ -1,4 +1,4 @@
-From 0478fce606290724925d379c8c300963529ca24b Mon Sep 17 00:00:00 2001
+From b98e04b8e6f4df7ad90886a3eb0912c4925b4d17 Mon Sep 17 00:00:00 2001
 From: Sam Thursfield <sam.thursfield@codethink.co.uk>
 Date: Tue, 26 May 2026 15:42:57 +0100
 Subject: [PATCH 14/19] FDSDK 26.08: core-deps/protobuf-c: Work around build
