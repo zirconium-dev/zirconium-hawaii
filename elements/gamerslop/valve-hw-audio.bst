@@ -1,17 +1,14 @@
 kind: manual
 
-# building firmware outselves isn't possible, some submodules required for building aren't accessible outside of steamos team
+# building firmware ourselves isn't possible, some submodules required for building aren't accessible outside of steamos team
 # at the very least they have prebuilt binaries right in git repo, thanks lol
 sources:
 - kind: git_repo
   url: github:evlaV/valve-hardware-audio-processing
+  track: main
   ref: 4117b4c0b971744c9cc63606b90175ee69ed4ed9
 
-build-depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
-
 depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - gnome-build-meta.bst:gnomeos-deps/alsa-ucm-conf.bst
 
 variables:
