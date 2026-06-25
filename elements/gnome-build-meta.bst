@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: gnome:gnome-build-meta.git
   track: master
-  ref: 49-branchpoint-744-gd63f0669cdbee568bfc8d62e9e0d4f1cd5782b99
+  ref: 49-branchpoint-747-g3dbf7cf820db4915ffc490741f881cd739fd6464
 - kind: patch_queue
   path: patches/gnome-build-meta
 
