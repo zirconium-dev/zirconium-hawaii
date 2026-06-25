@@ -1,7 +1,7 @@
-From b7d2ef0771fa8583c10a08dc68a48efe42129892 Mon Sep 17 00:00:00 2001
+From 7407c483b9ab89d675784e1636308d526144004a Mon Sep 17 00:00:00 2001
 From: Sam Thursfield <sam.thursfield@codethink.co.uk>
 Date: Wed, 20 May 2026 11:45:34 +0100
-Subject: [PATCH 01/19] FDSDK 26.08: Update junction and remove obsolete
+Subject: [PATCH 01/20] FDSDK 26.08: Update junction and remove obsolete
  patches
 
 Remove patches that are applied upstream in FDSDK master

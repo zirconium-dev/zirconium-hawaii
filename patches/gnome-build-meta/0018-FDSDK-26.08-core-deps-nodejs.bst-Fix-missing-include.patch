@@ -1,7 +1,7 @@
-From 6a28754e4aeeeb2c396bf027d33358db2cc2ee98 Mon Sep 17 00:00:00 2001
+From 45b8cd0c4bb71273e3fddb79f43452d4eeba895c Mon Sep 17 00:00:00 2001
 From: Sam Thursfield <sam.thursfield@codethink.co.uk>
 Date: Sat, 6 Jun 2026 10:30:28 +0100
-Subject: [PATCH 19/19] FDSDK 26.08: core-deps/nodejs.bst: Fix missing #include
+Subject: [PATCH 18/20] FDSDK 26.08: core-deps/nodejs.bst: Fix missing #include
  inside V8
 
 This fixes a build failure seen on aarch64 with GCC 16. The cause is

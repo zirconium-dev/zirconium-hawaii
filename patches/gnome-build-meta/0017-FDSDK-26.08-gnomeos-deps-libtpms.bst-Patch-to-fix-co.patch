@@ -1,7 +1,7 @@
-From 67c82a8557e5b04685ff97843a9044d6a57c4542 Mon Sep 17 00:00:00 2001
+From ed554b07e1849522cf468e8799bdb2aa5b6834eb Mon Sep 17 00:00:00 2001
 From: Sam Thursfield <sam.thursfield@codethink.co.uk>
 Date: Fri, 5 Jun 2026 14:37:28 +0100
-Subject: [PATCH 18/19] FDSDK 26.08: gnomeos-deps/libtpms.bst: Patch to fix
+Subject: [PATCH 17/20] FDSDK 26.08: gnomeos-deps/libtpms.bst: Patch to fix
  compile error
 
 This was taken from the upstream 'master' branch. It's not yet in any

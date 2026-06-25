@@ -1,7 +1,7 @@
-From fbbabac9570aeff84e4dd9267b11757109bcaa41 Mon Sep 17 00:00:00 2001
+From ef6b5ead4426d36cf7fb7e295768e1e3d699cb21 Mon Sep 17 00:00:00 2001
 From: Sam Thursfield <sam.thursfield@codethink.co.uk>
 Date: Fri, 5 Jun 2026 11:24:46 +0100
-Subject: [PATCH 16/19] FDSDK 26.08: Fix libnfs build with GLIBC 2.43
+Subject: [PATCH 15/20] FDSDK 26.08: Fix libnfs build with GLIBC 2.43
 
 Upstream PR is: https://github.com/sahlberg/libnfs/pull/576/
 ---

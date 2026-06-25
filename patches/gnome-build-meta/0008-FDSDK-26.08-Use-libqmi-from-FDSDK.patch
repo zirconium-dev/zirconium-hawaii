@@ -1,7 +1,7 @@
-From 3d38b8b224cfcecc0b9eb2a33a24ac5315600dbf Mon Sep 17 00:00:00 2001
+From f3d03c0849c12008a0e7022667b7cff3826a1609 Mon Sep 17 00:00:00 2001
 From: Sam Thursfield <sam.thursfield@codethink.co.uk>
 Date: Tue, 5 May 2026 12:55:11 +0100
-Subject: [PATCH 09/19] FDSDK 26.08: Use libqmi from FDSDK
+Subject: [PATCH 08/20] FDSDK 26.08: Use libqmi from FDSDK
 
 This wasn't available in FDSDK 25.08, but it's added in the upcoming
 26.08 release.

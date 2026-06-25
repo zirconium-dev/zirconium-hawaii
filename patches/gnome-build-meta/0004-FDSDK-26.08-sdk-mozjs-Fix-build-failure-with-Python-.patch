@@ -1,7 +1,7 @@
-From b340930f95522cb5104ab63c6f068bc6528d3773 Mon Sep 17 00:00:00 2001
+From 5b9707525b711af3ef6e4445d89afe2efb8c9706 Mon Sep 17 00:00:00 2001
 From: Sam Thursfield <sam.thursfield@codethink.co.uk>
 Date: Fri, 24 Apr 2026 12:43:31 +0100
-Subject: [PATCH 05/19] FDSDK 26.08: sdk/mozjs: Fix build failure with Python
+Subject: [PATCH 04/20] FDSDK 26.08: sdk/mozjs: Fix build failure with Python
  3.14
 
 The FDSDK update uncovered an issue in the Mozilla JavaScript runtime

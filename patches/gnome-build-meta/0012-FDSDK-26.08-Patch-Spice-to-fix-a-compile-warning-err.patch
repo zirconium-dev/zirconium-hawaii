@@ -1,7 +1,7 @@
-From cc5810503cea9f0ac8619461855f7232f4e82c28 Mon Sep 17 00:00:00 2001
+From b8476a758df8cb0f58de3697d24a1c28bfb17b83 Mon Sep 17 00:00:00 2001
 From: Sam Thursfield <sam.thursfield@codethink.co.uk>
 Date: Tue, 26 May 2026 15:22:49 +0100
-Subject: [PATCH 13/19] FDSDK 26.08: Patch Spice to fix a compile warning/error
+Subject: [PATCH 12/20] FDSDK 26.08: Patch Spice to fix a compile warning/error
 
 This error is presumably only detected with the C++ compiler in FDSDK
 26.08.

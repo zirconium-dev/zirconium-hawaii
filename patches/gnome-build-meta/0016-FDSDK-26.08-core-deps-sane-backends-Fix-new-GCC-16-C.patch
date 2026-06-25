@@ -1,7 +1,7 @@
-From f449b7ba0aba228c18d002d0baedfd83aec4389f Mon Sep 17 00:00:00 2001
+From ebe6410b2169adcfafc1cec8ff73084daed81085 Mon Sep 17 00:00:00 2001
 From: Sam Thursfield <sam.thursfield@codethink.co.uk>
 Date: Fri, 5 Jun 2026 12:37:09 +0100
-Subject: [PATCH 17/19] FDSDK 26.08: core-deps/sane-backends: Fix new GCC 16 /
+Subject: [PATCH 16/20] FDSDK 26.08: core-deps/sane-backends: Fix new GCC 16 /
  C23 errors
 
 These are patches from the 'main' branch which should be in the next
