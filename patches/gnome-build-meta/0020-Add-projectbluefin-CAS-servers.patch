@@ -1,0 +1,42 @@
+From c5f2ef0cf0cc6880fb5caded6c2bd58707c79870 Mon Sep 17 00:00:00 2001
+From: Hec <hec@heccraft.com>
+Date: Wed, 24 Jun 2026 22:24:19 -0400
+Subject: [PATCH 20/20] Add projectbluefin CAS servers
+
+---
+ project.conf | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+
+diff --git a/project.conf b/project.conf
+index cc79d1211..9d1bd85fe 100644
+--- a/project.conf
++++ b/project.conf
+@@ -15,6 +15,12 @@ artifacts:
+     retry-limit: 5
+     retry-delay: 500
+     request-timeout: 180
++- url: https://cache.projectbluefin.io:11001
++  connection-config:
++    keepalive-time: 60
++    retry-limit: 5
++    retry-delay: 500
++    request-timeout: 180
+ 
+ source-caches:
+ - url: https://gbm.gnome.org:11003
+@@ -23,6 +29,12 @@ source-caches:
+     retry-limit: 5
+     retry-delay: 500
+     request-timeout: 180
++- url: https://cache.projectbluefin.io:11001
++  connection-config:
++    keepalive-time: 60
++    retry-limit: 5
++    retry-delay: 500
++    request-timeout: 180
+ 
+ fatal-warnings:
+ - overlaps
+-- 
+2.54.0
+
