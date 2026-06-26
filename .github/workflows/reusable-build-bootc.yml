@@ -355,6 +355,7 @@ jobs:
 
           while IFS= read -r label; do
             BUILD_ARGS+=("--label" "$label")
+            BUILD_ARGS+=("--annotation" "$label")
           done <<< "$LABELS"
 
           podman build "${BUILD_ARGS[@]}" .
