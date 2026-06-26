@@ -47,6 +47,10 @@ config:
       rm /layer/usr/share/factory/etc/pam.d/other
       rm /layer/usr/share/factory/etc/pam.d/system-auth
 
+      # FIXME: get this PRed into niri
+    - |
+      sed -i 's/gnome-keyring;/oo7-portal;gnome-keyring;/' /layer/usr/share/xdg-desktop-portal/niri-portals.conf
+
     - |
       # A footgun.
       # https://tim.siosm.fr/blog/2023/12/22/dont-change-defaut-login-shell/
