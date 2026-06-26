@@ -63,3 +63,4 @@ config:
     components/xdg-desktop-portal.bst: gnome-build-meta.bst:core-deps/xdg-desktop-portal.bst
 
     components/bash-config.bst: config/bash-config.bst
+    components/sudo.bst: cli/sudo-rs.bst

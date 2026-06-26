@@ -51,7 +51,7 @@ depends:
   - freedesktop-sdk.bst:components/erofs-utils.bst
   - freedesktop-sdk.bst:components/dosfstools.bst
   - freedesktop-sdk.bst:components/pciutils.bst
-  - freedesktop-sdk.bst:components/sudo.bst
+  - cli/sudo-rs.bst
   - freedesktop-sdk.bst:components/vim.bst
   - freedesktop-sdk.bst:components/polkit.bst
   - freedesktop-sdk.bst:components/steam-devices.bst
