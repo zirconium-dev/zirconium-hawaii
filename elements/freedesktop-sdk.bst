@@ -72,3 +72,4 @@ config:
     components/linux.bst: core/linux.bst
 
     components/bash-config.bst: config/bash-config.bst
+    components/sudo.bst: cli/sudo-rs.bst
