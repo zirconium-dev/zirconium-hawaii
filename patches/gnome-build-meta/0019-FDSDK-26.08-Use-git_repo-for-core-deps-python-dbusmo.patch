@@ -1,9 +1,17 @@
-From b4de40dd37a428086463bd7a976e93b4385e3fb5 Mon Sep 17 00:00:00 2001
+From 56192abb8ee316c132f256f20fcd0ef47c1a69ba Mon Sep 17 00:00:00 2001
 From: Hec <hec@heccraft.com>
 Date: Thu, 25 Jun 2026 02:50:09 -0400
-Subject: [PATCH 19/20] FDSDK 26.08: Use git_repo for
+Subject: [PATCH 19/19] FDSDK 26.08: Use git_repo for
  core-deps/python-dbusmock.bst
 
+When pulling this particular project from pypi, the build gives the
+error "LookupError: setuptools-scm was unable to detect version for
+/buildstream/gnome/core-deps/python-dbusmock.bst."
+
+Changing to using the git repo fixes this entirely, it seems. I can
+trace this error back to this[1] commit in fdSDK.
+
+[1]: https://gitlab.com/freedesktop-sdk/freedesktop-sdk/-/commit/342c3c1500388a817c6f283971710b543b1dd27b
 ---
  elements/core-deps/python-dbusmock.bst | 8 ++++----
  1 file changed, 4 insertions(+), 4 deletions(-)

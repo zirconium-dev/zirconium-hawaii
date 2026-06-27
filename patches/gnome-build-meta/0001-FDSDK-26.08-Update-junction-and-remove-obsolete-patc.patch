@@ -1,7 +1,7 @@
-From 7407c483b9ab89d675784e1636308d526144004a Mon Sep 17 00:00:00 2001
+From 83a8a021c36d74d01aa0ff333e48506481f5d47a Mon Sep 17 00:00:00 2001
 From: Sam Thursfield <sam.thursfield@codethink.co.uk>
 Date: Wed, 20 May 2026 11:45:34 +0100
-Subject: [PATCH 01/20] FDSDK 26.08: Update junction and remove obsolete
+Subject: [PATCH 01/19] FDSDK 26.08: Update junction and remove obsolete
  patches
 
 Remove patches that are applied upstream in FDSDK master
@@ -11,13 +11,15 @@ Remove patches that are applied upstream in FDSDK master
  ...-openssh-Include-ssh-_config.d-.conf.patch | 53 -----------------
  ...-Disable-event-activation-by-default.patch | 53 -----------------
  .../0007-Update-Pipewire-to-1.6.7.patch       | 57 ++++---------------
- 5 files changed, 14 insertions(+), 209 deletions(-)
+ .../0008-linux-Enable-QCOM_PD_MAPPER.patch    | 32 -----------
+ 6 files changed, 14 insertions(+), 241 deletions(-)
  delete mode 100644 patches/freedesktop-sdk/0003-openssh-Use-etc-ssh-as-sysconfdir.patch
  delete mode 100644 patches/freedesktop-sdk/0004-openssh-Include-ssh-_config.d-.conf.patch
  delete mode 100644 patches/freedesktop-sdk/0005-lvm2-Disable-event-activation-by-default.patch
+ delete mode 100644 patches/freedesktop-sdk/0008-linux-Enable-QCOM_PD_MAPPER.patch
 
 diff --git a/elements/freedesktop-sdk.bst b/elements/freedesktop-sdk.bst
-index d025c59a0..05acf206c 100644
+index d025c59a0..2fcf8b65d 100644
 --- a/elements/freedesktop-sdk.bst
 +++ b/elements/freedesktop-sdk.bst
 @@ -3,8 +3,8 @@ kind: junction
@@ -27,20 +29,20 @@ index d025c59a0..05acf206c 100644
 -  track: freedesktop-sdk-25.08*
 -  ref: freedesktop-sdk-25.08.13-0-g8446990f0a549bb1f3ceb654af64fc176b274488
 +  track: master
-+  ref: freedesktop-sdk-25.08rc.3-2101-g69c67eb9198d85a7eed56664c0d9ede6dcf5081e
++  ref: freedesktop-sdk-25.08rc.3-2131-g25ab55f0ed760163013b2b0d7452461ba53e6de5
  - kind: patch_queue
    path: patches/freedesktop-sdk
  
 diff --git a/patches/freedesktop-sdk/0003-openssh-Use-etc-ssh-as-sysconfdir.patch b/patches/freedesktop-sdk/0003-openssh-Use-etc-ssh-as-sysconfdir.patch
 deleted file mode 100644
-index fcbfdb5af..000000000
+index 7ee5a29da..000000000
 --- a/patches/freedesktop-sdk/0003-openssh-Use-etc-ssh-as-sysconfdir.patch
 +++ /dev/null
 @@ -1,56 +0,0 @@
 -From cb7355848d5632c17355078ae33508f7766409f8 Mon Sep 17 00:00:00 2001
 -From: Valentin David <me@valentindavid.com>
 -Date: Sun, 26 Oct 2025 11:03:32 +0100
--Subject: [PATCH 3/7] openssh: Use /etc/ssh as sysconfdir
+-Subject: [PATCH 3/8] openssh: Use /etc/ssh as sysconfdir
 -
 -All other distros use that. And there are expectations from systemd
 -for it to be configured so.
@@ -95,14 +97,14 @@ index fcbfdb5af..000000000
 -
 diff --git a/patches/freedesktop-sdk/0004-openssh-Include-ssh-_config.d-.conf.patch b/patches/freedesktop-sdk/0004-openssh-Include-ssh-_config.d-.conf.patch
 deleted file mode 100644
-index 6e8e27abe..000000000
+index 081dba9a5..000000000
 --- a/patches/freedesktop-sdk/0004-openssh-Include-ssh-_config.d-.conf.patch
 +++ /dev/null
 @@ -1,53 +0,0 @@
 -From deba018b7180e08cb01685e422b7b4fc668d5ef4 Mon Sep 17 00:00:00 2001
 -From: Valentin David <me@valentindavid.com>
 -Date: Sun, 26 Oct 2025 16:06:02 +0100
--Subject: [PATCH 4/7] openssh: Include ssh*_config.d/*.conf
+-Subject: [PATCH 4/8] openssh: Include ssh*_config.d/*.conf
 -
 -Most distributions include system-wide configuration fragments from
 -and some software expect it: systemd, libvirt.
@@ -154,14 +156,14 @@ index 6e8e27abe..000000000
 -
 diff --git a/patches/freedesktop-sdk/0005-lvm2-Disable-event-activation-by-default.patch b/patches/freedesktop-sdk/0005-lvm2-Disable-event-activation-by-default.patch
 deleted file mode 100644
-index 3013de9f2..000000000
+index 3b63533b0..000000000
 --- a/patches/freedesktop-sdk/0005-lvm2-Disable-event-activation-by-default.patch
 +++ /dev/null
 @@ -1,53 +0,0 @@
 -From e51fde61ed09195ba684340c0b3be5f4c6fd9cad Mon Sep 17 00:00:00 2001
 -From: Valentin David <me@valentindavid.com>
 -Date: Sat, 24 Jan 2026 12:13:27 +0100
--Subject: [PATCH 5/7] lvm2: Disable event activation by default
+-Subject: [PATCH 5/8] lvm2: Disable event activation by default
 -
 -Because lvm2 does not have a distro wide configuration in /usr and all
 -is in /etc, configuring it is not compatible with systemd-sysupdate
@@ -212,7 +214,7 @@ index 3013de9f2..000000000
 -2.54.0
 -
 diff --git a/patches/freedesktop-sdk/0007-Update-Pipewire-to-1.6.7.patch b/patches/freedesktop-sdk/0007-Update-Pipewire-to-1.6.7.patch
-index ebb422e55..5a4eb7998 100644
+index 76fed1961..b7967d1d6 100644
 --- a/patches/freedesktop-sdk/0007-Update-Pipewire-to-1.6.7.patch
 +++ b/patches/freedesktop-sdk/0007-Update-Pipewire-to-1.6.7.patch
 @@ -1,54 +1,21 @@
@@ -222,7 +224,7 @@ index ebb422e55..5a4eb7998 100644
 +From 7692238e17543ba582c17d911e3d1cb8dec7b6b3 Mon Sep 17 00:00:00 2001
 +From: Hec <hec@heccraft.com>
 +Date: Fri, 19 Jun 2026 19:00:26 -0400
- Subject: [PATCH 7/7] Update Pipewire to 1.6.7
+ Subject: [PATCH 7/8] Update Pipewire to 1.6.7
  
  ---
 - elements/components/pipewire-base.bst | 7 ++++++-
@@ -282,6 +284,44 @@ index ebb422e55..5a4eb7998 100644
  +  ref: 1.6.7-0-g3b2cb4fb037bf6033b87d3c87ee917b2f686d309
  -- 
  2.54.0
+diff --git a/patches/freedesktop-sdk/0008-linux-Enable-QCOM_PD_MAPPER.patch b/patches/freedesktop-sdk/0008-linux-Enable-QCOM_PD_MAPPER.patch
+deleted file mode 100644
+index 143c628f9..000000000
+--- a/patches/freedesktop-sdk/0008-linux-Enable-QCOM_PD_MAPPER.patch
++++ /dev/null
+@@ -1,32 +0,0 @@
+-From 4f63e7d9a2580b847da8e7dd4f7e5d1f0b96e3fc Mon Sep 17 00:00:00 2001
+-From: Achill Gilgenast <achill@achill.org>
+-Date: Thu, 11 Jun 2026 10:26:27 +0200
+-Subject: [PATCH 8/8] linux: Enable QCOM_PD_MAPPER
+-
+-See https://lwn.net/Articles/973399/
+-
+-Allows the removal of the user-space pd-mapper service in GNOME OS,
+-which should not be used anymore (See also
+-https://github.com/linux-msm/pd-mapper/pull/15#issuecomment-3480801412)
+-
+-Signed-off-by: Achill Gilgenast <achill@achill.org>
+----
+- files/linux/fdsdk-config.sh | 2 ++
+- 1 file changed, 2 insertions(+)
+-
+-diff --git a/files/linux/fdsdk-config.sh b/files/linux/fdsdk-config.sh
+-index fd4337eeff7b..12301221822f 100644
+---- a/files/linux/fdsdk-config.sh
+-+++ b/files/linux/fdsdk-config.sh
+-@@ -67,6 +67,8 @@ case "$arch" in
+- 	enable SC_LPASS_CORECC_7280
+- 	enable SC_VIDEOCC_7280
+- 	enable SC_GCC_7280
+-+
+-+	enable QCOM_PD_MAPPER
+-     ;;
+- esac
+- 
+--- 
+-2.54.0
+-
 -- 
 2.54.0
 

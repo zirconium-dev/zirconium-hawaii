@@ -1,7 +1,7 @@
-From 5b9707525b711af3ef6e4445d89afe2efb8c9706 Mon Sep 17 00:00:00 2001
+From 997cf51707a64ae744c3e45d4c26f6ad049e2c26 Mon Sep 17 00:00:00 2001
 From: Sam Thursfield <sam.thursfield@codethink.co.uk>
 Date: Fri, 24 Apr 2026 12:43:31 +0100
-Subject: [PATCH 04/20] FDSDK 26.08: sdk/mozjs: Fix build failure with Python
+Subject: [PATCH 04/19] FDSDK 26.08: sdk/mozjs: Fix build failure with Python
  3.14
 
 The FDSDK update uncovered an issue in the Mozilla JavaScript runtime
@@ -19,7 +19,7 @@ should be handled separately.
  create mode 100644 patches/mozjs/python-3.14.patch
 
 diff --git a/elements/sdk/mozjs.bst b/elements/sdk/mozjs.bst
-index 7ec832506..9055837ab 100644
+index 0acdb8516..85943f773 100644
 --- a/elements/sdk/mozjs.bst
 +++ b/elements/sdk/mozjs.bst
 @@ -9,6 +9,8 @@ sources:
@@ -30,7 +30,7 @@ index 7ec832506..9055837ab 100644
 +  path: patches/mozjs/python-3.14.patch
  
  build-depends:
- - freedesktop-sdk.bst:public-stacks/buildsystem-make.bst
+ - (@): include/clang-for-recc.yml
 diff --git a/patches/mozjs/python-3.14.patch b/patches/mozjs/python-3.14.patch
 new file mode 100644
 index 000000000..6d37802dc

@@ -1,7 +1,7 @@
-From 45b8cd0c4bb71273e3fddb79f43452d4eeba895c Mon Sep 17 00:00:00 2001
+From 102966f0244ebaecb4e0618ad4b22810ce7aa380 Mon Sep 17 00:00:00 2001
 From: Sam Thursfield <sam.thursfield@codethink.co.uk>
 Date: Sat, 6 Jun 2026 10:30:28 +0100
-Subject: [PATCH 18/20] FDSDK 26.08: core-deps/nodejs.bst: Fix missing #include
+Subject: [PATCH 18/19] FDSDK 26.08: core-deps/nodejs.bst: Fix missing #include
  inside V8
 
 This fixes a build failure seen on aarch64 with GCC 16. The cause is
@@ -20,7 +20,7 @@ fix to land upstream in V8 instead.
  create mode 100644 patches/nodejs/fix-v8-build-failures.patch
 
 diff --git a/elements/core-deps/nodejs.bst b/elements/core-deps/nodejs.bst
-index b31033cbe..63b11a879 100644
+index 2c594a1db..6ca9d5015 100644
 --- a/elements/core-deps/nodejs.bst
 +++ b/elements/core-deps/nodejs.bst
 @@ -5,6 +5,8 @@ sources:
@@ -31,7 +31,7 @@ index b31033cbe..63b11a879 100644
 +  path: patches/nodejs/fix-v8-build-failures.patch
  
  build-depends:
- - freedesktop-sdk.bst:components/gyp.bst
+ - (@): include/gcc-for-recc.yml
 diff --git a/patches/nodejs/fix-v8-build-failures.patch b/patches/nodejs/fix-v8-build-failures.patch
 new file mode 100644
 index 000000000..fb7679176

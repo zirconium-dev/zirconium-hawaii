@@ -1,7 +1,7 @@
-From f8bb16e4b2c44a4005b9f6fdf5c1d6f63d852896 Mon Sep 17 00:00:00 2001
+From d7497246f96c4fb87ee6c95896ae638da63ebf03 Mon Sep 17 00:00:00 2001
 From: Sam Thursfield <sam.thursfield@codethink.co.uk>
 Date: Fri, 24 Apr 2026 13:08:51 +0100
-Subject: [PATCH 05/20] FDSDK 26.08: Fix Linux path
+Subject: [PATCH 05/19] FDSDK 26.08: Fix Linux path
 
 The Linux install path changed since FDSDK 25.08.
 ---
@@ -23,10 +23,10 @@ index ebdfa7cb1..87b265ff7 100644
    - |
      openssl x509 -inform PEM -outform DER -in "linux-module-cert.crt" -out "linux-module-cert.cer"
 diff --git a/elements/gnomeos/signed-boot.bst b/elements/gnomeos/signed-boot.bst
-index dd6859d4a..07a5a8f27 100644
+index 776a71cdf..43f42c26a 100644
 --- a/elements/gnomeos/signed-boot.bst
 +++ b/elements/gnomeos/signed-boot.bst
-@@ -120,7 +120,7 @@ config:
+@@ -121,7 +121,7 @@ config:
        --phases="enter-initrd:leave-initrd" \
        --secureboot-private-key=VENDOR.key \
        --secureboot-certificate=VENDOR.crt \

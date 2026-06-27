@@ -1,25 +1,26 @@
-From f3d03c0849c12008a0e7022667b7cff3826a1609 Mon Sep 17 00:00:00 2001
+From c9393a7b28b21d3feebab3c4f94fb9dd8682e84d Mon Sep 17 00:00:00 2001
 From: Sam Thursfield <sam.thursfield@codethink.co.uk>
 Date: Tue, 5 May 2026 12:55:11 +0100
-Subject: [PATCH 08/20] FDSDK 26.08: Use libqmi from FDSDK
+Subject: [PATCH 08/19] FDSDK 26.08: Use libqmi from FDSDK
 
 This wasn't available in FDSDK 25.08, but it's added in the upcoming
 26.08 release.
 ---
- elements/core-deps/libqmi.bst       | 20 --------------------
- elements/core-deps/libqrtr-glib.bst | 16 ----------------
+ elements/core-deps/libqmi.bst       | 24 ------------------------
+ elements/core-deps/libqrtr-glib.bst | 17 -----------------
  elements/gnomeos-deps/libssc.bst    |  2 +-
- 3 files changed, 1 insertion(+), 37 deletions(-)
+ 3 files changed, 1 insertion(+), 42 deletions(-)
  delete mode 100644 elements/core-deps/libqmi.bst
  delete mode 100644 elements/core-deps/libqrtr-glib.bst
 
 diff --git a/elements/core-deps/libqmi.bst b/elements/core-deps/libqmi.bst
 deleted file mode 100644
-index 7d49af385..000000000
+index d384f9193..000000000
 --- a/elements/core-deps/libqmi.bst
 +++ /dev/null
-@@ -1,20 +0,0 @@
+@@ -1,24 +0,0 @@
 -kind: meson
+-
 -sources:
 -- kind: git_repo
 -  url: freedesktop:mobile-broadband/libqmi.git
@@ -27,11 +28,14 @@ index 7d49af385..000000000
 -  exclude:
 -  - '*-dev'
 -  ref: 1.38.0-0-ge3d79ed3f7fdc6a7fa8b374860b1c23a8f172812
+-
 -build-depends:
+-- (@): include/gcc-for-recc.yml
+-- buildsystems/meson.bst
 -- sdk/gobject-introspection.bst
 -- sdk/gtk-doc.bst
--- freedesktop-sdk.bst:public-stacks/buildsystem-meson.bst
 -- freedesktop-sdk.bst:components/help2man.bst
+-
 -depends:
 -- sdk/glib.bst
 -- core-deps/libqrtr-glib.bst
@@ -41,10 +45,10 @@ index 7d49af385..000000000
 -- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 diff --git a/elements/core-deps/libqrtr-glib.bst b/elements/core-deps/libqrtr-glib.bst
 deleted file mode 100644
-index 353335c29..000000000
+index 03862774b..000000000
 --- a/elements/core-deps/libqrtr-glib.bst
 +++ /dev/null
-@@ -1,16 +0,0 @@
+@@ -1,17 +0,0 @@
 -kind: meson
 -
 -sources:
@@ -54,19 +58,20 @@ index 353335c29..000000000
 -  ref: 1.4.0-0-g69791f8f2a092d0ec8eb83cbe51dfc3d157c3079
 -
 -build-depends:
+-- (@): include/gcc-for-recc.yml
+-- buildsystems/meson.bst
 -- sdk/gobject-introspection.bst
 -- sdk/gtk-doc.bst
--- freedesktop-sdk.bst:public-stacks/buildsystem-meson.bst
 -
 -depends:
 -- sdk/glib.bst
 -- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 diff --git a/elements/gnomeos-deps/libssc.bst b/elements/gnomeos-deps/libssc.bst
-index 416b9309d..461b1771c 100644
+index 73550fadf..bc98bca0c 100644
 --- a/elements/gnomeos-deps/libssc.bst
 +++ b/elements/gnomeos-deps/libssc.bst
-@@ -10,6 +10,6 @@ build-depends:
- - freedesktop-sdk.bst:public-stacks/buildsystem-meson.bst
+@@ -11,6 +11,6 @@ build-depends:
+ - buildsystems/meson.bst
  
  depends:
 +- freedesktop-sdk.bst:components/libqmi.bst

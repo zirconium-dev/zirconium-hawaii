@@ -1,7 +1,7 @@
-From 43eed763fed90b6793b194572fb6c8c468683065 Mon Sep 17 00:00:00 2001
+From c4df09fb332aa4f9cc9b725eb1c7164ef17f65a4 Mon Sep 17 00:00:00 2001
 From: Sam Thursfield <sam.thursfield@codethink.co.uk>
 Date: Fri, 22 May 2026 11:42:38 +0100
-Subject: [PATCH 11/20] FDSDK 26.08: Increase ESP size to 240MB
+Subject: [PATCH 11/19] FDSDK 26.08: Increase ESP size to 240MB
 
 The initramfs is around 12MB larger with FDSDK 26.08. This is because
 the compression method for device firmwares switched from xz to zstd:

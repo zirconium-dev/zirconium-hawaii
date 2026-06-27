@@ -1,7 +1,7 @@
-From ed554b07e1849522cf468e8799bdb2aa5b6834eb Mon Sep 17 00:00:00 2001
+From 2df84b574fcb97ddcc36aa85435824ffb4d5f465 Mon Sep 17 00:00:00 2001
 From: Sam Thursfield <sam.thursfield@codethink.co.uk>
 Date: Fri, 5 Jun 2026 14:37:28 +0100
-Subject: [PATCH 17/20] FDSDK 26.08: gnomeos-deps/libtpms.bst: Patch to fix
+Subject: [PATCH 17/19] FDSDK 26.08: gnomeos-deps/libtpms.bst: Patch to fix
  compile error
 
 This was taken from the upstream 'master' branch. It's not yet in any
@@ -13,7 +13,7 @@ released version.
  create mode 100644 patches/libtpms/Fix-a-compilation-error-in-TPMLIB_GetPlainText.patch
 
 diff --git a/elements/gnomeos-deps/libtpms.bst b/elements/gnomeos-deps/libtpms.bst
-index 0435d160c..89c494eaa 100644
+index 1d87a421f..3a8bde0e2 100644
 --- a/elements/gnomeos-deps/libtpms.bst
 +++ b/elements/gnomeos-deps/libtpms.bst
 @@ -5,6 +5,8 @@ sources:
@@ -24,7 +24,7 @@ index 0435d160c..89c494eaa 100644
 +  path: patches/libtpms/Fix-a-compilation-error-in-TPMLIB_GetPlainText.patch
  
  build-depends:
- - freedesktop-sdk.bst:public-stacks/buildsystem-autotools.bst
+ - (@): include/gcc-for-recc.yml
 diff --git a/patches/libtpms/Fix-a-compilation-error-in-TPMLIB_GetPlainText.patch b/patches/libtpms/Fix-a-compilation-error-in-TPMLIB_GetPlainText.patch
 new file mode 100644
 index 000000000..48cbeb5d7

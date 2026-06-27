@@ -1,7 +1,7 @@
-From 0e0e29358bb917f0e2423e7243039aad90133d38 Mon Sep 17 00:00:00 2001
+From 33b624aef4b094ae415fb94bac44dfb6dd336ac6 Mon Sep 17 00:00:00 2001
 From: Sam Thursfield <sam.thursfield@codethink.co.uk>
 Date: Wed, 20 May 2026 12:44:03 +0100
-Subject: [PATCH 10/20] FDSDK 26.08: Override renamed `_private` elements
+Subject: [PATCH 10/19] FDSDK 26.08: Override renamed `_private` elements
 
 There is a common pattern in FDSDK used when a component
 requires multiple elements. This happens when a single repo is built in
@@ -28,10 +28,10 @@ https://gitlab.gnome.org/GNOME/gnome-build-meta/-/merge_requests/4647).
  8 files changed, 10 insertions(+), 10 deletions(-)
 
 diff --git a/elements/core-deps/systemd-base.bst b/elements/core-deps/systemd-base.bst
-index cc2187837..8dbe34b62 100644
+index c39967379..8ced1bdfe 100644
 --- a/elements/core-deps/systemd-base.bst
 +++ b/elements/core-deps/systemd-base.bst
-@@ -41,7 +41,7 @@ build-depends:
+@@ -42,7 +42,7 @@ build-depends:
  - freedesktop-sdk.bst:components/python3-pyelftools.bst
  - freedesktop-sdk.bst:components/libxslt.bst
  - freedesktop-sdk.bst:components/docbook-xsl.bst
@@ -88,7 +88,7 @@ index 15c0a58cc..9fa811205 100644
  - freedesktop-sdk.bst:components/libapparmor.bst
  - freedesktop-sdk.bst:components/libgpg-error.bst
 diff --git a/elements/core-deps/xdg-desktop-portal.bst b/elements/core-deps/xdg-desktop-portal.bst
-index 7e74d1a33..64cc8541d 100644
+index b523e99ed..160d84293 100644
 --- a/elements/core-deps/xdg-desktop-portal.bst
 +++ b/elements/core-deps/xdg-desktop-portal.bst
 @@ -1,7 +1,7 @@
@@ -101,7 +101,7 @@ index 7e74d1a33..64cc8541d 100644
  runtime-depends:
  - freedesktop-sdk.bst:components/flatpak.bst
 diff --git a/elements/freedesktop-sdk.bst b/elements/freedesktop-sdk.bst
-index 88e608cac..da866850e 100644
+index 1eca2c44b..2abf780a4 100644
 --- a/elements/freedesktop-sdk.bst
 +++ b/elements/freedesktop-sdk.bst
 @@ -55,12 +55,12 @@ config:
@@ -133,18 +133,18 @@ index ab7dd2395..c5e2a722e 100644
  
  # Common build deps that do not make it to the runtime
 diff --git a/elements/sdk/vala.bst b/elements/sdk/vala.bst
-index aa002d0e4..81fd5fa20 100644
+index ba09dc373..acf4d61f8 100644
 --- a/elements/sdk/vala.bst
 +++ b/elements/sdk/vala.bst
-@@ -11,7 +11,7 @@ build-depends:
+@@ -13,7 +13,7 @@ build-depends:
  - freedesktop-sdk.bst:components/bison.bst
  - freedesktop-sdk.bst:components/flex.bst
  - freedesktop-sdk.bst:components/git.bst
 -- freedesktop-sdk.bst:components/vala-bootstrap.bst
 +- freedesktop-sdk.bst:components/_private/vala-bootstrap.bst
- - freedesktop-sdk.bst:public-stacks/buildsystem-autotools.bst
  
  depends:
+ - sdk/glib.bst
 -- 
 2.54.0
 

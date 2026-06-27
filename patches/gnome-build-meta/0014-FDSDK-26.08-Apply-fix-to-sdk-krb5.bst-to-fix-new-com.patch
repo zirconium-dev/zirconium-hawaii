@@ -1,30 +1,29 @@
-From 8031302c6947793cc54f9f1616d00a26638bf22c Mon Sep 17 00:00:00 2001
+From d5b79d59863f8249011d4dc8828bd93d197205d9 Mon Sep 17 00:00:00 2001
 From: Sam Thursfield <sam.thursfield@codethink.co.uk>
 Date: Mon, 1 Jun 2026 17:27:32 +0100
-Subject: [PATCH 14/20] FDSDK 26.08: Apply fix to sdk/krb5.bst to fix new
+Subject: [PATCH 14/19] FDSDK 26.08: Apply fix to sdk/krb5.bst to fix new
  compile warning
 
 ---
- elements/sdk/krb5.bst                         |   4 +
+ elements/sdk/krb5.bst                         |   3 +
  .../krb5/fix-strchr-conformance-to-c23.patch  | 176 ++++++++++++++++++
- 2 files changed, 180 insertions(+)
+ 2 files changed, 179 insertions(+)
  create mode 100644 patches/krb5/fix-strchr-conformance-to-c23.patch
 
 diff --git a/elements/sdk/krb5.bst b/elements/sdk/krb5.bst
-index 373c2aca7..3410857dd 100644
+index 9f2b24c13..d73e0407f 100644
 --- a/elements/sdk/krb5.bst
 +++ b/elements/sdk/krb5.bst
-@@ -4,6 +4,10 @@ sources:
+@@ -4,6 +4,9 @@ sources:
  - kind: tar
    url: kerberos:dist/krb5/1.22/krb5-1.22.2.tar.gz
    ref: 3243ffbc8ea4d4ac22ddc7dd2a1dc54c57874c40648b60ff97009763554eaf13
 +# This fix is not yet released.
 +- kind: patch
 +  path: patches/krb5/fix-strchr-conformance-to-c23.patch
-+
+ 
  build-depends:
- - freedesktop-sdk.bst:components/bison.bst
- - freedesktop-sdk.bst:components/perl.bst
+ - (@): include/gcc-for-recc.yml
 diff --git a/patches/krb5/fix-strchr-conformance-to-c23.patch b/patches/krb5/fix-strchr-conformance-to-c23.patch
 new file mode 100644
 index 000000000..09d0f6dc9

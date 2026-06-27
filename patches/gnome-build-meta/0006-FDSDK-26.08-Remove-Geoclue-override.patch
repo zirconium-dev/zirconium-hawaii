@@ -1,18 +1,18 @@
-From 57ee290f6116d2bdb004a7ce7e21a9e770ac5ba0 Mon Sep 17 00:00:00 2001
+From 88da8433ccc409480df28e5168f866961793f23b Mon Sep 17 00:00:00 2001
 From: Sam Thursfield <sam.thursfield@codethink.co.uk>
 Date: Fri, 24 Apr 2026 16:34:33 +0100
-Subject: [PATCH 06/20] FDSDK 26.08: Remove Geoclue override
+Subject: [PATCH 06/19] FDSDK 26.08: Remove Geoclue override
 
 This override existed to build Geoclue with ModemManager support.
 That is done upstream in the upcoming FDSDK 26.08.
 ---
  elements/freedesktop-sdk.bst           |  2 -
- elements/gnomeos-deps/geoclue-base.bst | 73 --------------------------
- 2 files changed, 75 deletions(-)
+ elements/gnomeos-deps/geoclue-base.bst | 74 --------------------------
+ 2 files changed, 76 deletions(-)
  delete mode 100644 elements/gnomeos-deps/geoclue-base.bst
 
 diff --git a/elements/freedesktop-sdk.bst b/elements/freedesktop-sdk.bst
-index 05acf206c..88e608cac 100644
+index 2fcf8b65d..1eca2c44b 100644
 --- a/elements/freedesktop-sdk.bst
 +++ b/elements/freedesktop-sdk.bst
 @@ -64,5 +64,3 @@ config:
@@ -23,15 +23,16 @@ index 05acf206c..88e608cac 100644
 -    components/geoclue-base.bst: gnomeos-deps/geoclue-base.bst
 diff --git a/elements/gnomeos-deps/geoclue-base.bst b/elements/gnomeos-deps/geoclue-base.bst
 deleted file mode 100644
-index 9df168915..000000000
+index b58b0b636..000000000
 --- a/elements/gnomeos-deps/geoclue-base.bst
 +++ /dev/null
-@@ -1,73 +0,0 @@
+@@ -1,74 +0,0 @@
 -# From freedesktop-sdk but with modemmanager enabled
 -kind: meson
 -
 -build-depends:
--- freedesktop-sdk.bst:public-stacks/buildsystem-meson.bst
+-- (@): include/gcc-for-recc.yml
+-- buildsystems/meson.bst
 -- freedesktop-sdk.bst:components/gtk-doc.bst
 -- freedesktop-sdk.bst:components/gobject-introspection.bst
 -- freedesktop-sdk.bst:components/systemd.bst

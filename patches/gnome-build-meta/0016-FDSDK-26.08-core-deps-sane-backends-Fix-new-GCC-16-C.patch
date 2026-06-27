@@ -1,7 +1,7 @@
-From ebe6410b2169adcfafc1cec8ff73084daed81085 Mon Sep 17 00:00:00 2001
+From 3e6763a44c210b8fcb4a114f09814c8960236940 Mon Sep 17 00:00:00 2001
 From: Sam Thursfield <sam.thursfield@codethink.co.uk>
 Date: Fri, 5 Jun 2026 12:37:09 +0100
-Subject: [PATCH 16/20] FDSDK 26.08: core-deps/sane-backends: Fix new GCC 16 /
+Subject: [PATCH 16/19] FDSDK 26.08: core-deps/sane-backends: Fix new GCC 16 /
  C23 errors
 
 These are patches from the 'main' branch which should be in the next
@@ -17,7 +17,7 @@ See: https://gitlab.com/sane-project/backends/-/merge_requests/894/
  create mode 100644 patches/sane-backends/0002-gphoto-Fix-for-error-triggered-by-ISO-C23-changes.patch
 
 diff --git a/elements/core-deps/sane-backends.bst b/elements/core-deps/sane-backends.bst
-index 9a26e3391..241752cd7 100644
+index 64fd9b658..a1757b53e 100644
 --- a/elements/core-deps/sane-backends.bst
 +++ b/elements/core-deps/sane-backends.bst
 @@ -7,6 +7,8 @@ sources:
@@ -28,7 +28,7 @@ index 9a26e3391..241752cd7 100644
 +  path: patches/sane-backends
  
  build-depends:
- - freedesktop-sdk.bst:components/python3.bst
+ - (@): include/gcc-for-recc.yml
 diff --git a/patches/sane-backends/0001-gphoto2.c-Fix-build-failure-with-GCC-16-and-C23.patch b/patches/sane-backends/0001-gphoto2.c-Fix-build-failure-with-GCC-16-and-C23.patch
 new file mode 100644
 index 000000000..6bd2431a7

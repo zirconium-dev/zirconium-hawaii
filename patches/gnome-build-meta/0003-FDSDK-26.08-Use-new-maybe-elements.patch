@@ -1,7 +1,7 @@
-From fdc048dcddbe08d9a9d4ff5396957ab4efa8f689 Mon Sep 17 00:00:00 2001
+From 42a39abf6f82ec75e21e977118a396c2d767a305 Mon Sep 17 00:00:00 2001
 From: Sam Thursfield <sam.thursfield@codethink.co.uk>
 Date: Wed, 20 May 2026 12:44:32 +0100
-Subject: [PATCH 03/20] FDSDK 26.08: Use new `-maybe` elements
+Subject: [PATCH 03/19] FDSDK 26.08: Use new `-maybe` elements
 
 FDSDK 26.08 introduces support for some new architectures where not all
 of the components can be built. The workaround for that is to add
@@ -21,12 +21,12 @@ element but on platforms where it can't be built, contain nothing.
  10 files changed, 10 insertions(+), 10 deletions(-)
 
 diff --git a/elements/core-deps/fwupd-efi.bst b/elements/core-deps/fwupd-efi.bst
-index e52c3a784..b65d69048 100644
+index 77847c214..4e53823cd 100644
 --- a/elements/core-deps/fwupd-efi.bst
 +++ b/elements/core-deps/fwupd-efi.bst
-@@ -9,7 +9,7 @@ sources:
- build-depends:
- - freedesktop-sdk.bst:public-stacks/buildsystem-meson.bst
+@@ -10,7 +10,7 @@ build-depends:
+ - (@): include/gcc-for-recc.yml
+ - buildsystems/meson.bst
  - freedesktop-sdk.bst:components/genpeimg.bst
 -- freedesktop-sdk.bst:components/gnu-efi.bst
 +- freedesktop-sdk.bst:components/gnu-efi-maybe.bst
@@ -34,18 +34,18 @@ index e52c3a784..b65d69048 100644
  - freedesktop-sdk.bst:components/python3-pefile.bst
  
 diff --git a/elements/core-deps/fwupd.bst b/elements/core-deps/fwupd.bst
-index 60b291ebb..816c6e4e0 100644
+index a997fd0cb..6640189f5 100644
 --- a/elements/core-deps/fwupd.bst
 +++ b/elements/core-deps/fwupd.bst
-@@ -16,7 +16,7 @@ build-depends:
+@@ -18,7 +18,7 @@ build-depends:
  # Needed for docs/test-deps.py
  - freedesktop-sdk.bst:components/python3-packaging.bst
  - freedesktop-sdk.bst:components/systemd.bst
 -- freedesktop-sdk.bst:components/valgrind.bst
 +- freedesktop-sdk.bst:components/valgrind-maybe.bst
- - freedesktop-sdk.bst:public-stacks/buildsystem-meson.bst
  
  depends:
+ - core-deps/ModemManager.bst
 diff --git a/elements/gnomeos-deps/deps-devel.bst b/elements/gnomeos-deps/deps-devel.bst
 index 7238b3a5b..ab7dd2395 100644
 --- a/elements/gnomeos-deps/deps-devel.bst
@@ -73,11 +73,11 @@ index 27cde7024..041e78655 100644
  - gnomeos-deps/nftables.bst
  - gnomeos-deps/firewalld.bst
 diff --git a/elements/gnomeos-deps/shim.bst b/elements/gnomeos-deps/shim.bst
-index e4f676469..3c53b7a09 100644
+index 9f78c8222..7a0df70da 100644
 --- a/elements/gnomeos-deps/shim.bst
 +++ b/elements/gnomeos-deps/shim.bst
-@@ -22,7 +22,7 @@ build-depends:
- - freedesktop-sdk.bst:public-stacks/buildsystem-make.bst
+@@ -23,7 +23,7 @@ build-depends:
+ - buildsystems/make.bst
  - freedesktop-sdk.bst:components/git.bst
  - freedesktop-sdk.bst:components/openssl.bst
 -- freedesktop-sdk.bst:components/sbsigntools.bst
@@ -138,7 +138,7 @@ index 261017c7f..8ec19675d 100644
  variables:
    strip-binaries: ''
 diff --git a/elements/gnomeos/signed-boot.bst b/elements/gnomeos/signed-boot.bst
-index b3b9cc73b..dd6859d4a 100644
+index 13fdae245..776a71cdf 100644
 --- a/elements/gnomeos/signed-boot.bst
 +++ b/elements/gnomeos/signed-boot.bst
 @@ -13,7 +13,7 @@ build-depends:
