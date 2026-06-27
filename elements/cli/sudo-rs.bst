@@ -48,6 +48,7 @@ config:
   - |
     install -Dm4755 target/release/sudo -t "%{install-root}%{bindir}"
     install -Dm0755 target/release/visudo -t "%{install-root}%{bindir}"
+    ln -s sudo "%{install-root}%{bindir}/sudoedit"
 
     install -Dm0600 sudoers -t "%{install-root}%{sysconfdir}"
     install -Dm0644 sudo.pam "%{install-root}%{indep-libdir}/pam.d/sudo"
@@ -55,5 +56,6 @@ config:
 
   # manpages
   - |
-    install -Dm0644 docs/man/sudoers.5.man -t "%{install-root}%{datadir}/man/man5"
-    install -Dm0644 docs/man/{vi,}sudo.8.man -t "%{install-root}%{datadir}/man/man8"
+    install -Dm0644 docs/man/sudoers.5.man "%{install-root}%{datadir}/man/man5/sudoers.5"
+    install -Dm0644 docs/man/visudo.8.man "%{install-root}%{datadir}/man/man8/visudo.8"
+    install -Dm0644 docs/man/sudo.8.man "%{install-root}%{datadir}/man/man8/sudo.8"
