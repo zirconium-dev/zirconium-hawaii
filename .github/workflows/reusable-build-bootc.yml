@@ -63,27 +63,7 @@ jobs:
         run: |
           just generate-image-version
 
-      - name: Configure BuildStream (no push)
-        run: |
-          mkdir -p ~/.config
-          cat > ~/.config/buildstream.conf << EOF
-          # BuildStream user configuration
-          scheduler:
-            fetchers: 24
-            builders: 4
-            network-retries: 3
-
-          logging:
-            verbose: true
-            message-format: '[%{wallclock}][%{elapsed}][%{key}][%{element}] %{action} %{message}'
-            error-lines: 80
-
-          build:
-            retry-failed: true
-          EOF
-
       - name: Configure BuildStream
-        if: inputs.publish
         env:
           CASD_CLIENT_CERT: ${{ vars.CASD_CLIENT_CERT }}
           CASD_CLIENT_KEY: ${{ secrets.CASD_CLIENT_KEY }}
