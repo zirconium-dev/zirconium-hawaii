@@ -82,7 +82,7 @@ jobs:
             retry-failed: true
           EOF
 
-      - name: Configure BuildStream to push to artifact servers
+      - name: Configure BuildStream
         if: inputs.publish
         env:
           CASD_CLIENT_CERT: ${{ vars.CASD_CLIENT_CERT }}
@@ -138,41 +138,56 @@ jobs:
                 client-key: ~/.config/hawaii/client.key
                 client-cert: ~/.config/hawaii/client.crt
 
-          cache:
-            storage-service:
-              url: https://cache.projectbluefin.io:11002
-              connection-config:
-                keepalive-time: 60
-                retry-limit: 5
-                retry-delay: 1000
-                request-timeout: 180
-              auth:
-                client-key: ~/.config/hawaii/client.key
-                client-cert: ~/.config/hawaii/client.crt
+          # cache:
+          #   storage-service:
+          #     url: https://cache.projectbluefin.io:11002
+          #     connection-config:
+          #       keepalive-time: 60
+          #       retry-limit: 5
+          #       retry-delay: 1000
+          #       request-timeout: 180
+          #     auth:
+          #       client-key: ~/.config/hawaii/client.key
+          #       client-cert: ~/.config/hawaii/client.crt
 
-          remote-execution:
-            execution-service:
-              url: https://cache.projectbluefin.io:11002
-              connection-config:
-                keepalive-time: 60
-                retry-limit: 5
-                retry-delay: 1000
-                request-timeout: 180
-              auth:
-                client-key: ~/.config/hawaii/client.key
-                client-cert: ~/.config/hawaii/client.crt
-            action-cache-service:
-              url: https://cache.projectbluefin.io:11002
-              connection-config:
-                keepalive-time: 60
-                retry-limit: 5
-                retry-delay: 1000
-                request-timeout: 180
-              auth:
-                client-key: ~/.config/hawaii/client.key
-                client-cert: ~/.config/hawaii/client.crt
+          # remote-execution:
+          #   execution-service:
+          #     url: https://cache.projectbluefin.io:11002
+          #     connection-config:
+          #       keepalive-time: 60
+          #       retry-limit: 5
+          #       retry-delay: 1000
+          #       request-timeout: 180
+          #     auth:
+          #       client-key: ~/.config/hawaii/client.key
+          #       client-cert: ~/.config/hawaii/client.crt
+          #   action-cache-service:
+          #     url: https://cache.projectbluefin.io:11002
+          #     connection-config:
+          #       keepalive-time: 60
+          #       retry-limit: 5
+          #       retry-delay: 1000
+          #       request-timeout: 180
+          #     auth:
+          #       client-key: ~/.config/hawaii/client.key
+          #       client-cert: ~/.config/hawaii/client.crt
           EOF
+          else
+          cat > ~/.config/buildstream.conf << EOF
+          # BuildStream user configuration
+          scheduler:
+            fetchers: 24
+            builders: 4
+            network-retries: 3
 
+          logging:
+            verbose: true
+            message-format: '[%{wallclock}][%{elapsed}][%{key}][%{element}] %{action} %{message}'
+            error-lines: 80
+
+          build:
+            retry-failed: true
+          EOF
           fi
 
       - name: Print BuildStream configuration
