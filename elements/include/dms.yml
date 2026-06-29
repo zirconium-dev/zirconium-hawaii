@@ -94,11 +94,6 @@ sources:
   base-dir: "*/*"
   kind: zip
   url: golang-proxy:go4.org/mem/@v/v0.0.0-20240501181205-ae6ca9944745.zip
-- directory: core/vendor/golang.org/x/exp
-  ref: de285d08489fcd4d420a8561501e75b5124db0a48121dfc26e811959f518db4e
-  base-dir: "*/*/*"
-  kind: zip
-  url: golang-proxy:golang.org/x/exp/@v/v0.0.0-20260410095643-746e56fc9e2f.zip
 - directory: core/vendor/golang.org/x/image
   ref: 80cf8b03c19e3000eda524c98c5bba6513b2691daba943b8ba6b800295104696
   base-dir: "*/*/*"
@@ -289,6 +284,11 @@ sources:
   base-dir: "*/*/*"
   kind: zip
   url: golang-proxy:golang.org/x/crypto/@v/v0.50.0.zip
+- directory: core/vendor/golang.org/x/exp
+  ref: de285d08489fcd4d420a8561501e75b5124db0a48121dfc26e811959f518db4e
+  base-dir: "*/*/*"
+  kind: zip
+  url: golang-proxy:golang.org/x/exp/@v/v0.0.0-20260410095643-746e56fc9e2f.zip
 - directory: core/vendor/golang.org/x/net
   ref: 3808b07d64ba58f58ca91737f0a165439f72b03a512ea901bad2aa1e168092d5
   base-dir: "*/*/*"

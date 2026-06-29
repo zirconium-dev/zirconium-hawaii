@@ -7,12 +7,12 @@ sources:
   ref-format: sha1
   url: github:OpenGamingCollective/linux.git
   track: "ogc-*"
-  ref: 70e7f084332cdf89b64d1532cd42309d33200de2
+  ref: 6b90cf3d8db0a3366865678e0a9eb14eb365c134
 - kind: git_repo
   directory: ogc-kernel-packages
   url: github:OpenGamingCollective/kernel-packages.git
   track: "main"
-  ref: v7.0.9-ogc3-2-g50babbfae2926ce185e52b2874cf784b8a385138
+  ref: v7.1.2-ogc1-0-g07981463227d744de7f8d396d478ab815ad5d185
 - kind: git_repo
   directory: archlinux-kernel-config
   url: archlinux_gitlab:archlinux/packaging/packages/linux
