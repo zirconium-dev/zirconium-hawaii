@@ -5,7 +5,7 @@ sources:
   path: files/gamerslop-config
 
 depends:
-  - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 
 variables:
   strip-binaries: ""

@@ -1933,21 +1933,14 @@ sources:
     version: 3.3.0
     sha: f75c23a64ef8f40f13a6989991e643554d9bef1d682a281160cf0c1bc389c5e9
 build-depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:components/stripper.bst
 - freedesktop-sdk.bst:components/pkg-config.bst
 - freedesktop-sdk.bst:components/rust.bst
-- freedesktop-sdk.bst:components/pixman.bst
-# - freedesktop-sdk.bst:vm/mesa-default.bst
+- freedesktop-sdk.bst:components/mesa-headers.bst
 - freedesktop-sdk.bst:extensions/mesa/libdrm.bst
 - freedesktop-sdk.bst:components/dummy-gbm.bst
 - freedesktop-sdk.bst:components/libinput.bst
 - freedesktop-sdk.bst:components/libdisplay-info.bst
-- freedesktop-sdk.bst:components/glib.bst
-- freedesktop-sdk.bst:components/pipewire.bst
-- freedesktop-sdk.bst:components/libxkbcommon.bst
-- freedesktop-sdk.bst:components/cairo.bst
-- freedesktop-sdk.bst:components/pango.bst
 - freedesktop-sdk.bst:components/llvm.bst
 - freedesktop-sdk.bst:components/gcc.bst
 - freedesktop-sdk.bst:components/libseat.bst
@@ -1964,7 +1957,6 @@ depends:
 - freedesktop-sdk.bst:components/glib.bst
 - freedesktop-sdk.bst:components/libinput.bst
 - freedesktop-sdk.bst:components/libdisplay-info.bst
-- freedesktop-sdk.bst:vm/mesa-default.bst
 
 config:
   build-commands:

@@ -1,10 +1,7 @@
 kind: manual
 
 build-depends:
-  - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
-
-depends:
-  - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 
 sources:
   - kind: git_repo

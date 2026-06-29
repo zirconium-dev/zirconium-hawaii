@@ -14,7 +14,10 @@ build-depends:
 - freedesktop-sdk.bst:components/python3.bst
 - freedesktop-sdk.bst:components/sed.bst
 - freedesktop-sdk.bst:components/desktop-file-utils.bst
-# gtk+3 is here because if it isn't here, then desktop-file-utils causes the build environment to fail to start. this is... weird. but i won't question it.
+# FIXME: remove gtk+-3.bst when https://gitlab.com/freedesktop-sdk/freedesktop-sdk/-/merge_requests/32978 is merged
+# or an equivalent into 25.08
+# 
+# gtk+3 is here because if it isn't here, then desktop-file-utils causes the build environment to fail to start.
 - gnome-build-meta.bst:sdk/gtk+-3.bst
 
 depends:

@@ -8,9 +8,6 @@ sources:
 - kind: local
   path: files/noto
 
-depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
-
 build-depends:
 - freedesktop-sdk.bst:components/fontconfig.bst
 - freedesktop-sdk.bst:components/pkg-config.bst

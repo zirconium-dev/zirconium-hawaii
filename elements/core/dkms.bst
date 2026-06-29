@@ -8,7 +8,6 @@ sources:
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-make.bst
-- freedesktop-sdk.bst:components/kmod.bst
 
 runtime-depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst

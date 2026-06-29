@@ -9,7 +9,6 @@ sources:
   ref: v2.2.7-0-g4edf054c6bfddcc62174bbc453e26c73cfbe7bbf
 
 build-depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:public-stacks/buildsystem-autotools.bst
 - freedesktop-sdk.bst:components/pkg-config.bst
 - freedesktop-sdk.bst:components/gcc.bst

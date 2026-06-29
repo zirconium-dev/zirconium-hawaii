@@ -3,9 +3,6 @@ kind: manual
 build-depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 
-depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
-
 sources:
 - kind: zip
   url: github_files:subframe7536/maple-font/releases/download/v7.9/MapleMono-Variable.zip

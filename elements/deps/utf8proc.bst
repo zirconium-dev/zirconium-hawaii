@@ -7,7 +7,6 @@ sources:
   ref: v2.11.3-0-ge5e799221b45bbb90f5fdc5c69b6b8dfbf017e78
 
 build-depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst
 - freedesktop-sdk.bst:components/make.bst
 - freedesktop-sdk.bst:components/sed.bst

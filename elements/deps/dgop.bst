@@ -6,7 +6,6 @@ sources:
   ref: ea045df478ee8cd246e9f80b85ea616c4faec0fbf957dd6de81b37f686d07013
 
 build-depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:public-stacks/buildsystem-make.bst
 - freedesktop-sdk.bst:components/go.bst
 

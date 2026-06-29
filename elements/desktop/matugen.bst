@@ -1533,7 +1533,6 @@ sources:
     version: 0.5.12
     sha: 410e9ecef634c709e3831c2cfdb8d9c32164fae1c67496d5b68fff728eec37fe
 build-depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:components/stripper.bst
 - freedesktop-sdk.bst:components/gcc.bst
 - freedesktop-sdk.bst:components/rust.bst
