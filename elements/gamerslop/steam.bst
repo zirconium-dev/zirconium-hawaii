@@ -11,12 +11,12 @@ runtime-depends:
 
 sources:
 - kind: tar
-  url: steampowered:steam/archive/stable/steam_%{steam_version}.tar.gz
-  ref: 7f2d374a2fb413ced5b8125151456219d918a255872b4bb77016cbccf38bb7f1
+  url: steampowered:steam/archive/beta/steam_%{steam_version}.tar.gz
+  ref: 649375d2f9377f8009aaf3e2ff09978041eb9114897d9c5a3886f1d82e27ba1f
 # The steam_version variable must be updated manually.
 variables:
   strip-binaries: ""
-  steam_version: 1.0.0.85
+  steam_version: 1.0.0.87
 
 config:
   install-commands:
