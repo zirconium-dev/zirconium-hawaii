@@ -68,7 +68,6 @@ depends:
   - gnome-build-meta.bst:gnomeos-deps/toolbox.bst
   - gnome-build-meta.bst:gnomeos-deps/udev-hide-usr.bst
   - gnome-build-meta.bst:gnomeos-deps/zram-generator.bst
-  - gnome-build-meta.bst:gnomeos/reload-sysext.bst
 
   - core/tuned.bst
   - core/uutils-coreutils.bst
