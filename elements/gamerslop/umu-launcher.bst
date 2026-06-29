@@ -202,7 +202,6 @@ depends:
 - freedesktop-sdk.bst:components/usbutils.bst
 - freedesktop-sdk.bst:components/vulkan-icd-loader.bst
 - freedesktop-sdk.bst:components/xdg-user-dirs.bst
-- freedesktop-sdk.bst:vm/mesa-default.bst
 - gnome-build-meta.bst:core-deps/zenity.bst
 - gnome-build-meta.bst:gnomeos-deps/python3-zstd.bst
 

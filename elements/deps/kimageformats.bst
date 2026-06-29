@@ -14,6 +14,7 @@ sources:
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst
 - freedesktop-sdk.bst:components/extra-cmake-modules.bst
+- freedesktop-sdk.bst:components/mesa-headers.bst
 
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst

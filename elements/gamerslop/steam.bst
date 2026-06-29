@@ -6,7 +6,6 @@ build-depends:
 
 runtime-depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
-- freedesktop-sdk.bst:vm/mesa-default.bst
 - freedesktop-sdk.bst:components/tar.bst
 - freedesktop-sdk.bst:components/xz.bst
 

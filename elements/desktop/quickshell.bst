@@ -15,6 +15,8 @@ build-depends:
 - freedesktop-sdk.bst:components/pkg-config.bst
 - freedesktop-sdk.bst:components/vulkan-headers.bst
 - freedesktop-sdk.bst:components/wayland-protocols.bst
+- freedesktop-sdk.bst:extensions/mesa/mesa.bst
+- freedesktop-sdk.bst:components/mesa-headers.bst
 - deps/cli11.bst
 
 depends:
@@ -22,9 +24,6 @@ depends:
 - freedesktop-sdk.bst:components/linux-pam.bst
 - freedesktop-sdk.bst:components/pipewire.bst
 - freedesktop-sdk.bst:components/polkit.bst
-- freedesktop-sdk.bst:vm/mesa-default.bst
-- freedesktop-sdk.bst:components/mesa-headers.bst
-- freedesktop-sdk.bst:extensions/mesa/mesa.bst
 - deps/cpptrace.bst
 - deps/jemalloc.bst
 - deps/qt6-qtwayland.bst
