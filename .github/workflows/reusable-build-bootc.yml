@@ -89,7 +89,7 @@ jobs:
             error-lines: 80
 
           build:
-            max-jobs: 32
+            # max-jobs: 32
             retry-failed: true
 
           artifacts:
