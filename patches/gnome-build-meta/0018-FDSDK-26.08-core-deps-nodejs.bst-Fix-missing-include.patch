@@ -1,4 +1,4 @@
-From 102966f0244ebaecb4e0618ad4b22810ce7aa380 Mon Sep 17 00:00:00 2001
+From 9ff173270d2561123ca79d28e3e7c0df4bee40c2 Mon Sep 17 00:00:00 2001
 From: Sam Thursfield <sam.thursfield@codethink.co.uk>
 Date: Sat, 6 Jun 2026 10:30:28 +0100
 Subject: [PATCH 18/19] FDSDK 26.08: core-deps/nodejs.bst: Fix missing #include
@@ -20,13 +20,13 @@ fix to land upstream in V8 instead.
  create mode 100644 patches/nodejs/fix-v8-build-failures.patch
 
 diff --git a/elements/core-deps/nodejs.bst b/elements/core-deps/nodejs.bst
-index 2c594a1db..6ca9d5015 100644
+index 6233aa493..27e8674eb 100644
 --- a/elements/core-deps/nodejs.bst
 +++ b/elements/core-deps/nodejs.bst
 @@ -5,6 +5,8 @@ sources:
    url: github:nodejs/node.git
    track: 'v*'
-   ref: v26.3.0-0-gb7e6a5d37e7a14ef0f2cc95214b95d66c4081415
+   ref: v26.4.0-0-g2022edf3e32ce28ee08b17f8566243a090dacd95
 +- kind: patch
 +  path: patches/nodejs/fix-v8-build-failures.patch
  
