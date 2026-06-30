@@ -63,6 +63,36 @@ jobs:
         run: |
           just generate-image-version
 
+      - name: Print BuildStream configuration
+        run: |
+          cat ~/.config/buildstream.conf
+
+      - name: Install BuildStream and dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            python3-pip python3-venv bubblewrap \
+            lzip xz-utils bzip2 gzip \
+            git wget curl \
+            ostree \
+            just
+          python3 -m venv venv
+          source venv/bin/activate
+          pip install -r ./utils/requirements.txt
+
+      - name: See if any changes were made to the image
+        if: ${{ inputs.force-rebuild == 'false' || !inputs.force-rebuild }}
+        id: determine-if-need-for-build
+        run: |
+          source venv/bin/activate
+          bst artifact show ${{ inputs.element }} | grep "available" && echo "run-build='false'" || true >> $GITHUB_OUTPUT
+
+      - name: Pull dependencies via buildstream
+        if: steps.determine-if-need-for-build.outputs.run-build != 'false'
+        id: pull-deps
+        run: |
+          bst artifact pull ${{ inputs.element }} --deps all
+
       - name: Configure BuildStream
         env:
           CASD_CLIENT_CERT: ${{ vars.CASD_CLIENT_CERT }}
@@ -169,30 +199,6 @@ jobs:
             retry-failed: true
           EOF
           fi
-
-      - name: Print BuildStream configuration
-        run: |
-          cat ~/.config/buildstream.conf
-
-      - name: Install BuildStream and dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y \
-            python3-pip python3-venv bubblewrap \
-            lzip xz-utils bzip2 gzip \
-            git wget curl \
-            ostree \
-            just
-          python3 -m venv venv
-          source venv/bin/activate
-          pip install -r ./utils/requirements.txt
-
-      - name: See if any changes were made to the image
-        if: ${{ inputs.force-rebuild == 'false' || !inputs.force-rebuild }}
-        id: determine-if-need-for-build
-        run: |
-          source venv/bin/activate
-          bst artifact show ${{ inputs.element }} | grep "available" && echo "run-build='false'" || true >> $GITHUB_OUTPUT
 
       # This generates a timestamp like what is defined on the ArtifactHub documentation
       # E.G: 2022-02-08T15:38:15Z'
