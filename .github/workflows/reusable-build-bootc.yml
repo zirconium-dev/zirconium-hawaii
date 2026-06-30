@@ -63,10 +63,6 @@ jobs:
         run: |
           just generate-image-version
 
-      - name: Print BuildStream configuration
-        run: |
-          cat ~/.config/buildstream.conf
-
       - name: Install BuildStream and dependencies
         run: |
           sudo apt-get update
@@ -199,6 +195,10 @@ jobs:
             retry-failed: true
           EOF
           fi
+
+      - name: Print BuildStream configuration
+        run: |
+          cat ~/.config/buildstream.conf
 
       # This generates a timestamp like what is defined on the ArtifactHub documentation
       # E.G: 2022-02-08T15:38:15Z'
