@@ -87,6 +87,7 @@ jobs:
         if: steps.determine-if-need-for-build.outputs.run-build != 'false'
         id: pull-deps
         run: |
+          source venv/bin/activate
           bst artifact pull ${{ inputs.element }} --deps all
 
       - name: Configure BuildStream
