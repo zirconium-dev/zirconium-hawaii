@@ -18,7 +18,7 @@ sources:
 - kind: git_repo
   directory: subprojects/wlroots
   url: github:Joshua-Ashton/wlroots.git
-  ref: 54e844748029d4874e14d0c086d50092c04c8899
+  ref: 88a869855742281c98c22cab9641b317b8d065ef
 - kind: git_repo
   directory: subprojects/libliftoff
   url: freedesktop:emersion/libliftoff.git
@@ -52,6 +52,7 @@ build-depends:
 - freedesktop-sdk.bst:components/vulkan-headers.bst
 - freedesktop-sdk.bst:components/glslang.bst
 - freedesktop-sdk.bst:components/wayland-protocols.bst
+- gnome-build-meta.bst:core-deps/catch2.bst
 - deps/google-benchmark.bst
 
 depends:
