@@ -25,6 +25,7 @@ depends:
   - freedesktop-sdk.bst:components/cups-daemon.bst
   - freedesktop-sdk.bst:vm/config/flathub.bst
   - freedesktop-sdk.bst:vm/mesa-default.bst
+  - gnome-build-meta.bst:gnomeos-deps/alsa-ucm-conf.bst
   - gnome-build-meta.bst:gnomeos-deps/wl-clipboard.bst
   - gnome-build-meta.bst:gnomeos-deps/fprintd.bst
   - gnome-build-meta.bst:sdk/xwayland-satellite.bst
