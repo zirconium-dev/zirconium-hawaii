@@ -6,7 +6,7 @@ sources:
 - kind: git_repo
   url: github:evlaV/valve-hardware-audio-processing
   track: main
-  ref: 0.98-0-g4117b4c0b971744c9cc63606b90175ee69ed4ed9
+  ref: 0.99-0-g558d0e8370f6f3b5f1a1a09c634174a9eb00b278
 
 depends:
 - gnome-build-meta.bst:gnomeos-deps/alsa-ucm-conf.bst
