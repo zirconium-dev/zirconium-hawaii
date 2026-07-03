@@ -9,6 +9,7 @@ depends:
   - desktop/satty.bst
   - cli/chezmoi.bst
   - core/greetd.bst
+  - core/pam-u2f.bst
   - core/xdg-utils.bst
   - desktop/iio-niri.bst
   - desktop/xdg-terminal-exec.bst
