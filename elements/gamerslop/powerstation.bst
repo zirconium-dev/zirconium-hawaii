@@ -12,9 +12,6 @@ sources:
   path: patches/powerstation
 
 - kind: cargo2
-  url: crates:crates
-  git-mirrors:
-    https://gitlab.com/: "gitlab:"
   ref:
   - kind: registry
     name: addr2line

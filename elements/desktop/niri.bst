@@ -6,9 +6,6 @@ sources:
   track: main
   ref: v26.04-36-g49fc6117fd6c043adaa2ead316b82db5ed735d36
 - kind: cargo2
-  url: crates:crates
-  git-mirrors:
-    https://github.com/: "github:"
   ref:
   - kind: registry
     name: accesskit

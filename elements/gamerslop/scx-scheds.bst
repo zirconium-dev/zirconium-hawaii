@@ -6,7 +6,6 @@ sources:
   track: v*
   ref: v1.1.2-0-gb68cb3c829312b43785225bcfd445a3ecefef5c2
 - kind: cargo2
-  url: crates:crates
   ref:
   - kind: registry
     name: addr2line

@@ -6,7 +6,6 @@ sources:
   track: v*
   ref: v26.3.0-0-g244e21225379af4037aeeabdc6efd5b71984e7dd
 - kind: cargo2
-  url: crates:crates
   ref:
   - kind: registry
     name: aho-corasick

@@ -10,7 +10,6 @@ sources:
   - "*-alpha*"
   ref: 2.1.0-0-g0fd343e6d54a231673bc6d3ae2fd0c1fc102cebe
 - kind: cargo2
-  url: crates:crates
   ref:
   - kind: registry
     name: aho-corasick

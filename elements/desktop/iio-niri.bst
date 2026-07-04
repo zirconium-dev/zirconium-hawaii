@@ -7,9 +7,7 @@ sources:
   ref: v2.3.0-0-g39fb7b6fbfc132e2c257de990860827e3ef49d87
 - kind: local
   path: files/iio-niri
-
 - kind: cargo2
-  url: crates:crates
   ref:
   - kind: registry
     name: aho-corasick

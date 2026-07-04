@@ -6,7 +6,6 @@ sources:
   track: v*
   ref: v0.21.1-0-g2d18065ea534bd12792865784eed86a617ffbdc7
 - kind: cargo2
-  url: crates:crates
   ref:
   - kind: registry
     name: adler2

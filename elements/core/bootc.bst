@@ -8,9 +8,6 @@ sources:
 - kind: local
   path: files/bootc
 - kind: cargo2
-  url: crates:crates
-  git-mirrors:
-    https://github.com/: "github:"
   ref:
   - kind: registry
     name: addr2line

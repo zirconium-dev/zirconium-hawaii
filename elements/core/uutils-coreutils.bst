@@ -6,9 +6,6 @@ sources:
   track: "*"
   ref: 0.9.0-0-g840c36d3964833e1dc107fcb9ade9c0ad63076c0
 - kind: cargo2
-  url: crates:crates
-  git-mirrors:
-    https://github.com/: "github:"
   ref:
   - kind: registry
     name: adler2
