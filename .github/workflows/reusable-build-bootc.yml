@@ -25,10 +25,6 @@ on:
         description: "Image element to build"
         required: true
         type: string
-      force-rebuild:
-        description: Force rebuild of full image
-        type: string
-        default: false
     secrets:
       SIGNING_SECRET:
         description: "The private key used to sign the image"
@@ -76,15 +72,7 @@ jobs:
           source venv/bin/activate
           pip install -r ./utils/requirements.txt
 
-      - name: See if any changes were made to the image
-        if: ${{ inputs.force-rebuild == 'false' || !inputs.force-rebuild }}
-        id: determine-if-need-for-build
-        run: |
-          source venv/bin/activate
-          bst artifact show ${{ inputs.element }} | grep "available" && echo "run-build='false'" || true >> $GITHUB_OUTPUT
-
       - name: Pull dependencies via buildstream
-        if: steps.determine-if-need-for-build.outputs.run-build != 'false'
         id: pull-deps
         run: |
           source venv/bin/activate
@@ -206,7 +194,6 @@ jobs:
       # https://artifacthub.io/docs/topics/repositories/container-images/
       # https://linux.die.net/man/1/date
       - name: Get current date
-        if: steps.determine-if-need-for-build.outputs.run-build != 'false'
         id: date
         run: echo "date=$(date -u +%Y\-%m\-%d\T%H\:%M\:%S\Z)" | tee "${GITHUB_OUTPUT}"
 
@@ -220,7 +207,6 @@ jobs:
           echo "branch=$(yq .variables.branch project.conf)" >> "${GITHUB_OUTPUT}"
 
       - name: Image Metadata
-        if: steps.determine-if-need-for-build.outputs.run-build != 'false'
         uses: docker/metadata-action@80c7e94dd9b9319bd5eb7a0e0fe9291e23a2a2e9 # v6.1.0
         id: metadata
         with:
@@ -251,22 +237,18 @@ jobs:
           sep-annotations: " "
 
       - name: Free disk space
-        if: steps.determine-if-need-for-build.outputs.run-build != 'false'
         uses: hastd/free-disk-space@68572aeaadb7f76bd408246328e95926323402b5 # v0.1.2
 
       - name: Enable unprivileged userns
-        if: steps.determine-if-need-for-build.outputs.run-build != 'false'
         run: |
           source venv/bin/activate
           sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
 
       - name: Print disk usage before image build
-        if: steps.determine-if-need-for-build.outputs.run-build != 'false'
         run: |
           df -h
 
       - name: Buildstream build (dependencies)
-        if: steps.determine-if-need-for-build.outputs.run-build != 'false'
         run: |
           source venv/bin/activate
           bst build ${{ inputs.element }}
@@ -274,7 +256,7 @@ jobs:
       # For some reason, it takes about 5-6x longer to build filesystem and runtime when pushing.
       # Here, we ensure that we don't use the remote-execution server for the specific elements that are slower to build.
       - name: Configure BuildStream to not push or use remote-execution server
-        if: inputs.publish && steps.determine-if-need-for-build.outputs.run-build != 'false'
+        if: inputs.publish
         env:
           CASD_CLIENT_CERT: ${{ vars.CASD_CLIENT_CERT }}
           CASD_CLIENT_KEY: ${{ secrets.CASD_CLIENT_KEY }}
@@ -320,19 +302,17 @@ jobs:
           EOF
 
       - name: Buildstream build (image)
-        if: steps.determine-if-need-for-build.outputs.run-build != 'false'
         run: |
           source venv/bin/activate
           bst build ${{ inputs.image-element }}
 
       - name: Print disk usage after image build
-        if: steps.determine-if-need-for-build.outputs.run-build != 'false'
         run: |
           df -h
           du -sh $HOME/.cache/buildstream
 
       - name: Export Initial OCI Image
-        if: inputs.publish && steps.determine-if-need-for-build.outputs.run-build != 'false'
+        if: inputs.publish
         run: |
           source venv/bin/activate
           bst artifact checkout --tar - ${{ inputs.image-element }} | podman load
@@ -343,7 +323,7 @@ jobs:
         run: rm -f ~/.config/hawaii/client.key
 
       - name: Build final OCI Image
-        if: inputs.publish && steps.determine-if-need-for-build.outputs.run-build != 'false'
+        if: inputs.publish
         env:
           LABELS: ${{ steps.metadata.outputs.labels }}
           TAGS: ${{ steps.metadata.outputs.tags }}
@@ -363,7 +343,7 @@ jobs:
           podman build "${BUILD_ARGS[@]}" .
 
       - name: Login to GitHub Container Registry
-        if: inputs.publish && steps.determine-if-need-for-build.outputs.run-build != 'false'
+        if: inputs.publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           LOGIN_USER: ${{ github.actor }}
@@ -372,7 +352,7 @@ jobs:
           echo "${GITHUB_TOKEN}" | docker login -u "${LOGIN_USER}" --password-stdin "ghcr.io" # For cosign
 
       - name: Push to GHCR
-        if: inputs.publish && steps.determine-if-need-for-build.outputs.run-build != 'false'
+        if: inputs.publish
         id: push
         env:
           TAGS: ${{ steps.metadata.outputs.tags }}
@@ -386,11 +366,11 @@ jobs:
           done
 
       - name: Install Cosign
-        if: inputs.publish && steps.determine-if-need-for-build.outputs.run-build != 'false'
+        if: inputs.publish
         uses: sigstore/cosign-installer@6f9f17788090df1f26f669e9d70d6ae9567deba6 # v4.1.2
 
       - name: Sign Image
-        if: inputs.publish && steps.determine-if-need-for-build.outputs.run-build != 'false'
+        if: inputs.publish
         env:
           COSIGN_EXPERIMENTAL: false
           COSIGN_PRIVATE_KEY: ${{ secrets.SIGNING_SECRET }}
