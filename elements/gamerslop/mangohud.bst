@@ -3,7 +3,7 @@ kind: meson
 sources:
 - kind: tar
   url: github_files:flightlessmango/MangoHud/releases/download/v%{version}/MangoHud-v%{version}-Source.tar.xz
-  ref: e810ac73163468533ddb7c74b681f1de4992a3d785dce294fee9933ec8956b05
+  ref: bbe5a2b976313c53f21dc24b98bbed03226589460a0cce20d923cb2c36c9d8b0
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-meson.bst
@@ -31,7 +31,7 @@ depends:
 - deps/glfw.bst
 
 variables:
-  version: 0.8.3
+  version: 0.8.4
   meson-local: >-
     -Dmangoapp=true
     -Dmangohudctl=true
@@ -41,7 +41,7 @@ variables:
 config:
   # override install-commands to add missing executable bit to /usr/bin/mangohud
   install-commands:
-    - |
-      %{meson-install}
-    - |
-      chmod +x %{install-root}%{bindir}/*
+  - |
+    %{meson-install}
+  - |
+    chmod +x %{install-root}%{bindir}/*
