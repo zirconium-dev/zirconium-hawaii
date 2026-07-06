@@ -5,8 +5,10 @@ description: Linux kernel with patches from OpenGamingCollective applied
 sources:
 - kind: git_repo
   url: github:OpenGamingCollective/linux.git
-  track: "ogc-*"
-  ref: v7.1.2-ogc2-0-g351f72fcb834737b6abf39a1db8132591a1e395c
+  # Pin to v7.1.2-ogc1 until this github issue is fixed
+  # https://github.com/OpenGamingCollective/linux/issues/75
+  track: "v7.1.2-ogc1"
+  ref: v7.1.2-ogc1-0-g6b90cf3d8db0a3366865678e0a9eb14eb365c134
 - kind: git_repo
   directory: ogc-kernel-packages
   url: github:OpenGamingCollective/kernel-packages.git
