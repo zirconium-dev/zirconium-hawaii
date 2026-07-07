@@ -6,7 +6,7 @@ sources:
   track: "*.*.*"
   exclude:
   - "*.rc*"
-  ref: 1.4.0-0-ge17b257d4e6c06295e2ff607a6e9865d2033db43
+  ref: 1.4.1-0-g346cab89c19a3525718be8c5c65d700ab47b432e
 - kind: cargo2
   ref:
   - kind: registry
@@ -22,6 +22,10 @@ sources:
     version: 0.10.4
     sha: 3078c7629b62d3f0439517fa394996acacc5cbc91c5a20d8c658e77abd503a71
   - kind: registry
+    name: block-buffer
+    version: 0.12.0
+    sha: cdd35008169921d80bc60d3d0ab416eecb028c4cd653352907921d95084790be
+  - kind: registry
     name: cfg-if
     version: 1.0.0
     sha: baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd
@@ -30,13 +34,25 @@ sources:
     version: 0.4.4
     sha: 773f3b9af64447d2ce9850330c473515014aa235e6a783b02db81ff39e4a3dad
   - kind: registry
+    name: const-oid
+    version: 0.10.2
+    sha: a6ef517f0926dd24a1582492c791b6a4818a4d94e789a334894aa15b0d12f55c
+  - kind: registry
     name: cpufeatures
     version: 0.2.16
     sha: 16b80225097f2e5ae4e7179dd2266824648f3e2f49d9134d584b76389d31c4c3
   - kind: registry
+    name: cpufeatures
+    version: 0.3.0
+    sha: 8b2a41393f66f16b0823bb79094d54ac5fbd34ab292ddafb9a0456ac9f87d201
+  - kind: registry
     name: crypto-common
     version: 0.1.6
     sha: 1bfb12502f3fc46cca1bb51ac28df9d618d813cdc3d2f25b9fe775a34af26bb3
+  - kind: registry
+    name: crypto-common
+    version: 0.2.1
+    sha: 77727bb15fa921304124b128af125e7e3b968275d1b108b379190264f4423710
   - kind: registry
     name: curve25519-dalek
     version: 4.1.3
@@ -49,6 +65,10 @@ sources:
     name: digest
     version: 0.10.7
     sha: 9ed9a281f7bc9b7576e61468ba615a66a5c8cfdff42420a70aa82701a3b1e292
+  - kind: registry
+    name: digest
+    version: 0.11.2
+    sha: 4850db49bf08e663084f7fb5c87d202ef91a3907271aff24a94eb97ff039153c
   - kind: registry
     name: ed25519
     version: 2.2.3
@@ -69,6 +89,10 @@ sources:
     name: heck
     version: 0.5.0
     sha: 2304e00983f87ffb38b55b444b5e3b60a884b5d30c0fca7d82fe33449bbe55ea
+  - kind: registry
+    name: hybrid-array
+    version: 0.4.8
+    sha: 8655f91cd07f2b9d0c24137bd650fe69617773435ee5ec83022377777ce65ef1
   - kind: registry
     name: inout
     version: 0.1.3
@@ -95,24 +119,24 @@ sources:
     sha: 37d3544b3f2748c54e147655edb5025752e2303145b5aefb3c3ea2c78b973bb0
   - kind: registry
     name: pyo3
-    version: 0.28.2
-    sha: cf85e27e86080aafd5a22eae58a162e133a589551542b3e5cee4beb27e54f8e1
+    version: 0.29.0
+    sha: cd274650b21d4bfc26a0a47587962c1edb425f69287324355cd040c3ea66071c
   - kind: registry
     name: pyo3-build-config
-    version: 0.28.2
-    sha: 8bf94ee265674bf76c09fa430b0e99c26e319c945d96ca0d5a8215f31bf81cf7
+    version: 0.29.0
+    sha: c5e2a7d2f0d013342f295c048ad19237add5154a55b1c5a254c0ec93d4109078
   - kind: registry
     name: pyo3-ffi
-    version: 0.28.2
-    sha: 491aa5fc66d8059dd44a75f4580a2962c1862a1c2945359db36f6c2818b748dc
+    version: 0.29.0
+    sha: ca85c467da1bbc8d866eea5deff9cf29ea5f7785054a17da36e65bda9c05845b
   - kind: registry
     name: pyo3-macros
-    version: 0.28.2
-    sha: f5d671734e9d7a43449f8480f8b38115df67bef8d21f76837fa75ee7aaa5e52e
+    version: 0.29.0
+    sha: 9ac53762fd065daa3194dd09337a38bd793a188100fd1a9304c4ab312d901771
   - kind: registry
     name: pyo3-macros-backend
-    version: 0.28.2
-    sha: 22faaa1ce6c430a1f71658760497291065e6450d7b5dc2bcf254d49f66ee700a
+    version: 0.29.0
+    sha: 4ca3a1557399783172dc5bf39cfca835157732532cba56b71d2292161e53b362
   - kind: registry
     name: quote
     version: 1.0.38
@@ -133,6 +157,10 @@ sources:
     name: sha2
     version: 0.10.9
     sha: a7507d819769d01a365ab707794a4084392c824f54a7a6a7862f8c3d0892b283
+  - kind: registry
+    name: sha2
+    version: 0.11.0
+    sha: 446ba717509524cb3f22f17ecc096f10f4822d76ab5c0b9822c5f9c284e825f4
   - kind: registry
     name: signature
     version: 2.2.0
