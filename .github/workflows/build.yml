@@ -16,6 +16,15 @@ on:
         description: Skip building Hawaii Jackrabbit image
         default: false
         type: boolean
+      pull-before-configure:
+        description: "Pull from cache before build"
+        type: boolean
+        default: false
+      remote-execution:
+        description: "Configure remote-execution server (requires valid CASD keys)"
+        type: boolean
+        # default: true
+        default: false
 
 env:
   IMAGE_DESC: "Opinionated niri + bootc image"
@@ -45,7 +54,9 @@ jobs:
       element: "oci/zirconium/stack.bst"
       image-element: "oci/zirconium/image.bst"
       default-tag: "edge"
+      remote-execution: ${{ inputs.remote-execution == true }}
       publish: ${{ github.event_name != 'pull_request' && github.ref == format('refs/heads/edge', github.event.repository.default_branch) }}
+      pull-before-configure: ${{ inputs.pull-before-configure == true }}
 
   # Run this build AFTER build-hawaii. build-hawaii will cache all of the base packages.
   build-hawaii-jackrabbit:
@@ -65,4 +76,6 @@ jobs:
       element: "oci/jackrabbit/stack.bst"
       image-element: "oci/jackrabbit/image.bst"
       default-tag: "edge"
+      remote-execution: ${{ inputs.remote-execution == true }}
       publish: ${{ github.event_name != 'pull_request' && github.ref == format('refs/heads/edge', github.event.repository.default_branch) }}
+      pull-before-configure: ${{ inputs.pull-before-configure == true }}
