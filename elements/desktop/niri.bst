@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: github:niri-wm/niri.git
   track: main
-  ref: v26.04-37-ga30ca7983b2f1fc3ddeb209b3fe18fa78e0dbd25
+  ref: v26.04-38-gef5b7379dc444d33b01a7faec2bd6592d3188357
 - kind: cargo2
   ref:
   - kind: registry
@@ -315,10 +315,6 @@ sources:
     name: console
     version: 0.16.3
     sha: d64e8af5551369d19cf50138de61f1c42074ab970f74e99be916646777f8fc87
-  - kind: registry
-    name: convert_case
-    version: 0.8.0
-    sha: baaaa0ecca5b51987b9423ccdc971514dd8b0bb7b4060b983d3664dad3f1f89f
   - kind: registry
     name: cookie-factory
     version: 0.3.3
@@ -833,12 +829,12 @@ sources:
     sha: e8a484fa48be5f62a8d3ffed767779d0ab808cfead91de98ef4362d469097dfb
   - kind: registry
     name: libspa
-    version: 0.9.2
-    sha: b6b8cfa2a7656627b4c92c6b9ef929433acd673d5ab3708cda1b18478ac00df4
+    version: 0.10.0
+    sha: 2909f3be29d674e7f10604aff18d1bbe1bb03c4cd61c8a8ba19c0b1d162f7d4e
   - kind: registry
     name: libspa-sys
-    version: 0.9.2
-    sha: 901049455d2eb6decf9058235d745237952f4804bc584c5fcb41412e6adcc6e0
+    version: 0.10.0
+    sha: 69ad52764fca54818486f3cf75afec844d1f1a1568c24dcee25d41b1ab007dda
   - kind: registry
     name: libudev-sys
     version: 0.1.4
@@ -907,10 +903,6 @@ sources:
     name: ndk-sys
     version: 0.6.0+11769913
     sha: ee6cda3051665f1fb8d9e08fc35c96d5a244fb1be711a03b71118828afc9a873
-  - kind: registry
-    name: nix
-    version: 0.30.1
-    sha: 74523f3a35e05aba87a1d978330aef40f67b0304ac79c1c00b294c9830543db6
   - kind: registry
     name: nix
     version: 0.31.2
@@ -1097,12 +1089,12 @@ sources:
     sha: c835479a4443ded371d6c535cbfd8d31ad92c5d23ae9770a61bc155e4992a3c1
   - kind: registry
     name: pipewire
-    version: 0.9.2
-    sha: 9688b89abf11d756499f7c6190711d6dbe5a3acdb30c8fbf001d6596d06a8d44
+    version: 0.10.0
+    sha: 8585aba8a52ad74ccc633b8e293c1dc4277976bd5d510b925533f34fd6685f38
   - kind: registry
     name: pipewire-sys
-    version: 0.9.2
-    sha: cb028afee0d6ca17020b090e3b8fa2d7de23305aef975c7e5192a5050246ea36
+    version: 0.10.0
+    sha: f2089f245b548723e60325773c27f586b7a2372c79ea941b246cd0d654706adc
   - kind: registry
     name: pixman
     version: 0.2.1
