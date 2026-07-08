@@ -8,12 +8,12 @@ sources:
 
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
+- freedesktop-sdk.bst:components/tar.bst
 
 variables:
   strip-binaries: ""
 
 config:
   install-commands:
-  - cp -r system_files/usr/ "%{install-root}%{prefix}/"
-  - cp -r system_files/etc/ "%{install-root}%{sysconfdir}/"
+  - cp -aT system_files "%{install-root}"
   - "%{install-extra}"
