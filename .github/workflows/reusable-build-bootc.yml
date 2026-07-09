@@ -258,13 +258,14 @@ jobs:
         run: |
           just bst build ${{ inputs.element }}
 
+      # Delete casd token 
+      - name: Delete token
+        if: always()
+        run: rm -f ~/.config/hawaii/client.key
+
       # For some reason, it takes about 5-6x longer to build filesystem and runtime when pushing.
       # Here, we ensure that we don't use the remote-execution server for the specific elements that are slower to build.
       - name: Configure BuildStream to not push or use remote-execution server
-        if: inputs.publish
-        env:
-          CASD_CLIENT_CERT: ${{ vars.CASD_CLIENT_CERT }}
-          CASD_CLIENT_KEY: ${{ secrets.CASD_CLIENT_KEY }}
         run: |
           cat > ~/.config/buildstream.conf << EOF
           # BuildStream user configuration
@@ -280,30 +281,6 @@ jobs:
 
           build:
             retry-failed: true
-
-          artifacts:
-            servers:
-            - url: https://cache.projectbluefin.io:11002
-              connection-config:
-                keepalive-time: 60
-                retry-limit: 5
-                retry-delay: 1000
-                request-timeout: 180
-              auth:
-                client-key: ~/.config/hawaii/client.key
-                client-cert: ~/.config/hawaii/client.crt
-
-          source-caches:
-            servers:
-            - url: https://cache.projectbluefin.io:11002
-              connection-config:
-                keepalive-time: 60
-                retry-limit: 5
-                retry-delay: 1000
-                request-timeout: 180
-              auth:
-                client-key: ~/.config/hawaii/client.key
-                client-cert: ~/.config/hawaii/client.crt
           EOF
 
       - name: Buildstream build (image)
@@ -318,11 +295,6 @@ jobs:
         if: inputs.publish
         run: |
           just bst artifact checkout --tar - ${{ inputs.image-element }} | podman load
-
-      # Delete casd token 
-      - name: Delete token
-        if: always()
-        run: rm -f ~/.config/hawaii/client.key
 
       - name: Build final OCI Image
         if: inputs.publish
