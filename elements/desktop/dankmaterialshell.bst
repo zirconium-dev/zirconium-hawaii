@@ -33,6 +33,7 @@ runtime-depends:
 - deps/kimageformats.bst
 - desktop/brightnessctl.bst
 - desktop/dankcalendar.bst
+- desktop/danksearch.bst
 - desktop/ddcutil.bst
 - desktop/matugen.bst
 - freedesktop-sdk.bst:components/libnotify.bst

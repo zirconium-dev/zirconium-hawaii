@@ -5,6 +5,7 @@ enable chezmoi-init.service
 enable chezmoi-update.timer
 enable foot-server.service
 enable iio-niri.service
+enable dsearch.service
 # FIXME: add these
 # enable fcitx5.service
 # enable udiskie.service
