@@ -21,7 +21,6 @@ depends:
   - freedesktop-sdk.bst:components/openssh-systemd.bst
   - freedesktop-sdk.bst:components/fwupd.bst
   - freedesktop-sdk.bst:vm/base-filesystem.bst
-  - freedesktop-sdk.bst:vm/config/journald.bst
   - freedesktop-sdk.bst:vm/config/networkd.bst
   - freedesktop-sdk.bst:vm/config/resolved.bst
   - freedesktop-sdk.bst:vm/config/systemd-homed-firstboot.bst
@@ -63,6 +62,7 @@ depends:
   - gnome-build-meta.bst:gnomeos-deps/android-udev-rules.bst
   - gnome-build-meta.bst:gnomeos-deps/distrobox.bst
   - gnome-build-meta.bst:gnomeos-deps/hidraw-udev.bst
+  - gnome-build-meta.bst:gnomeos-deps/journald-config.bst
   - gnome-build-meta.bst:gnomeos-deps/just.bst
   - gnome-build-meta.bst:gnomeos-deps/ld-config.bst
   - gnome-build-meta.bst:gnomeos-deps/toolbox.bst
