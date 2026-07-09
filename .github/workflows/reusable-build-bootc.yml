@@ -68,6 +68,9 @@ jobs:
         run: |
           just generate-image-version
 
+      - name: Free disk space
+        uses: hastd/free-disk-space@68572aeaadb7f76bd408246328e95926323402b5 # v0.1.2
+
       - name: Pull artifacts and sources
         if: inputs.pull-before-configure
         run: |
@@ -243,16 +246,9 @@ jobs:
           sep-tags: " "
           sep-annotations: " "
 
-      - name: Free disk space
-        uses: hastd/free-disk-space@68572aeaadb7f76bd408246328e95926323402b5 # v0.1.2
-
       - name: Enable unprivileged userns
         run: |
           sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
-
-      - name: Print disk usage before image build
-        run: |
-          df -h
 
       - name: Buildstream build (dependencies)
         run: |
