@@ -18,6 +18,10 @@ variables:
     build GOFLAGS="" BUILD_TIME=2011-11-10_15:00:00 VERSION=v%{version}
 
 config:
+  # The service is hardcoded to use /usr/local, for some reason.
+  configure-commands:
+  - |
+    sed -i 's|/usr/local|/usr|g' assets/dsearch.service
   install-commands:
   - |
     install -Dm0755 bin/dsearch -t "%{install-root}%{bindir}"
