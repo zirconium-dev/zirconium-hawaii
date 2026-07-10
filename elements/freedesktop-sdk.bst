@@ -62,5 +62,11 @@ config:
     components/_private/xdg-desktop-portal-base.bst: gnome-build-meta.bst:core-deps/xdg-desktop-portal-base.bst
     components/xdg-desktop-portal.bst: gnome-build-meta.bst:core-deps/xdg-desktop-portal.bst
 
+    # Epiphany requires nettle 3.x.
+    # https://gitlab.gnome.org/GNOME/epiphany/-/work_items/2892
+    components/nettle.bst: gnome-build-meta.bst:core-deps/nettle3.bst
+    # evolution-data-server requires libical 3.x.
+    components/libical.bst: gnome-build-meta.bst:core-deps/libical3.bst
+
     components/bash-config.bst: config/bash-config.bst
     components/sudo.bst: cli/sudo-rs.bst

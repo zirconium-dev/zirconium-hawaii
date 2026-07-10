@@ -3,8 +3,8 @@ kind: junction
 sources:
 - kind: git_repo
   url: gnome:gnome-build-meta.git
-  track: master
-  ref: 49-branchpoint-762-g1929173348bfbc61d7231993c5862ea8f9f9d869
+  track: sam/fdsdk-26.08
+  ref: 49-branchpoint-806-gdc1ee98df0f65c9f8afbe14bf1435203170d6f0c
 - kind: patch_queue
   path: patches/gnome-build-meta
 
