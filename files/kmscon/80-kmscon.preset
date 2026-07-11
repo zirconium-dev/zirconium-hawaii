@@ -1,0 +1,2 @@
+disable kmscon.service
+disable getty@.service

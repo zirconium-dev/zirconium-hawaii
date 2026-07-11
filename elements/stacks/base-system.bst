@@ -69,6 +69,7 @@ depends:
   - gnome-build-meta.bst:gnomeos-deps/udev-hide-usr.bst
   - gnome-build-meta.bst:gnomeos-deps/zram-generator.bst
 
+  - core/kmscon.bst
   - core/tuned.bst
   - core/uutils-coreutils.bst
 
