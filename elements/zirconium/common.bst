@@ -53,5 +53,8 @@ config:
 
     install -Dm0644 "mkosi.extra/usr/lib/systemd/system/flatpak-preinstall.service" -t "%{install-root}%{indep-libdir}/systemd/system"
   - |
+    # FIXME: re-add when fcitx5 support is in Hawaii
+    rm -f "%{install-root}%{sysconfdir}/profile.d/fcitx5.sh"
+  - |
     %{install-extra}
 
