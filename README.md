@@ -6,7 +6,7 @@ Zirconium, but based on [Freedesktop SDK](https://gitlab.com/freedesktop-sdk/fre
 
 ## What is Zirconium Hawaii
 
-Zirconium Hawaii is an experiment (initially known as Niri OS) that turned into a real project. It is a distribution that builds its own components in a manner that is both far closer to the source, and is 100% reproducible.
+Zirconium Hawaii is a distribution that builds its own components in a manner that is both far closer to the source, and is 100% reproducible.
 
 Zirconium Hawaii can be compared most accurately to [Gnome OS](https://os.gnome.org), which is our biggest inspiration for this project. We use the same build system as Gnome OS, and we even use components **from** Gnome OS!
 
