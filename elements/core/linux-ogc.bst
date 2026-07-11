@@ -5,21 +5,20 @@ description: Linux kernel with patches from OpenGamingCollective applied
 sources:
 - kind: git_repo
   url: github:OpenGamingCollective/linux.git
-  # Pin to v7.1.2-ogc1 until this github issue is fixed
-  # https://github.com/OpenGamingCollective/linux/issues/75
-  track: "v7.1.2-ogc1"
-  ref: v7.1.2-ogc1-0-g6b90cf3d8db0a3366865678e0a9eb14eb365c134
+  track: "ogc-*"
+  ref: v7.1.3-ogc3-0-g94276e0bdc0c5156c03bf44505b7fd5ae0b347b9
 - kind: git_repo
   directory: ogc-kernel-packages
   url: github:OpenGamingCollective/kernel-packages.git
   track: "main"
-  ref: v7.1.2-ogc2-0-gdba5c90a70a555f4a2a11b73ed6e54f937b4c791
+  ref: v7.1.3-ogc3-0-g7c021da90cd14e3a0084b44ae5ad80aa06e5631d
 - kind: git_repo
   directory: archlinux-kernel-config
   url: archlinux_gitlab:archlinux/packaging/packages/linux
+  # FIXME: eventually use our own config instead of pulling Arch Linux's config
   # manually update this track to the version of the linux kernel that ogc is using
-  track: 7.1.2.arch2-1
-  ref: 7.1.2.arch2-1-0-gc2fad0da09a91d0e1b06bac5f33855c0261c1464
+  track: 7.1.3.arch1-1
+  ref: 7.1.3.arch1-1-0-g523a9a9ca99e503bc262df74e3c2b039ff9c522a
 - kind: local
   path: files/linux/config-utils.sh
 - kind: local
