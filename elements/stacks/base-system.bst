@@ -69,10 +69,10 @@ depends:
   - gnome-build-meta.bst:gnomeos-deps/udev-hide-usr.bst
   - gnome-build-meta.bst:gnomeos-deps/zram-generator.bst
 
+  - cli/lsb-release.bst
+  - config/polkit/networkmanager-wheel-nopasswd.bst
+  - config/sysctl.bst
+  - config/systemd/zirconium.bst
   - core/kmscon.bst
   - core/tuned.bst
   - core/uutils-coreutils.bst
-
-  - config/systemd/zirconium.bst
-  - config/polkit/networkmanager-wheel-nopasswd.bst
-  - cli/lsb-release.bst
