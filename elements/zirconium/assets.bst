@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: github:zirconium-dev/assets.git
   track: main
-  ref: bbcc598039cc9c48b631677ff3bd267217cf8509
+  ref: 1442638447f3597f173273e1939dc03827e071ea
 
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
@@ -14,10 +14,10 @@ variables:
 
 config:
   install-commands:
-    - |
-      install -Dpm0644 -t %{install-root}%{datadir}/plymouth/themes/spinner/ ./logos/watermark.png
-      install -Dpm0644 -t %{install-root}%{datadir}/zirconium/skel/Pictures/Wallpapers/ ./wallpapers/*
-      install -Dpm0644 -t %{install-root}%{datadir}/zirconium/pixmaps/ ./logos/logo-z.svg
-    - |
-      %{install-extra}
+  - |
+    install -Dpm0644 -t %{install-root}%{datadir}/plymouth/themes/spinner/ ./logos/watermark.png
+    install -Dpm0644 -t %{install-root}%{datadir}/zirconium/skel/Pictures/Wallpapers/ ./wallpapers/*
+    install -Dpm0644 -t %{install-root}%{datadir}/zirconium/pixmaps/ ./logos/logo-z.svg
+  - |
+    %{install-extra}
 

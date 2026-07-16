@@ -11,7 +11,7 @@ sources:
 - kind: git_repo
   url: github:zirconium-dev/zirconium.git
   track: main
-  ref: 5a51299f80e1d740bdb7889fa66c0ae5505f3fcb
+  ref: 363fcd0e08108d9d4378f4a5b10d2fb77532abf0
 
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
@@ -40,7 +40,7 @@ config:
     install -Dm0644 cosign.pub "%{install-root}%{datadir}/pki/containers/zirconium.pub"
     install -Dm0644 mkosi.extra/usr/share/factory/etc/profile.d/*.sh -t "%{install-root}%{sysconfdir}/profile.d"
     install -Dm0644 mkosi.extra/usr/share/xdg-terminal-exec/xdg-terminals.list -t "%{install-root}%{datadir}/xdg-terminal-exec"
-    cp -r "mkosi.extra/usr/share/factory/etc/containers" "%{install-root}%{sysconfdir}/containers"
+    cp -r "mkosi.profiles/zirconium-bootc-ostree/mkosi.extra/usr/share/factory/etc/containers" "%{install-root}%{sysconfdir}/containers"
 
     # pam stuff
     install -Dm0644 mkosi.extra/usr/share/greetd/greetd-spawn.pam_env.conf -t "%{install-root}%{datadir}/greetd"
