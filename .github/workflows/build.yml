@@ -23,8 +23,7 @@ on:
       remote-execution:
         description: "Configure remote-execution server (requires valid CASD keys)"
         type: boolean
-        # default: true
-        default: false
+        default: true
 
 env:
   IMAGE_DESC: "Opinionated niri + bootc image"
