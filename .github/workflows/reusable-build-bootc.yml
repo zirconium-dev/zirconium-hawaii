@@ -32,7 +32,8 @@ on:
       remote-execution:
         description: "Configure remote-execution server (requires valid CASD keys)"
         type: boolean
-        default: true
+        # default: true
+        default: false
     secrets:
       SIGNING_SECRET:
         description: "The private key used to sign the image"
