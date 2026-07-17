@@ -39,7 +39,7 @@ config:
       SUPPORT_URL="${SUPPORT_URL}"
       BUG_REPORT_URL="${SUPPORT_URL}"
       DOCUMENTATION_URL="${DOCUMENTATION_URL}"
-      LOGO=img-logo-icon
+      LOGO="zirconium"
       DEFAULT_HOSTNAME="zirconium"
       EOF
       mkdir -p %{install-root}%{sysconfdir}/
