@@ -269,13 +269,9 @@ config:
 
   install-commands:
   - |
-    # greetd itself
     make -C man DESTDIR="%{install-root}" PREFIX="%{prefix}" install
     install -Dm0755 target/release/greetd -t "%{install-root}%{bindir}"
     install -Dm0644 greetd.service -t "%{install-root}%{prefix}/lib/systemd/system"
     install -Dm0644 greetd.pam "%{install-root}%{sysconfdir}/pam.d/greetd"
-    install -Dm0644 greetd.sysusers "%{install-root}%{prefix}/lib/sysusers.d/greetd.conf"
-    # agreety
-    install -Dm0755 target/release/agreety -t "%{install-root}%{bindir}"
   - |
     %{install-extra}
