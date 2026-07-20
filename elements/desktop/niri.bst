@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: github:niri-wm/niri.git
   track: main
-  ref: v26.04-39-g0777769e719b7c9b7c980d4ea66288bfbb4da5b3
+  ref: v26.04-43-g7f26c3ee804fb6ed458ef7fb0e3c794f14e0b3bc
 - kind: cargo2
   ref:
   - kind: registry
@@ -1119,6 +1119,10 @@ sources:
     name: polling
     version: 3.11.0
     sha: 5d0e4f59085d47d8241c88ead0f274e8a0cb551f3625263c05eb8dd897c34218
+  - kind: registry
+    name: portable-atomic
+    version: 1.14.0
+    sha: 3d20d5497ef88037a52ff98267d066e7f11fcc5e99bbfbd58a42336193aacec3
   - kind: registry
     name: ppv-lite86
     version: 0.2.21
