@@ -16,8 +16,6 @@ depends:
   - desktop/xdg-terminal-exec.bst
   - config/satty.bst
   - config/pam/greetd.bst
-  - config/greetd/service.bst
-  - config/greetd/dms.bst
   - config/default-icons/adwaita.bst
   - config/ld-config.bst
   - freedesktop-sdk.bst:components/desktop-file-utils.bst
