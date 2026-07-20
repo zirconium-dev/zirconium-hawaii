@@ -13,7 +13,11 @@ sources:
   - kind: git_repo
     url: github:AvengeMedia/DankMaterialShell.git
     track: master
-    ref: v1.5.0-126-g5dfd875b9ec012a15a6c986be25e6552659dd7fb
+    ref: v1.5.0-160-g5de0339506b73235485099f174a259b44d3fe70b
+  - kind: git_module
+    url: github:AvengeMedia/dank-qml-common
+    path: dank-qml-common
+    ref: 1451ac603844f2b686e58fa062b1456373693c22
   - kind: local
     path: files/dankmaterialshell
 
@@ -21,6 +25,7 @@ build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-make.bst
 - freedesktop-sdk.bst:components/git.bst
 - freedesktop-sdk.bst:components/go.bst
+- freedesktop-sdk.bst:components/tar.bst
 
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
@@ -44,11 +49,6 @@ variables:
   make-args: build GOFLAGS="" BUILD_TIME=2011-11-10_15:00:00
 
 config:
-  configure-commands:
-  - |
-    # Modify dms-greeter to use /usr/share/quickshell/dms instead of /usr/share/quickshell/dms-greeter, since we are not
-    # going to install dms into /usr/share/quickshell/dms-greeter.
-    sed -i 's/^DMS_PATH="dms-greeter"$/DMS_PATH="dms"/;s/default: dms-greeter)$/default: dms)/' quickshell/Modules/Greetd/assets/dms-greeter
   install-commands:
   - |
     install -dm0755 "%{install-root}%{datadir}/bash-completion/completions"
@@ -60,14 +60,8 @@ config:
     ./core/bin/dms completion fish > "%{install-root}%{datadir}/fish/vendor_completions.d/dms.fish"
 
     install -Dm0755 ./core/bin/dms "%{install-root}%{bindir}/dms"
-    install -dm0755 "%{install-root}%{datadir}/quickshell/dms"
-    cp -r "quickshell/./" "%{install-root}%{datadir}/quickshell/dms"
     install -Dpm0644 -t "%{install-root}%{sysconfdir}/pam.d/" quickshell/assets/pam/fprint
     install -Dpm0644 -t "%{install-root}%{sysconfdir}/pam.d/" quickshell/assets/pam/u2f
     install -Dm0644 -t "%{install-root}%{prefix}/lib/systemd/user/" assets/systemd/dms.service
-
-    # dms-greeter
-    install -Dm0755 "quickshell/Modules/Greetd/assets/dms-greeter" -t "%{install-root}%{bindir}"
-    install -Dm0644 "quickshell/systemd/tmpfiles-dms-greeter.conf" "%{install-root}%{indep-libdir}/tmpfiles.d/dms-greeter.conf"
   - |
     %{install-extra}
