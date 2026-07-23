@@ -5,7 +5,7 @@ build-depends:
   - stacks/zirconium.bst
   - freedesktop-sdk.bst:vm/prepare-image.bst
   - core/os-release.bst
-  - core/linux-ogc.bst
+  - core/linux.bst
   - core/bootc.bst
 
 variables:

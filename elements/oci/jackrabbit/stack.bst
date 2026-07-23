@@ -2,7 +2,7 @@ kind: stack
 
 depends:
   - stacks/jackrabbit.bst
-  - core/linux-ogc.bst
+  - core/linux.bst
   - core/initramfs.bst
   - gamerslop/valve-hw-audio.bst
   - gamerslop/xonedo-dkms.bst

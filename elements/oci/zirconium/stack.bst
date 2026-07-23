@@ -2,7 +2,7 @@ kind: stack
 
 depends:
   - stacks/zirconium.bst
-  - core/linux-ogc.bst
+  - core/linux.bst
   - core/initramfs.bst
 
 public:

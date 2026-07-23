@@ -1,28 +1,24 @@
 # Based off of freedesktop-sdk.bst:components/linux.bst
 kind: make
-description: Linux kernel with patches from OpenGamingCollective applied
+description: Linux kernel with various patches for Zirconium
 
 sources:
 - kind: git_repo
-  url: github:OpenGamingCollective/linux.git
-  track: "ogc-*"
-  ref: v7.1.3-ogc3-0-g94276e0bdc0c5156c03bf44505b7fd5ae0b347b9
-- kind: git_repo
-  directory: ogc-kernel-packages
-  url: github:OpenGamingCollective/kernel-packages.git
-  track: "main"
-  ref: v7.1.3-ogc3-0-g7c021da90cd14e3a0084b44ae5ad80aa06e5631d
-- kind: git_repo
-  directory: archlinux-kernel-config
-  url: archlinux_gitlab:archlinux/packaging/packages/linux
-  # FIXME: eventually use our own config instead of pulling Arch Linux's config
-  # manually update this track to the version of the linux kernel that ogc is using
-  track: 7.1.3.arch1-1
-  ref: 7.1.3.arch1-1-0-g523a9a9ca99e503bc262df74e3c2b039ff9c522a
+  url: kernel:linux/kernel/git/stable/linux.git
+  track: v*
+  exclude:
+  - '*-rc*'
+  ref: v7.1.5-0-g155b42bec9cbb6b8cdc47dd9bd09503a81fbe493
+- kind: patch_queue
+  path: patches/linux/fdsdk
+- kind: patch_queue
+  path: patches/linux/fixes
+- kind: patch_queue
+  path: patches/linux/ogc
 - kind: local
   path: files/linux/config-utils.sh
 - kind: local
-  path: files/linux/gamerslop-config.sh
+  path: files/linux/zirc-config.sh
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-make.bst
@@ -30,7 +26,6 @@ build-depends:
 - freedesktop-sdk.bst:components/cpio.bst  # loongarch64 build enabled CONFIG_IKHEADERS by default
 - freedesktop-sdk.bst:components/flex.bst
 - freedesktop-sdk.bst:components/bc.bst
-- freedesktop-sdk.bst:components/git.bst
 - freedesktop-sdk.bst:components/gzip.bst
 - freedesktop-sdk.bst:components/pahole.bst
 - freedesktop-sdk.bst:components/python3.bst
@@ -73,47 +68,45 @@ environment-nocache:
 
 config:
   configure-commands:
+  # Generate the default kernel config for the target architecture
   - |
-    # Add the ogc version to the end of the kernel version
-    # If we're on a tagged release, remove .git and set the extra version to the tag.
-    # If you keep .git around, your kernel version will include the git hash at the end, which is ugly.
-    if git describe --tag 2>/dev/null | grep -e '-ogc[0-9]' &>/dev/null; then
-      git_tag="$(git describe --tag)"
-      rm -rf .git
-    else
-      git_tag="ogc"
-    fi
-    extra_version="-${git_tag#*$"-"}"
-    echo "$extra_version" > localversion.10-ogc
-
-  - |
-    # put the variables that we need to unset into a file usable by fdSDK's config-utils.sh
-    for f in $(grep -Evh "^[[:blank:]]*#|^[[:blank:]]*$" ogc-kernel-packages/config/{ogc,arch}.config.unset); do
-      echo remove $f >> ogc-config.sh
-    done
-
-  - |
-    # merge Arch Linux's default config with ogc's config set
-    cp archlinux-kernel-config/config.x86_64 .config
-    for f in ogc arch; do
-      scripts/kconfig/merge_config.sh .config ogc-kernel-packages/config/${f}.config.set
-    done
+    make defconfig
 
   - |
     . ./config-utils.sh
-    . ./ogc-config.sh
-    . ./gamerslop-config.sh
+    rm -f expected-configs
+    . ./fdsdk-config.sh "%{arch}"
+    . ./zirc-config.sh "%{arch}"
 
   - |
     make -j1 olddefconfig
+
+  # Fail if any configs are missing
+  - |
+    . ./config-utils.sh
+
+    missing_configs=0
+    for config in $(cat expected-configs); do
+      if ! has "${config}"; then
+        echo "Missing ${config}" 1>&2
+        missing_configs=1
+      fi
+    done
+    # Only fail for...
+    case "%{arch}" in
+      x86_64|aarch64)
+        [ "${missing_configs}" = 0 ]
+      ;;
+    esac
 
   install-commands:
   - |
     release=$(make -s kernelrelease)
     install -Dm644 "%{image-name}" "%{install-root}%{indep-libdir}/modules/${release}/vmlinuz"
+    install -Dm644 vmlinux "%{install-root}%{indep-libdir}/modules/${release}/vmlinux"
     install -Dm644 System.map "%{install-root}%{indep-libdir}/modules/${release}/System.map"
     install -Dm644 .config "%{install-root}%{indep-libdir}/modules/${release}/config"
-    ZSTD_CLEVEL=19 make INSTALL_MOD_PATH='%{install-root}%{prefix}' modules_install INSTALL_MOD_STRIP=1
+    ZSTD_CLEVEL=10 make INSTALL_MOD_PATH='%{install-root}%{prefix}' modules_install INSTALL_MOD_STRIP=1
 
   - |
     release=$(make -s kernelrelease)
@@ -151,14 +144,16 @@ config:
       install-commands:
         (>):
         - |
-          make -j1 INSTALL_DTBS_PATH='%{install-root}%{bootdir}/dtbs' dtbs_install
+          release=$(make -s kernelrelease)
+          make -j1 INSTALL_DTBS_PATH="%{install-root}%{indep-libdir}/modules/${release}/dtbs" dtbs_install
 
 public:
   bst:
     split-rules:
       devel:
         (>):
-        - '%{bootdir}/System.map'
+        - '%{indep-libdir}/modules/*/System.map'
+        - '%{indep-libdir}/modules/*/vmlinux'
     overlap-whitelist:
     - "%{project_licensedir}"
     - "%{project_licensedir}/**"
