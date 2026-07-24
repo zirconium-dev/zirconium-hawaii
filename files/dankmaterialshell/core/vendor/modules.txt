@@ -2,8 +2,9 @@
 ## explicit; go 1.24.0
 filippo.io/edwards25519
 filippo.io/edwards25519/field
-# github.com/AvengeMedia/dankgo v0.0.0-20260721162324-38d48943054d
+# github.com/AvengeMedia/dankgo v0.0.0-20260724133713-a4ef23371e05
 ## explicit; go 1.26
+github.com/AvengeMedia/dankgo/boottimer
 github.com/AvengeMedia/dankgo/dbusutil
 github.com/AvengeMedia/dankgo/errdefs
 github.com/AvengeMedia/dankgo/ipc
