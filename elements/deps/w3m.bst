@@ -11,7 +11,6 @@ build-depends:
 
 depends:
 - deps/bdwgc.bst
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:components/openssl.bst
 - freedesktop-sdk.bst:components/zlib.bst
 

@@ -16,5 +16,4 @@ build-depends:
 - gnome-build-meta.bst:sdk/gtk-doc.bst
 
 depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - gnome-build-meta.bst:core/nautilus.bst

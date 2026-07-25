@@ -28,7 +28,6 @@ build-depends:
 - freedesktop-sdk.bst:components/tar.bst
 
 depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - desktop/quickshell.bst
 - deps/qt6-qtmultimedia.bst
 

@@ -19,7 +19,6 @@ build-depends:
 - freedesktop-sdk.bst:components/xorg-lib-xinerama.bst
 
 depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:components/libxkbcommon.bst
 - freedesktop-sdk.bst:components/libglvnd.bst
 

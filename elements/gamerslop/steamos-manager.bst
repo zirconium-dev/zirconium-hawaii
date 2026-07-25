@@ -869,7 +869,6 @@ build-depends:
 - freedesktop-sdk.bst:components/rust.bst
 
 depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:components/dbus.bst
 - freedesktop-sdk.bst:components/glib.bst
 - freedesktop-sdk.bst:components/gsettings-desktop-schemas.bst

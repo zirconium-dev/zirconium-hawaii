@@ -12,7 +12,6 @@ build-depends:
 - freedesktop-sdk.bst:components/scdoc.bst
 
 depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:components/gawk.bst
 
 variables:

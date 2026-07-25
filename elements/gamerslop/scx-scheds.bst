@@ -3227,7 +3227,6 @@ build-depends:
 - freedesktop-sdk.bst:components/systemd.bst
 
 depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:components/elfutils.bst
 - freedesktop-sdk.bst:components/jq.bst
 - freedesktop-sdk.bst:components/libseccomp.bst

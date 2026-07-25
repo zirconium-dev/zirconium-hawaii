@@ -17,7 +17,6 @@ build-depends:
 - freedesktop-sdk.bst:components/mesa-headers.bst
 
 depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:components/libavif.bst
 - freedesktop-sdk.bst:components/libheif.bst
 - freedesktop-sdk.bst:components/libjxl.bst

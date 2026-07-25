@@ -259,7 +259,6 @@ build-depends:
 - freedesktop-sdk.bst:components/gcc.bst
 
 depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:components/linux-pam.bst
 
 config:

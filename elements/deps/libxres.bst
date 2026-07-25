@@ -11,7 +11,6 @@ build-depends:
 - freedesktop-sdk.bst:components/pkg-config.bst
 
 depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:components/xorg-lib-xext.bst
 - freedesktop-sdk.bst:components/xorg-lib-x11.bst
 - freedesktop-sdk.bst:components/xorg-proto-xorgproto.bst

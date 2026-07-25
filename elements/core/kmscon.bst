@@ -15,7 +15,7 @@ sources:
   path: files/kmscon/kmscon.conf
 
 build-depends:
-- freedesktop-sdk.bst:public-stacks//buildsystem-meson.bst
+- freedesktop-sdk.bst:public-stacks/buildsystem-meson.bst
 - gnome-build-meta.bst:core-deps/libcheck.bst
 - freedesktop-sdk.bst:components/docbook-xsl.bst
 - freedesktop-sdk.bst:components/libxslt.bst
@@ -29,7 +29,6 @@ depends:
 - freedesktop-sdk.bst:components/libdrm.bst
 - freedesktop-sdk.bst:components/libxkbcommon.bst
 - freedesktop-sdk.bst:components/systemd.bst
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 
 config:
   install-commands:

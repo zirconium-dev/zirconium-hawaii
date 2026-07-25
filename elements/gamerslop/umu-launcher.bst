@@ -216,7 +216,6 @@ build-depends:
 - freedesktop-sdk.bst:components/scdoc.bst
 
 depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:bootstrap/libxcrypt.bst
 - freedesktop-sdk.bst:components/curl.bst
 - freedesktop-sdk.bst:components/dbus.bst
