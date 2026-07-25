@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: gitlab:freedesktop-sdk/freedesktop-sdk.git
   track: master
-  ref: freedesktop-sdk-25.08rc.3-2210-g9853a14d8ea4d4c2fcddcddf46ef12c707ea15c1
+  ref: freedesktop-sdk-26.08beta.1-10-gdae6745586026a351d5a4950c327464246bc7a7f
 - kind: patch_queue
   path: patches/freedesktop-sdk
 
@@ -29,6 +29,7 @@ config:
     components/gdk-pixbuf.bst: gnome-build-meta.bst:sdk/gdk-pixbuf.bst
     components/glib-networking.bst: gnome-build-meta.bst:sdk/glib-networking.bst
     components/glib.bst: gnome-build-meta.bst:sdk/glib.bst
+    components/glycin.bst: gnome-build-meta.bst:sdk/glycin.bst
     components/gobject-introspection.bst: gnome-build-meta.bst:sdk/gobject-introspection.bst
     components/python3-gi-docgen.bst: gnome-build-meta.bst:sdk/gi-docgen.bst
     components/graphene.bst: gnome-build-meta.bst:sdk/graphene.bst
@@ -36,6 +37,7 @@ config:
     components/gtk3.bst: gnome-build-meta.bst:sdk/gtk+-3.bst
     components/libibus.bst: gnome-build-meta.bst:sdk/libibus.bst
     components/json-glib.bst: gnome-build-meta.bst:sdk/json-glib.bst
+    components/libglycin.bst: gnome-build-meta.bst:sdk/libglycin.bst
     components/libnotify.bst: gnome-build-meta.bst:sdk/libnotify.bst
     components/librsvg.bst: gnome-build-meta.bst:sdk/librsvg.bst
     components/libsoup.bst: gnome-build-meta.bst:sdk/libsoup.bst
