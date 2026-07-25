@@ -17,8 +17,8 @@ sources:
       url: github_files:junegunn/fzf/releases/download/v%{version}/fzf-%{version}-linux_amd64.tar.gz
       ref: df53438be5f51e151bb4044d78fda72bdfe209e3ecd2baecae48e8dea370c81b
 
-depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
+build-depends:
+- freedesktop-sdk.bst:public-stacks/runtime-gnu.bst
 
 variables:
   version: 0.74.1

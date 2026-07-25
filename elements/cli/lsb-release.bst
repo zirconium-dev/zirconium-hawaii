@@ -11,7 +11,6 @@ build-depends:
 - freedesktop-sdk.bst:components/help2man.bst
 
 depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:components/util-linux.bst
 
 variables:
