@@ -6,8 +6,8 @@ sources:
 - kind: local
   path: files/os-release
 
-depends:
-  - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
+build-depends:
+- freedesktop-sdk.bst:public-stacks/runtime-gnu.bst
 
 variables:
   strip-binaries: ""

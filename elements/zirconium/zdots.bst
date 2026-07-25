@@ -6,8 +6,10 @@ sources:
   track: main
   ref: ebada4ed82b36bb1bc1e625c0809fb6658bda9eb
 
-depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
+build-depends:
+- freedesktop-sdk.bst:public-stacks/runtime-gnu.bst
+
+runtime-depends:
 - cli/chezmoi.bst
 
 variables:

@@ -9,6 +9,7 @@ sources:
   path: patches/python3-pyinotify
 
 build-depends:
+- freedesktop-sdk.bst:public-stacks/runtime-gnu.bst
 - freedesktop-sdk.bst:components/stripper.bst
 - freedesktop-sdk.bst:components/python3-build.bst
 - freedesktop-sdk.bst:components/python3-installer.bst

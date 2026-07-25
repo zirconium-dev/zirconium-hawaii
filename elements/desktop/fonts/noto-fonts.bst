@@ -9,6 +9,7 @@ sources:
   path: files/noto
 
 build-depends:
+- freedesktop-sdk.bst:public-stacks/runtime-gnu.bst
 - freedesktop-sdk.bst:components/fontconfig.bst
 - freedesktop-sdk.bst:components/pkg-config.bst
 

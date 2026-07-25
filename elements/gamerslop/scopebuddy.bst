@@ -7,7 +7,7 @@ sources:
   ref: 1.4.0-0-g4340ab2047eb9d7f840d342b932d98a8d0f7f652
 
 depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
+- freedesktop-sdk.bst:public-stacks/runtime-gnu.bst
 
 runtime-depends:
 - gamerslop/gamescope.bst

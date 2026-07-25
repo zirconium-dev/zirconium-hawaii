@@ -7,6 +7,7 @@ sources:
   ref: v0.7.4-0-g702d6360ce082d8328e0cfd84f6415b0c94ca6dd
 
 build-depends:
+- freedesktop-sdk.bst:public-stacks/runtime-gnu.bst
 - freedesktop-sdk.bst:components/stripper.bst
 - freedesktop-sdk.bst:components/python3-build.bst
 - freedesktop-sdk.bst:components/python3-installer.bst

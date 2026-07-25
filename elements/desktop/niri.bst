@@ -1926,6 +1926,7 @@ sources:
     version: 3.3.0
     sha: f75c23a64ef8f40f13a6989991e643554d9bef1d682a281160cf0c1bc389c5e9
 build-depends:
+- freedesktop-sdk.bst:public-stacks/runtime-gnu.bst
 - freedesktop-sdk.bst:components/stripper.bst
 - freedesktop-sdk.bst:components/pkg-config.bst
 - freedesktop-sdk.bst:components/rust.bst
@@ -1940,7 +1941,6 @@ build-depends:
 - freedesktop-sdk.bst:components/git.bst
 
 depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:components/cairo.bst
 - freedesktop-sdk.bst:components/pango.bst
 - freedesktop-sdk.bst:components/pixman.bst

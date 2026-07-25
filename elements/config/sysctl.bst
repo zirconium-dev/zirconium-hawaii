@@ -5,7 +5,7 @@ sources:
   path: files/sysctl/10-zirconium.conf
 
 build-depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
+- freedesktop-sdk.bst:public-stacks/runtime-gnu.bst
 
 variables:
   strip-binaries: ''

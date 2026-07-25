@@ -4,8 +4,10 @@ sources:
 - kind: local
   path: files/default-icon-config
 
-depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
+build-depends:
+- freedesktop-sdk.bst:public-stacks/runtime-gnu.bst
+
+runtime-depends:
 - gnome-build-meta.bst:sdk/adwaita-icon-theme.bst
 
 variables:

@@ -1,11 +1,10 @@
 kind: manual
 
 build-depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
+- freedesktop-sdk.bst:public-stacks/runtime-gnu.bst
 - freedesktop-sdk.bst:components/make.bst
 
 runtime-depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:components/tar.bst
 - freedesktop-sdk.bst:components/xz.bst
 

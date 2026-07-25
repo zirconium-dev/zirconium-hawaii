@@ -832,13 +832,13 @@ sources:
     version: 3.4.0
     sha: 1e8535915cfa75547e559d8c68e8139909a4aeee076831e4ef7fc59d8172c4d6
 build-depends:
+- freedesktop-sdk.bst:public-stacks/runtime-gnu.bst
 - freedesktop-sdk.bst:components/pkg-config.bst
 - freedesktop-sdk.bst:components/stripper.bst
 - freedesktop-sdk.bst:components/rust.bst
 - freedesktop-sdk.bst:components/gcc.bst
 
 depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:components/gdk-pixbuf.bst
 - freedesktop-sdk.bst:components/glib.bst
 - freedesktop-sdk.bst:components/hicolor-icon-theme.bst

@@ -6,8 +6,8 @@ sources:
   track: main
   ref: 83dcc94565b0b5c8f0a6ed5f8e171ad8873c56e2
 
-depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
+build-depends:
+- freedesktop-sdk.bst:public-stacks/runtime-gnu.bst
 
 variables:
   strip-binaries: ""

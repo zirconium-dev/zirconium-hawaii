@@ -580,6 +580,7 @@ sources:
     version: 3.4.0
     sha: 1e8535915cfa75547e559d8c68e8139909a4aeee076831e4ef7fc59d8172c4d6
 build-depends:
+- freedesktop-sdk.bst:public-stacks/runtime-gnu.bst
 - freedesktop-sdk.bst:components/bpf-maybe.bst
 - freedesktop-sdk.bst:components/findutils.bst
 - freedesktop-sdk.bst:components/gcc.bst
@@ -590,7 +591,6 @@ build-depends:
 - freedesktop-sdk.bst:components/systemd.bst
 
 depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:components/polkit.bst
 
 config:

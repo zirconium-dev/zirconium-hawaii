@@ -8,7 +8,10 @@ sources:
   track: main
   ref: 0.99-0-g558d0e8370f6f3b5f1a1a09c634174a9eb00b278
 
-depends:
+build-depends:
+- freedesktop-sdk.bst:public-stacks/runtime-gnu.bst
+
+runtime-depends:
 - gnome-build-meta.bst:gnomeos-deps/alsa-ucm-conf.bst
 
 variables:
