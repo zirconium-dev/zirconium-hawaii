@@ -35,8 +35,40 @@ enable POSIX_AUX_CLOCKS
 enable SECURITY_IPE
 value_str LSM "landlock,lockdown,yama,integrity,loadpin,safesetid,selinux,smack,tomoyo,apparmor,ipe,bpf"
 
-# Network emulation
+# Needed for network virtualization
+module NET_SCH_HTB
+module NET_SCH_HFSC
+module NET_SCH_PRIO
+module NET_SCH_MULTIQ
+module NET_SCH_RED
+module NET_SCH_SFB
+module NET_SCH_SFQ
+module NET_SCH_TEQL
+module NET_SCH_TBF
+module NET_SCH_CBS
+module NET_SCH_ETF
+module NET_SCH_MQPRIO_LIB
+module NET_SCH_TAPRIO
+module NET_SCH_GRED
 module NET_SCH_NETEM
+module NET_SCH_DRR
+module NET_SCH_MQPRIO
+module NET_SCH_SKBPRIO
+module NET_SCH_CHOKE
+module NET_SCH_QFQ
+module NET_SCH_CODEL
+enable NET_SCH_FQ_CODEL
+module NET_SCH_CAKE
+module NET_SCH_FQ
+module NET_SCH_HHF
+module NET_SCH_PIE
+module NET_SCH_FQ_PIE
+module NET_SCH_INGRESS
+module NET_SCH_PLUG
+module NET_SCH_ETS
+enable NET_SCH_BPF
+module NET_SCH_DUALPI2
+enable NET_SCH_DEFAULT
 
 # More precise CPU usage accounting
 enable VIRT_CPU_ACCOUNTING
