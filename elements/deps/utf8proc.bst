@@ -11,7 +11,7 @@ build-depends:
 - freedesktop-sdk.bst:components/make.bst
 - freedesktop-sdk.bst:components/sed.bst
 
-depends:
+runtime-depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 
 variables:
