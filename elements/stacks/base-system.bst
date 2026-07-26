@@ -3,6 +3,7 @@ kind: stack
 # Basic functional system + cli utilities
 depends:
   - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
+  - freedesktop-sdk.bst:bootstrap/libselinux.bst
   - freedesktop-sdk.bst:components/util-linux-full.bst
   - freedesktop-sdk.bst:components/locales.bst
   - freedesktop-sdk.bst:components/linux-firmware.bst
