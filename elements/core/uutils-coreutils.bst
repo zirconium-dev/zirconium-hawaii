@@ -1637,8 +1637,8 @@ depends:
 
 environment:
   CARGOFLAGS: "--frozen --offline"
-  # We still have util-linux in our system, which provides `more`. Less overlapping please!
-  SKIP_UTILS: "more"
+  # We still have util-linux in our system, which provides `more`. procps also provides `kill` and `uptime`. Less overlapping please!
+  SKIP_UTILS: "more kill uptime"
 
 config:
   install-commands:
