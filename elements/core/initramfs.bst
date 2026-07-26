@@ -3,10 +3,14 @@ kind: script
 build-depends:
   - freedesktop-sdk.bst:components/fakecap.bst
   - stacks/zirconium.bst
-  - freedesktop-sdk.bst:vm/prepare-image.bst
   - core/os-release.bst
   - core/linux.bst
   - core/bootc.bst
+  # This is needed because prepare-image.bst depends on runtime-gnu.
+  # The real solution here is to not use the entire zirconium stack to generate the initramfs, but whatever. I'm lazy.
+  - filename: freedesktop-sdk.bst:vm/prepare-image.bst
+    config:
+      location: /prepare-image
 
 variables:
   uuidnamespace: df2427db-01ec-4c99-96b1-be3edb3cd9f6
@@ -19,7 +23,7 @@ config:
   commands:
     - mkdir -p /fakecap /tmp /var/tmp
     - |
-      prepare-image.sh --noroot --noboot \
+      /prepare-image/usr/bin/prepare-image.sh --noroot --noboot \
                        --seed "%{uuidnamespace}" >/dev/null
 
     - |
