@@ -20,10 +20,9 @@ on:
         description: "Pull from cache before build"
         type: boolean
         default: false
-      remote-execution:
-        description: "Configure remote-execution server (requires valid CASD keys)"
+      disable-remote-execution:
+        description: "Don't configure remote-execution server (requires valid CASD keys)"
         type: boolean
-        # default: true
         default: false
 
 env:
@@ -51,10 +50,9 @@ jobs:
       id-token: write
     with:
       image-name: "zirconium-hawaii"
-      element: "oci/zirconium/stack.bst"
-      image-element: "oci/zirconium/image.bst"
+      element: "oci/zirconium/image.bst"
       default-tag: "edge"
-      remote-execution: ${{ inputs.remote-execution == true }}
+      disable-remote-execution: ${{ inputs.disable-remote-execution == true }}
       publish: ${{ github.event_name != 'pull_request' && github.ref == format('refs/heads/edge', github.event.repository.default_branch) }}
       pull-before-configure: ${{ inputs.pull-before-configure == true }}
 
@@ -73,9 +71,8 @@ jobs:
       id-token: write
     with:
       image-name: "zirconium-hawaii-jackrabbit"
-      element: "oci/jackrabbit/stack.bst"
-      image-element: "oci/jackrabbit/image.bst"
+      element: "oci/jackrabbit/image.bst"
       default-tag: "edge"
-      remote-execution: ${{ inputs.remote-execution == true }}
+      disable-remote-execution: ${{ inputs.disable-remote-execution == true }}
       publish: ${{ github.event_name != 'pull_request' && github.ref == format('refs/heads/edge', github.event.repository.default_branch) }}
       pull-before-configure: ${{ inputs.pull-before-configure == true }}

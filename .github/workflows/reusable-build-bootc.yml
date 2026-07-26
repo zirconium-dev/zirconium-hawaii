@@ -18,21 +18,16 @@ on:
         type: boolean
         default: true
       element:
-        description: "Dependency element to build"
-        required: true
-        type: string
-      image-element:
-        description: "Image element to build"
+        description: "Element to build"
         required: true
         type: string
       pull-before-configure:
         description: "Pull from cache before build"
         type: boolean
         default: false
-      remote-execution:
-        description: "Configure remote-execution server (requires valid CASD keys)"
+      disable-remote-execution:
+        description: "Don't configure remote-execution server (requires valid CASD keys)"
         type: boolean
-        # default: true
         default: false
     secrets:
       SIGNING_SECRET:
@@ -80,7 +75,7 @@ jobs:
         env:
           CASD_CLIENT_CERT: ${{ vars.CASD_CLIENT_CERT }}
           CASD_CLIENT_KEY: ${{ secrets.CASD_CLIENT_KEY }}
-          REMOTE_EXECUTION: ${{ inputs.remote-execution }}
+          DISABLE_REMOTE_EXECUTION: ${{ inputs.disable-remote-execution }}
         run: |
           mkdir -p ~/.config
           if [[ -n "$CASD_CLIENT_CERT" ]] && [[ -n "$CASD_CLIENT_KEY" ]]; then
@@ -128,7 +123,7 @@ jobs:
                 client-cert: ~/.config/hawaii/client.crt
 
           EOF
-          if [ "${REMOTE_EXECUTION}" = "true" ]; then
+          if [ "${DISABLE_REMOTE_EXECUTION}" = "false" ]; then
           cat >> ~/.config/buildstream.conf << EOF
           cache:
             storage-service:
@@ -250,38 +245,9 @@ jobs:
         run: |
           sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
 
-      - name: Buildstream build (dependencies)
+      - name: Buildstream build
         run: |
           just bst build ${{ inputs.element }}
-
-      # Delete casd token 
-      - name: Delete token
-        if: always()
-        run: rm -f ~/.config/hawaii/client.key
-
-      # For some reason, it takes about 5-6x longer to build filesystem and runtime when pushing.
-      # Here, we ensure that we don't use the remote-execution server for the specific elements that are slower to build.
-      - name: Configure BuildStream to not push or use remote-execution server
-        run: |
-          cat > ~/.config/buildstream.conf << EOF
-          # BuildStream user configuration
-          scheduler:
-            fetchers: 24
-            builders: 4
-            network-retries: 3
-
-          logging:
-            verbose: true
-            message-format: '[%{wallclock}][%{elapsed}][%{key}][%{element}] %{action} %{message}'
-            error-lines: 80
-
-          build:
-            retry-failed: true
-          EOF
-
-      - name: Buildstream build (image)
-        run: |
-          just bst build ${{ inputs.image-element }}
 
       - name: Print disk usage after image build
         run: |
@@ -290,7 +256,12 @@ jobs:
       - name: Export Initial OCI Image
         if: inputs.publish
         run: |
-          just bst artifact checkout --tar - ${{ inputs.image-element }} | podman load
+          just bst artifact checkout --tar - ${{ inputs.element }} | podman load
+
+      # Delete casd token 
+      - name: Delete token
+        if: always()
+        run: rm -f ~/.config/hawaii/client.key
 
       - name: Build final OCI Image
         if: inputs.publish
