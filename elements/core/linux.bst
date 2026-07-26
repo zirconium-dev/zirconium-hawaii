@@ -18,6 +18,8 @@ sources:
 - kind: local
   path: files/linux/config-utils.sh
 - kind: local
+  path: files/linux/fdsdk-config.sh
+- kind: local
   path: files/linux/zirc-config.sh
 
 build-depends:

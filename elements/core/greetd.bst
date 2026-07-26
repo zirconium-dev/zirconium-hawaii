@@ -251,12 +251,10 @@ sources:
     sha: bec47e5bfd1bff0eeaf6d8b485cc1074891a197ab4225d504cb7a1ab88b02bf0
 
 build-depends:
-- freedesktop-sdk.bst:components/stripper.bst
-- freedesktop-sdk.bst:components/make.bst
+- freedesktop-sdk.bst:public-stacks/buildsystem-make.bst
 - freedesktop-sdk.bst:components/scdoc.bst
 - freedesktop-sdk.bst:components/pkg-config.bst
 - freedesktop-sdk.bst:components/rust.bst
-- freedesktop-sdk.bst:components/gcc.bst
 
 depends:
 - freedesktop-sdk.bst:components/linux-pam.bst
