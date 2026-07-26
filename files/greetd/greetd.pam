@@ -1,9 +1,11 @@
 #%PAM-1.0
 
+auth       substack     system-auth
+auth       optional     pam_oo7.so
 auth       required     pam_securetty.so
 auth       requisite    pam_nologin.so
 auth       requisite    pam_nologin.so
-auth       include      system-auth
+auth       include      postlogin
 
 account    required     pam_access.so
 account    required     pam_nologin.so
@@ -18,3 +20,5 @@ session    optional     pam_mail.so          dir=/var/spool/mail standard quiet
 session    optional     pam_umask.so
 -session   optional     pam_systemd.so
 session    required     pam_env.so
+session    optional     pam_oo7.so auto_start
+session    include      postlogin
