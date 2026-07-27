@@ -2,11 +2,12 @@ kind: compose
 
 build-depends:
   - oci/jackrabbit/manifest.bst
-  - oci/jackrabbit/runtime.bst
-  - freedesktop-sdk.bst:components/gcc.bst
+  - oci/jackrabbit/stack.bst
+  - deps/brew-gcc/gcc.bst
 
 config:
   exclude:
     - debug
+    - devel
     - extra
     - static-blocklist
