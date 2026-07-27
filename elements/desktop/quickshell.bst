@@ -3,8 +3,8 @@ kind: cmake
 sources:
 - kind: git_repo
   url: outfoxxed:quickshell/quickshell
-  track: master
-  ref: v0.3.0-18-g10b439fc6e3fd65c15fe1c486271b31da05ed023
+  track: v*
+  ref: v0.3.0-0-g59e9c47b0eb48a9e4bcf9631fa062ee939bd2e83
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst
