@@ -36,7 +36,6 @@ runtime-depends:
 - deps/dgop.bst
 - deps/kimageformats.bst
 - desktop/brightnessctl.bst
-- desktop/dankcalendar.bst
 - desktop/danksearch.bst
 - desktop/ddcutil.bst
 - desktop/matugen.bst
