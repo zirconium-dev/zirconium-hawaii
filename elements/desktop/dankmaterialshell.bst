@@ -13,7 +13,7 @@ sources:
   - kind: git_repo
     url: github:AvengeMedia/DankMaterialShell.git
     track: master
-    ref: v1.5.0-203-gc67b1850765c0263e87973af8d81f54b89dfd1b4
+    ref: v1.5.0-208-g64461c534fb9faef30ac1c7aaabe64ce48ebc2fe
   - kind: git_module
     url: github:AvengeMedia/dank-qml-common
     path: dank-qml-common
