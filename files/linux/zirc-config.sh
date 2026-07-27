@@ -70,6 +70,36 @@ enable NET_SCH_BPF
 module NET_SCH_DUALPI2
 enable NET_SCH_DEFAULT
 
+module NET_CLS_BASIC
+module NET_CLS_ROUTE4
+module NET_CLS_FW
+module NET_CLS_U32
+module NET_CLS_FLOW
+module NET_CLS_CGROUP
+module NET_CLS_BPF
+module NET_CLS_FLOWER
+module NET_CLS_MATCHALL
+
+module NET_ACT_POLICE
+module NET_ACT_GACT
+module NET_ACT_MIRRED
+module NET_ACT_SAMPLE
+module NET_ACT_NAT
+module NET_ACT_PEDIT
+module NET_ACT_SIMP
+module NET_ACT_SKBEDIT
+module NET_ACT_CSUM
+module NET_ACT_MPLS
+module NET_ACT_VLAN
+module NET_ACT_BPF
+module NET_ACT_CONNMARK
+module NET_ACT_CTINFO
+module NET_ACT_SKBMOD
+module NET_ACT_IFE
+module NET_ACT_TUNNEL_KEY
+module NET_ACT_CT
+module NET_ACT_GATE
+
 # More precise CPU usage accounting
 enable VIRT_CPU_ACCOUNTING
 enable VIRT_CPU_ACCOUNTING_GEN
