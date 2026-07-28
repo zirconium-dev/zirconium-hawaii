@@ -47,6 +47,13 @@ variables:
   make-args: build GOFLAGS="" BUILD_TIME=2011-11-10_15:00:00
 
 config:
+  build-commands:
+  - |
+    if git describe --tag --exact-match &>/dev/null; then
+      %{make} VERSION="$(git describe --tag)"
+    else
+      %{make}
+    fi
   install-commands:
   - |
     install -dm0755 "%{install-root}%{datadir}/bash-completion/completions"
