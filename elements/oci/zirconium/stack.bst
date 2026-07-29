@@ -34,4 +34,4 @@ public:
       - ln -s var/srv /srv
       - ln -s ../../var/usrlocal usr/local
 
-      - touch /etc/machine-id
+      - echo 'uninitialized' > /etc/machine-id
