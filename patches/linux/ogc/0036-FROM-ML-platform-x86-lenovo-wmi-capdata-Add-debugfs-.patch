@@ -1,7 +1,7 @@
-From 574454597a6c4e9ebcb94bfa68b31b8da7466ba4 Mon Sep 17 00:00:00 2001
+From 8910c813f7b4f305250d7749807dfbdc50c78a6a Mon Sep 17 00:00:00 2001
 From: Rong Zhang <i@rong.moe>
 Date: Sun, 10 May 2026 04:25:46 +0000
-Subject: [PATCH 36/76] [FROM-ML] platform/x86: lenovo-wmi-capdata: Add debugfs
+Subject: [PATCH 36/84] [FROM-ML] platform/x86: lenovo-wmi-capdata: Add debugfs
  file for dumping capdata
 
 The Lenovo GameZone/Other interfaces have some delicate divergences

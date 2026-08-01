@@ -1,7 +1,7 @@
-From cc6e861d61c08b794baa76713867f8905eb6f776 Mon Sep 17 00:00:00 2001
+From 0f26fab7186f4b180c7ccb5b3b95addcb9f023f3 Mon Sep 17 00:00:00 2001
 From: "Derek J. Clark" <derekjohn.clark@gmail.com>
 Date: Sat, 18 Apr 2026 21:26:23 -0700
-Subject: [PATCH 67/76] [FROM-ML] HID: hid-oxp: Add Button Mapping Interface
+Subject: [PATCH 67/84] [FROM-ML] HID: hid-oxp: Add Button Mapping Interface
 
 Adds button mapping interface for second generation OneXPlayer
 configuration HID interfaces. This interface allows the MCU to swap

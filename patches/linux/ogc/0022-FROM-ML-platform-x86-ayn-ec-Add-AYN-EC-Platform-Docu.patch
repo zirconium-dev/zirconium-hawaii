@@ -1,7 +1,7 @@
-From 2d4a3ba7567edc4b7f74a00a23987b6027a7e245 Mon Sep 17 00:00:00 2001
+From 2754a417642ce88f2921d4de3d9e5eda4e63b082 Mon Sep 17 00:00:00 2001
 From: "Derek J. Clark" <derekjohn.clark@gmail.com>
 Date: Sat, 26 Jul 2025 13:40:41 -0700
-Subject: [PATCH 22/76] [FROM-ML] platform/x86: (ayn-ec) Add AYN EC Platform
+Subject: [PATCH 22/84] [FROM-ML] platform/x86: (ayn-ec) Add AYN EC Platform
  Documentation
 
 Adds ABI documentation for the ayn-ec platform driver
@@ -79,7 +79,7 @@ index 000000000000..32cb6f7ca2fc
 +
 +    Applies to AYN Loki and Tectoy Zeenix lines of handheld devices.
 diff --git a/MAINTAINERS b/MAINTAINERS
-index f2e155611248..9674341125a7 100644
+index 936c21dbf1f0..53b0ed43cd39 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
 @@ -4377,6 +4377,7 @@ AYN PLATFORM EC DRIVER

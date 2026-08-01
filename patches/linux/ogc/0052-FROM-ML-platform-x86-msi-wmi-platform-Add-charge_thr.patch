@@ -1,7 +1,7 @@
-From 50c4ba2621a1e5859d4233534e7dc22ebc8e9fd2 Mon Sep 17 00:00:00 2001
+From 7a5052b22701d6ad385c213323f041e3393a5f4d Mon Sep 17 00:00:00 2001
 From: Antheas Kapenekakis <lkml@antheas.dev>
 Date: Sun, 11 May 2025 22:44:24 +0200
-Subject: [PATCH 52/76] [FROM-ML] platform/x86: msi-wmi-platform: Add
+Subject: [PATCH 52/84] [FROM-ML] platform/x86: msi-wmi-platform: Add
  charge_threshold support
 
 The battery of MSI laptops supports charge threshold. Add support for it.

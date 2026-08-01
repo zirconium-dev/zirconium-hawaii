@@ -1,7 +1,7 @@
-From 1dbd57aa3fef8d81483004a6520c4f9733a9e0c0 Mon Sep 17 00:00:00 2001
+From 7e373732a81d7b8bb97510db0476ff893827a3a8 Mon Sep 17 00:00:00 2001
 From: "Derek J. Clark" <derekjohn.clark@gmail.com>
 Date: Sun, 10 May 2026 04:25:40 +0000
-Subject: [PATCH 30/76] [FROM-ML] platform/x86: lenovo-wmi-other: Add missing
+Subject: [PATCH 30/84] [FROM-ML] platform/x86: lenovo-wmi-other: Add missing
  CPU tunable attributes
 
 Use an enum for all device ID's and CPU attribute feature ID's,

@@ -1,7 +1,7 @@
-From 5aeb4ec0a05b2f8e5f3637e0850827d4e85fee76 Mon Sep 17 00:00:00 2001
+From b52138bf8d4a48305be36721c51fa85b40777d3d Mon Sep 17 00:00:00 2001
 From: "Derek J. Clark" <derekjohn.clark@gmail.com>
 Date: Sat, 18 Apr 2026 21:26:24 -0700
-Subject: [PATCH 68/76] [FROM-ML] HID: hid-oxp: Add Vibration Intensity
+Subject: [PATCH 68/84] [FROM-ML] HID: hid-oxp: Add Vibration Intensity
  Attribute
 
 Adds attribute for setting the rumble intensity level. This setting must

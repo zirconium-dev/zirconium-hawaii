@@ -1,7 +1,7 @@
-From 45dd3659857418dc06d736b6c60470866287dc51 Mon Sep 17 00:00:00 2001
+From c168e9e53f796658ea8d8004fb0e2fe2ea842358 Mon Sep 17 00:00:00 2001
 From: "Derek J. Clark" <derekjohn.clark@gmail.com>
 Date: Sun, 10 May 2026 04:25:44 +0000
-Subject: [PATCH 34/76] [FROM-ML] platform/x86: lenovo-wmi-other: Add
+Subject: [PATCH 34/84] [FROM-ML] platform/x86: lenovo-wmi-other: Add
  force_load_psy_ext module parameter
 
 Some Lenovo BIOS have been shown to have incomplete and/or broken

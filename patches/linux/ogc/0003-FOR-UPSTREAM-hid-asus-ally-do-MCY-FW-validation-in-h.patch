@@ -1,7 +1,7 @@
-From a43c280ddb3f50d333b6ea2e54b242c2c199edf6 Mon Sep 17 00:00:00 2001
+From a964c774b85415be641dc97ca9a18b9848081e84 Mon Sep 17 00:00:00 2001
 From: Luke Jones <luke@ljones.dev>
 Date: Mon, 24 Mar 2025 15:41:05 +1300
-Subject: [PATCH 03/76] [FOR-UPSTREAM] hid-asus-ally: do MCY FW validation in
+Subject: [PATCH 03/84] [FOR-UPSTREAM] hid-asus-ally: do MCY FW validation in
  hid-asus-ally
 
 Export the validate_mcu_fw_version() symbol in namespace and use in

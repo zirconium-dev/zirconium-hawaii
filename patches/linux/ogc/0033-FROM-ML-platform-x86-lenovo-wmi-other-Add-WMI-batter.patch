@@ -1,7 +1,7 @@
-From e837bcc4d1fda56dad19b41c557f584dba113186 Mon Sep 17 00:00:00 2001
+From 211a7c273848b1c5469ece1fb56fb2d44822ca09 Mon Sep 17 00:00:00 2001
 From: "Derek J. Clark" <derekjohn.clark@gmail.com>
 Date: Sun, 10 May 2026 04:25:43 +0000
-Subject: [PATCH 33/76] [FROM-ML] platform/x86: lenovo-wmi-other: Add WMI
+Subject: [PATCH 33/84] [FROM-ML] platform/x86: lenovo-wmi-other: Add WMI
  battery charge limiting
 
 Add charge_behaviour and charge_control_end_threshold attributes through

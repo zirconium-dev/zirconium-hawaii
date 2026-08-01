@@ -1,7 +1,7 @@
-From efea714e6f6aad375d3e16ce94c26b8d084a2f6d Mon Sep 17 00:00:00 2001
+From 97ca03e4698fadfa004b39aa6f5086798c79537d Mon Sep 17 00:00:00 2001
 From: "Derek J. Clark" <derekjohn.clark@gmail.com>
 Date: Wed, 13 May 2026 23:14:44 +0000
-Subject: [PATCH 42/76] [FROM-ML] HID: hid-msi: Add RGB control interface
+Subject: [PATCH 42/84] [FROM-ML] HID: hid-msi: Add RGB control interface
 
 Adds RGB control interface for MSI Claw devices. The MSI Claw uses a
 fairly unique RGB interface. It has 9 total zones (4 per joystick ring

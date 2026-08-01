@@ -1,7 +1,7 @@
-From 6760f85eae18ef0dfd8a9f9506b25f55a225542e Mon Sep 17 00:00:00 2001
+From 651c8f54adfcb671da2974e0b1e0c89d76677917 Mon Sep 17 00:00:00 2001
 From: "Derek J. Clark" <derekjohn.clark@gmail.com>
 Date: Sat, 26 Jul 2025 13:40:38 -0700
-Subject: [PATCH 19/76] [FROM-ML] platform/x86: (ayn-ec) Add PWM Fan HWMON
+Subject: [PATCH 19/84] [FROM-ML] platform/x86: (ayn-ec) Add PWM Fan HWMON
  Interface
 
 Adds platform driver for AYN Loki and Tectoy Zeenix lines of handheld
@@ -31,7 +31,7 @@ Signed-off-by: Derek J. Clark <derekjohn.clark@gmail.com>
  create mode 100644 drivers/platform/x86/ayn-ec.c
 
 diff --git a/MAINTAINERS b/MAINTAINERS
-index c8d4b913f26c..f2e155611248 100644
+index f74da642290a..936c21dbf1f0 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
 @@ -4373,6 +4373,12 @@ F:	Documentation/devicetree/bindings/spi/axiado,ax3000-spi.yaml

@@ -1,7 +1,7 @@
-From 11952bd656d07d1af60211d0a1121d59e1885d88 Mon Sep 17 00:00:00 2001
+From a9eadd72772f5eeab85265b46e17b4711f64c715 Mon Sep 17 00:00:00 2001
 From: Natalie Vock <natalie.vock@gmx.de>
 Date: Sun, 14 Sep 2025 18:45:08 +0200
-Subject: [PATCH 28/76] [FROM-ML] drm/ttm: Use common ancestor of evictor and
+Subject: [PATCH 28/84] [FROM-ML] drm/ttm: Use common ancestor of evictor and
  evictee as limit pool
 
 When checking whether to skip certain buffers because they're protected

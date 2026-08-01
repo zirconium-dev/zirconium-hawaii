@@ -1,7 +1,7 @@
-From b3203c719fb460fac6ecd3395682d2843ade0931 Mon Sep 17 00:00:00 2001
+From e561ecbecca270f863c81ff8e86e447cdd32b91e Mon Sep 17 00:00:00 2001
 From: "Derek J. Clark" <derekjohn.clark@gmail.com>
 Date: Sun, 10 May 2026 04:25:41 +0000
-Subject: [PATCH 31/76] [FROM-ML] platform/x86: lenovo-wmi-other: Add GPU
+Subject: [PATCH 31/84] [FROM-ML] platform/x86: lenovo-wmi-other: Add GPU
  tunable attributes
 
 Use an enum for all GPU attribute feature ID's and add GPU attributes.

@@ -1,7 +1,7 @@
-From 7253da49d8c71ec3d9fde3d9427de85295f39350 Mon Sep 17 00:00:00 2001
+From ed110997fab0cc774dc863ec7cd3e7ca021a5ed4 Mon Sep 17 00:00:00 2001
 From: Armin Wolf <W_Armin@gmx.de>
 Date: Sun, 11 May 2025 22:44:21 +0200
-Subject: [PATCH 49/76] [FROM-ML] platform/x86: msi-wmi-platform: Add support
+Subject: [PATCH 49/84] [FROM-ML] platform/x86: msi-wmi-platform: Add support
  for fan control
 
 Adds fan curve support for the MSI platform. These devices contain

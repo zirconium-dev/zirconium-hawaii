@@ -1,7 +1,7 @@
-From e6d9c386e73f367aff24dfd4b2ba5dd7818395b4 Mon Sep 17 00:00:00 2001
+From 1b83e356ad881ddc37114a6a8022767e76bdd7ee Mon Sep 17 00:00:00 2001
 From: "Luke D. Jones" <luke@ljones.dev>
 Date: Wed, 2 Oct 2024 23:51:36 +1300
-Subject: [PATCH 05/76] [FOR-UPSTREAM] hid-asus-ally: initial gamepad
+Subject: [PATCH 05/84] [FOR-UPSTREAM] hid-asus-ally: initial gamepad
  configuration
 
 Add the basics of the gamepad configuration options. Makes the gamepad

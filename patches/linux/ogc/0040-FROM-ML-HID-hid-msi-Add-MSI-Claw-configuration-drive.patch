@@ -1,7 +1,7 @@
-From 334e4279936c8d9308cbf867b826f220c21ccd8d Mon Sep 17 00:00:00 2001
+From 050825d5d5e56fa3019d5b20b2bd4e3a5409bae4 Mon Sep 17 00:00:00 2001
 From: "Derek J. Clark" <derekjohn.clark@gmail.com>
 Date: Wed, 13 May 2026 23:14:42 +0000
-Subject: [PATCH 40/76] [FROM-ML] HID: hid-msi: Add MSI Claw configuration
+Subject: [PATCH 40/84] [FROM-ML] HID: hid-msi: Add MSI Claw configuration
  driver
 
 Adds configuration HID driver for the MSI Claw series of handheld PC's.
@@ -38,10 +38,10 @@ Signed-off-by: Derek J. Clark <derekjohn.clark@gmail.com>
  create mode 100644 drivers/hid/hid-msi.c
 
 diff --git a/MAINTAINERS b/MAINTAINERS
-index c8d4b913f26c..52cbf34646fc 100644
+index f74da642290a..aaf75941243d 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
-@@ -18129,6 +18129,12 @@ S:	Odd Fixes
+@@ -18128,6 +18128,12 @@ S:	Odd Fixes
  F:	Documentation/devicetree/bindings/net/ieee802154/mrf24j40.txt
  F:	drivers/net/ieee802154/mrf24j40.c
  

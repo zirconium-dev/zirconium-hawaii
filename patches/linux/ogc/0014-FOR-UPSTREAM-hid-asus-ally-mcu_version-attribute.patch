@@ -1,7 +1,7 @@
-From 987b56a107b1e5afff9ad55030893ec32a046774 Mon Sep 17 00:00:00 2001
+From e0ffd386fb6e17225a7d5c55402abfa58b28bbc1 Mon Sep 17 00:00:00 2001
 From: Luke Jones <luke@ljones.dev>
 Date: Mon, 10 Feb 2025 17:15:01 +1300
-Subject: [PATCH 14/76] [FOR-UPSTREAM] hid-asus-ally: mcu_version attribute
+Subject: [PATCH 14/84] [FOR-UPSTREAM] hid-asus-ally: mcu_version attribute
 
 Add the mcu_version sysfs attribute so that userspace has a way to check
 the MCU FW version.

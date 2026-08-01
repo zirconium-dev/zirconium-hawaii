@@ -1,7 +1,7 @@
-From 4606c15b81eb86b33621bff456ad6a36d0a09f98 Mon Sep 17 00:00:00 2001
+From 511510d4bc3f03ce5fddffef337469a1b2dbc3d2 Mon Sep 17 00:00:00 2001
 From: Natalie Vock <natalie.vock@gmx.de>
 Date: Sun, 31 Aug 2025 17:17:20 +0200
-Subject: [PATCH 23/76] [FROM-ML] cgroup/dmem: Add queries for protection
+Subject: [PATCH 23/84] [FROM-ML] cgroup/dmem: Add queries for protection
  values
 
 Callers can use this feedback to be more aggressive in making space for

@@ -1,7 +1,7 @@
-From 5252f5437f8ad58973926bd185e1289062b47fcb Mon Sep 17 00:00:00 2001
+From c1987193b9aa7b97b2593b661b6a55ccb8250cfb Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Tomasz=20Paku=C5=82a?= <tomasz.pakula.oficjalny@gmail.com>
 Date: Tue, 3 Feb 2026 18:56:14 +0000
-Subject: [PATCH 74/76] [FROM-ML] drm/amd/display: Add CH7218 PCON ID
+Subject: [PATCH 70/84] [FROM-ML] drm/amd/display: Add CH7218 PCON ID
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
@@ -25,10 +25,10 @@ Signed-off-by: Tomasz Pakuła <tomasz.pakula.oficjalny@gmail.com>
  2 files changed, 2 insertions(+)
 
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_helpers.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_helpers.c
-index a3cb05490dc9..7e1e9ff3fe0c 100644
+index ee214f7592e5..2a5ed4403852 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_helpers.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_helpers.c
-@@ -1485,6 +1485,7 @@ static bool dm_is_freesync_pcon_whitelist(const uint32_t branch_dev_id)
+@@ -1492,6 +1492,7 @@ static bool dm_is_freesync_pcon_whitelist(const uint32_t branch_dev_id)
  	case DP_BRANCH_DEVICE_ID_90CC24:
  	case DP_BRANCH_DEVICE_ID_001CF8:
  	case DP_BRANCH_DEVICE_ID_001FF2:

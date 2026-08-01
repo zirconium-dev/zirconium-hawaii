@@ -1,7 +1,7 @@
-From c107d1860caee9ecf5e71d3aa83e7b829c7640bc Mon Sep 17 00:00:00 2001
+From 4d6580394d858bbdc78cf7daebee3541adfdaec4 Mon Sep 17 00:00:00 2001
 From: "Derek J. Clark" <derekjohn.clark@gmail.com>
 Date: Sat, 18 Apr 2026 21:26:20 -0700
-Subject: [PATCH 64/76] [FROM-ML] HID: hid-oxp: Add OneXPlayer configuration
+Subject: [PATCH 64/84] [FROM-ML] HID: hid-oxp: Add OneXPlayer configuration
  driver
 
 Adds OneXPlayer HID configuration driver. In this initial driver patch,
@@ -49,10 +49,10 @@ Signed-off-by: Derek J. Clark <derekjohn.clark@gmail.com>
  create mode 100644 drivers/hid/hid-oxp.c
 
 diff --git a/MAINTAINERS b/MAINTAINERS
-index c8d4b913f26c..d7ff07c1f1d1 100644
+index f74da642290a..8084371c345f 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
-@@ -19931,6 +19931,12 @@ S:	Maintained
+@@ -19930,6 +19930,12 @@ S:	Maintained
  F:	drivers/mtd/nand/onenand/
  F:	include/linux/mtd/onenand*.h
  

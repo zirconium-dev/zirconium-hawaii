@@ -1,7 +1,7 @@
-From 391881a5cadbb2828502740b3958323f9d9bf9e6 Mon Sep 17 00:00:00 2001
+From 45e060280681608e9d2b11f340d8c11dc8b90d20 Mon Sep 17 00:00:00 2001
 From: Natalie Vock <natalie.vock@gmx.de>
 Date: Thu, 11 Sep 2025 11:30:59 +0200
-Subject: [PATCH 27/76] [FROM-ML] drm/ttm: Be more aggressive when allocating
+Subject: [PATCH 27/84] [FROM-ML] drm/ttm: Be more aggressive when allocating
  below protection limit
 
 When the cgroup's memory usage is below the low/min limit and allocation

@@ -1,14 +1,14 @@
-From 6450435e2c50f00bdad917f6aba3985471411c95 Mon Sep 17 00:00:00 2001
-From: Marco Rodolfi <marco.rodolfi@tuta.io>
-Date: Sun, 14 Jun 2026 10:06:30 +0200
-Subject: [PATCH 72/76] [EXTERNALLY-MAINTAINED] hwmon: steamdeck-hwmon: Add
- support  for max battery  level/rate
+From c3538877aca681c3ec35cd537272e8f55ba5f208 Mon Sep 17 00:00:00 2001
+From: Andrey Smirnov <andrew.smirnov@gmail.com>
+Date: Sat, 15 Jul 2023 12:58:54 -0700
+Subject: [PATCH 73/84] [EXTERNALLY-MAINTAINED] hwmon: steamdeck-hwmon: Add
+ support for max battery level/rate
 
 Add support for max battery level/charge rate attributes.
 
-(cherry picked from commit 50af83e8fd75dc52221edd3fb6fd7a7f70c4d8a4)
-
 Signed-off-by: Andrey Smirnov <andrew.smirnov@gmail.com>
+(cherry picked from commit 50af83e8fd75dc52221edd3fb6fd7a7f70c4d8a4)
+Signed-off-by: Cristian Ciocaltea <cristian.ciocaltea@collabora.com>
 ---
  drivers/hwmon/steamdeck-hwmon.c | 72 ++++++++++++++++++++++++++++++++-
  1 file changed, 71 insertions(+), 1 deletion(-)

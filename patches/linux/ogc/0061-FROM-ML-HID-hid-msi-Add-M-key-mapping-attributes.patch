@@ -1,7 +1,7 @@
-From 733cfd0cebce50c70beed8686d0feb8eaccf6650 Mon Sep 17 00:00:00 2001
+From ae5c6ab97ad2e3fe688324be8f4218b69b0f67ce Mon Sep 17 00:00:00 2001
 From: "Derek J. Clark" <derekjohn.clark@gmail.com>
 Date: Sat, 16 May 2026 04:28:39 +0000
-Subject: [PATCH 61/76] [FROM-ML] HID: hid-msi: Add M-key mapping attributes
+Subject: [PATCH 61/84] [FROM-ML] HID: hid-msi: Add M-key mapping attributes
 
 Adds attributes that allow for remapping the M-keys with up to 5 values
 when in macro mode. There are 2 mappable buttons on the rear of the

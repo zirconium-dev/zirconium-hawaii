@@ -1,0 +1,27 @@
+From aa94cf76d2be2860b6d7656b289d4603b81ec94b Mon Sep 17 00:00:00 2001
+From: Kyle Gospodnetich <me@kylegospodneti.ch>
+Date: Wed, 29 Jul 2026 07:03:20 -0700
+Subject: [PATCH 79/84] Merge pull request #86 from
+ OpenGamingCollective/msi-led-rename
+
+[NOT-FOR-UPSTREAM] HID: hid-msi: Report RGB LED under the Legion Go name
+---
+ drivers/hid/hid-msi.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/drivers/hid/hid-msi.c b/drivers/hid/hid-msi.c
+index d4688caef296..f74856d4e452 100644
+--- a/drivers/hid/hid-msi.c
++++ b/drivers/hid/hid-msi.c
+@@ -1512,7 +1512,7 @@ static int claw_probe(struct hid_device *hdev, u8 ep)
+ 	if (!drvdata->bmap_support)
+ 		dev_dbg(&hdev->dev, "M-Key mapping is not supported. Update firmware to enable.\n");
+ 
+-	drvdata->led_mc.led_cdev.name = "msi_claw:rgb:joystick_rings";
++	drvdata->led_mc.led_cdev.name = "go:rgb:joystick_rings";
+ 	drvdata->led_mc.led_cdev.brightness = 0x50;
+ 	drvdata->led_mc.led_cdev.max_brightness = 0x64;
+ 	drvdata->led_mc.led_cdev.color = LED_COLOR_ID_RGB;
+-- 
+2.55.0
+

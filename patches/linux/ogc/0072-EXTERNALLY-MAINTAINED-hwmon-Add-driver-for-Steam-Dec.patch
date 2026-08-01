@@ -1,15 +1,14 @@
-From 415ed87e44e098e65cd2e593b542368313ce63c6 Mon Sep 17 00:00:00 2001
-From: Marco Rodolfi <marco.rodolfi@tuta.io>
-Date: Sun, 14 Jun 2026 10:06:12 +0200
-Subject: [PATCH 71/76] [EXTERNALLY-MAINTAINED] hwmon: Add driver for Steam
- Deck's EC  sensors
+From 2682a801c9922f672d048fc2073975a3f75ce8a6 Mon Sep 17 00:00:00 2001
+From: Andrey Smirnov <andrew.smirnov@gmail.com>
+Date: Sat, 19 Feb 2022 16:09:45 -0800
+Subject: [PATCH 72/84] [EXTERNALLY-MAINTAINED] hwmon: Add driver for Steam
+ Deck's EC sensors
 
 Add driver for sensors exposed by EC firmware on Steam Deck hardware.
 
 (cherry picked from commit 6917aac77bee6185ae3920b936cdbe7876118c0b)
-[fwd-ported to v7.0]
+[fwd-ported to v6.11]
 Signed-off-by: Cristian Ciocaltea <cristian.ciocaltea@collabora.com>
-Signed-off-by: Marco Rodolfi <marco.rodolfi@tuta.io>
 ---
  drivers/hwmon/Kconfig           |  11 ++
  drivers/hwmon/Makefile          |   1 +
@@ -18,10 +17,10 @@ Signed-off-by: Marco Rodolfi <marco.rodolfi@tuta.io>
  create mode 100644 drivers/hwmon/steamdeck-hwmon.c
 
 diff --git a/drivers/hwmon/Kconfig b/drivers/hwmon/Kconfig
-index 14e4cea48acc..c149b47bd4db 100644
+index b1f121b84bf6..e41d31115c2f 100644
 --- a/drivers/hwmon/Kconfig
 +++ b/drivers/hwmon/Kconfig
-@@ -2160,6 +2160,17 @@ config SENSORS_SCH5636
+@@ -2163,6 +2163,17 @@ config SENSORS_SCH5636
  	  This driver can also be built as a module. If so, the module
  	  will be called sch5636.
  

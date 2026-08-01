@@ -1,7 +1,7 @@
-From ef5f1d157101181447e3208255d0a1b391e38033 Mon Sep 17 00:00:00 2001
+From 8ec0317b01c7b39649151d8d38b28fec46b1da07 Mon Sep 17 00:00:00 2001
 From: "Derek J. Clark" <derekjohn.clark@gmail.com>
 Date: Sat, 18 Apr 2026 21:26:21 -0700
-Subject: [PATCH 65/76] [FROM-ML] HID: hid-oxp: Add Second Generation RGB
+Subject: [PATCH 65/84] [FROM-ML] HID: hid-oxp: Add Second Generation RGB
  Control
 
 Adds support for the second generation of RGB Control for OneXPlayer

@@ -1,8 +1,8 @@
-From 7b2f472850ba27a6404eeea4b0931388047441d8 Mon Sep 17 00:00:00 2001
-From: Marco Rodolfi <marco.rodolfi@tuta.io>
-Date: Sun, 14 Jun 2026 10:05:54 +0200
-Subject: [PATCH 70/76] [EXTERNALLY-MAINTAINED] mfd: steamdeck: Expose
- controller  board power in sysfs
+From afc89ac63d31050d501a11a5e53e1d8a1f35e90e Mon Sep 17 00:00:00 2001
+From: Andrey Smirnov <andrew.smirnov@gmail.com>
+Date: Sun, 24 Sep 2023 15:02:33 -0700
+Subject: [PATCH 75/84] [EXTERNALLY-MAINTAINED] mfd: steamdeck: Expose
+ controller board power in sysfs
 
 As of version 118 Deck's BIOS implements "SCBP" method that allows
 gating power of the controller board (VBUS). Add a basic WO method to

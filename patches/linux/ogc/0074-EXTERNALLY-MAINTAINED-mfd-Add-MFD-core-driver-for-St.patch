@@ -1,29 +1,28 @@
-From 2238a3a947b44a7d9d0c4357ad57762fa58a84d9 Mon Sep 17 00:00:00 2001
-From: Marco Rodolfi <marco.rodolfi@tuta.io>
-Date: Sun, 14 Jun 2026 10:05:29 +0200
-Subject: [PATCH 69/76] [EXTERNALLY-MAINTAINED] mfd: Add MFD core driver for
- Steam  Deck
+From 7f20cbb79d735805745bb79d3e6c59fe826d5c4e Mon Sep 17 00:00:00 2001
+From: Andrey Smirnov <andrew.smirnov@gmail.com>
+Date: Sat, 19 Feb 2022 16:08:36 -0800
+Subject: [PATCH 74/84] [EXTERNALLY-MAINTAINED] mfd: Add MFD core driver for
+ Steam Deck
 
 Add MFD core driver for Steam Deck. Doesn't really do much so far
 besides instantiating a number of MFD cells that implement all the
 interesting functionality.
 
 (cherry picked from commit 5f534c2d6ebdefccb9c024eb0f013bc1c0c622d9)
-[fwd-ported to v6.11 and v7.0]
+[fwd-ported to v6.11]
 Signed-off-by: Cristian Ciocaltea <cristian.ciocaltea@collabora.com>
-Signed-off-by: Marco Rodolfi <marco.rodolfi@tuta.io>
 ---
- drivers/mfd/Kconfig     |  12 ++++
+ drivers/mfd/Kconfig     |  11 ++++
  drivers/mfd/Makefile    |   2 +
  drivers/mfd/steamdeck.c | 127 ++++++++++++++++++++++++++++++++++++++++
- 3 files changed, 141 insertions(+)
+ 3 files changed, 140 insertions(+)
  create mode 100644 drivers/mfd/steamdeck.c
 
 diff --git a/drivers/mfd/Kconfig b/drivers/mfd/Kconfig
-index 7192c9d1d268..1edfdd34119e 100644
+index 7192c9d1d268..76ca59ac1859 100644
 --- a/drivers/mfd/Kconfig
 +++ b/drivers/mfd/Kconfig
-@@ -2580,5 +2580,17 @@ config MFD_MAX7360
+@@ -2580,5 +2580,16 @@ config MFD_MAX7360
  	  additional drivers must be enabled in order to use the functionality
  	  of the device.
  
@@ -37,7 +36,6 @@ index 7192c9d1d268..1edfdd34119e 100644
 +	  of Steam Deck specific ACPI functionality.
 +
 +	  Say N here, unless you are running on Steam Deck hardware.
-+
 +
  endmenu
  endif

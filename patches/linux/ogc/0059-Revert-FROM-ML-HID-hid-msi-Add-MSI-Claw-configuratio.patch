@@ -1,7 +1,7 @@
-From 2719ffd8510e6cab352f0fc30bc1eed75c4851c9 Mon Sep 17 00:00:00 2001
+From ea816d9702ea0673178bc6fae7b12a9474fb9194 Mon Sep 17 00:00:00 2001
 From: "Derek J. Clark" <derekjohn.clark@gmail.com>
 Date: Fri, 15 May 2026 22:24:08 -0700
-Subject: [PATCH 59/76] Revert "[FROM-ML] HID: hid-msi: Add MSI Claw
+Subject: [PATCH 59/84] Revert "[FROM-ML] HID: hid-msi: Add MSI Claw
  configuration driver"
 
 This reverts commit dc7aa161b6d5190a31e1ef6314c79d89b7b0e564.
@@ -15,10 +15,10 @@ This reverts commit dc7aa161b6d5190a31e1ef6314c79d89b7b0e564.
  delete mode 100644 drivers/hid/hid-msi.c
 
 diff --git a/MAINTAINERS b/MAINTAINERS
-index 52cbf34646fc..c8d4b913f26c 100644
+index aaf75941243d..f74da642290a 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
-@@ -18129,12 +18129,6 @@ S:	Odd Fixes
+@@ -18128,12 +18128,6 @@ S:	Odd Fixes
  F:	Documentation/devicetree/bindings/net/ieee802154/mrf24j40.txt
  F:	drivers/net/ieee802154/mrf24j40.c
  

@@ -1,7 +1,7 @@
-From 37ce7f08aa287076c2861c6585b6f942e7ab34a4 Mon Sep 17 00:00:00 2001
+From 8f0946b911f417e50f901f73628e3ef5ee588153 Mon Sep 17 00:00:00 2001
 From: Rong Zhang <i@rong.moe>
 Date: Sun, 10 May 2026 04:25:45 +0000
-Subject: [PATCH 35/76] [FROM-ML] platform/x86: lenovo-wmi-helpers: Add helper
+Subject: [PATCH 35/84] [FROM-ML] platform/x86: lenovo-wmi-helpers: Add helper
  for creating per-device debugfs dir
 
 We are about to add debugfs support for lenovo-wmi-capdata. Let's setup
