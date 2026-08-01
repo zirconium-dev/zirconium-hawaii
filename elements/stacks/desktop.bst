@@ -43,17 +43,17 @@ depends:
   - gnome-build-meta.bst:sdk/gvfs-client.bst
   - gnome-build-meta.bst:sdk/pinentry.bst
 
+  - freedesktop-sdk.bst:components/noto-cjk.bst
   - freedesktop-sdk.bst:components/noto-emoji.bst
+  - freedesktop-sdk.bst:components/noto-fonts.bst
   - freedesktop-sdk.bst:components/tex-gyre-fonts.bst
   - freedesktop-sdk.bst:components/google-crosextra-caladea.bst
   - freedesktop-sdk.bst:components/google-crosextra-carlito.bst
-  - gnome-build-meta.bst:gnomeos-deps/noto-cjk.bst
   - gnome-build-meta.bst:sdk/cantarell-fonts.bst
   - gnome-build-meta.bst:sdk/adwaita-fonts.bst
   - desktop/fonts/jetbrains-mono.bst
   - desktop/fonts/jetbrains-mono-nerd-font.bst
   - desktop/fonts/maple-mono.bst
-  - desktop/fonts/noto-fonts.bst
 
   - freedesktop-sdk.bst:components/vulkan-icd-loader.bst
   - freedesktop-sdk.bst:components/compat-vulkan-link.bst
