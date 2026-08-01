@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: github:glfw/glfw.git
   track: "*"
-  ref: 3.4-0-g7b6aead9fb88b3623e3b3725ebb42670cbe4c579
+  ref: 3.5.1-0-gd9d6f0f1f967807ffade6598ea9a631ebaf37a56
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst

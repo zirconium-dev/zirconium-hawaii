@@ -6,7 +6,7 @@ sources:
 - kind: git_repo
   url: github:evlaV/valve-hardware-audio-processing
   track: main
-  ref: 0.99-0-g558d0e8370f6f3b5f1a1a09c634174a9eb00b278
+  ref: 0.99-2-gefbabce3ebfcc9b4d6c58c97042b056de81cdaf1
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/runtime-gnu.bst
