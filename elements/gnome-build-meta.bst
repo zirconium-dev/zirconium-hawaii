@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: gnome:gnome-build-meta.git
   track: sam/fdsdk-26.08
-  ref: 49-branchpoint-828-g06f469327999f76065c5632c05f0611ea093e91a
+  ref: 49-branchpoint-839-ge589032ae00384ae751ebf7ab72f0657a12c2f7c
 - kind: patch_queue
   path: patches/gnome-build-meta
 
