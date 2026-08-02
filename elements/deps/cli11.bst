@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: github:CLIUtils/CLI11
   track: v*
-  ref: v2.7.1-0-g9cac680352e3a9a7a000e5fdebf8cd25b7a5fb34
+  ref: v2.7.2-0-gcbd58a3696887b34c70949aef21a71735a0c2ad5
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst
