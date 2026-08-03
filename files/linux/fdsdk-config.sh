@@ -1648,6 +1648,9 @@ enable XFS_ONLINE_SCRUB
 enable XFS_QUOTA
 enable XFS_RT
 
+module NFS_FS
+module NFSD
+
 enable FSCACHE
 
 module CIFS
