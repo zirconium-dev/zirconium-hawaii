@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: github:OpenGamingCollective/ScopeBuddy.git
   track: "*"
-  ref: 1.4.0-0-g4340ab2047eb9d7f840d342b932d98a8d0f7f652
+  ref: 1.5.0-0-g8c517a4c1b2fb9ed3fe43a95e1c5630cdecc4678
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/runtime-gnu.bst
