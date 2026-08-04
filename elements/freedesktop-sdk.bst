@@ -69,3 +69,6 @@ config:
 
     components/bash-config.bst: config/bash-config.bst
     components/sudo.bst: cli/sudo-rs.bst
+
+    # This is temporary until freedesktop-sdk fixes their nftables element in 26.08beta
+    components/nftables.bst: core/nftables.bst
