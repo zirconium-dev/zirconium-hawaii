@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: gitlab:freedesktop-sdk/freedesktop-sdk.git
   track: master
-  ref: freedesktop-sdk-26.08beta.2-0-g45dfca2b727ca2eb13a52152e2d894d26f20fc57
+  ref: freedesktop-sdk-26.08beta.2-39-gbb51910a2dc2a6b969f7212ea8f6496fa629feec
 - kind: patch_queue
   path: patches/freedesktop-sdk
 
@@ -64,9 +64,6 @@ config:
     components/_private/xdg-desktop-portal-base.bst: gnome-build-meta.bst:core-deps/xdg-desktop-portal-base.bst
     components/xdg-desktop-portal.bst: gnome-build-meta.bst:core-deps/xdg-desktop-portal.bst
 
-    # Epiphany requires nettle 3.x.
-    # https://gitlab.gnome.org/GNOME/epiphany/-/work_items/2892
-    components/nettle.bst: gnome-build-meta.bst:core-deps/nettle3.bst
     # evolution-data-server requires libical 3.x.
     components/libical.bst: gnome-build-meta.bst:core-deps/libical3.bst
 
