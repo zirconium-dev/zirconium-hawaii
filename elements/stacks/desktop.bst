@@ -8,6 +8,7 @@ depends:
   - desktop/foot.bst
   - desktop/qt6ct.bst
   - desktop/satty.bst
+  - desktop/brlaser.bst
   - cli/chezmoi.bst
   - core/greetd.bst
   - core/pam-u2f.bst
