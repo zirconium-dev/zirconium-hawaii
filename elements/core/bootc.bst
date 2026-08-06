@@ -5,6 +5,8 @@ sources:
   url: github:bootc-dev/bootc.git
   track: v*
   ref: v1.16.6-0-gcf828dc1ec9eb4cac647992a2b09b3a67e5b8868
+  exclude:
+  - v1.16.7
 - kind: local
   path: files/bootc
 - kind: cargo2
