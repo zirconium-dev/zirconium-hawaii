@@ -1,7 +1,7 @@
-From ff56571e24a8bbac6909911ec990bdc4df0a2e4e Mon Sep 17 00:00:00 2001
+From 1ab61b28a330f743aaa6652fa871ba43a339d5d7 Mon Sep 17 00:00:00 2001
 From: Ahmed Yaseen <yaseen@ghoul.dev>
 Date: Mon, 11 May 2026 00:12:13 +0500
-Subject: [PATCH 01/84] [FROM-ML] platform/x86: asus-armoury: gate PPT writes
+Subject: [PATCH 001/103] [FROM-ML] platform/x86: asus-armoury: gate PPT writes
  behind active fan curve
 
 On models flagged with requires_fan_curve in the DMI power_data table
@@ -71,10 +71,10 @@ index 495dc1e31d40..f2a880eb0cdf 100644
  	ac_limits = power_data->ac_data;
  	if (ac_limits) {
 diff --git a/drivers/platform/x86/asus-wmi.c b/drivers/platform/x86/asus-wmi.c
-index 80144c412b90..e4c1716d9b30 100644
+index a459b7ad18ba..b22aa1c0022f 100644
 --- a/drivers/platform/x86/asus-wmi.c
 +++ b/drivers/platform/x86/asus-wmi.c
-@@ -4001,6 +4001,30 @@ static int asus_wmi_custom_fan_curve_init(struct asus_wmi *asus)
+@@ -4021,6 +4021,30 @@ static int asus_wmi_custom_fan_curve_init(struct asus_wmi *asus)
  	return 0;
  }
  

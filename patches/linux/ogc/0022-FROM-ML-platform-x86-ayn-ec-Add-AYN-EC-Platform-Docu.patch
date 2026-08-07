@@ -1,7 +1,7 @@
-From 2754a417642ce88f2921d4de3d9e5eda4e63b082 Mon Sep 17 00:00:00 2001
+From 763e79d20047bea7bb7e7c9428f68a948d5fb32e Mon Sep 17 00:00:00 2001
 From: "Derek J. Clark" <derekjohn.clark@gmail.com>
 Date: Sat, 26 Jul 2025 13:40:41 -0700
-Subject: [PATCH 22/84] [FROM-ML] platform/x86: (ayn-ec) Add AYN EC Platform
+Subject: [PATCH 022/103] [FROM-ML] platform/x86: (ayn-ec) Add AYN EC Platform
  Documentation
 
 Adds ABI documentation for the ayn-ec platform driver
