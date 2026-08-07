@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: github:fastfetch-cli/fastfetch.git
   track: "*"
-  ref: 2.66.0-0-g08698098579bb8b043b0a343159b8018f5cea4fc
+  ref: 2.67.0-0-g56da8f811068289f6352db8881418aa6e0f994e8
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst
