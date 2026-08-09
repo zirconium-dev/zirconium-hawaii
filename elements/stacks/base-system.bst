@@ -35,6 +35,7 @@ depends:
   - freedesktop-sdk.bst:components/findutils.bst
   - freedesktop-sdk.bst:components/diffutils.bst
   - freedesktop-sdk.bst:components/wget2.bst
+  - freedesktop-sdk.bst:components/gettext.bst
   - freedesktop-sdk.bst:components/sed.bst
   - freedesktop-sdk.bst:components/less.bst
   - freedesktop-sdk.bst:components/which.bst
