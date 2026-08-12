@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: gitlab:freedesktop-sdk/freedesktop-sdk.git
   track: master
-  ref: freedesktop-sdk-26.08beta.2-39-gbb51910a2dc2a6b969f7212ea8f6496fa629feec
+  ref: freedesktop-sdk-26.08beta.3-0-g4c7a4177c501510d68ebcba31c5b65ea23bc1b4f
 - kind: patch_queue
   path: patches/freedesktop-sdk
 
@@ -64,11 +64,9 @@ config:
     components/_private/xdg-desktop-portal-base.bst: gnome-build-meta.bst:core-deps/xdg-desktop-portal-base.bst
     components/xdg-desktop-portal.bst: gnome-build-meta.bst:core-deps/xdg-desktop-portal.bst
 
-    # evolution-data-server requires libical 3.x.
+    # gnome-calendar still requires libical 3.x. Nothing in the flatpak runtimes depends
+    # on it, so this can be reverted in a stable branch
     components/libical.bst: gnome-build-meta.bst:core-deps/libical3.bst
 
     components/bash-config.bst: config/bash-config.bst
     components/sudo.bst: cli/sudo-rs.bst
-
-    # This is temporary until freedesktop-sdk fixes their nftables element in 26.08beta
-    components/nftables.bst: core/nftables.bst
