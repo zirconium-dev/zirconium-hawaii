@@ -14,6 +14,10 @@ github.com/AvengeMedia/dankgo/paths
 github.com/AvengeMedia/dankgo/shellapp
 github.com/AvengeMedia/dankgo/shellapp/shellfs
 github.com/AvengeMedia/dankgo/syncmap
+# github.com/AvengeMedia/dgop v0.2.4-0.20260808141551-f559f2f31d2a
+## explicit; go 1.26
+github.com/AvengeMedia/dgop/gops
+github.com/AvengeMedia/dgop/models
 # github.com/Microsoft/go-winio v0.6.2
 ## explicit; go 1.21
 github.com/Microsoft/go-winio
@@ -123,6 +127,13 @@ github.com/coder/websocket/internal/bpool
 github.com/coder/websocket/internal/errd
 github.com/coder/websocket/internal/util
 github.com/coder/websocket/internal/wsjs
+# github.com/danielgtaylor/huma/v2 v2.39.1
+## explicit; go 1.25.0
+github.com/danielgtaylor/huma/v2
+github.com/danielgtaylor/huma/v2/casing
+github.com/danielgtaylor/huma/v2/negotiation
+github.com/danielgtaylor/huma/v2/validation
+github.com/danielgtaylor/huma/v2/yaml
 # github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc
 ## explicit
 github.com/davecgh/go-spew/spew
@@ -134,6 +145,13 @@ github.com/dblohm7/wingoes
 github.com/dlclark/regexp2/v2
 github.com/dlclark/regexp2/v2/helpers
 github.com/dlclark/regexp2/v2/syntax
+# github.com/ebitengine/purego v0.10.2
+## explicit; go 1.18
+github.com/ebitengine/purego
+github.com/ebitengine/purego/internal/cgo
+github.com/ebitengine/purego/internal/fakecgo
+github.com/ebitengine/purego/internal/strings
+github.com/ebitengine/purego/internal/xreflect
 # github.com/emirpasic/gods v1.18.1
 ## explicit; go 1.2
 github.com/emirpasic/gods/containers
@@ -241,6 +259,10 @@ github.com/go-json-experiment/json/v1
 # github.com/go-logfmt/logfmt v0.6.1
 ## explicit; go 1.21
 github.com/go-logfmt/logfmt
+# github.com/go-ole/go-ole v1.3.0
+## explicit; go 1.12
+github.com/go-ole/go-ole
+github.com/go-ole/go-ole/oleutil
 # github.com/godbus/dbus/v5 v5.2.2
 ## explicit; go 1.20
 github.com/godbus/dbus/v5
@@ -275,17 +297,20 @@ github.com/kevinburke/ssh_config
 # github.com/klauspost/cpuid/v2 v2.4.0
 ## explicit; go 1.24.0
 github.com/klauspost/cpuid/v2
-# github.com/lucasb-eyer/go-colorful v1.4.0
+# github.com/lucasb-eyer/go-colorful v1.4.1
 ## explicit; go 1.12
 github.com/lucasb-eyer/go-colorful
-# github.com/mattn/go-isatty v0.0.23
+# github.com/lufia/plan9stats v0.0.0-20260802145828-341c2f0c90b5
+## explicit; go 1.21
+github.com/lufia/plan9stats
+# github.com/mattn/go-isatty v0.0.24
 ## explicit; go 1.20
 github.com/mattn/go-isatty
-# github.com/mattn/go-localereader v0.0.1 => github.com/mattn/go-localereader v0.0.2-0.20220822084749-2491eb6c1c75
+# github.com/mattn/go-localereader v0.0.2-0.20220822084749-2491eb6c1c75
 ## explicit
 github.com/mattn/go-localereader
-# github.com/mattn/go-runewidth v0.0.24
-## explicit; go 1.20
+# github.com/mattn/go-runewidth v0.0.27
+## explicit; go 1.23
 github.com/mattn/go-runewidth
 # github.com/mdlayher/netlink v1.11.2
 ## explicit; go 1.25.0
@@ -321,6 +346,9 @@ github.com/pkg/errors
 # github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2
 ## explicit
 github.com/pmezard/go-difflib/difflib
+# github.com/power-devops/perfstat v0.0.0-20260805114148-88456608a4f6
+## explicit; go 1.14
+github.com/power-devops/perfstat
 # github.com/rivo/uniseg v0.4.7
 ## explicit; go 1.18
 github.com/rivo/uniseg
@@ -337,6 +365,18 @@ github.com/sblinch/kdl-go/relaxed
 # github.com/sergi/go-diff v1.4.0
 ## explicit; go 1.13
 github.com/sergi/go-diff/diffmatchpatch
+# github.com/shirou/gopsutil/v4 v4.26.7
+## explicit; go 1.24.0
+github.com/shirou/gopsutil/v4/common
+github.com/shirou/gopsutil/v4/cpu
+github.com/shirou/gopsutil/v4/disk
+github.com/shirou/gopsutil/v4/host
+github.com/shirou/gopsutil/v4/internal/common
+github.com/shirou/gopsutil/v4/load
+github.com/shirou/gopsutil/v4/mem
+github.com/shirou/gopsutil/v4/net
+github.com/shirou/gopsutil/v4/process
+github.com/shirou/gopsutil/v4/sensors
 # github.com/spf13/afero v1.15.0
 ## explicit; go 1.23.0
 github.com/spf13/afero
@@ -364,6 +404,12 @@ github.com/tailscale/go-winio/internal/fs
 github.com/tailscale/go-winio/internal/socket
 github.com/tailscale/go-winio/internal/stringbuffer
 github.com/tailscale/go-winio/pkg/guid
+# github.com/tklauser/go-sysconf v0.4.0
+## explicit; go 1.25.0
+github.com/tklauser/go-sysconf
+# github.com/tklauser/numcpus v0.12.0
+## explicit; go 1.25.0
+github.com/tklauser/numcpus
 # github.com/x448/float16 v0.8.4
 ## explicit; go 1.11
 github.com/x448/float16
@@ -395,6 +441,9 @@ github.com/yuin/goldmark/util
 # github.com/yuin/goldmark-highlighting/v2 v2.0.0-20230729083705-37449abec8cc
 ## explicit; go 1.13
 github.com/yuin/goldmark-highlighting/v2
+# github.com/yusufpapurcu/wmi v1.2.4
+## explicit; go 1.16
+github.com/yusufpapurcu/wmi
 # go.etcd.io/bbolt v1.5.0
 ## explicit; go 1.25.0
 go.etcd.io/bbolt
@@ -429,7 +478,7 @@ golang.org/x/crypto/ssh
 golang.org/x/crypto/ssh/agent
 golang.org/x/crypto/ssh/internal/bcrypt_pbkdf
 golang.org/x/crypto/ssh/knownhosts
-# golang.org/x/exp v0.0.0-20260709172345-9ea1abe57597
+# golang.org/x/exp v0.0.0-20260727155853-b88d891fe743
 ## explicit; go 1.25.0
 golang.org/x/exp/constraints
 golang.org/x/exp/maps
@@ -563,3 +612,4 @@ tailscale.com/util/winutil/winenv
 tailscale.com/version
 tailscale.com/version/distro
 tailscale.com/wgengine/filter/filtertype
+# github.com/mattn/go-localereader v0.0.1 => github.com/mattn/go-localereader v0.0.2-0.20220822084749-2491eb6c1c75
