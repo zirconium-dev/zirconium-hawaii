@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: github:InioX/matugen.git
   track: v*
-  ref: v4.1.0-0-g4112d352914742ba69f6380fd07984adba02d376
+  ref: v4.2.0-0-gbb27a35d7f9e0f57cf638703f3d8e3182aed0304
 - kind: cargo2
   ref:
   - kind: registry

@@ -11,7 +11,7 @@ sources:
 - kind: git_repo
   url: github:zirconium-dev/zirconium.git
   track: main
-  ref: 10599df67e22fbc9959cac83a01433cd05fa766c
+  ref: 92c72035b33a3e72a8fc379af7e227a5b3e872c8
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/runtime-gnu.bst

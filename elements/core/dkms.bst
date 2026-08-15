@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: github:dell/dkms.git
   track: "v*.*.*"
-  ref: v3.4.2-0-g43f222144e8b8a556335fc5cfa97758ff58a8442
+  ref: v3.4.3-0-g04154266549a7b3723f8e7a18515b59c34e921b1
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-make.bst

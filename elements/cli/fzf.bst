@@ -5,23 +5,23 @@ sources:
 - kind: git_repo
   url: github:junegunn/fzf.git
   track: v*
-  ref: v0.74.2-0-g3337be9d450cd349e99273a2d3985ceaf5f3753f
+  ref: v0.74.3-0-g15f64c492a08f0840b81540c7d1de35737448086
 - kind: tar
   directory: "bin"
   base-dir: ""
   (?):
   - arch == "aarch64":
       url: github_files:junegunn/fzf/releases/download/v%{version}/fzf-%{version}-linux_arm64.tar.gz
-      ref: 1373e3f5ed3c468179d4529942ddd96c234bcad1bcacaf238916e26a5234b5b2
+      ref: 4a17a17b46bd0c4873e995533de508995c11572c0be0664a5dbcf13f60463046
   - arch == "x86_64":
       url: github_files:junegunn/fzf/releases/download/v%{version}/fzf-%{version}-linux_amd64.tar.gz
-      ref: b3648f48675612b69ee35371cf6dc99ca96d767e89b912d079080916ac8ba8bd
+      ref: 3501a595e4b5c40a6b047340a0e8f805c46fd4e61ef95ef8a136ba8c61cf6f22
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/runtime-gnu.bst
 
 variables:
-  version: 0.74.2
+  version: 0.74.3
   strip-binaries: ""
 
 config:
