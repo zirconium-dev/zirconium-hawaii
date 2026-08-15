@@ -58,6 +58,8 @@ aliases:
   xorg-freedesktop: https://xorg.freedesktop.org/
   steampowered: https://repo.steampowered.com/
   winupdate-catalog: https://catalog.s.download.windowsupdate.com/
+  #Generic alias (we require aliased urls)
+  tar_https: https://
 
   # git aliases go here
   codeberg: https://codeberg.org/
