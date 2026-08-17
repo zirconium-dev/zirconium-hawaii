@@ -115,14 +115,12 @@ module CRYPTO_DH
 module CRYPTO_ECB
 module CRYPTO_ECDSA
 module CRYPTO_ECRDSA
-module CRYPTO_FCRYPT
 module CRYPTO_HMAC
 module CRYPTO_LRW
 module CRYPTO_LZ4
 module CRYPTO_LZ4HC
 module CRYPTO_MD4
 module CRYPTO_MD5
-module CRYPTO_PCBC
 module CRYPTO_PCRYPT
 module CRYPTO_LIB_POLY1305
 module CRYPTO_RMD160
@@ -986,11 +984,6 @@ module BT_HCIBFUSB
 module BT_HCIBTUSB
 module BT_HIDP
 module BT_RFCOMM
-if has PCMCIA; then
-    module BT_HCIBLUECARD
-    module BT_HCIBT3C
-    module BT_HCIDTL1
-fi
 enable BT_HCIBTUSB_AUTOSUSPEND
 enable BT_HCIBTUSB_MTK
 enable BT_HCIUART_3WIRE
