@@ -9,7 +9,7 @@ sources:
   - "*-rc*"
   - "*-alpha*"
   - "*-lts*"
-  ref: v6.11.1-0-g7ef3bccd89cc163a664b46fe80a4bd56084b1983
+  ref: v6.11.2-0-g78cf6915d84657a719847235ab2433b5faf35bb5
 
 build-depends:
 - freedesktop-sdk.bst:extensions/mesa/mesa.bst

@@ -9,7 +9,7 @@ sources:
   - "*-rc*"
   - "*-alpha*"
   - "*-lts*"
-  ref: v6.11.1-0-g1cdfe8d416a173a85051e0028dd94d24311022e2
+  ref: v6.11.2-0-g6f162ccac1425edbd7b4d1582fabab5973b43d6c
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst

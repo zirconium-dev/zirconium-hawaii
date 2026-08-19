@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: github:OpenGamingCollective/gamescope.git
   track: ogc
-  ref: 3.16.19-139-g49771ecf8ff3ea07622f76a0481bd4d917ba2805
+  ref: 3.16.19-153-g9e6234adba03405e3c1810b968a7bd6e1487d88f
 # meson subprojects
 - kind: git_repo
   directory: subprojects/glm
@@ -18,7 +18,7 @@ sources:
 - kind: git_module
   path: subprojects/wlroots
   url: freedesktop:wlroots/wlroots.git
-  ref: 88a869855742281c98c22cab9641b317b8d065ef
+  ref: d783533489e1f75d6886c2ab5c5960090ef268f8
 - kind: git_module
   path: subprojects/libliftoff
   url: freedesktop:emersion/libliftoff.git

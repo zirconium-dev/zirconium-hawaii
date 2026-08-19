@@ -1,9 +1,9 @@
 sources:
 - directory: core/vendor/github.com/AvengeMedia/dgop
-  ref: 57609413b0cc87b2c70ba8b6277eb3495d8585e73e5e53cc31b3c0cd77730f3c
+  ref: a63db2e54ea0a8219f4185ff35a419976fe5ba1e8535f8f2ea9521d33012ea93
   base-dir: "*/*/*"
   kind: zip
-  url: golang-proxy:github.com/!avenge!media/dgop/@v/v0.2.4-0.20260808141551-f559f2f31d2a.zip
+  url: golang-proxy:github.com/!avenge!media/dgop/@v/v0.2.4-0.20260819141338-085d828cf577.zip
 - directory: core/vendor/github.com/Wifx/gonetworkmanager/v2
   ref: 18ade00b4f176832df17d82c4877c7ddd415631f2e5622a83fd82efc98e30693
   base-dir: "*/*/*/*"
@@ -425,10 +425,10 @@ sources:
   kind: zip
   url: golang-proxy:github.com/mattn/go-localereader/@v/v0.0.2-0.20220822084749-2491eb6c1c75.zip
 - directory: core/vendor/github.com/mattn/go-runewidth
-  ref: 78b1690bd2506faeeecff9cce615e5710c12fe25a5393abe3c2503d0ea4ee2ea
+  ref: 9300cf3ffb7008839e3a68d4e7772ef9f11c2f50d431675a3ff8ab2adaf730ce
   base-dir: "*/*/*"
   kind: zip
-  url: golang-proxy:github.com/mattn/go-runewidth/@v/v0.0.27.zip
+  url: golang-proxy:github.com/mattn/go-runewidth/@v/v0.0.25.zip
 - directory: core/vendor/github.com/muesli/ansi
   ref: 59c0d420908d51df3c701510337fbe42bfb4d48fcc5f490b5eb2f36fc25f91b9
   base-dir: "*/*/*"

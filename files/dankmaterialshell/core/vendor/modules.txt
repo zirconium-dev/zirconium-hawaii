@@ -17,7 +17,7 @@ github.com/AvengeMedia/dankgo/syncmap
 github.com/AvengeMedia/dankgo/wayland/client
 github.com/AvengeMedia/dankgo/wayland/ext_data_control
 github.com/AvengeMedia/dankgo/wlclipboard
-# github.com/AvengeMedia/dgop v0.2.4-0.20260808141551-f559f2f31d2a
+# github.com/AvengeMedia/dgop v0.2.4-0.20260819141338-085d828cf577
 ## explicit; go 1.26
 github.com/AvengeMedia/dgop/gops
 github.com/AvengeMedia/dgop/models
@@ -312,8 +312,8 @@ github.com/mattn/go-isatty
 # github.com/mattn/go-localereader v0.0.2-0.20220822084749-2491eb6c1c75
 ## explicit
 github.com/mattn/go-localereader
-# github.com/mattn/go-runewidth v0.0.27
-## explicit; go 1.23
+# github.com/mattn/go-runewidth v0.0.27 => github.com/mattn/go-runewidth v0.0.25
+## explicit; go 1.20
 github.com/mattn/go-runewidth
 # github.com/mdlayher/netlink v1.11.2
 ## explicit; go 1.25.0
@@ -616,3 +616,4 @@ tailscale.com/version
 tailscale.com/version/distro
 tailscale.com/wgengine/filter/filtertype
 # github.com/mattn/go-localereader v0.0.1 => github.com/mattn/go-localereader v0.0.2-0.20220822084749-2491eb6c1c75
+# github.com/mattn/go-runewidth => github.com/mattn/go-runewidth v0.0.25
