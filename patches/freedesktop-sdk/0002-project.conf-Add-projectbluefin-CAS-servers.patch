@@ -1,7 +1,7 @@
 From 1406f49b92a0c57559184edefe4541826010b135 Mon Sep 17 00:00:00 2001
 From: Hec <hec@heccraft.com>
 Date: Thu, 28 May 2026 01:07:37 -0400
-Subject: [PATCH 5/7] project.conf: Add projectbluefin CAS servers
+Subject: [PATCH 2/5] project.conf: Add projectbluefin CAS servers
 
 ---
  project.conf | 12 ++++++++++++
@@ -12,9 +12,9 @@ index 80ebc447a..6c0179241 100644
 --- a/project.conf
 +++ b/project.conf
 @@ -165,6 +165,12 @@ artifacts:
-     retry-limit: 5
+     retry-limit: 4
      retry-delay: 500
-     request-timeout: 180
+     request-timeout: 300
 +- url: https://cache.projectbluefin.io:11001
 +  connection-config:
 +    keepalive-time: 60
@@ -25,9 +25,9 @@ index 80ebc447a..6c0179241 100644
  source-caches:
  - url: https://cache.freedesktop-sdk.io:11001
 @@ -179,6 +185,12 @@ source-caches:
-     retry-limit: 5
+     retry-limit: 4
      retry-delay: 500
-     request-timeout: 180
+     request-timeout: 300
 +- url: https://cache.projectbluefin.io:11001
 +  connection-config:
 +    keepalive-time: 60

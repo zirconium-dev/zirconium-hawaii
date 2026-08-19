@@ -1,7 +1,7 @@
 From 2ad5b11604fb152b95b7f3d9dc5b498d565dfd31 Mon Sep 17 00:00:00 2001
 From: Hec <hec@heccraft.com>
 Date: Fri, 31 Jul 2026 23:07:54 -0400
-Subject: [PATCH] noto-cjk: Switch to variable font instead
+Subject: [PATCH 4/5] noto-cjk: Switch to variable font instead
 
 By using the variable font instead of grabbing both the "Bold" and
 "Regular" variants of each font, we see a decent space savings while not
