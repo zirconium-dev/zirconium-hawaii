@@ -6,7 +6,11 @@ sources:
 - kind: git_repo
   url: github:kmscon/kmscon.git
   track: 'v*'
-  ref: v10.0.1-0-gc9d0e23336c6bb7645a1f5f48a4a82f1d5a589d9
+  ref: v10.0.2-0-gbaa2bcc5bde55318dcfbff0dd0090271e1f88674
+  # This patch is officially recommended to be used within the v10.0.2 release notes. It should be removed when kmscon updates past 10.0.2.
+  # https://github.com/kmscon/kmscon/releases/tag/v10.0.2
+- kind: patch
+  path: patches/kmscon/507.patch
 - kind: local
   path: files/kmscon/80-kmscon.preset
 - kind: local

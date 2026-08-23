@@ -29,6 +29,11 @@ sources:
   base-dir: "*/*/*"
   kind: zip
   url: golang-proxy:github.com/charmbracelet/lipgloss/@v/v1.1.0.zip
+- directory: core/vendor/github.com/dlclark/regexp2/v2
+  ref: 068f3cfc039119473609e438145072de2d402e75aace180fa467ab546226956d
+  base-dir: "*/*/*/*"
+  kind: zip
+  url: golang-proxy:github.com/dlclark/regexp2/v2/@v/v2.5.1.zip
 - directory: core/vendor/github.com/fsnotify/fsnotify
   ref: b2c6a334e0d518da2e046066bdd9da34cb26bad6df9f17701802d3de522ab016
   base-dir: "*/*/*"
@@ -44,6 +49,11 @@ sources:
   base-dir: "*/*/*"
   kind: zip
   url: golang-proxy:github.com/holoplot/go-evdev/@v/v0.0.0-20260504100651-66d1748fe847.zip
+- directory: core/vendor/github.com/klauspost/compress
+  ref: 3b3a3540125ad9b3ae1ab0f5df06ac32d11b8330c3140f977d213e0f6df482e9
+  base-dir: "*/*/*"
+  kind: zip
+  url: golang-proxy:github.com/klauspost/compress/@v/v1.19.2.zip
 - directory: core/vendor/github.com/pilebones/go-udev
   ref: bc033ea8baec612959025f58b2ec4cf1225be4685bc9e20909ea8225a56bf4a1
   base-dir: "*/*/*"
@@ -79,11 +89,6 @@ sources:
   base-dir: "*/*/*"
   kind: zip
   url: golang-proxy:github.com/yuin/goldmark/@v/v1.8.4.zip
-- directory: core/vendor/github.com/yuin/goldmark-highlighting/v2
-  ref: 2e5d685d24d3d3c156bb5d0be095c93ca202a928d7b52aa016788b1b15e2bcf3
-  base-dir: "*/*/*/*"
-  kind: zip
-  url: golang-proxy:github.com/yuin/goldmark-highlighting/v2/@v/v2.0.0-20230729083705-37449abec8cc.zip
 - directory: core/vendor/go.etcd.io/bbolt
   ref: 2c350ca36afba707b917529a8049b001c71915c99c152d5e2600ed4bac6fbc37
   base-dir: "*/*"
@@ -100,10 +105,10 @@ sources:
   kind: zip
   url: golang-proxy:golang.org/x/image/@v/v0.44.0.zip
 - directory: core/vendor/tailscale.com
-  ref: 725dd2d03444f02a36146fbcfbc662ad8361af8c4a0097af19b8eb78e21baeeb
+  ref: abc513f9cee0b6c02a94876a6a16430a0a30a26238e22b5a2c2b351ec1527f69
   base-dir: "*"
   kind: zip
-  url: golang-proxy:tailscale.com/@v/v1.100.0.zip
+  url: golang-proxy:tailscale.com/@v/v1.102.0.zip
 - directory: core/vendor/filippo.io/edwards25519
   ref: 98f2d3ca9b88daa031b0fb2fb521b7ea386af1fed61b6f445a20bef7fa381c17
   base-dir: "*/*"
@@ -159,11 +164,6 @@ sources:
   base-dir: "*/*/*"
   kind: zip
   url: golang-proxy:github.com/dblohm7/wingoes/@v/v0.0.0-20260526185140-fb298caac7ca.zip
-- directory: core/vendor/github.com/dlclark/regexp2/v2
-  ref: 068f3cfc039119473609e438145072de2d402e75aace180fa467ab546226956d
-  base-dir: "*/*/*/*"
-  kind: zip
-  url: golang-proxy:github.com/dlclark/regexp2/v2/@v/v2.5.1.zip
 - directory: core/vendor/github.com/ebitengine/purego
   ref: e7b3be15ff55f43244f0962a6cfd0eec4a98896c44dce0b570ec05ce22b1a504
   base-dir: "*/*/*"
@@ -425,10 +425,10 @@ sources:
   kind: zip
   url: golang-proxy:github.com/mattn/go-localereader/@v/v0.0.2-0.20220822084749-2491eb6c1c75.zip
 - directory: core/vendor/github.com/mattn/go-runewidth
-  ref: 9300cf3ffb7008839e3a68d4e7772ef9f11c2f50d431675a3ff8ab2adaf730ce
+  ref: 7e8df69a8b9ccb1e05a8d6e8cbce89be7a2b1031b6155903594aef24a7e28825
   base-dir: "*/*/*"
   kind: zip
-  url: golang-proxy:github.com/mattn/go-runewidth/@v/v0.0.25.zip
+  url: golang-proxy:github.com/mattn/go-runewidth/@v/v0.0.28.zip
 - directory: core/vendor/github.com/muesli/ansi
   ref: 59c0d420908d51df3c701510337fbe42bfb4d48fcc5f490b5eb2f36fc25f91b9
   base-dir: "*/*/*"

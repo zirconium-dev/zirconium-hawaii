@@ -6,7 +6,7 @@ sources:
   track: "v*.*.*"
   exclude:
   - "*-rc*"
-  ref: v2.27.0-0-g38d4414a85112d5d296c84a4058a0901f5c497be
+  ref: v2.28.0-0-ga4907c9af9ea0a29f208b8f024465af16a7c9cbf
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/runtime-gnu.bst

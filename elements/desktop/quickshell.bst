@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: outfoxxed:quickshell/quickshell
   track: v*
-  ref: v0.3.0-0-g59e9c47b0eb48a9e4bcf9631fa062ee939bd2e83
+  ref: v0.3.1-0-g1a4716cde794a59928d9d9fc15f2afc7a95de360
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst
