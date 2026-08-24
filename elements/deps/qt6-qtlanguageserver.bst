@@ -12,7 +12,7 @@ sources:
   ref: v6.11.2-0-g78cf6915d84657a719847235ab2433b5faf35bb5
 
 build-depends:
-- freedesktop-sdk.bst:extensions/mesa/mesa.bst
+- freedesktop-sdk.bst:components/mesa-headers.bst
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst
 
 depends:

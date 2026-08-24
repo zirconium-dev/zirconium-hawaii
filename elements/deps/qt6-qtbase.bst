@@ -17,7 +17,6 @@ build-depends:
 - freedesktop-sdk.bst:components/sqlite.bst
 - freedesktop-sdk.bst:components/vulkan-headers.bst
 - freedesktop-sdk.bst:components/mesa-headers.bst
-- freedesktop-sdk.bst:extensions/mesa/mesa.bst
 
 depends:
 - freedesktop-sdk.bst:components/cups.bst

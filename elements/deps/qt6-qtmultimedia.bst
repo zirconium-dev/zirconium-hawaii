@@ -16,7 +16,6 @@ build-depends:
 - freedesktop-sdk.bst:components/gstreamer-plugins-bad.bst
 - freedesktop-sdk.bst:components/gstreamer-plugins-base.bst
 - freedesktop-sdk.bst:components/xorg-lib-xrandr.bst
-- freedesktop-sdk.bst:extensions/mesa/mesa.bst
 - freedesktop-sdk.bst:components/mesa-headers.bst
 - freedesktop-sdk.bst:components/vulkan-headers.bst
 - freedesktop-sdk.bst:components/ffmpeg.bst
