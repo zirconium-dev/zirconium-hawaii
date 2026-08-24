@@ -11,8 +11,12 @@ sources:
   ref: v7.2-0-g8d3ae59288f1e7d58d76558a6ee96d533bc5019f
 - kind: patch_queue
   path: patches/linux/fdsdk
-- kind: patch_queue
-  path: patches/linux/ogc
+- kind: remote_patch
+  url: github_files:OpenGamingCollective/linux/releases/download/v%{ogc-patchset-version}/monolithic.patch
+  ref: 059d3a273df16c6d1b62af812df48551f121914cc90be24f1d96be59ea4abdc3
+# Needed for the ogc patchset to compile with fdsdk's config
+- kind: patch
+  path: patches/linux/remove-DEVICE_ATTR-macros-in-ayn-ec.c.patch
 - kind: local
   path: files/linux/config-utils.sh
 - kind: local
@@ -35,10 +39,12 @@ build-depends:
 - freedesktop-sdk.bst:components/rust-src.bst
 - freedesktop-sdk.bst:components/util-linux.bst
 - freedesktop-sdk.bst:components/zstd.bst
+- freedesktop-sdk.bst:components/patch.bst
 # - filename: components/linux-module-cert.bst
 #   strict: true
 
 variables:
+  ogc-patchset-version: 7.2-ogc6
   bootdir: /boot
   kernel_arch: '%{arch}'
   src-arch: '%{kernel_arch}'

@@ -1,0 +1,38 @@
+From 366397785f0f0d7915bf0d9dd1216fe5417e04be Mon Sep 17 00:00:00 2001
+From: Hec <hec@heccraft.com>
+Date: Mon, 24 Aug 2026 15:42:19 -0400
+Subject: [PATCH] remove DEVICE_ATTR_.._NAMED macros in ayn-ec.c
+
+they should not be there, lol. they were added to device.h so it's just
+breaking kernel compilation if you have -Werror enabled.
+---
+ drivers/platform/x86/ayn-ec.c | 13 -------------
+ 1 file changed, 13 deletions(-)
+
+diff --git a/drivers/platform/x86/ayn-ec.c b/drivers/platform/x86/ayn-ec.c
+index 25f748d7db18..cd388bd39fbd 100644
+--- a/drivers/platform/x86/ayn-ec.c
++++ b/drivers/platform/x86/ayn-ec.c
+@@ -117,19 +117,6 @@ static struct thermal_sensor thermal_sensors[] = {
+ 	{}
+ };
+ 
+-#define DEVICE_ATTR_RW_NAMED(_name, _attrname)               \
+-	struct device_attribute dev_attr_##_name = {         \
+-		.attr = { .name = _attrname, .mode = 0644 }, \
+-		.show = _name##_show,                        \
+-		.store = _name##_store,                      \
+-	}
+-
+-#define DEVICE_ATTR_RO_NAMED(_name, _attrname)               \
+-	struct device_attribute dev_attr_##_name = {         \
+-		.attr = { .name = _attrname, .mode = 0444 }, \
+-		.show = _name##_show,                        \
+-	}
+-
+ /* Handle ACPI lock mechanism */
+ #define ACPI_LOCK_DELAY_MS 500
+ 
+-- 
+2.55.0
+
