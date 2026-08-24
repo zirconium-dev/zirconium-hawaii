@@ -1,0 +1,39 @@
+From 5cc362ef088ecd1d33c9dc14af139207d88ee99b Mon Sep 17 00:00:00 2001
+From: Hec <hec@heccraft.com>
+Date: Mon, 24 Aug 2026 02:55:27 -0400
+Subject: [PATCH] Add projectbluefin CAS servers
+
+---
+ project.conf | 16 ++++++++++++++++
+ 1 file changed, 16 insertions(+)
+
+diff --git a/project.conf b/project.conf
+index f4d8148..0fb3447 100644
+--- a/project.conf
++++ b/project.conf
+@@ -7,6 +7,22 @@ min-version: 2.6
+ # Subdirectory where elements are stored
+ element-path: elements
+ 
++artifacts:
++- url: https://cache.projectbluefin.io:11001
++  connection-config:
++    keepalive-time: 60
++    retry-limit: 5
++    retry-delay: 500
++    request-timeout: 180
++
++source-caches:
++- url: https://cache.projectbluefin.io:11001
++  connection-config:
++    keepalive-time: 60
++    retry-limit: 5
++    retry-delay: 500
++    request-timeout: 180
++
+ (@):
+   - freedesktop-sdk.bst:include/runtime.yml
+   - include/shell.yml
+-- 
+2.55.0
+

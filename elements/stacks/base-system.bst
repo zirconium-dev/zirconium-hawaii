@@ -61,6 +61,7 @@ depends:
   - freedesktop-sdk.bst:components/git.bst
   - freedesktop-sdk.bst:components/rsync.bst
   - freedesktop-sdk.bst:components/jq.bst
+  - freedesktop-sdk-extra.bst:components/smartmontools.bst
 
   - gnome-build-meta.bst:gnomeos-deps/android-udev-rules.bst
   - gnome-build-meta.bst:gnomeos-deps/distrobox.bst

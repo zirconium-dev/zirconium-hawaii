@@ -1,0 +1,28 @@
+From 1408b94424b8adcd366cf504702f667042058672 Mon Sep 17 00:00:00 2001
+From: Hec <hec@heccraft.com>
+Date: Mon, 24 Aug 2026 02:27:37 -0400
+Subject: [PATCH] smartmontools: add systemd as build dependency
+
+While not explicitly required to build smartmontools, adding systemd as
+a build dependency will install the smartd systemd service.
+
+Signed-off-by: Hec <hec@heccraft.com>
+---
+ elements/components/smartmontools.bst | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/elements/components/smartmontools.bst b/elements/components/smartmontools.bst
+index a9a55ba..3afd516 100644
+--- a/elements/components/smartmontools.bst
++++ b/elements/components/smartmontools.bst
+@@ -7,6 +7,7 @@ description: |
+ 
+ build-depends:
+ - freedesktop-sdk.bst:public-stacks/buildsystem-autotools.bst
++- freedesktop-sdk.bst:components/systemd.bst
+ 
+ variables:
+   command-subdir: smartmontools
+-- 
+2.55.0
+
