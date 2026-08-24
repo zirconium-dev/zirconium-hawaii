@@ -542,14 +542,9 @@ module ZD1211RW
 
 # Ethernet hardware
 module IGB
-module TYPHOON
-module VORTEX
-module NE2K_PCI
 if has PCMCIA; then
     module PCMCIA_PCNET
 fi
-module ADAPTEC_STARFIRE
-module ET131X
 module ENA_ETHERNET
 module AMD8111_ETH
 case "$arch" in
@@ -558,8 +553,13 @@ case "$arch" in
         module AMD_XGBE
     ;;
 esac
-module PCNET32
-module AQTION
+case "$arch" in
+    aarch64)
+        ;;
+    *)
+        module AQTION
+        ;;
+esac
 module ALX
 module ATL1
 module ATL1C
@@ -575,30 +575,10 @@ enable BNXT_HWMON
 enable BNXT_SRIOV
 module CNIC
 module NET_VENDOR_BROADCOM
-module BNA
-module CHELSIO_T1
-enable CHELSIO_T1_1G
-module CHELSIO_T3
-module CHELSIO_T4
-module CHELSIO_T4VF
-module ENIC
-enable NET_TULIP
-module DE2104X
-module DM9102
 if has PCMCIA; then
     module PCMCIA_XIRCOM
 fi
-module TULIP
-module ULI526X
-module WINBOND_840
-module DL2K
-module BE2NET
-enable BE2NET_BE2
-enable BE2NET_BE3
-enable BE2NET_LANCER
-enable BE2NET_SKYHAWK
 module FEALNX
-module GVE
 module I40E
 module I40EVF
 module ICE
@@ -619,7 +599,6 @@ enable MLX5_EN_ARFS
 enable MLX5_EN_RXNFC
 enable MLX5_MPFS
 module MLXFW
-module KSZ884X_PCI
 case "$arch" in
     x86_64)
         enable NET_VENDOR_MICROSOFT
@@ -628,8 +607,6 @@ case "$arch" in
 esac
 enable NET_VENDOR_MYRI
 module MYRI10GE
-module NATSEMI
-module NS83820
 enable NET_VENDOR_NETRONOME
 module NFP
 module NETXEN_NIC
@@ -641,7 +618,6 @@ module QLA3XXX
 module QLCNIC
 enable QLCNIC_HWMON
 enable QLCNIC_SRIOV
-module R6040
 module 8139CP
 module 8139TOO
 enable 8139TOO_8129
@@ -650,9 +626,6 @@ module SFC_FALCON
 module SFC
 enable SFC_MCDI_MON
 enable SFC_SRIOV
-module SC92031
-module SIS190
-module SIS900
 module EPIC100
 module SMSC9420
 case "$arch" in
@@ -661,14 +634,7 @@ case "$arch" in
     ;;
 esac
 module STMMAC_ETH
-module CASSINI
-module HAPPYMEAL
-module NIU
-module SUNGEM
-module TEHUTI
 module TLAN
-module VIA_RHINE
-module VIA_VELOCITY
 if has PCMCIA; then
     module PCMCIA_XIRC2PS
 fi
@@ -709,6 +675,12 @@ case "$arch" in
         module DRM_PANEL_SAMSUNG_SOFEF00
     ;;
 esac
+
+# DRM Panic
+enable CONFIG_DRM_PANIC
+enable CONFIG_DRM_PANIC_SCREEN_QR_CODE
+value_str DRM_PANIC_SCREEN "qr_code"
+value_str DRM_PANIC_SCREEN_QR_CODE_URL "https://freedesktop-sdk.org/panic#"
 
 # NPUs
 enable DRM_ACCEL
