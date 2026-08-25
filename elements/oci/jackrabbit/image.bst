@@ -51,6 +51,11 @@ config:
     - |
       sed -i 's/gnome-keyring;/oo7-portal;gnome-keyring;/' /layer/usr/share/xdg-desktop-portal/niri-portals.conf
 
+      # FIXME: remove this when 26.08rc.2+ is being used
+    - |
+      unlink /layer/usr/bin/unzip
+      ln -s bsdunzip /layer/usr/bin/unzip
+
     - |
       # A footgun.
       # https://tim.siosm.fr/blog/2023/12/22/dont-change-defaut-login-shell/
