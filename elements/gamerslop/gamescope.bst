@@ -38,10 +38,8 @@ sources:
 
 - kind: local
   path: files/gamescope
-# kind: patch_queue doesn't work here because we need to patch submodules, and it uses "git apply". we'll use "patch" directly instead.
-- kind: local
-  directory: patches
-  path: patches/gamescope
+- kind: patch
+  path: patches/gamescope/Use-system-stb-glm.patch
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-meson.bst
@@ -96,10 +94,6 @@ depends:
 config:
   configure-commands:
   - |
-    # Apply patches
-    for f in patches/*; do
-      patch -Np1 -i "${f}"
-    done
     # Replace spirv-headers include with the system directory
     sed -i 's^../thirdparty/SPIRV-Headers/include/spirv/^/usr/include/spirv/^' src/meson.build
     %{meson}
