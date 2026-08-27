@@ -6,6 +6,4 @@ sources:
   track: "*.*.*"
   exclude:
   - "*.dev*"
-  ref: 2.7.0-0-g432a00368261e01c2827071d67c477bfe4a55664
-- kind: patch_queue
-  path: patches/buildstream-plugins
+  ref: 2.8.0-0-g2681232038711d5c3d4ef1ecc962321c33ec72c1
