@@ -8,12 +8,12 @@ sources:
   track: v*
   exclude:
   - '*-rc*'
-  ref: v7.2-0-g8d3ae59288f1e7d58d76558a6ee96d533bc5019f
+  ref: v7.2.1-0-g458fbaaefba2fc5450c325a6834453dc4f4e52ae
 - kind: patch_queue
   path: patches/linux/fdsdk
 - kind: remote_patch
   url: github_files:OpenGamingCollective/linux/releases/download/v%{ogc-patchset-version}/monolithic.patch
-  ref: a1fcd498c7e6cfae56aab7af2af22ff2919874897a8b35e1a795aca0cc27d96e
+  ref: aca1dd25690c04f9b23f6834854a8a1f68def131623440d4ab9a5a7d5608d4f5
 # Needed for the ogc patchset to compile with fdsdk's config
 - kind: patch
   path: patches/linux/remove-DEVICE_ATTR-macros-in-ayn-ec.c.patch
@@ -44,7 +44,7 @@ build-depends:
 #   strict: true
 
 variables:
-  ogc-patchset-version: 7.2-ogc9
+  ogc-patchset-version: 7.2.1-ogc2
   bootdir: /boot
   kernel_arch: '%{arch}'
   src-arch: '%{kernel_arch}'
