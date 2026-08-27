@@ -18,6 +18,7 @@ config:
     install -Dpm0644 -t %{install-root}%{datadir}/plymouth/themes/spinner/ ./logos/watermark.png
     install -Dpm0644 -t %{install-root}%{datadir}/zirconium/skel/Pictures/Wallpapers/ ./wallpapers/*
     install -Dpm0644 -t %{install-root}%{datadir}/zirconium/pixmaps/ ./logos/logo-z.svg
+    install -Dpm0644 ./logos/logo-z.svg %{install-root}%{datadir}/pixmaps/zirconium.svg
   - |
     %{install-extra}
 
