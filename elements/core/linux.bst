@@ -8,7 +8,7 @@ sources:
   track: v*
   exclude:
   - '*-rc*'
-  ref: v7.2.1-0-g458fbaaefba2fc5450c325a6834453dc4f4e52ae
+  ref: v7.2-0-g8d3ae59288f1e7d58d76558a6ee96d533bc5019f
 - kind: patch_queue
   path: patches/linux/fdsdk
 - kind: remote_patch
