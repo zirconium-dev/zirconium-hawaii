@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: github:ShadowBlip/PowerStation.git
   track: v*
-  ref: v0.8.1-0-g350804f51c6de551b60df6ac57a5bb9ed42e3b6e
+  ref: v0.8.2-0-gd095f3e607b1523e167e11af053d5363e82b21fa
 
 # Buildstream doesn't like the gitlab:shadowapex/libryzenadj-rs repo, so we're patching powerstation to use the version from cargo registry.
 # There is no difference between the two versions (both are v0.15.0), so this is fine.
