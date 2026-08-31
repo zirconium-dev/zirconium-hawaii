@@ -73,7 +73,6 @@ github.com/aymanbagabas/go-osc52/v2
 ## explicit; go 1.24.2
 github.com/charmbracelet/bubbles/cursor
 github.com/charmbracelet/bubbles/key
-github.com/charmbracelet/bubbles/progress
 github.com/charmbracelet/bubbles/runeutil
 github.com/charmbracelet/bubbles/spinner
 github.com/charmbracelet/bubbles/textinput
@@ -83,9 +82,6 @@ github.com/charmbracelet/bubbletea
 # github.com/charmbracelet/colorprofile v0.4.3
 ## explicit; go 1.25.0
 github.com/charmbracelet/colorprofile
-# github.com/charmbracelet/harmonica v0.2.0
-## explicit; go 1.16
-github.com/charmbracelet/harmonica
 # github.com/charmbracelet/lipgloss v1.1.0
 ## explicit; go 1.18
 github.com/charmbracelet/lipgloss

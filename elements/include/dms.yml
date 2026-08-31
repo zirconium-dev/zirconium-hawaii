@@ -369,11 +369,6 @@ sources:
   base-dir: "*/*/*"
   kind: zip
   url: golang-proxy:github.com/charmbracelet/colorprofile/@v/v0.4.3.zip
-- directory: core/vendor/github.com/charmbracelet/harmonica
-  ref: 8494d728916551f0fc9a065fa854dfae2d75c7191ce839bae07de1a6290db40a
-  base-dir: "*/*/*"
-  kind: zip
-  url: golang-proxy:github.com/charmbracelet/harmonica/@v/v0.2.0.zip
 - directory: core/vendor/github.com/charmbracelet/x/ansi
   ref: 1d52a11e3ddfeabe350df8b1a5ee7a8660ac6903ae3a9f1031d9668384d59f6a
   base-dir: "*/*/*/*"

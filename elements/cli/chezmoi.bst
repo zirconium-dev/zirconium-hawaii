@@ -7,16 +7,16 @@ sources:
 - kind: git_repo
   url: github:twpayne/chezmoi.git
   track: v*
-  ref: v2.72.0-0-gf81cb321789aa3df62871248f5e4d361a59e7cc1
+  ref: v2.72.1-0-gf901167e4685db90da56d6a2a19df642cb3e0247
 - kind: tar
   base-dir: "usr/bin"
   (?):
   - arch == "aarch64":
       url: github_files:twpayne/chezmoi/releases/download/v%{version}/chezmoi_%{version}_linux_arm64.apk
-      ref: cf14eb0c5125886301c0c9042d80cf1394dbc4c82d6c8f84c9ec866c3d5253fd
+      ref: 5ab01410b1645448e10500cf36b5f9d6c1725b97612675f6d93b11d75b365ec7
   - arch == "x86_64":
       url: github_files:twpayne/chezmoi/releases/download/v%{version}/chezmoi_%{version}_linux_amd64.apk
-      ref: b55c2dc66b8a1de99120c05cb1aa9e09ed93ba3eea628c2f3dc385f86b05132d
+      ref: 47719461fd04743b24bb8b5c3fac3f8668848349a7cad8aabfce2bcbe7c1ff91
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/runtime-gnu.bst
@@ -25,7 +25,7 @@ depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 
 variables:
-  version: 2.72.0
+  version: 2.72.1
   strip-binaries: ""
 
 config:
