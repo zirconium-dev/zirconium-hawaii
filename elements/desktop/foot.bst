@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: codeberg:dnkl/foot.git
   track: "*"
-  ref: 1.27.0-0-gde998602dbc00c8862a6823d553cbb1df91c676d
+  ref: 1.28.0-0-gab33c9a19d626f8d0ac0bd1adfdba21946ada948
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-meson.bst
