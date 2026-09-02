@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: gitlab:freedesktop-sdk/freedesktop-sdk-extra.git
   track: tpollard/fdsdk-26.08
-  ref: 77db9de5fc66f45dbbf1a19e38c2619441dae9ae
+  ref: deba8290685eb9a97f2fff57cf4c34c179f87bf2
 - kind: patch_queue
   path: patches/freedesktop-sdk-extra
 
