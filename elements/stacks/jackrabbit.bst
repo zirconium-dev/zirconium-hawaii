@@ -7,6 +7,7 @@ depends:
   - gamerslop/gamescope.bst
   - gamerslop/gamescope-session.bst
   - gamerslop/gamescope-session-steam.bst
+  - gamerslop/inputplumber.bst
   - gamerslop/mangohud.bst
   - gamerslop/powerbuttond.bst
   - gamerslop/powerstation.bst
