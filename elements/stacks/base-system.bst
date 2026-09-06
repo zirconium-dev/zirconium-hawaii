@@ -2,7 +2,8 @@ kind: stack
 
 # Basic functional system + cli utilities
 depends:
-  - freedesktop-sdk.bst:public-stacks/runtime-gnu.bst
+  - core/uutils-coreutils.bst
+  - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
   - freedesktop-sdk.bst:bootstrap/libselinux.bst
   - freedesktop-sdk.bst:bootstrap/acl.bst
   - freedesktop-sdk.bst:components/util-linux-full.bst
