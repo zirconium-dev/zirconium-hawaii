@@ -74,6 +74,16 @@ sources:
   base-dir: "*/*/*"
   kind: zip
   url: golang-proxy:github.com/spf13/cobra/@v/v1.10.2.zip
+- directory: core/vendor/github.com/srwiley/oksvg
+  ref: d8e517dd8a48583bc32892a7c430dda165f79907b1fc9e3d49fe59a2894f587b
+  base-dir: "*/*/*"
+  kind: zip
+  url: golang-proxy:github.com/srwiley/oksvg/@v/v0.0.0-20221011165216-be6e8873101c.zip
+- directory: core/vendor/github.com/srwiley/rasterx
+  ref: 73ece9286c5a7d75924bbf2bb2151fe4690257d4a26055ad68cdc12253ca3469
+  base-dir: "*/*/*"
+  kind: zip
+  url: golang-proxy:github.com/srwiley/rasterx/@v/v0.0.0-20210519020934-456a8d69b780.zip
 - directory: core/vendor/github.com/stretchr/testify
   ref: 6874ed1c4b0b7e9feb27989b16c179b36590020633436ae260cefc5f5565589f
   base-dir: "*/*/*"
@@ -360,10 +370,10 @@ sources:
   kind: zip
   url: golang-proxy:golang.zx2c4.com/wireguard/windows/@v/v1.0.1.zip
 - directory: core/vendor/github.com/AvengeMedia/dankgo
-  ref: f8732158a6ef035cba77b1b7c88a39624d38471214726500efd8ad34edecfa4e
+  ref: fd2badf006d24e5c16cc90ea02616ccfc05fe3dd3e2d020ad2eb838a736cb69e
   base-dir: "*/*/*"
   kind: zip
-  url: golang-proxy:github.com/!avenge!media/dankgo/@v/v1.6.1-0.20260908011626-07e1ef7caaea.zip
+  url: golang-proxy:github.com/!avenge!media/dankgo/@v/v1.6.3-0.20260918210430-d03946da44cd.zip
 - directory: core/vendor/github.com/atotto/clipboard
   ref: d67b2c36c662751309fd2ec351df3651584bea840bd27be9a90702c3a238b43f
   base-dir: "*/*/*"

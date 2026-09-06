@@ -14,12 +14,12 @@ variables:
 
 environment:
   NAME: "Zirconium"
-  CODENAME: "Antifachy"
+  CODENAME: "Clockwork"
   HOME_URL: "https://zirconium.gay"
   DOCUMENTATION_URL: "https://github.com/zirconium-dev/zirconium-hawaii"
   SUPPORT_URL: "https://github.com/zirconium-dev/zirconium-hawaii/issues"
   ID: "zirconium"
-  VERSION: "%{freedesktop-sdk-flatpak-branch}"
+  VERSION: "edge.%{freedesktop-sdk-flatpak-branch}"
 
 config:
   build-commands:

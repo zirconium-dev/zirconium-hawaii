@@ -3,8 +3,8 @@ kind: junction
 sources:
 - kind: git_repo
   url: gitlab:freedesktop-sdk/freedesktop-sdk.git
-  track: freedesktop-sdk-26.08*
-  ref: freedesktop-sdk-26.08.1-0-gb02b59ffe19a49a402f357fd5fcb1d552ebc50d7
+  track: master
+  ref: freedesktop-sdk-26.08rc.2-173-g62a59d62f3e55bcd559be2593270f2e806000c09
 - kind: patch_queue
   path: patches/freedesktop-sdk
 
@@ -59,6 +59,10 @@ config:
     components/systemd.bst: gnome-build-meta.bst:core-deps/systemd.bst
     components/systemd-ukify.bst: gnome-build-meta.bst:core-deps/systemd-ukify.bst
     components/systemd-libs.bst: gnome-build-meta.bst:core-deps/systemd-libs.bst
+
+    # swick has signed up for dealing with all the issues from building these from git
+    components/_private/xdg-desktop-portal-base.bst: gnome-build-meta.bst:core-deps/xdg-desktop-portal-base.bst
+    components/xdg-desktop-portal.bst: gnome-build-meta.bst:core-deps/xdg-desktop-portal.bst
 
     # gnome-calendar still requires libical 3.x. Nothing in the flatpak runtimes depends
     # on it, so this can be reverted in a stable branch

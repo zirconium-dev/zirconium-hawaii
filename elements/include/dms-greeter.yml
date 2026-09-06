@@ -4,11 +4,6 @@ sources:
   base-dir: "*/*/*"
   kind: zip
   url: golang-proxy:github.com/!avenge!media/dankgo/@v/v0.0.0-20260718184203-ed59ffc6e599.zip
-- directory: core/vendor/github.com/lucasb-eyer/go-colorful
-  ref: 78d5d0e0737f0f54bbed77b6dfa847d8c871bed2668a9dc44328c7c3411ada10
-  base-dir: "*/*/*"
-  kind: zip
-  url: golang-proxy:github.com/lucasb-eyer/go-colorful/@v/v1.2.0.zip
 - directory: core/vendor/github.com/sblinch/kdl-go
   ref: c2093f820c504766aa58d3f2fa56c716f91ad5ab5e2717482f90820efa3e80ff
   base-dir: "*/*/*"
@@ -69,6 +64,11 @@ sources:
   base-dir: "*/*/*"
   kind: zip
   url: golang-proxy:github.com/inconshreveable/mousetrap/@v/v1.1.0.zip
+- directory: core/vendor/github.com/lucasb-eyer/go-colorful
+  ref: 78d5d0e0737f0f54bbed77b6dfa847d8c871bed2668a9dc44328c7c3411ada10
+  base-dir: "*/*/*"
+  kind: zip
+  url: golang-proxy:github.com/lucasb-eyer/go-colorful/@v/v1.2.0.zip
 - directory: core/vendor/github.com/mattn/go-isatty
   ref: aee31e550fcdffd1fc4b8e7e7fa8bb59aa4311f9c0b51893f8c6837f8c3f7f37
   base-dir: "*/*/*"

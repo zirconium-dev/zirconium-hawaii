@@ -3,8 +3,8 @@ kind: junction
 sources:
 - kind: git_repo
   url: gnome:gnome-build-meta.git
-  track: gnome-51
-  ref: 51.0-0-ga50b8c9de35f51c6a646c8178cde3c2c176725b6
+  track: master
+  ref: 49-branchpoint-991-ge4880a4fa779a7a42a0fe7225be94449aa5aa490
 - kind: patch_queue
   path: patches/gnome-build-meta
 
