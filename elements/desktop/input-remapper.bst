@@ -9,15 +9,10 @@ sources:
   - "*-rc*"
 
 build-depends:
+- freedesktop-sdk.bst:public-stacks/buildsystem-python-setuptools.bst
 - freedesktop-sdk.bst:components/gettext.bst
-- freedesktop-sdk.bst:components/stripper.bst
-- freedesktop-sdk.bst:components/python3-build.bst
-- freedesktop-sdk.bst:components/python3-installer.bst
-- freedesktop-sdk.bst:components/python3-setuptools.bst
-- freedesktop-sdk.bst:components/python3-wheel.bst
 
 depends:
-- freedesktop-sdk.bst:public-stacks/runtime-gnu.bst
 - freedesktop-sdk.bst:components/python3.bst
 - freedesktop-sdk.bst:components/pycairo.bst
 - freedesktop-sdk.bst:components/python3-psutil.bst

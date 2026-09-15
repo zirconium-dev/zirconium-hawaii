@@ -9,7 +9,6 @@ sources:
   - gtksourceview-4-99 # beta release for 5.x
 
 build-depends:
-- (@): gnome-build-meta.bst:include/gcc-for-recc.yml
 - freedesktop-sdk.bst:public-stacks/buildsystem-meson.bst
 - gnome-build-meta.bst:sdk/gobject-introspection.bst
 - gnome-build-meta.bst:sdk/gtk-doc.bst

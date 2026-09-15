@@ -7,11 +7,8 @@ sources:
   ref: v0.8.0-0-g9eb96680138269811a39d838d720abc3dce33954
 
 build-depends:
-- freedesktop-sdk.bst:public-stacks/runtime-gnu.bst
+- freedesktop-sdk.bst:public-stacks/buildsystem-python-hatchling.bst
 - freedesktop-sdk.bst:components/stripper.bst
-- freedesktop-sdk.bst:components/python3-build.bst
-- freedesktop-sdk.bst:components/python3-hatchling.bst
-- freedesktop-sdk.bst:components/python3-installer.bst
 - freedesktop-sdk.bst:components/python3-wheel.bst
 
 depends:

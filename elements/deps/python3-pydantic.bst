@@ -426,18 +426,13 @@ sources:
     sha: aac060176f7020d62c3bcc1cdbcec619d54f48b07ad1963a3f80ce7a0c17755f
 
 build-depends:
-- freedesktop-sdk.bst:components/gcc.bst
-- freedesktop-sdk.bst:components/rust.bst
-- freedesktop-sdk.bst:components/stripper.bst
-- freedesktop-sdk.bst:components/python3-build.bst
-- freedesktop-sdk.bst:components/python3-hatchling.bst
+- freedesktop-sdk.bst:public-stacks/buildsystem-rust.bst
+- freedesktop-sdk.bst:public-stacks/buildsystem-python-hatchling.bst
 - freedesktop-sdk.bst:components/python3-hatch-fancy-pypi-readme.bst
-- freedesktop-sdk.bst:components/python3-installer.bst
 - freedesktop-sdk.bst:components/python3-maturin.bst
 - freedesktop-sdk.bst:components/python3-wheel.bst
 
 depends:
-- freedesktop-sdk.bst:public-stacks/runtime-gnu.bst
 - freedesktop-sdk.bst:components/python3.bst
 - freedesktop-sdk.bst:components/python3-typing-extensions.bst
 - deps/python3-annotated-types.bst
