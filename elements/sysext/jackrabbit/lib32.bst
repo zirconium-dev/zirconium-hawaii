@@ -10,6 +10,8 @@ build-depends:
 - freedesktop-sdk.bst:cross-compilers/freedesktop-sdk-i686.bst:components/xorg-lib-xinerama.bst
 - freedesktop-sdk.bst:cross-compilers/freedesktop-sdk-i686.bst:extensions/mesa/libdrm.bst
 - freedesktop-sdk.bst:cross-compilers/freedesktop-sdk-i686.bst:extensions/mesa/mesa.bst
+# we need 'sh'
+- freedesktop-sdk.bst:cross-compilers/freedesktop-sdk-i686.bst:public-stacks/runtime-gnu.bst
 
 public:
   bst:

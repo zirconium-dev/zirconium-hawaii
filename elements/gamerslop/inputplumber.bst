@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: github:ShadowBlip/InputPlumber.git
   track: v*
-  ref: v0.78.1-0-g23f84b78521a4e12f2ff7b16fa9e0dc03ccb1846
+  ref: v0.81.0-0-gea60d873cca17edd1cb655ede26f557108135252
 - kind: cargo2
   ref:
   - kind: registry
@@ -1424,7 +1424,6 @@ build-depends:
 - freedesktop-sdk.bst:components/rust.bst
 
 depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:components/libevdev.bst
 - freedesktop-sdk.bst:components/dbus.bst
 - freedesktop-sdk.bst:components/systemd-libs.bst

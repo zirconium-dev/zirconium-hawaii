@@ -3,8 +3,8 @@ kind: junction
 sources:
 - kind: git_repo
   url: gnome:gnome-build-meta.git
-  track: gnome-50
-  ref: 50.4-0-g8524013485013dd5616bfff02dbeab274d5a4553
+  track: gnome-51
+  ref: 51.0-0-ga50b8c9de35f51c6a646c8178cde3c2c176725b6
 - kind: patch_queue
   path: patches/gnome-build-meta
 
@@ -15,6 +15,9 @@ config:
 
     # fuck you gnomeos, i want nmtui!!!!!!
     core-deps/NetworkManager.bst: freedesktop-sdk.bst:components/networkmanager.bst
+
+    # Keeping this within Zirconium as I would need to patch gnome to get Zirc-specific configs in. This way is easier.
+    gnomeos-deps/kmscon.bst: core/kmscon.bst
 
     # replace power-profiles-daemon with tuned everywhere
     core-deps/power-profiles-daemon.bst: core/tuned.bst

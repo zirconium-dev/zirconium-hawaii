@@ -1,9 +1,16 @@
 kind: manual
 
+
 public:
   bst:
+    integration-commands:
+      - rm /etc/containers/policy.json # this gets replaced by the one in zirconium/common.bst
+      - mv /etc/containers/registries.conf /usr/share/containers/regstries.conf
+      - mkdir -p /usr/share/containers/registries.d
+      - mkdir -p /usr/share/containers/registries.conf.d
+      - mv /etc/containers/registries.d/* /usr/share/containers/registries.d
+      - mv /etc/containers/registries.conf.d/* /usr/share/containers/registries.conf.d
     overlap-whitelist:
-    - /etc/containers/policy.json
     - /usr/share/xdg-terminal-exec/xdg-terminals.list
 
 # This is pulling from zirconium-dev/zirconium for various services and shell configurations.
@@ -11,10 +18,14 @@ sources:
 - kind: git_repo
   url: github:zirconium-dev/zirconium.git
   track: main
-  ref: 1df8e4ddcd7297ca5970957f50d343a73d862062
+  ref: 4f828b9532978dda28dae5d1d73bb6921a1a3c9e
+- kind: local
+  path: files/zirconium/policy.json
 
-depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
+build-depends:
+- freedesktop-sdk.bst:public-stacks/runtime-gnu.bst
+
+runtime-depends:
 - freedesktop-sdk.bst:components/containers-common.bst
 - cli/hyfetch.bst
 - cli/gum.bst
@@ -39,8 +50,10 @@ config:
     install -Dm0644 mkosi.extra/usr/share/pki/containers/*.pub -t "%{install-root}%{datadir}/pki/containers"
     install -Dm0644 cosign.pub "%{install-root}%{datadir}/pki/containers/zirconium.pub"
     install -Dm0644 mkosi.extra/usr/share/factory/etc/profile.d/*.sh -t "%{install-root}%{sysconfdir}/profile.d"
+    install -Dm0644 mkosi.extra/usr/share/factory/etc/kmscon/kmscon.conf -t "%{install-root}%{sysconfdir}/kmscon"
     install -Dm0644 mkosi.extra/usr/share/xdg-terminal-exec/xdg-terminals.list -t "%{install-root}%{datadir}/xdg-terminal-exec"
-    cp -r "mkosi.profiles/zirconium-bootc-ostree/mkosi.extra/usr/share/factory/etc/containers" "%{install-root}%{sysconfdir}/containers"
+    install -Dm0644 policy.json -t "%{install-root}%{datadir}/containers"
+    install -Dm0644 mkosi.profiles/zirconium-bootc-ostree/mkosi.extra/usr/share/factory/etc/containers/registries.d/zirconium-dev.yaml -t "%{install-root}%{datadir}/containers/registries.d"
 
     # pam stuff
     install -Dm0644 mkosi.extra/usr/share/greetd/greetd-spawn.pam_env.conf -t "%{install-root}%{datadir}/greetd"

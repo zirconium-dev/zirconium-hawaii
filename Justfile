@@ -6,7 +6,7 @@ image_tag := env("BUILD_IMAGE_TAG", "latest")
 base_dir := env("BUILD_BASE_DIR", ".")
 filesystem := env("BUILD_FILESYSTEM", "btrfs")
 vendor := "Zirconium"
-bst_image := env("BST_IMAGE", "registry.gitlab.com/freedesktop-sdk/infrastructure/freedesktop-sdk-docker-images/bst2:188e1f83de7a9cc5c4c2d779942a45b0ec3f093f")
+bst_image := env("BST_IMAGE", "registry.gitlab.com/freedesktop-sdk/infrastructure/freedesktop-sdk-docker-images/bst2:2f09ebe57e18593af0b7a9085230757850f06a9b")
 
 bst *ARGS:
     #!/usr/bin/env bash
@@ -19,6 +19,7 @@ bst *ARGS:
         --privileged \
         --device /dev/fuse \
         --network=host \
+        --pids-limit -1 \
         -v "{{base_dir}}":/pwd \
         -v "$HOME/.config/buildstream.conf:/root/.config/buildstream.conf" \
         -v "$HOME/.config/hawaii:/root/.config/hawaii" \
@@ -37,6 +38,7 @@ bst-interactive *ARGS:
         --privileged \
         --device /dev/fuse \
         --network=host \
+        --pids-limit -1 \
         -v "{{base_dir}}":/pwd \
         -v "$HOME/.config/buildstream.conf:/root/.config/buildstream.conf" \
         -v "$HOME/.config/hawaii:/root/.config/hawaii" \
@@ -58,7 +60,7 @@ generate-keys $vendor=vendor:
     cp files/boot-keys/linux-module-cert.crt files/boot-keys/modules/linux-module-cert.crt
 
 [ arg ("branch", long="branch", short="b") ]
-generate-image-version branch="25.08":
+generate-image-version branch="26.08":
     #!/usr/bin/env bash
     set -xeu
 

@@ -3,7 +3,7 @@ kind: script
 build-depends:
   - core/dkms.bst
   - freedesktop-sdk.bst:public-stacks/buildsystem-make.bst
-  - gamerslop/linux-ogc.bst
+  - core/linux.bst
   - gamerslop/xonedo.bst
 
 config:

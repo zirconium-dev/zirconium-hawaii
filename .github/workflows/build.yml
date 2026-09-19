@@ -15,8 +15,16 @@ on:
         description: Skip building Hawaii image
         default: false
         type: boolean
+      skip-nvidia:
+        description: Skip building Hawaii Nvidia image
+        default: false
+        type: boolean
       skip-jackrabbit:
         description: Skip building Hawaii Jackrabbit image
+        default: false
+        type: boolean
+      skip-jackrabbit-nvidia:
+        description: Skip building Hawaii Jackrabbit Nvidia image
         default: false
         type: boolean
       pull-before-configure:
@@ -58,11 +66,11 @@ jobs:
       pull-before-configure: ${{ inputs.pull-before-configure == true }}
 
   # Run this build AFTER build-hawaii. build-hawaii will cache all of the base packages.
-  build-hawaii-jackrabbit:
-    name: Build Hawaii Jackrabbit Bootc Image
+  build-hawaii-nvidia:
+    name: Build Hawaii Nvidia Bootc Image
     if: |
       !failure() && !cancelled() &&
-      (github.event.inputs.skip-jackrabbit == 'false' || !github.event.inputs.skip-jackrabbit)
+      (github.event.inputs.skip-nvidia == 'false' || !github.event.inputs.skip-nvidia)
     uses: ./.github/workflows/reusable-build-bootc.yml
     needs: build-hawaii
     secrets: inherit
@@ -71,8 +79,46 @@ jobs:
       packages: write
       id-token: write
     with:
+      image-name: "zirconium-hawaii-nvidia"
+      element: "oci/nvidia/image.bst"
+      disable-remote-execution: ${{ inputs.disable-remote-execution == true }}
+      publish: ${{ github.event_name != 'pull_request' && ( github.ref == format('refs/heads/stable', github.event.repository.default_branch) || github.ref == format('refs/heads/testing', github.event.repository.default_branch) ) }}
+      pull-before-configure: ${{ inputs.pull-before-configure == true }}
+
+  build-hawaii-jackrabbit:
+    name: Build Hawaii Jackrabbit Bootc Image
+    if: |
+      !failure() && !cancelled() &&
+      (github.event.inputs.skip-jackrabbit == 'false' || !github.event.inputs.skip-jackrabbit)
+    uses: ./.github/workflows/reusable-build-bootc.yml
+    needs: build-hawaii-nvidia
+    secrets: inherit
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
+    with:
       image-name: "zirconium-hawaii-jackrabbit"
       element: "oci/jackrabbit/image.bst"
+      disable-remote-execution: ${{ inputs.disable-remote-execution == true }}
+      publish: ${{ github.event_name != 'pull_request' && ( github.ref == format('refs/heads/stable', github.event.repository.default_branch) || github.ref == format('refs/heads/testing', github.event.repository.default_branch) ) }}
+      pull-before-configure: ${{ inputs.pull-before-configure == true }}
+
+  build-hawaii-jackrabbit-nvidia:
+    name: Build Hawaii Jackrabbit Nvidia Bootc Image
+    if: |
+      !failure() && !cancelled() &&
+      (github.event.inputs.skip-jackrabbit-nvidia == 'false' || !github.event.inputs.skip-jackrabbit-nvidia)
+    uses: ./.github/workflows/reusable-build-bootc.yml
+    needs: build-hawaii-jackrabbit
+    secrets: inherit
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
+    with:
+      image-name: "zirconium-hawaii-jackrabbit-nvidia"
+      element: "oci/jackrabbit-nvidia/image.bst"
       disable-remote-execution: ${{ inputs.disable-remote-execution == true }}
       publish: ${{ github.event_name != 'pull_request' && ( github.ref == format('refs/heads/stable', github.event.repository.default_branch) || github.ref == format('refs/heads/testing', github.event.repository.default_branch) ) }}
       pull-before-configure: ${{ inputs.pull-before-configure == true }}

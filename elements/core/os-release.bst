@@ -6,15 +6,15 @@ sources:
 - kind: local
   path: files/os-release
 
-depends:
-  - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
+build-depends:
+- freedesktop-sdk.bst:public-stacks/runtime-gnu.bst
 
 variables:
   strip-binaries: ""
 
 environment:
-  NAME: "Zirconium Hawaii"
-  CODENAME: "Hawaii"
+  NAME: "Zirconium"
+  CODENAME: "Antifachy"
   HOME_URL: "https://zirconium.gay"
   DOCUMENTATION_URL: "https://github.com/zirconium-dev/zirconium-hawaii"
   SUPPORT_URL: "https://github.com/zirconium-dev/zirconium-hawaii/issues"

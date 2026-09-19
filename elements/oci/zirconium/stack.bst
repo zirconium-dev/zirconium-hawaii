@@ -2,7 +2,7 @@ kind: stack
 
 depends:
   - stacks/zirconium.bst
-  - core/linux-fedora.bst
+  - core/linux.bst
   - core/initramfs.bst
 
 public:
@@ -32,6 +32,6 @@ public:
       - ln -s var/opt /opt
       - ln -s var/mnt /mnt
       - ln -s var/srv /srv
-      - ln -s ../../var/usrlocal usr/local
+      - ln -s ../var/usrlocal usr/local
 
       - echo 'uninitialized' > /etc/machine-id

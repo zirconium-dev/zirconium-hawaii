@@ -87,6 +87,8 @@ aliases:
   kde: https://invent.kde.org/
   steamos-gitlab: https://gitlab.steamos.cloud/
   sigrok: git://sigrok.org/
+  #Generic alias (we require aliased urls)
+  git_https: https://
 
   # docker aliases go here
   ghcr: https://ghcr.io/

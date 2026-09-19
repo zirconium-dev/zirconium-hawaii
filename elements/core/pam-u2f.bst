@@ -8,7 +8,7 @@ sources:
 
 build-depends:
 - freedesktop-sdk.bst:components/asciidoc.bst
-- freedesktop-sdk.bst:components/systemd-stage1.bst # Depends on udev
+- freedesktop-sdk.bst:components/_private/systemd-stage1.bst # Depends on udev
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst
 
 depends:

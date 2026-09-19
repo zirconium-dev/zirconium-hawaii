@@ -3,8 +3,8 @@ kind: meson
 sources:
 - kind: git_repo
   url: github:OpenGamingCollective/gamescope.git
-  track: ogc
-  ref: 3.16.19-173-g13e1dd1984f90c9f8e79ffdc98a8abfdc25455ca
+  track: '*.*.*-ogc*'
+  ref: 3.16.28-ogc3-0-gf337915858b3574bc790f2ac02f23827b21b78c6
 # meson subprojects
 - kind: git_repo
   directory: subprojects/glm
@@ -43,7 +43,6 @@ sources:
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-meson.bst
-- freedesktop-sdk.bst:components/gcc.bst
 - freedesktop-sdk.bst:components/git.bst
 - freedesktop-sdk.bst:components/cmake.bst
 - freedesktop-sdk.bst:components/patch.bst
@@ -54,7 +53,6 @@ build-depends:
 - deps/google-benchmark.bst
 
 depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:components/lcms.bst
 - freedesktop-sdk.bst:components/libavif.bst
 - freedesktop-sdk.bst:components/libcap.bst

@@ -1,0 +1,68 @@
+From 36c40aa22b83f7f54e5171850b9af6e20a65c289 Mon Sep 17 00:00:00 2001
+From: Hec <hec@heccraft.com>
+Date: Sat, 1 Aug 2026 12:23:11 -0400
+Subject: [PATCH 5/5] Revert "libdisplay-info: Update to 0.4.0-0"
+
+This reverts commit 74f1ecd065696603f8208a177e7719871abb6f5b.
+---
+ elements/components/libdisplay-info.bst       |  2 +-
+ elements/components/weston.bst                |  2 --
+ .../0001-Allow-libdisplay-info-0.4.0.patch    | 26 -------------------
+ 3 files changed, 1 insertion(+), 29 deletions(-)
+ delete mode 100644 patches/weston/0001-Allow-libdisplay-info-0.4.0.patch
+
+diff --git a/elements/components/libdisplay-info.bst b/elements/components/libdisplay-info.bst
+index 608cac757..6ed7759dc 100644
+--- a/elements/components/libdisplay-info.bst
++++ b/elements/components/libdisplay-info.bst
+@@ -19,4 +19,4 @@ sources:
+ - kind: git_repo
+   track: '*.*.*'
+   url: freedesktop:emersion/libdisplay-info.git
+-  ref: 0.4.0-0-gc67a3e9bedb05ab61c7443704a1a107e76254595
++  ref: 0.3.0-0-g47a5590e9c4eb35d67651b8c05a55f1a48259329
+diff --git a/elements/components/weston.bst b/elements/components/weston.bst
+index 913142b4a..b416e66b9 100644
+--- a/elements/components/weston.bst
++++ b/elements/components/weston.bst
+@@ -56,5 +56,3 @@ sources:
+   - '*.*.9[0-9]'
+   url: freedesktop:wayland/weston.git
+   ref: 16.0.0-0-gd1882b0a544ae2197b597a6e39478e719bc54302
+-- kind: patch
+-  path: patches/weston/0001-Allow-libdisplay-info-0.4.0.patch
+diff --git a/patches/weston/0001-Allow-libdisplay-info-0.4.0.patch b/patches/weston/0001-Allow-libdisplay-info-0.4.0.patch
+deleted file mode 100644
+index 865b730f1..000000000
+--- a/patches/weston/0001-Allow-libdisplay-info-0.4.0.patch
++++ /dev/null
+@@ -1,26 +0,0 @@
+-From 78b9d63a59b9bcc9d320441ee55c827b346fe58a Mon Sep 17 00:00:00 2001
+-From: Tom Pollard <tom.pollard@codethink.co.uk>
+-Date: Tue, 28 Jul 2026 10:51:27 +0100
+-Subject: [PATCH] Allow libdisplay-info 0.4.0
+-
+-Signed-off-by: Tom Pollard <tom.pollard@codethink.co.uk>
+----
+- meson.build | 2 +-
+- 1 file changed, 1 insertion(+), 1 deletion(-)
+-
+-diff --git a/meson.build b/meson.build
+-index 03f4d320..4814a815 100644
+---- a/meson.build
+-+++ b/meson.build
+-@@ -180,7 +180,7 @@ endif
+- 
+- dep_libdisplay_info = dependency(
+- 	'libdisplay-info',
+--	version: ['>= 0.2.0', '< 0.4.0'],
+-+	version: ['>= 0.2.0', '< 0.5.0'],
+- 	fallback: ['display-info', 'di_dep'],
+- 	default_options: [
+- 		'werror=false',
+--- 
+-2.53.0
+-
+-- 
+2.55.0
+

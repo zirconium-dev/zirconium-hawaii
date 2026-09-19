@@ -3,7 +3,7 @@ kind: make
 sources:
 - kind: tar
   url: github_files:AvengeMedia/danksearch/releases/download/v%{version}/dsearch-%{version}.tar.gz
-  ref: 0a7e0d68294683833901220ec0e2a600827a36adc72bc1763f3ea5b527c1d0e4
+  ref: 4e63abb6f352fd9a0d7846aeab8fa115b12eb90ed47d54c765070f6831f9707b
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-make.bst
@@ -13,7 +13,7 @@ depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 
 variables:
-  version: 0.3.2
+  version: 1.6.0
   make-args: >-
     build GOFLAGS="" BUILD_TIME=2011-11-10_15:00:00 VERSION=v%{version}
 

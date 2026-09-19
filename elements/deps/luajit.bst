@@ -4,12 +4,12 @@ sources:
 - kind: git_repo
   url: github:LuaJIT/LuaJIT.git
   track: v2.1
-  ref: 1ee778a4e37122d8ca7d5733c590a47dafd6b15c
+  ref: c6ffc141a8762b41703f9287d63d93622a13dd8f
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-make.bst
 
-depends:
+runtime-depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 
 variables:

@@ -6,8 +6,8 @@ sources:
   track: "*"
   ref: 1.5.0-0-g8c517a4c1b2fb9ed3fe43a95e1c5630cdecc4678
 
-depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
+build-depends:
+- freedesktop-sdk.bst:public-stacks/runtime-gnu.bst
 
 runtime-depends:
 - gamerslop/gamescope.bst

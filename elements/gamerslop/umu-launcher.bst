@@ -207,16 +207,13 @@ sources:
     sha: ced3678a2879b30306d323f4542626697a464a97c0a07c9aebf7ebca65cd4dde
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-make.bst
+- freedesktop-sdk.bst:public-stacks/buildsystem-python-hatchling.bst
 - freedesktop-sdk.bst:components/pkg-config.bst
-- freedesktop-sdk.bst:components/python3-build.bst
-- freedesktop-sdk.bst:components/python3-hatchling.bst
-- freedesktop-sdk.bst:components/python3-installer.bst
 - freedesktop-sdk.bst:components/python3-maturin.bst
 - freedesktop-sdk.bst:components/rust.bst
 - freedesktop-sdk.bst:components/scdoc.bst
 
 depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:bootstrap/libxcrypt.bst
 - freedesktop-sdk.bst:components/curl.bst
 - freedesktop-sdk.bst:components/dbus.bst
@@ -232,8 +229,6 @@ depends:
 - gnome-build-meta.bst:gnomeos-deps/python3-zstd.bst
 
 config:
-  build-commands:
+  configure-commands:
   - |
     ./configure.sh --prefix=/usr --use-system-pyzstd --use-system-urllib
-  - |
-    %{make}

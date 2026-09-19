@@ -16,7 +16,6 @@ build-depends:
 - freedesktop-sdk.bst:components/mesa-headers.bst
 
 depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - deps/qt6-qtbase.bst
 
 variables:

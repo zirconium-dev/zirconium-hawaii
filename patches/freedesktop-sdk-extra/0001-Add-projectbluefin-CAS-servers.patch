@@ -1,39 +1,42 @@
-From 5cc362ef088ecd1d33c9dc14af139207d88ee99b Mon Sep 17 00:00:00 2001
+From 3b8e0f9a6111e9d014e9bdb78923690fd8edf27a Mon Sep 17 00:00:00 2001
 From: Hec <hec@heccraft.com>
-Date: Mon, 24 Aug 2026 02:55:27 -0400
+Date: Sat, 5 Sep 2026 03:13:30 -0400
 Subject: [PATCH] Add projectbluefin CAS servers
 
 ---
- project.conf | 16 ++++++++++++++++
- 1 file changed, 16 insertions(+)
+ project.conf | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
 
 diff --git a/project.conf b/project.conf
-index f4d8148..0fb3447 100644
+index 39e274e..6667ad5 100644
 --- a/project.conf
 +++ b/project.conf
-@@ -7,6 +7,22 @@ min-version: 2.6
- # Subdirectory where elements are stored
- element-path: elements
+@@ -34,6 +34,12 @@ artifacts:
+     retry-limit: 4
+     retry-delay: 500
+     request-timeout: 300
++- url: https://cache.projectbluefin.io:11001
++  connection-config:
++    keepalive-time: 60
++    retry-limit: 5
++    retry-delay: 500
++    request-timeout: 180
  
-+artifacts:
+ source-caches:
+ - url: https://cache.freedesktop-sdk.io:11001
+@@ -42,6 +48,12 @@ source-caches:
+     retry-limit: 4
+     retry-delay: 500
+     request-timeout: 300
 +- url: https://cache.projectbluefin.io:11001
 +  connection-config:
 +    keepalive-time: 60
 +    retry-limit: 5
 +    retry-delay: 500
 +    request-timeout: 180
-+
-+source-caches:
-+- url: https://cache.projectbluefin.io:11001
-+  connection-config:
-+    keepalive-time: 60
-+    retry-limit: 5
-+    retry-delay: 500
-+    request-timeout: 180
-+
- (@):
-   - freedesktop-sdk.bst:include/runtime.yml
-   - include/shell.yml
+ 
+ sandbox:
+   build-arch: "%{arch}"
 -- 
 2.55.0
 

@@ -10,6 +10,7 @@ sources:
   ref: 0d9fd8d01460bd3707f6faf1cad367c196a2a26db47b639fa06b6d9be2068676
 
 build-depends:
+- freedesktop-sdk.bst:public-stacks/runtime-gnu.bst
 - freedesktop-sdk.bst:components/tar.bst
 - freedesktop-sdk.bst:components/zstd.bst
 

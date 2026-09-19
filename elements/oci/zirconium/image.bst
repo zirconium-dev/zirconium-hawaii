@@ -53,6 +53,10 @@ config:
       rm /layer/usr/bin/chsh
 
     - |
+      # pam_securetty breaks root login with kmscon
+      sed -i '/pam_securetty.so/d' /layer/etc/pam.d/* /layer/usr/lib/pam.d/*
+
+    - |
       glib-compile-schemas /layer/usr/share/glib-2.0/schemas
 
     - |

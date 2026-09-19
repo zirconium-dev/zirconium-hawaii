@@ -2,7 +2,9 @@ kind: stack
 
 # Basic functional system + cli utilities
 depends:
-  - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
+  - freedesktop-sdk.bst:public-stacks/runtime-gnu.bst
+  - freedesktop-sdk.bst:bootstrap/libselinux.bst
+  - freedesktop-sdk.bst:bootstrap/acl.bst
   - freedesktop-sdk.bst:components/util-linux-full.bst
   - freedesktop-sdk.bst:components/locales.bst
   - freedesktop-sdk.bst:components/linux-firmware.bst
@@ -57,7 +59,6 @@ depends:
   - freedesktop-sdk.bst:components/steam-devices.bst
   - freedesktop-sdk.bst:components/git-lfs.bst
   - freedesktop-sdk.bst:components/git.bst
-  - freedesktop-sdk.bst:components/unzip.bst
   - freedesktop-sdk.bst:components/rsync.bst
   - freedesktop-sdk.bst:components/jq.bst
   - freedesktop-sdk-extra.bst:components/smartmontools.bst
@@ -71,10 +72,11 @@ depends:
   - gnome-build-meta.bst:gnomeos-deps/toolbox.bst
   - gnome-build-meta.bst:gnomeos-deps/udev-hide-usr.bst
   - gnome-build-meta.bst:gnomeos-deps/zram-generator.bst
-  - gnome-build-meta.bst:gnomeos/reload-sysext.bst
 
   - cli/lsb-release.bst
+  - cli/lshw.bst
   - config/polkit/networkmanager-wheel-nopasswd.bst
   - config/sysctl.bst
   - config/systemd/zirconium.bst
+  - core/kmscon.bst
   - core/tuned.bst

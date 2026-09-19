@@ -242,13 +242,10 @@ sources:
     version: 1.0.23
     sha: 29666d0abbfad1e3dc4dcf6144730dd3a3ab225bbbdac83319345b1b44ccfc1b
 build-depends:
+- freedesktop-sdk.bst:public-stacks/buildsystem-rust.bst
 - freedesktop-sdk.bst:components/pkg-config.bst
-- freedesktop-sdk.bst:components/stripper.bst
-- freedesktop-sdk.bst:components/rust.bst
-- freedesktop-sdk.bst:components/gcc.bst
 
 depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:components/iio-sensor-proxy.bst
 - freedesktop-sdk.bst:components/dbus.bst
 

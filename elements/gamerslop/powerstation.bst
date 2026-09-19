@@ -803,7 +803,6 @@ build-depends:
 - freedesktop-sdk.bst:components/systemd.bst
 
 depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:components/dbus.bst
 - freedesktop-sdk.bst:components/zlib.bst
 

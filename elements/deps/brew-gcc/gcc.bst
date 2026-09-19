@@ -5,7 +5,7 @@
 kind: manual
 
 build-depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
+- freedesktop-sdk.bst:public-stacks/runtime-gnu.bst
 - freedesktop-sdk.bst:components/findutils.bst
 - freedesktop-sdk.bst:components/binutils.bst
 - filename: deps/brew-gcc/filter.bst

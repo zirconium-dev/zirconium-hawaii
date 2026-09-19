@@ -3,18 +3,18 @@ kind: make
 sources:
 - kind: tar
   url: github_files:AvengeMedia/dgop/releases/download/v%{version}/dgop-%{version}.tar.gz
-  ref: 97bc47b292bc7289e506fffbf239313328b4aaa283c54bc0d462c7651ef4e3fe
+  ref: 3d6db30092fa10334f497bb56f2a38f055295a60f86128471c043fd802ae8e38
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-make.bst
 - freedesktop-sdk.bst:components/go.bst
 
-depends:
+runtime-depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 
 variables:
-  version: 0.2.3
-  make-args: build BUILD_TIME=2011-11-10_15:00:00 VERSION=v%{version}
+  version: 1.6.0
+  make-args: build GOFLAGS="" BUILD_TIME=2011-11-10_15:00:00 VERSION=v%{version}
 
 config:
   install-commands:

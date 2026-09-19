@@ -3,13 +3,15 @@ kind: cmake
 sources:
 - kind: git_repo
   url: github:google/benchmark.git
-  track: v*
-  ref: v1.9.5-0-g192ef10025eb2c4cdd392bc502f0c852196baa48
+  # FIXME: track via version again
+  # Currently set to a specific commit that fixes compilation with gcc-16
+  # track: v*
+  ref: 8abf1e701fbd88c8170f48fe0558247e2e5f8e7d
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst
 
-depends:
+runtime-depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 
 variables:

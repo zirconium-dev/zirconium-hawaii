@@ -1,0 +1,85 @@
+kind: script
+
+build-depends:
+  - freedesktop-sdk.bst:components/fakecap.bst
+  - freedesktop-sdk.bst:components/oci-builder.bst
+  - freedesktop-sdk.bst:components/glib.bst
+  - freedesktop-sdk.bst:vm/prepare-image.bst
+  - oci/nvidia/init-scripts.bst
+  - filename: oci/nvidia/filesystem.bst
+    config:
+      location: /layer
+  - filename: oci/os-release.bst
+    config:
+      location: /layer
+
+environment:
+  LD_PRELOAD: /usr/libexec/fakecap/fakecap.so
+  FAKECAP_DB: /fakecap
+
+variables:
+  sysroot-seed: b57666f6-0fe5-4310-adff-f256936d164d
+
+config:
+  commands:
+    - mkdir /fakecap
+    - |
+      prepare-image.sh \
+         --sysroot /layer \
+         --initscripts /initial_scripts \
+         --seed "%{sysroot-seed}" \
+         --noroot --noboot >/dev/null
+
+    - |
+      systemd-sysusers --root /layer
+
+    - |
+      # We use our own issue in core/os-release.bst
+      rm /layer/usr/share/factory/etc/issue
+      cp /layer/etc/issue /layer/usr/share/factory/etc/issue
+
+    - |
+      # Start with en_US.UTF-8 instead of C.UTF-8
+      rm /layer/usr/share/factory/etc/locale.conf
+
+    - |
+      # Neither of these line up with anything in /etc
+      rm /layer/usr/share/factory/etc/pam.d/other
+      rm /layer/usr/share/factory/etc/pam.d/system-auth
+
+    - |
+      # A footgun.
+      # https://tim.siosm.fr/blog/2023/12/22/dont-change-defaut-login-shell/
+      rm /layer/usr/bin/chsh
+
+    - |
+      # pam_securetty breaks root login with kmscon
+      sed -i '/pam_securetty.so/d' /layer/etc/pam.d/* /layer/usr/lib/pam.d/*
+
+    - |
+      # Remove GDM service directories added by GNOME OS' Nvidia script
+      rm -rf /layer/usr/lib/systemd/system/gdm.service.wants
+      rm -rf /layer/usr/lib/systemd/system/gdm.service.d
+
+    - |
+      glib-compile-schemas /layer/usr/share/glib-2.0/schemas
+
+    - |
+      cd "%{install-root}"
+      build-oci <<EOF
+      mode: oci
+      gzip: gzip
+      images:
+      - os: linux
+        architecture: "%{go-arch}"
+        layer: /layer
+        comment: "Import Zirconium layer"
+        config:
+          Labels:
+            'com.github.containers.toolbox': 'true'
+            'org.opencontainers.image.source': 'https://github.com/zirconium-dev/zirconium-hawaii/'
+            'org.opencontainers.image.url': 'https://github.com/zirconium-dev/zirconium-hawaii/'
+            'containers.bootc': '1'
+        index-annotations:
+          'org.opencontainers.image.ref.name': 'localhost/zirconium-hawaii-input:latest'
+      EOF

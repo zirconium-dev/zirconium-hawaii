@@ -12,7 +12,6 @@ build-depends:
 - freedesktop-sdk.bst:components/systemd.bst
 - freedesktop-sdk.bst:components/python3.bst
 - freedesktop-sdk.bst:components/scdoc.bst
-- freedesktop-sdk.bst:components/gcc.bst
 - freedesktop-sdk.bst:components/wayland-protocols.bst
 - freedesktop-sdk.bst:components/sed.bst
 - deps/tllist.bst

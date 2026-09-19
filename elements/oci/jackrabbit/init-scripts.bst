@@ -1,7 +1,7 @@
 kind: collect_initial_scripts
 
 build-depends:
-  - stacks/jackrabbit.bst
+  - oci/jackrabbit/stack.bst
 
 config:
   path: /initial_scripts

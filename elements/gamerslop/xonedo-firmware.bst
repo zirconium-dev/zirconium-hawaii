@@ -23,11 +23,9 @@ sources:
   path: files/xonedo-firmware/ms-terms-of-use
 
 build-depends:
+- freedesktop-sdk.bst:public-stacks/runtime-gnu.bst
 - freedesktop-sdk.bst:components/bzip2.bst
 - freedesktop-sdk.bst:components/libarchive.bst
-
-depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 
 variables:
   license-files-extra: ms-terms-of-use

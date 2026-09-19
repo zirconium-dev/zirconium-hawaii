@@ -19,7 +19,6 @@ build-depends:
 - freedesktop-sdk.bst:components/mesa-headers.bst
 
 depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:components/cups.bst
 - freedesktop-sdk.bst:components/dbus.bst
 - freedesktop-sdk.bst:components/fontconfig.bst

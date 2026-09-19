@@ -5,7 +5,7 @@
 kind: filter
 
 build-depends:
-- freedesktop-sdk.bst:components/gcc-base.bst
+- freedesktop-sdk.bst:components/_private/gcc-base.bst
 
 config:
   exclude:

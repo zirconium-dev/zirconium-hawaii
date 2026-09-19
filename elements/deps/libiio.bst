@@ -18,7 +18,6 @@ build-depends:
 - freedesktop-sdk.bst:components/sed.bst
 
 depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:components/avahi.bst
 - freedesktop-sdk.bst:components/libaio.bst
 - freedesktop-sdk.bst:components/libusb.bst

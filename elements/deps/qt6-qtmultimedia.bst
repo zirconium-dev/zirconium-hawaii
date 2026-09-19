@@ -22,7 +22,6 @@ build-depends:
 - deps/qt6-qtdeclarative.bst
 
 depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:components/pipewire.bst
 - freedesktop-sdk.bst:components/zstd.bst
 - deps/qt6-qtbase.bst

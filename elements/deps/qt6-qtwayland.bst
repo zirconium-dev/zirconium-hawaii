@@ -18,7 +18,6 @@ build-depends:
 - freedesktop-sdk.bst:components/vulkan-headers.bst
 
 depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:components/wayland.bst
 - deps/qt6-qtbase.bst
 - deps/qt6-qtsvg.bst

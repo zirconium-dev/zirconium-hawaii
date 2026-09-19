@@ -6,15 +6,13 @@ sources:
   track: "*"
   exclude:
   - "*-rc*"
-  ref: v2.2.7-0-g4edf054c6bfddcc62174bbc453e26c73cfbe7bbf
+  ref: v3.0.1-0-gbbe30d7f7add0ea1ce29feb2af6ae1160ad20d01
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-autotools.bst
 - freedesktop-sdk.bst:components/pkg-config.bst
-- freedesktop-sdk.bst:components/gcc.bst
 
 depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:components/jansson.bst
 - freedesktop-sdk.bst:components/libdrm.bst
 - freedesktop-sdk.bst:components/libusb.bst

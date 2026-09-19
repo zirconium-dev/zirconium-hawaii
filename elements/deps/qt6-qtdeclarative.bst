@@ -18,7 +18,6 @@ build-depends:
 - deps/qt6-qtlanguageserver.bst
 
 depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:components/zlib.bst
 - deps/qt6-qtbase.bst
 - deps/qt6-qtshadertools.bst

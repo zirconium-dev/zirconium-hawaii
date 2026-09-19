@@ -7,12 +7,10 @@ sources:
   ref: 982cbcb019ae4d2bee5ae69385223409ee555c88
 
 build-depends:
+- freedesktop-sdk.bst:public-stacks/runtime-gnu.bst
 - freedesktop-sdk.bst:components/git.bst
 - freedesktop-sdk.bst:components/sed.bst
 - freedesktop-sdk.bst:components/stripper.bst
-
-depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 
 config:
   install-commands:

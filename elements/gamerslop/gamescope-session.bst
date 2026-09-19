@@ -1,14 +1,16 @@
 kind: manual
 
-depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
+build-depends:
+- freedesktop-sdk.bst:public-stacks/runtime-gnu.bst
+
+runtime-depends:
 - gamerslop/gamescope.bst
 
 sources:
 - kind: git_repo
   url: github:OpenGamingCollective/gamescope-session.git
   track: main
-  ref: 39c835136c242df16693431a55f1340280844e48
+  ref: 2f2715ce22cbcb0290f5ea82080796753a455b4b
 
 variables:
   strip-binaries: ""

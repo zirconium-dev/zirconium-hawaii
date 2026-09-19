@@ -16,10 +16,10 @@ depends:
 sources:
 - kind: git_repo
   url: github:Supreeeme/xwayland-satellite.git
-  # FIXME: enable track when upstream issue is fixed:
-  # https://github.com/Supreeeme/xwayland-satellite/issues/468
-  # track: v*
-  ref: v0.8.1-0-g536bd32efc935bf876d6de385ec18a1b715c9358
+  track: v*
+  ref: v0.8.2-0-g8d135d3b2854b30fd01ea6cd6c27e523dd50a839
+- kind: patch_queue
+  path: patches/xwayland-satellite
 - kind: cargo2
   ref:
   - kind: registry

@@ -3219,9 +3219,8 @@ sources:
     sha: 6d464f5733ffa07a3164d656f18533caace9d0638596721355d73256a410d691
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-meson.bst
-- freedesktop-sdk.bst:components/bpf.bst
+- freedesktop-sdk.bst:components/bpf-maybe.bst
 - freedesktop-sdk.bst:components/findutils.bst
-- freedesktop-sdk.bst:components/gcc.bst
 - freedesktop-sdk.bst:components/make.bst
 - freedesktop-sdk.bst:components/python3.bst
 - freedesktop-sdk.bst:components/rust.bst
@@ -3229,7 +3228,6 @@ build-depends:
 - freedesktop-sdk.bst:components/systemd.bst
 
 depends:
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:components/elfutils.bst
 - freedesktop-sdk.bst:components/jq.bst
 - freedesktop-sdk.bst:components/libseccomp.bst

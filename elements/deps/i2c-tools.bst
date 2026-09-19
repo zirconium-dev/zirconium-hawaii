@@ -9,13 +9,8 @@ sources:
   path: files/i2c-tools
 
 build-depends:
-- freedesktop-sdk.bst:components/make.bst
-- freedesktop-sdk.bst:components/gcc.bst
-- freedesktop-sdk.bst:components/stripper.bst
-- freedesktop-sdk.bst:components/python3-setuptools.bst
-- freedesktop-sdk.bst:components/python3-build.bst
-- freedesktop-sdk.bst:components/python3-installer.bst
-- freedesktop-sdk.bst:components/python3-wheel.bst
+- freedesktop-sdk.bst:public-stacks/buildsystem-make.bst
+- freedesktop-sdk.bst:public-stacks/buildsystem-python-setuptools.bst
 
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst

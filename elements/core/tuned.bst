@@ -9,6 +9,7 @@ sources:
   ref: v2.28.0-0-ga4907c9af9ea0a29f208b8f024465af16a7c9cbf
 
 build-depends:
+- freedesktop-sdk.bst:public-stacks/runtime-gnu.bst
 - freedesktop-sdk.bst:components/make.bst
 - freedesktop-sdk.bst:components/pkg-config.bst
 - freedesktop-sdk.bst:components/python3.bst
