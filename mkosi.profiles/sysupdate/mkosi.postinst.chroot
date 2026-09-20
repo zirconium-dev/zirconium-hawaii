@@ -7,9 +7,3 @@ for f in /initial_scripts/*; do
   $f /
 done
 rm -rf /initial_scripts
-
-# FIXME: use CONFEXT_LEVEL
-mkdir -p /usr/lib/confexts/factory
-cp --archive --no-target-directory --update=none "/etc" "/usr/lib/confexts/factory/etc"
-mkdir -p /usr/lib/confexts/factory/etc/extension-release.d
-printf 'ID=_any' > /usr/lib/confexts/factory/etc/extension-release.d/extension-release.factory

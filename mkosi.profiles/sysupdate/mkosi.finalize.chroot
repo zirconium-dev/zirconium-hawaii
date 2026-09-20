@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -xeuo pipefail
+
+mkdir -p /usr/lib/confexts/factory
+cp --archive --no-target-directory --update=none "/etc" "/usr/lib/confexts/factory/etc"
+mkdir -p /usr/lib/confexts/factory/etc/extension-release.d
+. /usr/lib/os-release
+cat > /usr/lib/confexts/factory/etc/extension-release.d/extension-release.factory <<EOF
+ID="${ID}"
+CONFEXT_LEVEL="${CONFEXT_LEVEL}"
+EOF
