@@ -43,6 +43,11 @@ config:
     rm %{install-root}/usr/bin/chsh
 
   - |
+    # Why does prepare-image.sh run systemd-firstboot?
+    rm %{install-root}/etc/localtime
+
+  - |
+    # Put stuff in /usr when we can
     cp -rlTP %{install-root}/etc/pam.d %{install-root}/usr/lib/pam.d
     rm -rf %{install-root}/etc/pam.d
 

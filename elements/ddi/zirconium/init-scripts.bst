@@ -4,4 +4,4 @@ build-depends:
   - ddi/zirconium/stack.bst
 
 config:
-  path: /etc/initial_scripts
+  path: /initial_scripts
