@@ -11,7 +11,7 @@ sources:
 - kind: git_repo
   url: github:OpenGamingCollective/gamescope-session-steam.git
   track: main
-  ref: 55e541aa3adb80ee751220c886b9d133504f6e20
+  ref: 82c45fc112775e3fa927d5c326c39b21f1761cc1
 
 variables:
   strip-binaries: ""

@@ -8,7 +8,7 @@ sources:
   - "*beta*"
   - "*rc*"
   - "*alpha*"
-  ref: 4.1.0-0-g52fe5a0339065aa5461075c53002b1534b590188
+  ref: 4.2.0-0-g17e7edf4d01bc43d0d550c5013d45659ac752cab
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-meson.bst

@@ -13,11 +13,11 @@ sources:
   - kind: git_repo
     url: github:AvengeMedia/dank-greeter.git
     track: master
-    ref: v1.6.2-3-gc792f1e13287fed01b1bf1a80654553019f3e0cb
+    ref: v1.6.2-4-g7a352d5fe57eba94e8729a7d56eae469fecd15c2
   - kind: git_module
     url: github:AvengeMedia/dank-qml-common
     path: dank-qml-common
-    ref: 55d3897192f47692b7961812d94ad18004fa0ad8
+    ref: 1d28494b71bf3f2f2822265df5b12aea8d51449f
   - kind: local
     path: files/dms-greeter
 
