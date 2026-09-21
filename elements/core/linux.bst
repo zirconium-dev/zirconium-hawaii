@@ -14,27 +14,15 @@ sources:
 - kind: remote_patch
   url: github_files:OpenGamingCollective/linux/releases/download/v%{ogc-patchset-version}/monolithic.patch
   ref: c6e3ba1663c9ac3877245fabcb0befd860912a881af4d4f786d17be7f3436772
-- kind: git_repo
-  directory: ogc-kernel-packages
-  url: github:OpenGamingCollective/kernel-packages.git
-  track: "v*-ogc*"
-  exclude:
-  - "*-rc*"
-  ref: v7.2.4-ogc3-0-g77a6bd4369a4f1d61872a31ff1c56ebdd01e1bc9
-  # FIXME: eventually use our own config instead of pulling Fedora's config
-- kind: remote
-  (?):
-  - arch == "aarch64":
-      url: kojipkgs-fedora:packages/kernel/%{fedora-version}/%{fedora-pkgrelease}/aarch64/kernel-core-%{fedora-version}-%{fedora-pkgrelease}.aarch64.rpm
-      ref: 07e50292ac198179f5a2d4eff4817cf3a2578c7b56bfca11303865f36f9d6e1b
-  - arch == "x86_64":
-      url: kojipkgs-fedora:packages/kernel/%{fedora-version}/%{fedora-pkgrelease}/x86_64/kernel-core-%{fedora-version}-%{fedora-pkgrelease}.x86_64.rpm
-      ref: c58f7934d2e001c5d1d41f3c4277c7ac1a806cb61982cdf7cd6e07074867db50
-  filename: fedora-kernel.rpm
+# Needed for the ogc patchset to compile with fdsdk's config
+- kind: patch
+  path: patches/linux/remove-DEVICE_ATTR-macros-in-ayn-ec.c.patch
 - kind: local
   path: files/linux/config-utils.sh
 - kind: local
-  path: files/linux/fedora-config.sh
+  path: files/linux/fdsdk-config.sh
+- kind: local
+  path: files/linux/zirc-config.sh
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-make.bst
@@ -57,6 +45,7 @@ build-depends:
 
 variables:
   ogc-patchset-version: 7.2.4-ogc3
+  extra-version: '-ogc.zirc-edge'
   bootdir: /boot
   kernel_arch: '%{arch}'
   src-arch: '%{kernel_arch}'
@@ -90,28 +79,38 @@ environment-nocache:
 config:
   configure-commands:
   - |
-    # put the variables that we need to unset into a file usable by fdSDK's config-utils.sh
-    for f in $(grep -Evh "^[[:blank:]]*#|^[[:blank:]]*$" ogc-kernel-packages/config/{ogc,fedora}.config.unset); do
-      echo remove $f >> ogc-config.sh
-    done
+    echo '%{extra-version}' > localversion.10-zirconium
 
+  # Generate the default kernel config for the target architecture
   - |
-    # get fedora's config set
-    bsdtar --to-stdout -xvf fedora-kernel.rpm 'lib/modules/*/config' > .config
-
-  - |
-    # merge Fedora's default config with ogc's config set
-    for f in ogc fedora; do
-      scripts/kconfig/merge_config.sh .config ogc-kernel-packages/config/${f}.config.set
-    done
+    make defconfig
 
   - |
     . ./config-utils.sh
-    . ./ogc-config.sh
-    . ./fedora-config.sh
+    rm -f expected-configs
+    . ./fdsdk-config.sh "%{arch}"
+    . ./zirc-config.sh "%{arch}"
 
   - |
     make -j1 olddefconfig
+
+  # Fail if any configs are missing
+  - |
+    . ./config-utils.sh
+
+    missing_configs=0
+    for config in $(cat expected-configs); do
+      if ! has "${config}"; then
+        echo "Missing ${config}" 1>&2
+        missing_configs=1
+      fi
+    done
+    # Only fail for...
+    case "%{arch}" in
+      x86_64|aarch64)
+        [ "${missing_configs}" = 0 ]
+      ;;
+    esac
 
   install-commands:
   - |
