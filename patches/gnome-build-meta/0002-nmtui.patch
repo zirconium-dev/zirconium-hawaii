@@ -1,0 +1,32 @@
+From e27a534c6e4b9faaefd5ea23b5158e34c1889847 Mon Sep 17 00:00:00 2001
+From: Hec <hec@heccraft.com>
+Date: Mon, 21 Sep 2026 14:19:03 -0400
+Subject: [PATCH] nmtui
+
+---
+ elements/core-deps/NetworkManager.bst | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/elements/core-deps/NetworkManager.bst b/elements/core-deps/NetworkManager.bst
+index 129c9bfa5..e9b627c0d 100644
+--- a/elements/core-deps/NetworkManager.bst
++++ b/elements/core-deps/NetworkManager.bst
+@@ -36,6 +36,7 @@ depends:
+ - freedesktop-sdk.bst:components/libnvme.bst
+ - freedesktop-sdk.bst:components/libpsl.bst
+ - freedesktop-sdk.bst:components/modemmanager.bst
++- freedesktop-sdk.bst:components/newt.bst
+ - freedesktop-sdk.bst:components/nss.bst
+ - freedesktop-sdk.bst:components/polkit.bst
+ - freedesktop-sdk.bst:components/systemd-libs.bst
+@@ -56,7 +57,6 @@ variables:
+     -Ddocs=true
+     -Dtests=no
+     -Dlibaudit=no
+-    -Dnmtui=false
+     -Dselinux=false
+     -Dqt=false
+     -Dovs=false
+-- 
+2.55.0
+

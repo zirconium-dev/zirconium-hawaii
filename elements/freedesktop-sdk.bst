@@ -72,4 +72,5 @@ config:
     components/linux.bst: core/linux.bst
 
     components/bash-config.bst: config/bash-config.bst
+    components/networkmanager.bst: gnome-build-meta.bst:core-deps/NetworkManager.bst
     components/sudo.bst: cli/sudo-rs.bst
