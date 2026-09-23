@@ -5,6 +5,7 @@ sources:
   url: github:analogdevicesinc/libiio.git
   track: v*
   exclude:
+  - "v1.*"
   - "*-rc*"
   ref: v0.26-0-ga0eca0d2bf10326506fb762f0eec14255b27bef5
 
