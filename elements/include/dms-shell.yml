@@ -370,10 +370,10 @@ sources:
   kind: zip
   url: golang-proxy:golang.zx2c4.com/wireguard/windows/@v/v1.0.1.zip
 - directory: core/vendor/github.com/AvengeMedia/dankgo
-  ref: fd2badf006d24e5c16cc90ea02616ccfc05fe3dd3e2d020ad2eb838a736cb69e
+  ref: 4b360e125a210d73f9bc1d76ab56e448f2421fba7e47bbb6071e0abaec4c0586
   base-dir: "*/*/*"
   kind: zip
-  url: golang-proxy:github.com/!avenge!media/dankgo/@v/v1.6.3-0.20260918210430-d03946da44cd.zip
+  url: golang-proxy:github.com/!avenge!media/dankgo/@v/v1.6.3-0.20260922103155-c6cc9c3c32ba.zip
 - directory: core/vendor/github.com/atotto/clipboard
   ref: d67b2c36c662751309fd2ec351df3651584bea840bd27be9a90702c3a238b43f
   base-dir: "*/*/*"

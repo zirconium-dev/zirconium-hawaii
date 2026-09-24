@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: github:niri-wm/niri.git
   track: main
-  ref: v26.04-149-g8be4c6df68ddef2afd4ccdde7f27dbc782c30603
+  ref: v26.04-153-g5f4469b6a992492cf7221b269e9379f42e737649
 - kind: cargo2
   ref:
   - kind: registry
@@ -180,10 +180,6 @@ sources:
     version: 2.13.2
     sha: 3ded4057c258ba199e2d26386d3af3780957ecaee6c4ef4041c6b4b8b97c0b06
   - kind: registry
-    name: block-buffer
-    version: 0.10.4
-    sha: 3078c7629b62d3f0439517fa394996acacc5cbc91c5a20d8c658e77abd503a71
-  - kind: registry
     name: block2
     version: 0.6.2
     sha: cdeb9d870516001442e364c5220d3574d2da8dc765554b4a617230d33fa58ef5
@@ -305,10 +301,6 @@ sources:
     sha: 9885fa71e26b8ab7855e2ec7cae6e9b380edff76cd052e07c683a0319d51b3a2
   - kind: registry
     name: cpufeatures
-    version: 0.2.17
-    sha: 59ed5838eebb26a2bb2e58f6d5b5316989ae9d08bab10e0e6d103e656d1b0280
-  - kind: registry
-    name: cpufeatures
     version: 0.3.1
     sha: 5ca28b0ae3115b884660db4118d803791fd6756b6e88f39c0f3f7859060d7566
   - kind: registry
@@ -328,10 +320,6 @@ sources:
     version: 0.8.23
     sha: a31eee39dddec8330830986fcd7625edb5a24ec90ea038215273bbc3adb08ac6
   - kind: registry
-    name: crypto-common
-    version: 0.1.7
-    sha: 78c8292055d1c1df0cce5d180393dc8cce0abec0a7102adb6c7b1eef6016d60a
-  - kind: registry
     name: csscolorparser
     version: 0.8.4
     sha: 168dbdf4dced8f57fa4246ac9080598452b49d70bb2d0e46422142f113140dd8
@@ -343,10 +331,6 @@ sources:
     name: diff
     version: 0.1.13
     sha: 56254986775e3233ffa9c4d7d3faaf6d36a2c09d30b20687e9f88bc8bafc16c8
-  - kind: registry
-    name: digest
-    version: 0.10.7
-    sha: 9ed9a281f7bc9b7576e61468ba615a66a5c8cfdff42420a70aa82701a3b1e292
   - kind: registry
     name: directories
     version: 6.0.0
@@ -523,10 +507,6 @@ sources:
     name: generator
     version: 0.8.9
     sha: b3b854b0e584ead1a33f18b2fcad7cf7be18b3875c78816b753639aa501513ae
-  - kind: registry
-    name: generic-array
-    version: 0.14.7
-    sha: 85649ca51fd72272d7821adaf274ad91c288277713d9c18820d8499a7ff69e9a
   - kind: registry
     name: gethostname
     version: 1.1.0
@@ -1312,10 +1292,6 @@ sources:
     version: 1.1.1
     sha: 6662b5879511e06e8999a8a235d848113e942c9124f211511b16466ee2995f26
   - kind: registry
-    name: sha2
-    version: 0.10.9
-    sha: a7507d819769d01a365ab707794a4084392c824f54a7a6a7862f8c3d0892b283
-  - kind: registry
     name: sharded-slab
     version: 0.1.7
     sha: f40ca3c46823713e0d4209592e8d6e826aa57e928f09752619fc696c499637f6
@@ -1364,10 +1340,10 @@ sources:
     version: 0.3.3
     sha: e8e2fb0f499abb4d162f2bedad68f5ef91a1682b5a03596ddb67efd37768d100
   - kind: git
-    commit: 22571baa20d34d71092942dbb520c4e3fbbd6263
+    commit: 79bbed5e1199090d787115614847a79c76607181
     repo: github:Smithay/smithay.git
     query:
-      rev: 22571baa20d34d71092942dbb520c4e3fbbd6263
+      rev: 79bbed5e1199090d787115614847a79c76607181
     name: smithay
     version: 0.7.0
   - kind: registry
@@ -1375,10 +1351,10 @@ sources:
     version: 0.21.1
     sha: 74dc9ee14b0fdcb535f9556141bacac070c994a977d2240ee455d7438a617f00
   - kind: git
-    commit: 22571baa20d34d71092942dbb520c4e3fbbd6263
+    commit: 79bbed5e1199090d787115614847a79c76607181
     repo: github:Smithay/smithay.git
     query:
-      rev: 22571baa20d34d71092942dbb520c4e3fbbd6263
+      rev: 79bbed5e1199090d787115614847a79c76607181
     name: smithay-drm-extras
     version: 0.1.0
   - kind: registry
@@ -1517,10 +1493,6 @@ sources:
     name: tracy-client-sys
     version: 0.29.0
     sha: ab27f167b093214c68413a2e0bcd318f0591af475597405ff68138ba0a433379
-  - kind: registry
-    name: typenum
-    version: 1.20.1
-    sha: b6f5e870be6c3b371b77fe0ee0bafb859fa4964b4404c27de1d380043c4dda20
   - kind: registry
     name: udev
     version: 0.9.3

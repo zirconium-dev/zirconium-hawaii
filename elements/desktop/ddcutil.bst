@@ -6,7 +6,7 @@ sources:
   track: "*"
   exclude:
   - "*-rc*"
-  ref: v3.0.1-0-gbbe30d7f7add0ea1ce29feb2af6ae1160ad20d01
+  ref: v3.0.2-0-g5085ae9bb1a8e5bd8db717d80dd80a279a0f05fb
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-autotools.bst
