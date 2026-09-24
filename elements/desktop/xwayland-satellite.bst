@@ -17,9 +17,7 @@ sources:
 - kind: git_repo
   url: github:Supreeeme/xwayland-satellite.git
   track: v*
-  ref: v0.8.2-0-g8d135d3b2854b30fd01ea6cd6c27e523dd50a839
-- kind: patch_queue
-  path: patches/xwayland-satellite
+  ref: v0.8.3-0-gb83eab900644e4c7c77982ce3d44cb490f0c5e1d
 - kind: cargo2
   ref:
   - kind: registry
@@ -206,6 +204,10 @@ sources:
     name: hermit-abi
     version: 0.5.2
     sha: fc0fef456e4baa96da950455cd02c081ca953b141298e41db3fc7e36b1da849c
+  - kind: registry
+    name: hostname
+    version: 0.4.2
+    sha: 617aaa3557aef3810a6369d0a99fac8a080891b68bd9f9812a1eeda0c0730cbd
   - kind: registry
     name: humantime
     version: 2.3.0
@@ -402,6 +404,10 @@ sources:
     name: syn
     version: 2.0.111
     sha: 390cc9a294ab71bdb1aa2e99d13be9c753cd2d7bd6560c77118597410c4d2e87
+  - kind: registry
+    name: syslog
+    version: 7.0.0
+    sha: 019f1500a13379b7d051455df397c75770de6311a7a188a699499502704d9f10
   - kind: registry
     name: termcolor
     version: 1.4.1
