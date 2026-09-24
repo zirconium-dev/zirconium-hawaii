@@ -8,21 +8,21 @@ sources:
   directory: unused
   url: github:charmbracelet/gum.git
   track: v*
-  ref: v2.0.1-0-g7179388031ae67d7f538d001be87d931f1cf5e28
+  ref: v2.0.2-0-g879f048103adf0214b85943b52d8d65b08d772c5
 - kind: tar
   (?):
   - arch == "aarch64":
       url: github_files:charmbracelet/gum/releases/download/v%{version}/gum_%{version}_Linux_arm64.tar.gz
-      ref: 6998202a8fea27bb2007f69e44ec5dcb4cff5268c62d995de857eee0e2cd52cb
+      ref: 8ebf8b54ec1e8c81f2bb58b59ff9b70998186a4d11375f0cf357b80e0ccfa1d5
   - arch == "x86_64":
       url: github_files:charmbracelet/gum/releases/download/v%{version}/gum_%{version}_Linux_x86_64.tar.gz
-      ref: 4dfe4547f960813864c803b3617aa64427fa32ca566707fde949e08975297c48
+      ref: d842e06d93dbed90af48cb8dd10698db6f22e331fc40346bb37bbc753109edc2
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/runtime-gnu.bst
 
 variables:
-  version: 2.0.1
+  version: 2.0.2
   strip-binaries: ""
   license-files: LICENSE
 

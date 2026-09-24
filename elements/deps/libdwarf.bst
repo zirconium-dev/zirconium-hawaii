@@ -9,7 +9,7 @@ sources:
 - kind: git_repo
   url: github:davea42/libdwarf-code
   track: v*
-  ref: v2.3.2-0-gaf7b278c6aa2ae9daad94fb7f8bffdc0e9980993
+  ref: v2.3.3-0-g1c267616a4c8dc46b3380f0be4296ff8767bdfbb
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-meson.bst
