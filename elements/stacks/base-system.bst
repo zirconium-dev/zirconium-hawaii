@@ -24,8 +24,6 @@ depends:
   - freedesktop-sdk.bst:components/openssh-systemd.bst
   - freedesktop-sdk.bst:components/fwupd.bst
   - freedesktop-sdk.bst:vm/base-filesystem.bst
-  - freedesktop-sdk.bst:vm/config/networkd.bst
-  - freedesktop-sdk.bst:vm/config/resolved.bst
   - freedesktop-sdk.bst:vm/config/systemd-homed-firstboot.bst
   - freedesktop-sdk.bst:vm/config/sudo.bst
   - freedesktop-sdk.bst:components/wpa-supplicant.bst
