@@ -14,8 +14,7 @@ depends:
   - core/xdg-utils.bst
   - desktop/iio-niri.bst
   - desktop/xdg-terminal-exec.bst
-  - config/satty.bst
-  - config/default-icons/adwaita.bst
+  - config/default-icons.bst
   - config/ld-config.bst
   - config/plymouth.bst
   - desktop/input-remapper.bst
@@ -44,7 +43,6 @@ depends:
   - gnome-build-meta.bst:core/gvfs-daemon.bst
   - gnome-build-meta.bst:sdk/gvfs-client.bst
   - gnome-build-meta.bst:sdk/pinentry.bst
-
   - freedesktop-sdk.bst:components/noto-cjk.bst
   - freedesktop-sdk.bst:components/noto-emoji.bst
   - freedesktop-sdk.bst:components/noto-fonts.bst

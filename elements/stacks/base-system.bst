@@ -77,8 +77,8 @@ depends:
 
   - cli/lsb-release.bst
   - cli/lshw.bst
-  - config/polkit/networkmanager-wheel-nopasswd.bst
+  - config/polkit/networkmanager.bst
   - config/sysctl.bst
-  - config/systemd/zirconium.bst
+  - config/systemd-presets.bst
   - core/kmscon.bst
   - core/tuned.bst

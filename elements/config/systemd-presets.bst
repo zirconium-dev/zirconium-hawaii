@@ -2,8 +2,8 @@ kind: import
 
 sources:
 - kind: local
-  path: files/gamerslop-config
+  path: files/systemd-presets
 
 config:
   source: /
-  target: /
+  target: /usr/lib/systemd
