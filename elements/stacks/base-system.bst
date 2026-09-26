@@ -78,5 +78,6 @@ depends:
   - config/polkit/networkmanager.bst
   - config/sysctl.bst
   - config/systemd-presets.bst
+  - config/zram.bst
   - core/kmscon.bst
   - core/tuned.bst
