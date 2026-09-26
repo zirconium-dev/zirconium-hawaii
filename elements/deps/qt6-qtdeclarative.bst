@@ -15,6 +15,7 @@ build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst
 - freedesktop-sdk.bst:components/vulkan-headers.bst
 - freedesktop-sdk.bst:components/mesa-headers.bst
+- freedesktop-sdk.bst:components/python3.bst
 - deps/qt6-qtlanguageserver.bst
 
 depends:

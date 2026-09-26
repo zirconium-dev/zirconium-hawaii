@@ -1,0 +1,53 @@
+From 410302a4f58f99f3e0472a9eee087fffc53cc1b2 Mon Sep 17 00:00:00 2001
+From: Hec <hec@heccraft.com>
+Date: Sat, 26 Sep 2026 23:14:50 -0400
+Subject: [PATCH] Fix deps
+
+This is needed since we're overriding a lot of GNOME elements with FDSDK
+elements, and the runtime dependencies of a few of them (e.g glib) are
+different.
+---
+ elements/core-deps/gnome-online-accounts.bst | 1 +
+ elements/core-deps/graphviz.bst              | 1 +
+ elements/core-deps/librest.bst               | 1 +
+ 3 files changed, 3 insertions(+)
+
+diff --git a/elements/core-deps/gnome-online-accounts.bst b/elements/core-deps/gnome-online-accounts.bst
+index af664d89c..e58d54008 100644
+--- a/elements/core-deps/gnome-online-accounts.bst
++++ b/elements/core-deps/gnome-online-accounts.bst
+@@ -14,6 +14,7 @@ build-depends:
+ - sdk/vala.bst
+ - freedesktop-sdk.bst:components/docbook-xsl.bst
+ - freedesktop-sdk.bst:components/libxslt.bst
++- freedesktop-sdk.bst:components/krb5.bst
+ 
+ depends:
+ - core-deps/librest.bst
+diff --git a/elements/core-deps/graphviz.bst b/elements/core-deps/graphviz.bst
+index 9469acafd..501ad8275 100644
+--- a/elements/core-deps/graphviz.bst
++++ b/elements/core-deps/graphviz.bst
+@@ -24,6 +24,7 @@ depends:
+ - freedesktop-sdk.bst:components/jpeg.bst
+ - freedesktop-sdk.bst:components/libpng.bst
+ - freedesktop-sdk.bst:components/libtool.bst
++- freedesktop-sdk.bst:components/python3.bst
+ 
+ variables:
+   conf-local: >-
+diff --git a/elements/core-deps/librest.bst b/elements/core-deps/librest.bst
+index e3fd02a1f..82e3e04a4 100644
+--- a/elements/core-deps/librest.bst
++++ b/elements/core-deps/librest.bst
+@@ -11,6 +11,7 @@ build-depends:
+ - buildsystems/meson.bst
+ - sdk/gi-docgen.bst
+ - sdk/gobject-introspection.bst
++- sdk/sysprof-minimal.bst
+ 
+ depends:
+ - sdk/glib.bst
+-- 
+2.55.0
+
