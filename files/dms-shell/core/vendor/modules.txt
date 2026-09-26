@@ -2,7 +2,7 @@
 ## explicit; go 1.24.0
 filippo.io/edwards25519
 filippo.io/edwards25519/field
-# github.com/AvengeMedia/dankgo v1.6.3-0.20260923232838-611ba62fa30d
+# github.com/AvengeMedia/dankgo v1.6.3-0.20260926012208-454c05c31c29
 ## explicit; go 1.26.0
 github.com/AvengeMedia/dankgo/boottimer
 github.com/AvengeMedia/dankgo/dbusutil
@@ -13,6 +13,14 @@ github.com/AvengeMedia/dankgo/ipc
 github.com/AvengeMedia/dankgo/ipc/params
 github.com/AvengeMedia/dankgo/log
 github.com/AvengeMedia/dankgo/lyrics
+github.com/AvengeMedia/dankgo/material/color
+github.com/AvengeMedia/dankgo/material/contrast
+github.com/AvengeMedia/dankgo/material/dislike
+github.com/AvengeMedia/dankgo/material/dynamic
+github.com/AvengeMedia/dankgo/material/num
+github.com/AvengeMedia/dankgo/material/palettes
+github.com/AvengeMedia/dankgo/material/quantizer
+github.com/AvengeMedia/dankgo/material/temperature
 github.com/AvengeMedia/dankgo/paths
 github.com/AvengeMedia/dankgo/shellapp
 github.com/AvengeMedia/dankgo/shellapp/shellfs
@@ -33,16 +41,6 @@ github.com/Microsoft/go-winio/internal/fs
 github.com/Microsoft/go-winio/internal/socket
 github.com/Microsoft/go-winio/internal/stringbuffer
 github.com/Microsoft/go-winio/pkg/guid
-# github.com/Nadim147c/material/v3 v3.1.1
-## explicit; go 1.24
-github.com/Nadim147c/material/v3/color
-github.com/Nadim147c/material/v3/contrast
-github.com/Nadim147c/material/v3/dislike
-github.com/Nadim147c/material/v3/dynamic
-github.com/Nadim147c/material/v3/num
-github.com/Nadim147c/material/v3/palettes
-github.com/Nadim147c/material/v3/quantizer
-github.com/Nadim147c/material/v3/temperature
 # github.com/ProtonMail/go-crypto v1.4.1
 ## explicit; go 1.23.0
 github.com/ProtonMail/go-crypto/bitcurves

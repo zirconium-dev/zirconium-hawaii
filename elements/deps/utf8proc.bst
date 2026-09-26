@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: github:JuliaStrings/utf8proc.git
   track: v*
-  ref: v2.11.3-0-ge5e799221b45bbb90f5fdc5c69b6b8dfbf017e78
+  ref: v2.12.0-0-g79cdd5ab40c79afa559f689ffc13b76812dee1ac
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst
