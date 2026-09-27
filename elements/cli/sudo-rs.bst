@@ -37,9 +37,15 @@ public:
       chmod 0600 "${sysroot}%{sysconfdir}/sudoers.d"/*
       chmod 4755 "${sysroot}%{bindir}/sudo"
 
+environment:
+  MAXJOBS: '%{max-jobs}'
+
+environment-nocache:
+- MAXJOBS
+
 config:
   build-commands:
-  - cargo build --release --features default --frozen --offline
+  - cargo build --release --features default --frozen --offline --jobs "${MAXJOBS}"
 
   install-commands:
   - |

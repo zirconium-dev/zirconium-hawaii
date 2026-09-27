@@ -1537,9 +1537,15 @@ build-depends:
 runtime-depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 
+environment:
+  MAXJOBS: '%{max-jobs}'
+
+environment-nocache:
+- MAXJOBS
+
 config:
   build-commands:
-  - cargo build --release --all-features --frozen --offline
+  - cargo build --release --all-features --frozen --offline --jobs "${MAXJOBS}"
 
   install-commands:
   - |

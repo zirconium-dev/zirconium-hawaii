@@ -1158,9 +1158,15 @@ build-depends:
 depends:
 - freedesktop-sdk.bst:components/polkit.bst
 
+environment:
+  MAXJOBS: '%{max-jobs}'
+
+environment-nocache:
+- MAXJOBS
+
 config:
   build-commands:
-  - cargo build --release --all-features --frozen --offline --workspace
+  - cargo build --release --all-features --frozen --offline --workspace --jobs "${MAXJOBS}"
 
   install-commands:
   - |

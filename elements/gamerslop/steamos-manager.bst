@@ -875,9 +875,15 @@ depends:
 - freedesktop-sdk.bst:components/systemd.bst
 - gnome-build-meta.bst:core-deps/speech-dispatcher.bst
 
+environment:
+  MAXJOBS: '%{max-jobs}'
+
+environment-nocache:
+- MAXJOBS
+
 config:
   build-commands:
-  - cargo build --release --frozen --offline
+  - cargo build --release --frozen --offline --jobs "${MAXJOBS}"
 
   install-commands:
   - |

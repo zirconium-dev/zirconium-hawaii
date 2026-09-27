@@ -259,9 +259,15 @@ build-depends:
 depends:
 - freedesktop-sdk.bst:components/linux-pam.bst
 
+environment:
+  MAXJOBS: '%{max-jobs}'
+
+environment-nocache:
+- MAXJOBS
+
 config:
   build-commands:
-  - cargo build --release --all-features --frozen --offline
+  - cargo build --release --all-features --frozen --offline --jobs "${MAXJOBS}"
   - make -C man all
 
   install-commands:

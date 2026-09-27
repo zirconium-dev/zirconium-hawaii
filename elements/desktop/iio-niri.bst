@@ -249,9 +249,15 @@ depends:
 - freedesktop-sdk.bst:components/iio-sensor-proxy.bst
 - freedesktop-sdk.bst:components/dbus.bst
 
+environment:
+  MAXJOBS: '%{max-jobs}'
+
+environment-nocache:
+- MAXJOBS
+
 config:
   build-commands:
-  - cargo build --release --all-features --frozen --offline
+  - cargo build --release --all-features --frozen --offline --jobs "${MAXJOBS}"
 
   install-commands:
   - |

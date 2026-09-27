@@ -546,9 +546,15 @@ depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - cli/fastfetch.bst
 
+environment:
+  MAXJOBS: '%{max-jobs}'
+
+environment-nocache:
+- MAXJOBS
+
 config:
   build-commands:
-  - cargo build --release --features default --frozen --offline
+  - cargo build --release --features default --frozen --offline --jobs "${MAXJOBS}"
 
   install-commands:
   - |

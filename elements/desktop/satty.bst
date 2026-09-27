@@ -863,9 +863,15 @@ depends:
 - gnome-build-meta.bst:sdk/gtk.bst
 - gnome-build-meta.bst:sdk/libadwaita.bst
 
+environment:
+  MAXJOBS: '%{max-jobs}'
+
+environment-nocache:
+- MAXJOBS
+
 config:
   build-commands:
-  - cargo build --release --all-features --frozen --offline
+  - cargo build --release --all-features --frozen --offline --jobs "${MAXJOBS}"
 
   install-commands:
   - |
