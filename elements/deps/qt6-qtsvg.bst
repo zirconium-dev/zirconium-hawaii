@@ -3,7 +3,7 @@ kind: cmake
 sources:
 - kind: git_repo
   url: qt:qtsvg.git
-  track: v6.*.*
+  # track: v6.*.*
   exclude:
   - "*-beta*"
   - "*-rc*"
