@@ -1,22 +1,35 @@
 kind: make
 
 sources:
-- kind: tar
-  url: github_files:AvengeMedia/dgop/releases/download/v%{version}/dgop-%{version}.tar.gz
-  ref: 3d6db30092fa10334f497bb56f2a38f055295a60f86128471c043fd802ae8e38
+- kind: git_repo
+  directory: dgop_git
+  url: github:AvengeMedia/dgop.git
+  track: 'v*.*.*'
+  ref: v1.6.2-0-g56a43ff5b8c6b14c5a7c190a69eec43f2297d76b
+- kind: anitya
+  project-id: 388379
+  url: github_files:AvengeMedia/dgop/releases/download/v{version}/dgop-{version}.tar.gz
+  ref:
+    version: 1.6.2
+    sha256sum: 45571e79799dc4d583e04cc2ff1051c2ccba501daeed378dec29b3ddda4e42a2
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-make.bst
+- freedesktop-sdk.bst:components/git.bst
 - freedesktop-sdk.bst:components/go.bst
 
 runtime-depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 
 variables:
-  version: 1.6.0
-  make-args: build GOFLAGS="" BUILD_TIME=2011-11-10_15:00:00 VERSION=v%{version}
+  make-args: build GOFLAGS="" BUILD_TIME=2011-11-10_15:00:00
 
 config:
+  configure-commands:
+  # This is a hack to get dgop to show the version information for us; we still want the important stuff from the tarball
+  # but we only want the .git file from the git repo
+  - mv dgop_git/.git .
+  - rm -rf dgop_git
   install-commands:
   - |
     mkdir -p %{install-root}%{bash-completions-dir} \

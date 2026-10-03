@@ -1,9 +1,12 @@
 kind: make
 
 sources:
-- kind: tar
-  url: sourceforge:sourceforge/hdparm/hdparm-9.65.tar.gz
-  ref: d14929f910d060932e717e9382425d47c2e7144235a53713d55a94f7de535a4b
+- kind: anitya
+  project-id: 1304
+  url: sourceforge:sourceforge/hdparm/hdparm-{version}.tar.gz
+  ref:
+    version: 9.65
+    sha256sum: d14929f910d060932e717e9382425d47c2e7144235a53713d55a94f7de535a4b
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-make.bst

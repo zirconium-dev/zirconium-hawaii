@@ -1,9 +1,12 @@
 kind: make
 
 sources:
-- kind: tar
-  url: xorg-freedesktop:releases/individual/lib/libXres-1.2.3.tar.xz
-  ref: d2de8f5401d6c86a8992791654547eb8def585dfdc0c08cc16e24ef6aeeb69dc
+- kind: anitya
+  project-id: 1790
+  url: xorg-freedesktop:releases/individual/lib/libXres-{version}.tar.xz
+  ref:
+    version: 1.2.3
+    sha256sum: d2de8f5401d6c86a8992791654547eb8def585dfdc0c08cc16e24ef6aeeb69dc
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-make.bst

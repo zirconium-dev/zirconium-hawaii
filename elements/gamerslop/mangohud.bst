@@ -1,9 +1,12 @@
 kind: meson
 
 sources:
-- kind: tar
-  url: github_files:flightlessmango/MangoHud/releases/download/v%{version}/MangoHud-v%{version}-Source.tar.xz
-  ref: bbe5a2b976313c53f21dc24b98bbed03226589460a0cce20d923cb2c36c9d8b0
+- kind: anitya
+  project-id: 138139
+  url: github_files:flightlessmango/MangoHud/releases/download/v{version}/MangoHud-v{version}-Source.tar.xz
+  ref:
+    version: 0.8.4
+    sha256sum: bbe5a2b976313c53f21dc24b98bbed03226589460a0cce20d923cb2c36c9d8b0
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-meson.bst
@@ -30,7 +33,6 @@ depends:
 - deps/glfw.bst
 
 variables:
-  version: 0.8.4
   meson-local: >-
     -Dmangoapp=true
     -Dmangohudctl=true
