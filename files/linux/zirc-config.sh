@@ -179,9 +179,6 @@ case "$arch" in
         module CROS_EC_WATCHDOG
         module CROS_TYPEC_SWITCH
         module CROS_USBPD_NOTIFY
-
-        # Zotac Zone
-        module ZOTAC_ZONE_HID
     ;;
 esac
 
