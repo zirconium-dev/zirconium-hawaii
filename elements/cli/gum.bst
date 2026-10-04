@@ -29,9 +29,9 @@ variables:
 config:
   install-commands:
   - |
-    install -Dm0644 ./completions/gum.bash "%{install-root}%{datadir}/bash-completion/completions/gum"
-    install -Dm0644 ./completions/gum.zsh "%{install-root}%{datadir}/zsh/site-functions/_gum"
-    install -Dm0644 ./completions/gum.fish "%{install-root}%{datadir}/fish/vendor_completions.d/gum.fish"
+    install -Dm0644 ./completions/gum.bash "%{install-root}%{bash-completions-dir}/gum"
+    install -Dm0644 ./completions/gum.fish "%{install-root}%{fish-completions-dir}/gum.fish"
+    install -Dm0644 ./completions/gum.zsh "%{install-root}%{zsh-completions-dir}/_gum"
 
     install -Dm0644 ./manpages/gum.1.gz -t "%{install-root}%{datadir}/man/man1"
 

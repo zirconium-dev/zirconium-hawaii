@@ -1,0 +1,6 @@
+variables:
+  bash-completions-dir: "%{datadir}/bash-completion/completions"
+  elvish-completions-dir: "%{datadir}/elvish/lib"
+  fish-completions-dir: "%{datadir}/fish/vendor_completions.d"
+  nushell-completions-dir: "%{datadir}/nushell/completions"
+  zsh-completions-dir: "%{datadir}/zsh/site-functions"

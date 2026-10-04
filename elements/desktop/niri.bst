@@ -1980,11 +1980,12 @@ config:
     install -Dm644 resources/niri.service  resources/niri-shutdown.target -t "%{install-root}/usr/lib/systemd/user/"
     install -Dm644 resources/niri.desktop -t "%{install-root}/usr/share/wayland-sessions/"
     install -Dm644 resources/niri-portals.conf -t "%{install-root}/usr/share/xdg-desktop-portal/"
-    mkdir -p "%{install-root}/usr/share/bash-completion/completions/"
-    target/release/niri completions bash > "%{install-root}/usr/share/bash-completion/completions/niri"
-    mkdir -p "%{install-root}/usr/share/zsh/site-functions"
-    target/release/niri completions zsh > "%{install-root}/usr/share/zsh/site-functions/_niri"
-    mkdir -p "%{install-root}/usr/share/fish/vendor_completions.d"
-    target/release/niri completions fish > "%{install-root}/usr/share/fish/vendor_completions.d/niri.fish"
+  - |
+    mkdir -p %{install-root}%{bash-completions-dir} \
+      %{install-root}%{fish-completions-dir} \
+      %{install-root}%{zsh-completions-dir}
+    target/release/niri completions bash > "%{install-root}%{bash-completions-dir}/niri"
+    target/release/niri completions fish > "%{install-root}%{fish-completions-dir}/niri.fish"
+    target/release/niri completions zsh > "%{install-root}%{zsh-completions-dir}/_niri"
   - |
     %{install-extra}

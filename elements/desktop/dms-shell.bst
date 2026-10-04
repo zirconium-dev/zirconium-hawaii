@@ -56,13 +56,13 @@ config:
     fi
   install-commands:
   - |
-    install -dm0755 "%{install-root}%{datadir}/bash-completion/completions"
-    install -dm0755 "%{install-root}%{datadir}/zsh/site-functions"
-    install -dm0755 "%{install-root}%{datadir}/fish/vendor_completions.d"
+    mkdir -p %{install-root}%{bash-completions-dir} \
+      %{install-root}%{fish-completions-dir} \
+      %{install-root}%{zsh-completions-dir}
 
-    ./core/bin/dms completion bash > "%{install-root}%{datadir}/bash-completion/completions/dms"
-    ./core/bin/dms completion zsh > "%{install-root}%{datadir}/zsh/site-functions/_dms"
-    ./core/bin/dms completion fish > "%{install-root}%{datadir}/fish/vendor_completions.d/dms.fish"
+    ./core/bin/dms completion bash > "%{install-root}%{bash-completions-dir}/dms"
+    ./core/bin/dms completion fish > "%{install-root}%{fish-completions-dir}/dms.fish"
+    ./core/bin/dms completion zsh > "%{install-root}%{zsh-completions-dir}/_dms"
 
     install -Dm0755 ./core/bin/dms "%{install-root}%{bindir}/dms"
     install -Dpm0644 -t "%{install-root}%{indep-libdir}/pam.d/" quickshell/assets/pam/fprint

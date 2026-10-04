@@ -24,16 +24,16 @@ config:
     sed -i 's|/usr/local|/usr|g' assets/dsearch.service
   install-commands:
   - |
+    mkdir -p %{install-root}%{bash-completions-dir} \
+      %{install-root}%{fish-completions-dir} \
+      %{install-root}%{zsh-completions-dir}
+
+    ./bin/dsearch completion bash > "%{install-root}%{bash-completions-dir}/dsearch"
+    ./bin/dsearch completion fish > "%{install-root}%{zsh-completions-dir}/_dsearch"
+    ./bin/dsearch completion zsh > "%{install-root}%{fish-completions-dir}/dsearch.fish"
+
     install -Dm0755 bin/dsearch -t "%{install-root}%{bindir}"
     install -Dm0644 assets/dsearch.service -t "%{install-root}%{indep-libdir}/systemd/user"
-  - |
-    install -dm0755 "%{install-root}%{datadir}/bash-completion/completions"
-    install -dm0755 "%{install-root}%{datadir}/zsh/site-functions"
-    install -dm0755 "%{install-root}%{datadir}/fish/vendor_completions.d"
-
-    ./bin/dsearch completion bash > "%{install-root}%{datadir}/bash-completion/completions/dsearch"
-    ./bin/dsearch completion zsh > "%{install-root}%{datadir}/zsh/site-functions/_dsearch"
-    ./bin/dsearch completion fish > "%{install-root}%{datadir}/fish/vendor_completions.d/dsearch.fish"
   - |
     %{install-extra}
 

@@ -49,13 +49,13 @@ config:
     install -Dm0755 ./core/bin/dms-greeter "%{install-root}%{bindir}/dms-greeter"
   - |
     # shell completions
-    install -dm0755 "%{install-root}%{datadir}/bash-completion/completions"
-    install -dm0755 "%{install-root}%{datadir}/zsh/site-functions"
-    install -dm0755 "%{install-root}%{datadir}/fish/vendor_completions.d"
+    mkdir -p %{install-root}%{bash-completions-dir} \
+      %{install-root}%{fish-completions-dir} \
+      %{install-root}%{zsh-completions-dir}
 
-    ./core/bin/dms-greeter completion bash > "%{install-root}%{datadir}/bash-completion/completions/dms-greeter"
-    ./core/bin/dms-greeter completion zsh > "%{install-root}%{datadir}/zsh/site-functions/_dms-greeter"
-    ./core/bin/dms-greeter completion fish > "%{install-root}%{datadir}/fish/vendor_completions.d/dms-greeter.fish"
+    ./core/bin/dms-greeter completion bash > "%{install-root}%{bash-completions-dir}/dms-greeter"
+    ./core/bin/dms-greeter completion fish > "%{install-root}%{fish-completions-dir}/dms-greeter.fish"
+    ./core/bin/dms-greeter completion zsh > "%{install-root}%{zsh-completions-dir}/_dms-greeter"
   - |
     # tmpfiles and sysusers
     install -Dm0644 "assets/systemd/tmpfiles-dms-greeter.conf" "%{install-root}%{indep-libdir}/tmpfiles.d/dms-greeter.conf"

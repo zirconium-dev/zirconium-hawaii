@@ -19,13 +19,13 @@ variables:
 config:
   install-commands:
   - |
-    install -dm0755 "%{install-root}%{datadir}/bash-completion/completions"
-    install -dm0755 "%{install-root}%{datadir}/zsh/site-functions"
-    install -dm0755 "%{install-root}%{datadir}/fish/vendor_completions.d"
+    mkdir -p %{install-root}%{bash-completions-dir} \
+      %{install-root}%{fish-completions-dir} \
+      %{install-root}%{zsh-completions-dir}
 
-    ./bin/dgop completion bash > "%{install-root}%{datadir}/bash-completion/completions/dgop"
-    ./bin/dgop completion zsh > "%{install-root}%{datadir}/zsh/site-functions/_dgop"
-    ./bin/dgop completion fish > "%{install-root}%{datadir}/fish/vendor_completions.d/dgop.fish"
+    ./bin/dgop completion bash > "%{install-root}%{bash-completions-dir}/dgop"
+    ./bin/dgop completion fish > "%{install-root}%{fish-completions-dir}/dgop.fish"
+    ./bin/dgop completion zsh > "%{install-root}%{zsh-completions-dir}/_dgop"
 
     install -Dm0755 ./bin/dgop "%{install-root}%{bindir}/dgop"
   - |

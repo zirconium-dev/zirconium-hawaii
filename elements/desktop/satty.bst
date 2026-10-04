@@ -877,11 +877,11 @@ config:
   - |
     install -Dm0755 target/release/satty -t "%{install-root}%{bindir}"
     # completions
-    install -Dm0644 completions/_satty -t "%{install-root}%{datadir}/zsh/site-functions"
-    install -Dm0644 completions/satty.bash "%{install-root}%{datadir}/bash-completion/completions/satty"
-    install -Dm0644 completions/satty.fish -t "%{install-root}%{datadir}/fish/vendor_completions.d"
-    install -Dm0644 completions/satty.nu -t "%{install-root}%{datadir}/nushell/completions"
-    install -Dm0644 completions/satty.elv -t "%{install-root}%{datadir}/elvish/lib"
+    install -Dm0644 completions/_satty -t "%{install-root}%{zsh-completions-dir}"
+    install -Dm0644 completions/satty.bash "%{install-root}%{bash-completions-dir}/satty"
+    install -Dm0644 completions/satty.fish -t "%{install-root}%{fish-completions-dir}"
+    install -Dm0644 completions/satty.nu -t "%{install-root}%{nushell-completions-dir}"
+    install -Dm0644 completions/satty.elv -t "%{install-root}%{elvish-completions-dir}"
 
     install -Dm0644 satty.desktop -t "%{install-root}%{datadir}/applications"
     install -Dm0644 assets/satty.svg -t "%{install-root}%{datadir}/icons/hicolor/scalable/apps"
