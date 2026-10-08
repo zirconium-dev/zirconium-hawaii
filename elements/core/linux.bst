@@ -8,12 +8,12 @@ sources:
   track: v*
   exclude:
   - '*-rc*'
-  ref: v7.2.8-0-g9a66fdc0d7fd55f54235524a73435af99051e46f
+  ref: v7.2.9-0-g5fce161649b4d779d1b76d9fcd52dc77779774b8
 - kind: patch_queue
   path: patches/linux/fdsdk
 - kind: remote_patch
   url: github_files:OpenGamingCollective/linux/releases/download/v%{ogc-patchset-version}/monolithic.patch
-  ref: ec3f8d03ea98033776cee1f057180b5844330cead42a73aa1129c8123d126322
+  ref: dcd4a4d57763a931858f85bbfb08d0d3582aa08051b6099cab761c2ddaab7e80
 # Needed for the ogc patchset to compile with fdsdk's config
 - kind: patch
   path: patches/linux/remove-DEVICE_ATTR-macros-in-ayn-ec.c.patch
@@ -44,7 +44,7 @@ build-depends:
 #   strict: true
 
 variables:
-  ogc-patchset-version: 7.2.8-ogc1
+  ogc-patchset-version: 7.2.9-ogc1
   extra-version: '-ogc.zirc-edge'
   bootdir: /boot
   kernel_arch: '%{arch}'
@@ -62,9 +62,6 @@ variables:
       kernel_arch: riscv
   - arch == "loongarch64":
       kernel_arch: loongarch
-  # manually update this track to the version of the linux kernel that we're using
-  fedora-version: 7.2.4
-  fedora-pkgrelease: 300.fc45
 
 environment:
   ARCH: '%{kernel_arch}'
