@@ -1,0 +1,129 @@
+From f2a2cba5926faa7952f5bba6cf939b883fa7e003 Mon Sep 17 00:00:00 2001
+From: Aleix Pol i Gonzalez <aleix.pol@codethink.co.uk>
+Date: Wed, 7 Oct 2026 11:38:41 +0200
+Subject: [PATCH] sources/_utils.py: Adapt so we are not ignoring
+ directory-less files
+
+At the moment we were simply ignoring them, would lead to a confusingly
+empty source.
+
+Fixes #117
+---
+ .../sources/_utils.py                         | 17 ++++--
+ tests/sources/utils.py                        | 53 +++++++++++++++++++
+ 2 files changed, 65 insertions(+), 5 deletions(-)
+ create mode 100644 tests/sources/utils.py
+
+diff --git a/src/buildstream_plugins_community/sources/_utils.py b/src/buildstream_plugins_community/sources/_utils.py
+index 0e1c5fe..31eaaf1 100644
+--- a/src/buildstream_plugins_community/sources/_utils.py
++++ b/src/buildstream_plugins_community/sources/_utils.py
+@@ -185,18 +185,23 @@ class HTTPFetcher(SourceFetcher):
+         )
+ 
+ 
+-def _strip_top_dir(members, attr):
++def _strip_top_dir(members, attr, is_dir_attr):
+     for member in members:
+         path = getattr(member, attr)
+         trail_slash = path.endswith("/")
+         path = path.rstrip("/")
+         splitted = getattr(member, attr).split("/", 1)
++        new_path = path
+         if len(splitted) == 2:
+             new_path = splitted[1]
+             if trail_slash:
+                 new_path += "/"
+-            setattr(member, attr, new_path)
+-            yield member
++
++        if getattr(member, is_dir_attr)() and len(splitted) == 1:
++            # do not yield the root directory
++            continue
++        setattr(member, attr, new_path)
++        yield member
+ 
+ 
+ class TarStager:
+@@ -208,7 +213,7 @@ class TarStager:
+         with tarfile.open(self.mirror_file, "r:*") as tar:
+             members = (
+                 member
+-                for member in _strip_top_dir(tar.getmembers(), "path")
++                for member in _strip_top_dir(tar.getmembers(), "path", "isdir")
+                 if not any(
+                     any(utils.glob([member.name], pattern))
+                     for pattern in self.exclude
+@@ -231,7 +236,9 @@ class ZipStager:
+ 
+         with zipfile.ZipFile(self.mirror_file, mode="r") as zipf:
+             # Taken from zip plugin. It is needed to ensure reproducibility of permissions
+-            for member in _strip_top_dir(zipf.infolist(), "filename"):
++            for member in _strip_top_dir(
++                zipf.infolist(), "filename", "is_dir"
++            ):
+                 written = zipf.extract(member, path=directory)
+                 rel = os.path.relpath(written, start=directory)
+                 assert not os.path.isabs(rel)
+diff --git a/tests/sources/utils.py b/tests/sources/utils.py
+new file mode 100644
+index 0000000..87cd59d
+--- /dev/null
++++ b/tests/sources/utils.py
+@@ -0,0 +1,53 @@
++# SPDX-FileCopyrightText: 2026 Aleix Pol Gonzalez <aleix.pol@codethink.co.uk>
++# SPDX-License-Identifier: LGPL-2.1-or-later
++
++# pylint: disable=redefined-outer-name
++
++import tarfile
++
++from buildstream_plugins_community.sources._utils import TarStager
++
++
++def test_stage_root_file(tmp_path):
++    source = tmp_path / "README"
++    source.write_text("release contents", encoding="utf-8")
++    archive = tmp_path / "release.tar.xz"
++    with tarfile.open(archive, "w:xz") as tar:
++        tar.add(source, arcname="README")
++    checkout = tmp_path / "checkout"
++    checkout.mkdir()
++    TarStager(archive).stage(checkout)
++    assert (checkout / "README").read_text(
++        encoding="utf-8"
++    ) == "release contents"
++
++
++def test_stage_root_dir(tmp_path):
++    (tmp_path / "potato").mkdir()
++    source = tmp_path / "potato" / "README"
++    source.write_text("release contents", encoding="utf-8")
++    archive = tmp_path / "release.tar.xz"
++    with tarfile.open(archive, "w:xz") as tar:
++        tar.add(source, arcname="README")
++    checkout = tmp_path / "checkout"
++    checkout.mkdir()
++    TarStager(archive).stage(checkout)
++    assert (checkout / "README").read_text(
++        encoding="utf-8"
++    ) == "release contents"
++
++
++def test_stage_wrapped_directory(tmp_path):
++    source_dir = tmp_path / "potato"
++    source_dir.mkdir()
++    (source_dir / "README").write_text("release contents", encoding="utf-8")
++    archive = tmp_path / "release.tar.xz"
++    with tarfile.open(archive, "w:xz") as tar:
++        tar.add(source_dir, arcname="potato")
++    checkout = tmp_path / "checkout"
++    checkout.mkdir()
++    TarStager(archive).stage(checkout)
++    assert (checkout / "README").read_text(
++        encoding="utf-8"
++    ) == "release contents"
++    assert list(checkout.iterdir()) == [checkout / "README"]
+-- 
+2.55.0
+

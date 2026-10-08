@@ -4,11 +4,12 @@ build-depends:
 - freedesktop-sdk.bst:public-stacks/runtime-gnu.bst
 
 sources:
-  # FIXME: build the nerd fonts ourselves
-  - kind: tar
-    url: github_files:ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.tar.xz
-    ref: ef552a3e638f25125c6ad4c51176a6adcdce295ab1d2ffacf0db060caf8c1582
-    base-dir: ""
+- kind: anitya
+  project-id: 227412
+  url: github_files:ryanoasis/nerd-fonts/releases/download/v{version}/JetBrainsMono.tar.xz
+  ref:
+    version: 3.5.1
+    sha256sum: 04d5e8f903693f9dd13e16f867e994834e681eb3c72c0d337a770dcda09010cf
 
 variables:
   license-files-extra: "OFL.txt"
@@ -17,8 +18,7 @@ variables:
 
 config:
   install-commands:
-    - |
-      mkdir -p "%{fontdir}/jetbrains-mono-nerd-font"
-      install -p -m0644 *.ttf "%{fontdir}/jetbrains-mono-nerd-font"
-    - |
-      %{install-extra}
+  - |
+    install -Dm0644 *.ttf -t "%{fontdir}/jetbrains-mono-nerd-font"
+  - |
+    %{install-extra}

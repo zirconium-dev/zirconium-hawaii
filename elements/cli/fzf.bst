@@ -6,22 +6,25 @@ sources:
   url: github:junegunn/fzf.git
   track: v*
   ref: v0.74.4-0-ga140afeb4d733cad3c96a56bf6db7e26853b6757
-- kind: tar
+- kind: anitya
+  project-id: 15856
   directory: "bin"
-  base-dir: ""
   (?):
   - arch == "aarch64":
-      url: github_files:junegunn/fzf/releases/download/v%{version}/fzf-%{version}-linux_arm64.tar.gz
-      ref: 5d673b849f494f0d64ec471d8640b153ca8849e3846a31da17abdcfce8df6b46
+      url: github_files:junegunn/fzf/releases/download/v{version}/fzf-{version}-linux_arm64.tar.gz
+      ref:
+        version: 0.74.4
+        sha256sum: 5d673b849f494f0d64ec471d8640b153ca8849e3846a31da17abdcfce8df6b46
   - arch == "x86_64":
-      url: github_files:junegunn/fzf/releases/download/v%{version}/fzf-%{version}-linux_amd64.tar.gz
-      ref: 05e6813a337cc722c3ed07e54a764b75cc5d671e2e60459db0ba696ee5fa7504
+      url: github_files:junegunn/fzf/releases/download/v{version}/fzf-{version}-linux_amd64.tar.gz
+      ref:
+        version: 0.74.4
+        sha256sum: 05e6813a337cc722c3ed07e54a764b75cc5d671e2e60459db0ba696ee5fa7504
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/runtime-gnu.bst
 
 variables:
-  version: 0.74.4
   strip-binaries: ""
 
 config:
