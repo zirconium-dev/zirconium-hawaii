@@ -55,10 +55,10 @@ sources:
   kind: zip
   url: golang-proxy:github.com/klauspost/compress/@v/v1.19.2.zip
 - directory: core/vendor/github.com/pilebones/go-udev
-  ref: bc033ea8baec612959025f58b2ec4cf1225be4685bc9e20909ea8225a56bf4a1
+  ref: 54fc7dff4cd838d6dd19936ebb2c2bd653a15a40b3586983a308544d04930aa3
   base-dir: "*/*/*"
   kind: zip
-  url: golang-proxy:github.com/pilebones/go-udev/@v/v0.9.1.zip
+  url: golang-proxy:github.com/pilebones/go-udev/@v/v0.10.0.zip
 - directory: core/vendor/github.com/sblinch/kdl-go
   ref: c2093f820c504766aa58d3f2fa56c716f91ad5ab5e2717482f90820efa3e80ff
   base-dir: "*/*/*"
@@ -365,10 +365,10 @@ sources:
   kind: zip
   url: golang-proxy:golang.zx2c4.com/wireguard/windows/@v/v1.0.1.zip
 - directory: core/vendor/github.com/AvengeMedia/dankgo
-  ref: d827f2a851d854ccdd48c48fc42af5b04c3ed6aae00c9780f8f22682336c2a3f
+  ref: 6412956e7d35df6baadac92bd67d035ff34f1269d5a4f6125d92b4fc5a2a1416
   base-dir: "*/*/*"
   kind: zip
-  url: golang-proxy:github.com/!avenge!media/dankgo/@v/v1.6.3-0.20261002194355-b7285561e19f.zip
+  url: golang-proxy:github.com/!avenge!media/dankgo/@v/v1.6.3-0.20261006143448-ac49b6718245.zip
 - directory: core/vendor/github.com/atotto/clipboard
   ref: d67b2c36c662751309fd2ec351df3651584bea840bd27be9a90702c3a238b43f
   base-dir: "*/*/*"

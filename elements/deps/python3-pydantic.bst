@@ -424,7 +424,6 @@ sources:
     name: zmij
     version: 1.0.6
     sha: aac060176f7020d62c3bcc1cdbcec619d54f48b07ad1963a3f80ce7a0c17755f
-
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-rust.bst
 - freedesktop-sdk.bst:public-stacks/buildsystem-python-hatchling.bst
