@@ -3,8 +3,8 @@ kind: junction
 sources:
 - kind: git_repo
   url: gitlab:freedesktop-sdk/freedesktop-sdk-extra.git
-  track: freedesktop-sdk-extra-26.08*
-  ref: freedesktop-sdk-extra-26.08.1-0-g447b65b18504d0a8f4b42fb0c320250df20c20ed
+  track: main
+  ref: freedesktop-sdk-extra-26.08.2-38-g8a37955f3d8043fd6f4b2e76dd73963adbb1e048
 - kind: patch_queue
   path: patches/freedesktop-sdk-extra
 
