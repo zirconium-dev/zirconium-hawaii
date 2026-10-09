@@ -8,7 +8,7 @@ sources:
   - "core-v*"
   - "*b*"
   - "*a*"
-  ref: v2.13.5-0-g001dea020e0809844e5b17666432c9135a976f46
+  ref: v2.14.0-0-gfcdefa7198c4fc94a22eecf1a5b7926e20b9fc8a
 - kind: cargo2
   cargo-lock: pydantic-core/Cargo.lock
   ref:
@@ -21,17 +21,13 @@ sources:
     version: 1.1.3
     sha: 8e60d3430d3a69478ad0993f19238d2df97c507009a52b3c10addcd7f6bcb916
   - kind: registry
-    name: allocator-api2
-    version: 0.2.21
-    sha: 683d7910e743518b0e34f1186f92494becacb047c7b6bf616c96772180fef923
-  - kind: registry
     name: autocfg
     version: 1.3.0
     sha: 0c4b4d0bd25bd0b74681c0ad21497610ce1b7c91b1022cd21c80c6fbdd9476b0
   - kind: registry
     name: base64
-    version: 0.22.1
-    sha: 72b3254f16251a8381aa12e40e3c4d2f0199f8c6508fbecb9d91f575e0fbb8c6
+    version: 0.23.1
+    sha: ac07cdecf99051d9a5238b80f35af32cdeba5b336e55d957b318b50137e18da5
   - kind: registry
     name: bitflags
     version: 2.9.1
@@ -45,10 +41,6 @@ sources:
     version: 3.19.0
     sha: 46c5e41b57b8bba42a04676d81cb89e9ee8e859a1a66f80a5a72e1cb76b34d43
   - kind: registry
-    name: cc
-    version: 1.0.101
-    sha: ac367972e516d45567c7eafc73d24e1c193dcf200a8d94e9db7b3d38b349572d
-  - kind: registry
     name: cfg-if
     version: 1.0.0
     sha: baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd
@@ -60,10 +52,6 @@ sources:
     name: enum_dispatch
     version: 0.3.13
     sha: aa18ce2bc66555b3218614519ac839ddb759a7d6720732f979ef8d13be147ecd
-  - kind: registry
-    name: equivalent
-    version: 1.0.2
-    sha: 877a4ace8713b0bcf2a4e7eec82529c029f1d0619886d18145fea96c3ffe5c0f
   - kind: registry
     name: foldhash
     version: 0.2.0
@@ -82,8 +70,8 @@ sources:
     sha: 26145e563e54f2cadc477553f1ec5ee650b00862f0a58bcd12cbdc5f0ea2d2f4
   - kind: registry
     name: hashbrown
-    version: 0.16.1
-    sha: 841d1cc9bed7f9236f321df977030373f4a4163ae1a7dbfe1a51a2c1a51d9100
+    version: 0.17.1
+    sha: ed5909b6e89a2db4456e54cd5f673791d7eca6732202bbf2a9cc504fe2f9b84a
   - kind: registry
     name: heck
     version: 0.5.0
@@ -146,8 +134,8 @@ sources:
     sha: 49f1f14873335454500d59611f1cf4a4b0f786f9ac11f4312a78e4cf2566695b
   - kind: registry
     name: jiter
-    version: 0.14.0
-    sha: b6f3b5d3f84b36f4ad09fd1da896d23d9852a1aa86556578dd0289f43dce311d
+    version: 0.16.0
+    sha: 820ddcacd75c9782308d3fa594f3885630ea3f49adba78a8a29abdfe4b81630c
   - kind: registry
     name: js-sys
     version: 0.3.77
@@ -178,8 +166,8 @@ sources:
     sha: 13dc2df351e3202783a1fe0d44375f7295ffb4049267b0f3018346dc122a1d94
   - kind: registry
     name: lru
-    version: 0.16.3
-    sha: a1dc47f592c06f33f8e3aea9591776ec7c9f9e4124778ff8a3c3b87159f7e593
+    version: 0.18.5
+    sha: ef9ac18847474e638e3702b76c65d4eb93428471a74778ef0f1be711717f89b5
   - kind: registry
     name: memchr
     version: 2.7.4
@@ -210,32 +198,28 @@ sources:
     sha: 7170ef9988bc169ba16dd36a7fa041e5c4cbeb6a35b76d4c03daded371eae7c0
   - kind: registry
     name: proc-macro2
-    version: 1.0.86
-    sha: 5e719e8df665df0d1c8fbfd238015744736151d4445ec0836b8e628aae103b77
+    version: 1.0.107
+    sha: 985e7ec9bb745e6ce6535b544d84d6cd6f7ad8bd711c398938ae983b91a766d9
   - kind: registry
     name: pyo3
-    version: 0.28.3
-    sha: 91fd8e38a3b50ed1167fb981cd6fd60147e091784c427b8f7183a7ee32c31c12
+    version: 0.29.2
+    sha: 4688ddedf473e32662b9b067670129a8afb8c18e351482c70d62ba4a88171e8b
   - kind: registry
     name: pyo3-build-config
-    version: 0.28.3
-    sha: e368e7ddfdeb98c9bca7f8383be1648fd84ab466bf2bc015e94008db6d35611e
+    version: 0.29.2
+    sha: f41027e41b4bd03f6e60f9f417fe24a6341a6bb744edd62b6f709f2a52ea30e9
   - kind: registry
     name: pyo3-ffi
-    version: 0.28.3
-    sha: 7f29e10af80b1f7ccaf7f69eace800a03ecd13e883acfacc1e5d0988605f651e
+    version: 0.29.2
+    sha: e591a95526fead067432c3b3a33fc74770b87b1e04e73671090d9c2055a2b327
   - kind: registry
     name: pyo3-macros
-    version: 0.28.3
-    sha: df6e520eff47c45997d2fc7dd8214b25dd1310918bbb2642156ef66a67f29813
+    version: 0.29.2
+    sha: 73225868fc1cd84eef2c3c230ddb91273bf1de46aeb8a4248da76d32a0924a1c
   - kind: registry
     name: pyo3-macros-backend
-    version: 0.28.3
-    sha: c4cdc218d835738f81c2338f822078af45b4afdf8b2e33cbb5916f108b813acb
-  - kind: registry
-    name: python3-dll-a
-    version: 0.2.14
-    sha: d381ef313ae70b4da5f95f8a4de773c6aa5cd28f73adec4b4a31df70b66780d8
+    version: 0.29.2
+    sha: 571575aa3749fa6216757dd47d2a3e7ef360f329a40f0666a9fbd14889024952
   - kind: registry
     name: quote
     version: 1.0.44
@@ -250,40 +234,36 @@ sources:
     sha: dc33ff2d4973d518d823d61aa239014831e521c75da58e3df4840d3f47749d09
   - kind: registry
     name: regex
-    version: 1.12.3
-    sha: e10754a14b9137dd7b1e3e5b0493cc9171fdd105e0ab477f51b72e7f3ac0e276
+    version: 1.13.1
+    sha: f020237b6c8eed93db2e2cb53c00c60a8e1bc73da7d073199a1180401450218d
   - kind: registry
     name: regex-automata
-    version: 0.4.13
-    sha: 5276caf25ac86c8d810222b3dbb938e512c55c6831a10f3e6ed1c93b84041f1c
+    version: 0.4.18
+    sha: ad8553b9b26413251cbf30e620595c7a41b3887f03da04579c0e6b0d6a06b4b2
   - kind: registry
     name: regex-syntax
-    version: 0.8.5
-    sha: 2b15c43186be67a4fd63bee50d0303afffcef381492ebe2c5d87f324e1b8815c
-  - kind: registry
-    name: rustversion
-    version: 1.0.17
-    sha: 955d28af4278de8121b7ebeb796b6a45735dc01436d898801014aced2773a3d6
+    version: 0.8.11
+    sha: d6f6ff9a378485b298a5286656da665ba74413d36db0979633275d2e708145d4
   - kind: registry
     name: serde
-    version: 1.0.228
-    sha: 9a8e94ea7f378bd32cbbd37198a4a91436180c5bb472411e48b5ec2e2124ae9e
+    version: 1.0.229
+    sha: 4148590afebada386688f18773da617792bf2ef03ffc1e4cbd2b1d45b023e0ba
   - kind: registry
     name: serde_core
-    version: 1.0.228
-    sha: 41d385c7d4ca58e59fc732af25c3983b67ac852c1a25000afe1175de458b67ad
+    version: 1.0.229
+    sha: 67dca2c9c51e58a4791a4b1ed58308b39c64224d349a935ab5039aa360942a48
   - kind: registry
     name: serde_derive
-    version: 1.0.228
-    sha: d540f220d3187173da220f885ab66608367b6574e925011a9353e4badda91d79
+    version: 1.0.229
+    sha: e7a5d71263a5a7d47b41f6b3f06ba276f10cc18b0931f1799f710578e2309348
   - kind: registry
     name: serde_json
-    version: 1.0.149
-    sha: 83fc039473c5595ace860d8c4fafa220ff474b3fc6bfdb4293327f1a37e94d86
+    version: 1.0.151
+    sha: c841b55ecdae098c80dcae9cf767f6f8a0c2cdb3416bbef72181df4d0fe73f14
   - kind: registry
     name: smallvec
-    version: 1.15.1
-    sha: 67b1b7a3b5fe4f1376887184045fcf45c69e92af734b7aaddc05fb777b6fbd03
+    version: 1.16.2
+    sha: f9395f0f0eee849a9b707b2f06bb92a6a422090e2123bb2ef8e87a0e61892a8e
   - kind: registry
     name: speedate
     version: 0.17.0
@@ -308,6 +288,10 @@ sources:
     name: syn
     version: 2.0.82
     sha: 83540f837a8afc019423a8edb95b52a8effe46957ee402287f4292fae35be021
+  - kind: registry
+    name: syn
+    version: 3.0.6
+    sha: 8593e8e72159ed2257d083c7a454a85cbf854f37a0966d8d483aff8c8a3ebcee
   - kind: registry
     name: synstructure
     version: 0.13.1
@@ -342,8 +326,8 @@ sources:
     sha: b6c140620e7ffbb22c2dee59cafe6084a59b5ffc27a8859a5f0d494b5d52b6be
   - kind: registry
     name: uuid
-    version: 1.23.0
-    sha: 5ac8b6f42ead25368cf5b098aeb3dc8a1a2c05a3eee8a9a1a68c640edbfc79d9
+    version: 1.23.4
+    sha: bf80a72845275afea99e7f2b434723d3bc7e38470fcd1c7ed39a599c73319a53
   - kind: registry
     name: version_check
     version: 0.9.5

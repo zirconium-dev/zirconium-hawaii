@@ -2,8 +2,8 @@
 ## explicit; go 1.24.0
 filippo.io/edwards25519
 filippo.io/edwards25519/field
-# github.com/AvengeMedia/dankgo v1.6.3-0.20261006143448-ac49b6718245
-## explicit; go 1.26.0
+# github.com/AvengeMedia/dankgo v1.6.3-0.20261009141806-0a6056424f6d
+## explicit; go 1.27
 github.com/AvengeMedia/dankgo/boottimer
 github.com/AvengeMedia/dankgo/dbusutil
 github.com/AvengeMedia/dankgo/desktop
@@ -34,14 +34,14 @@ github.com/AvengeMedia/dankgo/wlclipboard
 ## explicit; go 1.26.0
 github.com/AvengeMedia/dgop/gops
 github.com/AvengeMedia/dgop/models
-# github.com/Microsoft/go-winio v0.6.2
-## explicit; go 1.21
+# github.com/Microsoft/go-winio v0.6.3
+## explicit; go 1.26.0
 github.com/Microsoft/go-winio
 github.com/Microsoft/go-winio/internal/fs
 github.com/Microsoft/go-winio/internal/socket
 github.com/Microsoft/go-winio/internal/stringbuffer
 github.com/Microsoft/go-winio/pkg/guid
-# github.com/ProtonMail/go-crypto v1.4.1
+# github.com/ProtonMail/go-crypto v1.5.2
 ## explicit; go 1.23.0
 github.com/ProtonMail/go-crypto/bitcurves
 github.com/ProtonMail/go-crypto/brainpool
@@ -61,8 +61,11 @@ github.com/ProtonMail/go-crypto/openpgp/errors
 github.com/ProtonMail/go-crypto/openpgp/internal/algorithm
 github.com/ProtonMail/go-crypto/openpgp/internal/ecc
 github.com/ProtonMail/go-crypto/openpgp/internal/encoding
+github.com/ProtonMail/go-crypto/openpgp/mldsa_eddsa
+github.com/ProtonMail/go-crypto/openpgp/mlkem_ecdh
 github.com/ProtonMail/go-crypto/openpgp/packet
 github.com/ProtonMail/go-crypto/openpgp/s2k
+github.com/ProtonMail/go-crypto/openpgp/slhdsa
 github.com/ProtonMail/go-crypto/openpgp/x25519
 github.com/ProtonMail/go-crypto/openpgp/x448
 # github.com/Wifx/gonetworkmanager/v2 v2.2.0
@@ -100,7 +103,7 @@ github.com/charmbracelet/lipgloss
 # github.com/charmbracelet/log v1.0.0
 ## explicit; go 1.21
 github.com/charmbracelet/log
-# github.com/charmbracelet/x/ansi v0.11.8
+# github.com/charmbracelet/x/ansi v0.11.9
 ## explicit; go 1.24.2
 github.com/charmbracelet/x/ansi
 github.com/charmbracelet/x/ansi/parser
@@ -116,20 +119,39 @@ github.com/clipperhouse/displaywidth
 # github.com/clipperhouse/uax29/v2 v2.7.0
 ## explicit; go 1.18
 github.com/clipperhouse/uax29/v2/graphemes
-# github.com/cloudflare/circl v1.6.4
-## explicit; go 1.24.0
+# github.com/cloudflare/circl v1.6.5
+## explicit; go 1.25.0
 github.com/cloudflare/circl/dh/x25519
 github.com/cloudflare/circl/dh/x448
 github.com/cloudflare/circl/ecc/goldilocks
 github.com/cloudflare/circl/internal/conv
 github.com/cloudflare/circl/internal/sha3
+github.com/cloudflare/circl/kem
+github.com/cloudflare/circl/kem/mlkem/mlkem1024
+github.com/cloudflare/circl/kem/mlkem/mlkem768
 github.com/cloudflare/circl/math
 github.com/cloudflare/circl/math/fp25519
 github.com/cloudflare/circl/math/fp448
 github.com/cloudflare/circl/math/mlsbset
+github.com/cloudflare/circl/pke/kyber/internal/common
+github.com/cloudflare/circl/pke/kyber/internal/common/params
+github.com/cloudflare/circl/pke/kyber/kyber1024
+github.com/cloudflare/circl/pke/kyber/kyber1024/internal
+github.com/cloudflare/circl/pke/kyber/kyber768
+github.com/cloudflare/circl/pke/kyber/kyber768/internal
 github.com/cloudflare/circl/sign
 github.com/cloudflare/circl/sign/ed25519
 github.com/cloudflare/circl/sign/ed448
+github.com/cloudflare/circl/sign/internal/dilithium
+github.com/cloudflare/circl/sign/internal/dilithium/params
+github.com/cloudflare/circl/sign/mldsa/mldsa65
+github.com/cloudflare/circl/sign/mldsa/mldsa65/internal
+github.com/cloudflare/circl/sign/mldsa/mldsa87
+github.com/cloudflare/circl/sign/mldsa/mldsa87/internal
+github.com/cloudflare/circl/sign/slhdsa
+github.com/cloudflare/circl/simd/keccakf1600
+github.com/cloudflare/circl/xof
+github.com/cloudflare/circl/xof/k12
 # github.com/coder/websocket v1.8.15
 ## explicit; go 1.23
 github.com/coder/websocket
@@ -147,12 +169,12 @@ github.com/danielgtaylor/huma/v2/yaml
 # github.com/dblohm7/wingoes v0.0.0-20260526185140-fb298caac7ca
 ## explicit; go 1.25.0
 github.com/dblohm7/wingoes
-# github.com/dlclark/regexp2/v2 v2.5.1
+# github.com/dlclark/regexp2/v2 v2.8.4
 ## explicit; go 1.25
 github.com/dlclark/regexp2/v2
 github.com/dlclark/regexp2/v2/helpers
 github.com/dlclark/regexp2/v2/syntax
-# github.com/ebitengine/purego v0.11.0
+# github.com/ebitengine/purego v0.11.1
 ## explicit; go 1.25.0
 github.com/ebitengine/purego
 github.com/ebitengine/purego/internal/cgo
@@ -176,7 +198,7 @@ github.com/fogleman/gg
 ## explicit; go 1.23
 github.com/fsnotify/fsnotify
 github.com/fsnotify/fsnotify/internal
-# github.com/fxamacker/cbor/v2 v2.9.2
+# github.com/fxamacker/cbor/v2 v2.9.6
 ## explicit; go 1.20
 github.com/fxamacker/cbor/v2
 # github.com/go-git/gcfg/v2 v2.0.2
@@ -185,7 +207,7 @@ github.com/go-git/gcfg/v2
 github.com/go-git/gcfg/v2/scanner
 github.com/go-git/gcfg/v2/token
 github.com/go-git/gcfg/v2/types
-# github.com/go-git/go-billy/v6 v6.0.0-alpha.1
+# github.com/go-git/go-billy/v6 v6.0.0-beta.1
 ## explicit; go 1.25.0
 github.com/go-git/go-billy/v6
 github.com/go-git/go-billy/v6/helper/chroot
@@ -193,15 +215,18 @@ github.com/go-git/go-billy/v6/helper/polyfill
 github.com/go-git/go-billy/v6/memfs
 github.com/go-git/go-billy/v6/osfs
 github.com/go-git/go-billy/v6/util
-# github.com/go-git/go-git/v6 v6.0.0-alpha.4
-## explicit; go 1.25.0
+# github.com/go-git/go-git/v6 v6.0.0-beta.1
+## explicit; go 1.26.0
 github.com/go-git/go-git/v6
 github.com/go-git/go-git/v6/config
 github.com/go-git/go-git/v6/internal/archive
+github.com/go-git/go-git/v6/internal/packhandle
 github.com/go-git/go-git/v6/internal/pathutil
 github.com/go-git/go-git/v6/internal/reference
 github.com/go-git/go-git/v6/internal/repository
 github.com/go-git/go-git/v6/internal/revision
+github.com/go-git/go-git/v6/internal/sharedfile
+github.com/go-git/go-git/v6/internal/transport
 github.com/go-git/go-git/v6/internal/url
 github.com/go-git/go-git/v6/plumbing
 github.com/go-git/go-git/v6/plumbing/cache
@@ -249,11 +274,12 @@ github.com/go-git/go-git/v6/utils/merkletrie/internal/frame
 github.com/go-git/go-git/v6/utils/merkletrie/noder
 github.com/go-git/go-git/v6/utils/sync
 github.com/go-git/go-git/v6/utils/trace
+github.com/go-git/go-git/v6/x/fdpool
 github.com/go-git/go-git/v6/x/plugin
 github.com/go-git/go-git/v6/x/plugin/config
 github.com/go-git/go-git/v6/x/plugin/zlib
 github.com/go-git/go-git/v6/x/storage
-# github.com/go-json-experiment/json v0.0.0-20260623181947-01eb4420fa68
+# github.com/go-json-experiment/json v0.0.0-20260820222146-c27c302e5fc3
 ## explicit; go 1.26
 github.com/go-json-experiment/json
 github.com/go-json-experiment/json/internal
@@ -287,7 +313,7 @@ github.com/google/go-cmp/cmp/internal/value
 # github.com/hdevalence/ed25519consensus v0.2.0
 ## explicit; go 1.19
 github.com/hdevalence/ed25519consensus
-# github.com/holoplot/go-evdev v0.0.0-20260504100651-66d1748fe847
+# github.com/holoplot/go-evdev v0.0.0-20260909133534-d873ed210bda
 ## explicit; go 1.18
 github.com/holoplot/go-evdev
 # github.com/inconshreveable/mousetrap v1.1.0
@@ -300,13 +326,11 @@ github.com/jsimonetti/rtnetlink/internal/unix
 # github.com/kevinburke/ssh_config v1.6.0
 ## explicit; go 1.18
 github.com/kevinburke/ssh_config
-# github.com/klauspost/compress v1.19.2
-## explicit; go 1.24
+# github.com/klauspost/compress v1.20.1
+## explicit; go 1.25
 github.com/klauspost/compress/flate
 github.com/klauspost/compress/internal/le
-# github.com/klauspost/cpuid/v2 v2.4.0
-## explicit; go 1.24.0
-github.com/klauspost/cpuid/v2
+github.com/klauspost/compress/internal/regmask
 # github.com/lucasb-eyer/go-colorful v1.4.1
 ## explicit; go 1.12
 github.com/lucasb-eyer/go-colorful
@@ -319,15 +343,15 @@ github.com/mattn/go-isatty
 # github.com/mattn/go-localereader v0.0.2-0.20220822084749-2491eb6c1c75
 ## explicit
 github.com/mattn/go-localereader
-# github.com/mattn/go-runewidth v0.0.30
+# github.com/mattn/go-runewidth v0.0.31
 ## explicit; go 1.23
 github.com/mattn/go-runewidth
 # github.com/mdlayher/netlink v1.11.2
 ## explicit; go 1.25.0
 github.com/mdlayher/netlink
 github.com/mdlayher/netlink/nlenc
-# github.com/mdlayher/socket v0.6.1
-## explicit; go 1.25.0
+# github.com/mdlayher/socket v0.7.0
+## explicit; go 1.26.0
 github.com/mdlayher/socket
 # github.com/mitchellh/go-ps v1.0.0
 ## explicit; go 1.13
@@ -345,10 +369,11 @@ github.com/muesli/termenv
 # github.com/pilebones/go-udev v0.10.0
 ## explicit; go 1.26
 github.com/pilebones/go-udev/netlink
-# github.com/pjbgf/sha1cd v0.6.0
-## explicit; go 1.22
+# github.com/pjbgf/sha1cd v0.7.0
+## explicit; go 1.24.0
 github.com/pjbgf/sha1cd
 github.com/pjbgf/sha1cd/internal
+github.com/pjbgf/sha1cd/internal/cpu
 github.com/pjbgf/sha1cd/ubc
 # github.com/pkg/errors v0.9.1
 ## explicit
@@ -372,8 +397,8 @@ github.com/sblinch/kdl-go/relaxed
 # github.com/sergi/go-diff v1.4.0
 ## explicit; go 1.13
 github.com/sergi/go-diff/diffmatchpatch
-# github.com/shirou/gopsutil/v4 v4.26.8
-## explicit; go 1.24.0
+# github.com/shirou/gopsutil/v4 v4.26.9
+## explicit; go 1.26.0
 github.com/shirou/gopsutil/v4/common
 github.com/shirou/gopsutil/v4/cpu
 github.com/shirou/gopsutil/v4/disk
@@ -398,8 +423,8 @@ github.com/spf13/pflag
 # github.com/srwiley/oksvg v0.0.0-20221011165216-be6e8873101c
 ## explicit; go 1.17
 github.com/srwiley/oksvg
-# github.com/srwiley/rasterx v0.0.0-20210519020934-456a8d69b780
-## explicit
+# github.com/srwiley/rasterx v0.0.0-20220730225603-2ab79fcdd4ef
+## explicit; go 1.17
 github.com/srwiley/rasterx
 # github.com/stretchr/objx v0.5.3
 ## explicit; go 1.20
@@ -431,18 +456,18 @@ github.com/x448/float16
 # github.com/xo/terminfo v1.2.0
 ## explicit; go 1.25
 github.com/xo/terminfo
-# github.com/yeqown/go-qrcode/v2 v2.2.5
-## explicit; go 1.18
+# github.com/yeqown/go-qrcode/v2 v2.3.0
+## explicit; go 1.19
 github.com/yeqown/go-qrcode/v2
-# github.com/yeqown/go-qrcode/writer/standard v1.3.0
-## explicit; go 1.17
+# github.com/yeqown/go-qrcode/writer/standard v1.4.0
+## explicit; go 1.19
 github.com/yeqown/go-qrcode/writer/standard
 github.com/yeqown/go-qrcode/writer/standard/imgkit
 # github.com/yeqown/reedsolomon v1.0.0
 ## explicit
 github.com/yeqown/reedsolomon
 github.com/yeqown/reedsolomon/binary
-# github.com/yuin/goldmark v1.8.4
+# github.com/yuin/goldmark v1.8.6
 ## explicit; go 1.22
 github.com/yuin/goldmark
 github.com/yuin/goldmark/ast
@@ -468,11 +493,11 @@ go.yaml.in/yaml/v3
 # go4.org/mem v0.0.0-20240501181205-ae6ca9944745
 ## explicit; go 1.14
 go4.org/mem
-# go4.org/netipx v0.0.0-20231129151722-fdeea329fbba
+# go4.org/netipx v0.0.0-20260823151212-3075585bcbeb
 ## explicit; go 1.18
 go4.org/netipx
-# golang.org/x/crypto v0.54.0
-## explicit; go 1.25.0
+# golang.org/x/crypto v0.57.0
+## explicit; go 1.26.0
 golang.org/x/crypto/argon2
 golang.org/x/crypto/blake2b
 golang.org/x/crypto/blake2s
@@ -493,7 +518,7 @@ golang.org/x/crypto/ssh
 golang.org/x/crypto/ssh/agent
 golang.org/x/crypto/ssh/internal/bcrypt_pbkdf
 golang.org/x/crypto/ssh/knownhosts
-# golang.org/x/exp v0.0.0-20260908205506-85c1c2202aba
+# golang.org/x/exp v0.0.0-20261007192929-f45ad48fbe92
 ## explicit; go 1.26.0
 golang.org/x/exp/constraints
 golang.org/x/exp/maps
@@ -519,8 +544,8 @@ golang.org/x/image/vector
 golang.org/x/image/vp8
 golang.org/x/image/vp8l
 golang.org/x/image/webp
-# golang.org/x/net v0.57.0
-## explicit; go 1.25.0
+# golang.org/x/net v0.60.0
+## explicit; go 1.26.0
 golang.org/x/net/bpf
 golang.org/x/net/html
 golang.org/x/net/html/atom
@@ -528,11 +553,11 @@ golang.org/x/net/html/charset
 golang.org/x/net/internal/socks
 golang.org/x/net/proxy
 golang.org/x/net/route
-# golang.org/x/sync v0.23.0
+# golang.org/x/sync v0.24.0
 ## explicit; go 1.26.0
 golang.org/x/sync/errgroup
 golang.org/x/sync/singleflight
-# golang.org/x/sys v0.48.0
+# golang.org/x/sys v0.49.0
 ## explicit; go 1.26.0
 golang.org/x/sys/cpu
 golang.org/x/sys/unix
@@ -564,14 +589,14 @@ golang.org/x/text/language
 golang.org/x/text/runes
 golang.org/x/text/transform
 golang.org/x/text/unicode/norm
-# golang.zx2c4.com/wireguard/windows v1.0.1
+# golang.zx2c4.com/wireguard/windows v1.1.1
 ## explicit; go 1.25.0
 golang.zx2c4.com/wireguard/windows/tunnel/winipcfg
 # gopkg.in/yaml.v3 v3.0.1
 ## explicit
 gopkg.in/yaml.v3
-# tailscale.com v1.102.0
-## explicit; go 1.26.5
+# tailscale.com v1.104.1
+## explicit; go 1.27.1
 tailscale.com
 tailscale.com/atomicfile
 tailscale.com/client/local
@@ -580,6 +605,7 @@ tailscale.com/drive
 tailscale.com/envknob
 tailscale.com/feature
 tailscale.com/feature/buildfeatures
+tailscale.com/feature/favorites/pintype
 tailscale.com/feature/serviceclientprefs/serviceclient
 tailscale.com/health
 tailscale.com/hostinfo
@@ -599,6 +625,8 @@ tailscale.com/paths
 tailscale.com/safesocket
 tailscale.com/syncs
 tailscale.com/tailcfg
+tailscale.com/tailcfg/nodecap
+tailscale.com/tailcfg/peercap
 tailscale.com/tka
 tailscale.com/tsconst
 tailscale.com/tstime

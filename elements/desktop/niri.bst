@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: github:niri-wm/niri.git
   track: main
-  ref: v26.04-165-ged22699d99462f61ab171472d3ea67e844ea580d
+  ref: v26.04-168-g2c82b77a7116a1241ea2fd41dd008ff00b609aae
 - kind: cargo2
   ref:
   - kind: registry
@@ -1340,10 +1340,10 @@ sources:
     version: 0.3.3
     sha: e8e2fb0f499abb4d162f2bedad68f5ef91a1682b5a03596ddb67efd37768d100
   - kind: git
-    commit: 79bbed5e1199090d787115614847a79c76607181
+    commit: 19c16d3e34172fcc8fb3d293bcae563b0a19ea70
     repo: github:Smithay/smithay.git
     query:
-      rev: 79bbed5e1199090d787115614847a79c76607181
+      rev: 19c16d3e34172fcc8fb3d293bcae563b0a19ea70
     name: smithay
     version: 0.7.0
   - kind: registry
@@ -1351,10 +1351,10 @@ sources:
     version: 0.21.1
     sha: 74dc9ee14b0fdcb535f9556141bacac070c994a977d2240ee455d7438a617f00
   - kind: git
-    commit: 79bbed5e1199090d787115614847a79c76607181
+    commit: 19c16d3e34172fcc8fb3d293bcae563b0a19ea70
     repo: github:Smithay/smithay.git
     query:
-      rev: 79bbed5e1199090d787115614847a79c76607181
+      rev: 19c16d3e34172fcc8fb3d293bcae563b0a19ea70
     name: smithay-drm-extras
     version: 0.1.0
   - kind: registry
