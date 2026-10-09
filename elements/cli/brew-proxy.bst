@@ -6,7 +6,7 @@ sources:
   track: v*
   ref: v0.3.6-0-gdfed5aa6f45d22cdccf93d5d177428350d8ecbc1
 - kind: local
-  path: files/brew-proxy/brew-proxy-dropin.conf
+  path: files/brew-proxy/brew.env
 - kind: cargo2
   ref:
   - kind: registry
@@ -401,4 +401,4 @@ config:
   - |
     %{meson-install}
   - |
-    install -Dm0644 brew-proxy-dropin.conf "%{install-root}%{indep-libdir}/systemd/system/brew-setup.service.d/brew-proxy.conf"
+    install -Dm0644 brew.env -t "%{install-root}%{sysconfdir}/homebrew/"

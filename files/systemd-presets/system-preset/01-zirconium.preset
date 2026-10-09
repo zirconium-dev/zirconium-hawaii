@@ -2,6 +2,8 @@
 
 enable uupd.timer
 enable rechunker-group-fix.service
+enable brew-proxy-setup.service
+enable brew-proxy-fix-ownership.service
 
 # Keeping systemd-networkd enabled with NetworkManger breaks systemd-timesyncd for some reason
 enable NetworkManager.service
