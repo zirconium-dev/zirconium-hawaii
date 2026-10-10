@@ -27,6 +27,25 @@ bst *ARGS:
         -w /pwd \
         "{{bst_image}}" bash -c 'bst --colors {{ARGS}}'
 
+bst-nocolor *ARGS:
+    #!/usr/bin/env bash
+    set -xeuo pipefail
+
+    mkdir -p "$HOME/.cache/buildstream"
+    mkdir -p "$HOME/.config/hawaii"
+    touch "$HOME/.config/buildstream.conf"
+    podman run --rm \
+        --privileged \
+        --device /dev/fuse \
+        --network=host \
+        --pids-limit -1 \
+        -v "{{base_dir}}":/pwd \
+        -v "$HOME/.config/buildstream.conf:/root/.config/buildstream.conf" \
+        -v "$HOME/.config/hawaii:/root/.config/hawaii" \
+        -v "$HOME/.cache/buildstream:/root/.cache/buildstream:rw" \
+        -w /pwd \
+        "{{bst_image}}" bash -c 'bst {{ARGS}}'
+
 bst-interactive *ARGS:
     #!/usr/bin/env bash
     set -xeuo pipefail
@@ -106,4 +125,28 @@ generate-bootable-image $base_dir=base_dir $filesystem=filesystem:
         --via-loopback /data/bootable.raw \
         --filesystem "${filesystem}" \
         --wipe \
-        --bootloader systemd \
+        --bootloader systemd
+
+rechunk $image_name=image_name:
+    #!/usr/bin/env bash
+    set -xeuo pipefail
+
+    CHUNKAH_OUTPUT_DIR="$(mktemp -d)"
+    CHUNKAH_CONFIG_FILE="$(mktemp)"
+
+    trap 'rm -f "${CHUNKAH_CONFIG_FILE}"; rm -rf "${CHUNKAH_OUTPUT_DIR}"' EXIT
+    podman inspect "${image_name}" > "${CHUNKAH_CONFIG_FILE}"
+
+    podman run --rm "--mount=type=image,src=${image_name},target=/chunkah" \
+        -v "${CHUNKAH_CONFIG_FILE}:/chunkah-config.json:ro,Z" \
+        -v "${CHUNKAH_OUTPUT_DIR}:/run/out:Z" \
+        -e SOURCE_DATE_EPOCH=1320937200 \
+        quay.io/coreos/chunkah:latest build \
+        --verbose \
+        --compressed \
+        --max-layers 256 \
+        --config /chunkah-config.json \
+        --output oci:/run/out/chunked
+
+    CHUNKED_IMAGE="$(podman pull "oci:${CHUNKAH_OUTPUT_DIR}/chunked")"
+    podman tag "${CHUNKED_IMAGE}" "${image_name}"

@@ -60,10 +60,10 @@ jobs:
       id-token: write
     with:
       image-name: "zirconium-hawaii"
-      element: "oci/zirconium/image.bst"
+      element-image: "oci/zirconium/image.bst"
+      element-stack: "oci/zirconium/stack.bst"
       disable-remote-execution: ${{ inputs.disable-remote-execution == true }}
       publish: ${{ github.event_name != 'pull_request' && ( github.ref == format('refs/heads/stable', github.event.repository.default_branch) || github.ref == format('refs/heads/testing', github.event.repository.default_branch) ) }}
-      pull-before-configure: ${{ inputs.pull-before-configure == true }}
 
   # Run this build AFTER build-hawaii. build-hawaii will cache all of the base packages.
   build-hawaii-nvidia:
@@ -80,10 +80,10 @@ jobs:
       id-token: write
     with:
       image-name: "zirconium-hawaii-nvidia"
-      element: "oci/nvidia/image.bst"
+      element-image: "oci/nvidia/image.bst"
+      element-stack: "oci/nvidia/stack.bst"
       disable-remote-execution: ${{ inputs.disable-remote-execution == true }}
       publish: ${{ github.event_name != 'pull_request' && ( github.ref == format('refs/heads/stable', github.event.repository.default_branch) || github.ref == format('refs/heads/testing', github.event.repository.default_branch) ) }}
-      pull-before-configure: ${{ inputs.pull-before-configure == true }}
 
   build-hawaii-jackrabbit:
     name: Build Hawaii Jackrabbit Bootc Image
@@ -99,10 +99,10 @@ jobs:
       id-token: write
     with:
       image-name: "zirconium-hawaii-jackrabbit"
-      element: "oci/jackrabbit/image.bst"
+      element-image: "oci/jackrabbit/image.bst"
+      element-stack: "oci/jackrabbit/stack.bst"
       disable-remote-execution: ${{ inputs.disable-remote-execution == true }}
       publish: ${{ github.event_name != 'pull_request' && ( github.ref == format('refs/heads/stable', github.event.repository.default_branch) || github.ref == format('refs/heads/testing', github.event.repository.default_branch) ) }}
-      pull-before-configure: ${{ inputs.pull-before-configure == true }}
 
   build-hawaii-jackrabbit-nvidia:
     name: Build Hawaii Jackrabbit Nvidia Bootc Image
@@ -118,7 +118,7 @@ jobs:
       id-token: write
     with:
       image-name: "zirconium-hawaii-jackrabbit-nvidia"
-      element: "oci/jackrabbit-nvidia/image.bst"
+      element-image: "oci/jackrabbit-nvidia/image.bst"
+      element-stack: "oci/jackrabbit-nvidia/stack.bst"
       disable-remote-execution: ${{ inputs.disable-remote-execution == true }}
       publish: ${{ github.event_name != 'pull_request' && ( github.ref == format('refs/heads/stable', github.event.repository.default_branch) || github.ref == format('refs/heads/testing', github.event.repository.default_branch) ) }}
-      pull-before-configure: ${{ inputs.pull-before-configure == true }}

@@ -12,14 +12,14 @@ on:
         required: false
         type: boolean
         default: true
-      element:
+      element-image:
         description: "Element to build"
         required: true
         type: string
-      pull-before-configure:
-        description: "Pull from cache before build"
-        type: boolean
-        default: false
+      element-stack:
+        description: "Stack element to get runtime dependencies"
+        required: true
+        type: string
       disable-remote-execution:
         description: "Don't configure remote-execution server (requires valid CASD keys)"
         type: boolean
@@ -63,11 +63,6 @@ jobs:
 
       - name: Free disk space
         uses: hastd/free-disk-space@68572aeaadb7f76bd408246328e95926323402b5 # v0.1.2
-
-      - name: Pull artifacts and sources
-        if: inputs.pull-before-configure
-        run: |
-          just bst artifact pull --deps all ${{ inputs.element }}
 
       - name: Configure BuildStream
         env:
@@ -247,7 +242,17 @@ jobs:
 
       - name: Buildstream build
         run: |
-          just bst build ${{ inputs.element }}
+          just bst build ${{ inputs.element-image }}
+
+      - name: Pull runtime dependencies
+        if: inputs.publish
+        run: |
+          just bst artifact pull --deps run ${{ inputs.element-stack }}
+        
+      - name: Generate extended attribute json file
+        if: inputs.publish
+        run: |
+          python3 get_xattr.py ${{ inputs.element-stack }}
 
       - name: Print disk usage after image build
         run: |
@@ -256,14 +261,14 @@ jobs:
       - name: Export Initial OCI Image
         if: inputs.publish
         run: |
-          just bst artifact checkout --tar - ${{ inputs.element }} | podman load
+          just bst artifact checkout --tar - ${{ inputs.element-image }} | podman load
 
       # Delete casd token 
       - name: Delete token
         if: always()
         run: rm -f ~/.config/hawaii/client.key
 
-      - name: Build final OCI Image
+      - name: Build OCI Image
         if: inputs.publish
         env:
           LABELS: ${{ steps.metadata.outputs.labels }}
@@ -271,17 +276,19 @@ jobs:
         run: |
           set -x
 
-          BUILD_ARGS=("--squash-all")
-          for tag in $TAGS; do
-            BUILD_ARGS+=("--tag" "$IMAGE_REGISTRY/$IMAGE_NAME:$tag")
-          done
+          BUILD_ARGS=()
 
           while IFS= read -r label; do
             BUILD_ARGS+=("--label" "$label")
             BUILD_ARGS+=("--annotation" "$label")
           done <<< "$LABELS"
 
-          podman build "${BUILD_ARGS[@]}" .
+          podman build "${BUILD_ARGS[@]}" . --tag localhost/zirconium-hawaii:latest
+
+      - name: Rechunk OCI image
+        if: inputs.publish
+        run: |
+          just rechunk
 
       - name: Login to GitHub Container Registry
         if: inputs.publish
@@ -302,7 +309,7 @@ jobs:
           set -x
           for i in $(seq "${MAX_RETRIES}"); do
             for TAG in $TAGS; do
-              podman push --compression-format=zstd "${IMAGE_REGISTRY}/${IMAGE_NAME}:$TAG" || sleep $((5 * i))
+              podman push --compression-format=zstd "localhost/zirconium-hawaii:latest" "${IMAGE_REGISTRY}/${IMAGE_NAME}:$TAG" || sleep $((5 * i))
             done
           done
 
