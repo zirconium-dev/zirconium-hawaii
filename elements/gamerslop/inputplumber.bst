@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: github:ShadowBlip/InputPlumber.git
   track: v*
-  ref: v0.81.0-0-gea60d873cca17edd1cb655ede26f557108135252
+  ref: v0.82.0-0-gd951ef9df713a3ad3a88645a8c07b79ea5592274
 - kind: cargo2
   ref:
   - kind: registry
@@ -459,10 +459,6 @@ sources:
     version: 2.0.7
     sha: 79cf5c93f93228cf8efb3ba362535fb11199ac548a09ce117c9b1adc3030d706
   - kind: registry
-    name: industrial-io
-    version: 0.6.1
-    sha: 348ab060d6e63ff76337f57d7646fc3bd38d7abc0ac8c98b7acedecf2262e90f
-  - kind: registry
     name: inotify
     version: 0.11.0
     sha: f37dccff2791ab604f9babef0ba14fbe0be30bd368dc541e2b08d07c8aa908f3
@@ -534,10 +530,6 @@ sources:
     name: libc
     version: 0.2.178
     sha: 37c93d8daa9d8a012fd8ab92f088405fb202ea0b6ab73ee2482ae66af4f42091
-  - kind: registry
-    name: libiio-sys
-    version: 0.4.1
-    sha: 2f643b99b21452dd9bb6cb5a517cfa8342e90c6e9427a2b6274d5331dfb9ad98
   - kind: registry
     name: libudev
     version: 0.3.0
@@ -739,10 +731,6 @@ sources:
     version: 0.2.0
     sha: 439ee305def115ba05938db6eb1644ff94165c5ab5e9420d1c1bcedbba909391
   - kind: registry
-    name: ppv-lite86
-    version: 0.2.21
-    sha: 85eae3c4ed2f50dcfe72643da4befc30deadb458a9b590d720cde2f2b1e97da9
-  - kind: registry
     name: proc-macro-crate
     version: 3.4.0
     sha: 219cb19e96be00ab2e37d6e299658a0cfa83e52429179969b0f0121b4ac46983
@@ -783,21 +771,9 @@ sources:
     version: 0.8.5
     sha: 34af8d1a0e25924bc5b7c43c079c942339d8f0a8b57c39049bef581b46327404
   - kind: registry
-    name: rand
-    version: 0.9.2
-    sha: 6db2770f06117d490610c7488547d543617b21bfa07796d7a12f6f1bd53850d1
-  - kind: registry
-    name: rand_chacha
-    version: 0.9.0
-    sha: d3022b5f1df60f26e1ffddd6c66e8aa15de382ae63b3a0c1bfc0e4d3e3f325cb
-  - kind: registry
     name: rand_core
     version: 0.6.4
     sha: ec0be4795e2f6a28069bec0b5ff3e2ac9bafc99e6a9a7dc3547996c5c816922c
-  - kind: registry
-    name: rand_core
-    version: 0.9.3
-    sha: 99d9a13982dcf210057a8a78572b2217b667c3beacbf3a0d8b454f6f82837d38
   - kind: registry
     name: ratatui
     version: 0.30.0
@@ -1393,14 +1369,6 @@ sources:
     name: zbus_names
     version: 4.2.0
     sha: 7be68e64bf6ce8db94f63e72f0c7eb9a60d733f7e0499e628dfab0f84d6bcb97
-  - kind: registry
-    name: zerocopy
-    version: 0.8.31
-    sha: fd74ec98b9250adb3ca554bdde269adf631549f51d8a8f8f0a10b50f1cb298c3
-  - kind: registry
-    name: zerocopy-derive
-    version: 0.8.31
-    sha: d8a8d209fdf45cf5138cbb5a506f6b52522a25afccc534d1475dad8e31105c6a
   - kind: registry
     name: zmij
     version: 1.0.3
