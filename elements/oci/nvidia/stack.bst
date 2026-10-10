@@ -2,6 +2,7 @@ kind: stack
 
 depends:
   - stacks/zirconium.bst
+  - stacks/bootc.bst
   - stacks/nvidia.bst
   - core/linux.bst
   - core/nvidia-initramfs.bst

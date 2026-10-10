@@ -4,7 +4,6 @@ depends:
   - cli/brew.bst
   - cli/brew-proxy.bst
   - stacks/base-system.bst
-  - stacks/bootc.bst
   - stacks/codecs.bst
   - stacks/desktop.bst
   - stacks/firewalld.bst
