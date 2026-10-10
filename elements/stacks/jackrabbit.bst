@@ -2,6 +2,7 @@ kind: stack
 
 depends:
   - config/gamerslop.bst
+  - gamerslop/dmemcg-booster.bst
   - gamerslop/gamescope.bst
   - gamerslop/gamescope-session.bst
   - gamerslop/gamescope-session-steam.bst
