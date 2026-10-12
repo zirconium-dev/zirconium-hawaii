@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -xeuo pipefail
+
+
+(
+  . /usr/lib/os-release
+  cat >> /usr/lib/os-release <<EOF
+SYSEXT_LEVEL="${IMAGE_VERSION}"
+CONFEXT_LEVEL="${IMAGE_VERSION}"
+EOF
+)
