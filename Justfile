@@ -140,7 +140,6 @@ rechunk $image_name=image_name:
     podman run --rm "--mount=type=image,src=${image_name},target=/chunkah" \
         -v "${CHUNKAH_CONFIG_FILE}:/chunkah-config.json:ro,Z" \
         -v "${CHUNKAH_OUTPUT_DIR}:/run/out:Z" \
-        -e SOURCE_DATE_EPOCH=1320937200 \
         quay.io/coreos/chunkah:latest build \
         --verbose \
         --compressed \
