@@ -30,7 +30,7 @@ github.com/AvengeMedia/dankgo/wayland/client
 github.com/AvengeMedia/dankgo/wayland/ext_data_control
 github.com/AvengeMedia/dankgo/wayland/xdg_shell
 github.com/AvengeMedia/dankgo/wlclipboard
-# github.com/AvengeMedia/dgop v1.6.3-0.20260920163359-59c7d81ae3b9
+# github.com/AvengeMedia/dgop v1.6.3-0.20261015133851-bf93d6b75cf2
 ## explicit; go 1.26.0
 github.com/AvengeMedia/dgop/gops
 github.com/AvengeMedia/dgop/models
@@ -299,6 +299,7 @@ github.com/go-ole/go-ole/oleutil
 ## explicit; go 1.20
 github.com/godbus/dbus/v5
 github.com/godbus/dbus/v5/introspect
+github.com/godbus/dbus/v5/prop
 # github.com/golang/freetype v0.0.0-20170609003504-e2365dfdc4a0
 ## explicit
 github.com/golang/freetype/raster

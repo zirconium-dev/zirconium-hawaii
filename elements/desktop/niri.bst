@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: github:niri-wm/niri.git
   track: main
-  ref: v26.04-185-gbb38b7e14f8f7bbef6584cf263bf36b0044d63d3
+  ref: v26.04-195-g45739bc072f9875a674d335ae724f10d3b35c665
 - kind: cargo2
   ref:
   - kind: registry
@@ -217,8 +217,8 @@ sources:
     sha: 06c28280c6b12055b5e39e4554271ae4e6630b27c0da9148c4cf6485fc6d245c
   - kind: registry
     name: calloop
-    version: 0.14.4
-    sha: 4dbf9978365bac10f54d1d4b04f7ce4427e51f71d61f2fe15e3fed5166474df7
+    version: 0.14.5
+    sha: 43b32313e937c8721c9d17ee9bf60699a6402b4b7c2cb6ac1bee0ffcaa4b4e5e
   - kind: registry
     name: calloop-wayland-source
     version: 0.4.1
@@ -1340,10 +1340,10 @@ sources:
     version: 0.3.3
     sha: e8e2fb0f499abb4d162f2bedad68f5ef91a1682b5a03596ddb67efd37768d100
   - kind: git
-    commit: 19c16d3e34172fcc8fb3d293bcae563b0a19ea70
+    commit: 8a270232f1bfc416c781273c98a3f52a812a0bba
     repo: github:Smithay/smithay.git
     query:
-      rev: 19c16d3e34172fcc8fb3d293bcae563b0a19ea70
+      rev: 8a270232f1bfc416c781273c98a3f52a812a0bba
     name: smithay
     version: 0.7.0
   - kind: registry
@@ -1351,10 +1351,10 @@ sources:
     version: 0.21.1
     sha: 74dc9ee14b0fdcb535f9556141bacac070c994a977d2240ee455d7438a617f00
   - kind: git
-    commit: 19c16d3e34172fcc8fb3d293bcae563b0a19ea70
+    commit: 8a270232f1bfc416c781273c98a3f52a812a0bba
     repo: github:Smithay/smithay.git
     query:
-      rev: 19c16d3e34172fcc8fb3d293bcae563b0a19ea70
+      rev: 8a270232f1bfc416c781273c98a3f52a812a0bba
     name: smithay-drm-extras
     version: 0.1.0
   - kind: registry

@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: github:OpenGamingCollective/gamescope.git
   track: '*.*.*-ogc*'
-  ref: 3.16.31-ogc2-0-g76a1563a83f8646915ed33378de7a50b0285f686
+  ref: 3.16.31-ogc6-0-gf391882b1cb450cfb607456d5805dd191f75a46a
 # meson subprojects
 - kind: git_repo
   directory: subprojects/glm
@@ -26,7 +26,7 @@ sources:
 - kind: git_module
   path: subprojects/vkroots
   url: github:Joshua-Ashton/vkroots
-  ref: 5106d8a0df95de66cc58dc1ea37e69c99afc9540
+  ref: 20733b938267dcac60f6ac105dbb757f9cc8df9c
 - kind: git_module
   path: subprojects/openvr
   url: github:ValveSoftware/openvr.git

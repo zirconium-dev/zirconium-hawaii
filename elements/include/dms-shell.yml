@@ -5,10 +5,10 @@ sources:
   kind: zip
   url: golang-proxy:github.com/!avenge!media/dankgo/@v/v1.6.3-0.20261009141806-0a6056424f6d.zip
 - directory: core/vendor/github.com/AvengeMedia/dgop
-  ref: 435bc60c44784c398ab8d66eb457a5b00980ef8d649971663c81b80c9d9ac317
+  ref: be2471fa68790b0306ba49d3d0d479225430ede5d124af7a08749ce13c1bebc9
   base-dir: "*/*/*"
   kind: zip
-  url: golang-proxy:github.com/!avenge!media/dgop/@v/v1.6.3-0.20260920163359-59c7d81ae3b9.zip
+  url: golang-proxy:github.com/!avenge!media/dgop/@v/v1.6.3-0.20261015133851-bf93d6b75cf2.zip
 - directory: core/vendor/github.com/Wifx/gonetworkmanager/v2
   ref: 18ade00b4f176832df17d82c4877c7ddd415631f2e5622a83fd82efc98e30693
   base-dir: "*/*/*/*"
