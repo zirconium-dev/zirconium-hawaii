@@ -873,7 +873,7 @@ depends:
 - freedesktop-sdk.bst:components/glib.bst
 - freedesktop-sdk.bst:components/gsettings-desktop-schemas.bst
 - freedesktop-sdk.bst:components/systemd.bst
-- gnome-build-meta.bst:core-deps/speech-dispatcher.bst
+- freedesktop-sdk-extra.bst:components/speech-dispatcher.bst
 
 environment:
   MAXJOBS: '%{max-jobs}'

@@ -40,7 +40,7 @@ runtime-depends:
 - desktop/ddcutil.bst
 - desktop/matugen.bst
 - freedesktop-sdk.bst:components/libnotify.bst
-- gnome-build-meta.bst:core-deps/accountsservice.bst
+- freedesktop-sdk-extra.bst:components/accountsservice.bst
 - gnome-build-meta.bst:core-deps/cups-pk-helper.bst
 
 variables:

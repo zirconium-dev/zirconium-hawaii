@@ -63,15 +63,15 @@ depends:
   - freedesktop-sdk.bst:components/hidapi.bst
   - freedesktop-sdk-extra.bst:components/smartmontools.bst
 
-  - gnome-build-meta.bst:gnomeos-deps/android-udev-rules.bst
-  - gnome-build-meta.bst:gnomeos-deps/distrobox.bst
+  - freedesktop-sdk-extra.bst:components/android-udev-rules.bst
+  - freedesktop-sdk-extra.bst:components/distrobox.bst
+  - freedesktop-sdk-extra.bst:components/just.bst
+  - freedesktop-sdk-extra.bst:components/toolbox.bst
+  - freedesktop-sdk-extra.bst:components/zram-generator.bst
   - gnome-build-meta.bst:gnomeos-deps/hidraw-udev.bst
   - gnome-build-meta.bst:gnomeos-deps/journald-config.bst
-  - gnome-build-meta.bst:gnomeos-deps/just.bst
   - gnome-build-meta.bst:gnomeos-deps/ld-config.bst
-  - gnome-build-meta.bst:gnomeos-deps/toolbox.bst
   - gnome-build-meta.bst:gnomeos-deps/udev-hide-usr.bst
-  - gnome-build-meta.bst:gnomeos-deps/zram-generator.bst
 
   - cli/lsb-release.bst
   - cli/lshw.bst

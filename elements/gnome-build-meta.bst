@@ -12,6 +12,7 @@ config:
   overrides:
     # This along with the patches is required and has to match what gnome-build-meta is using
     freedesktop-sdk.bst: freedesktop-sdk.bst
+    freedesktop-sdk-extra.bst: freedesktop-sdk-extra.bst
 
     # Edge doesn't have any matching cache entries with GNOME, so we don't need these elements to be matching with them
     sdk/glib.bst: freedesktop-sdk.bst:components/glib.bst

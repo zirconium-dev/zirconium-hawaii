@@ -27,10 +27,10 @@ depends:
   - freedesktop-sdk.bst:vm/config/flathub.bst
   - freedesktop-sdk.bst:vm/mesa-default.bst
   - gnome-build-meta.bst:gnomeos-deps/alsa-ucm-conf.bst
-  - gnome-build-meta.bst:gnomeos-deps/wl-clipboard.bst
+  - freedesktop-sdk-extra.bst:components/wl-clipboard.bst
   - gnome-build-meta.bst:gnomeos-deps/fprintd.bst
   - desktop/xwayland-satellite.bst
-  - gnome-build-meta.bst:core-deps/speech-dispatcher.bst
+  - freedesktop-sdk-extra.bst:components/speech-dispatcher.bst
   - gnome-build-meta.bst:core-deps/xdg-desktop-portal-gnome.bst
   - gnome-build-meta.bst:core-deps/xdg-desktop-portal-gtk.bst
   - gnome-build-meta.bst:core-deps/boltd.bst
