@@ -18,6 +18,7 @@ depends:
   - config/ld-config.bst
   - config/plymouth.bst
   - desktop/input-remapper.bst
+  - desktop/cardwire.bst
   - freedesktop-sdk.bst:components/desktop-file-utils.bst
   - freedesktop-sdk.bst:components/xwayland.bst
   - freedesktop-sdk.bst:components/flatpak.bst

@@ -52,7 +52,13 @@ def get_element_files(elements: list) -> dict:
 
 
 def main():
-    element = "elements/" + sys.argv[1]
+
+    try:
+        stack = sys.argv[1]
+    except IndexError:
+        stack = "oci/zirconium/stack.bst"
+
+    element = "elements/" + stack
 
     try:
         open(element)
@@ -60,11 +66,11 @@ def main():
         print("This element does not exist.")
         sys.exit(1)
 
-    deps = get_deps(sys.argv[1])
+    start = time.time()
+    deps = get_deps(stack)
 
     print(f"Getting file lists of {element} dependencies, {len(deps)} runtime dependencies found...")
 
-    start = time.time()
     dict = get_element_files(deps)
 
     with open("xattr.json", 'w', encoding='utf-8') as f:
