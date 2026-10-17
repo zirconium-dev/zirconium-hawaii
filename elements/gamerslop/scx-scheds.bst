@@ -3083,7 +3083,7 @@ environment-nocache:
 config:
   build-commands:
   - |
-    cargo build --release --all-features --frozen --offline --workspace --jobs "${MAXJOBS}" \
+    cargo build --release --frozen --offline --workspace --jobs "${MAXJOBS}" \
      --exclude scx_rlfifo \
      --exclude scx_mitosis \
      --exclude scxcash \
