@@ -35,6 +35,7 @@ config:
     components/graphene.bst: gnome-build-meta.bst:sdk/graphene.bst
     components/gsettings-desktop-schemas.bst: gnome-build-meta.bst:sdk/gsettings-desktop-schemas.bst
     components/gtk3.bst: gnome-build-meta.bst:sdk/gtk+-3.bst
+    components/krb5.bst: gnome-build-meta.bst:sdk/krb5.bst
     components/libibus.bst: gnome-build-meta.bst:sdk/libibus.bst
     components/json-glib.bst: gnome-build-meta.bst:sdk/json-glib.bst
     components/libglycin.bst: gnome-build-meta.bst:sdk/libglycin.bst
