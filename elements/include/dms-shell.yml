@@ -1,9 +1,9 @@
 sources:
 - directory: core/vendor/github.com/AvengeMedia/dankgo
-  ref: a9a7943017746faa2873f191a8ee22fd1b2968a660133d54ad1eabb2821b172e
+  ref: b2d5031c3371e49e9d48e3c411b88c80dc5cd453c1bc981b02fa10f5cf94f892
   base-dir: "*/*/*"
   kind: zip
-  url: golang-proxy:github.com/!avenge!media/dankgo/@v/v1.6.3-0.20261009141806-0a6056424f6d.zip
+  url: golang-proxy:github.com/!avenge!media/dankgo/@v/v1.6.3-0.20261019011452-dbde56fb9274.zip
 - directory: core/vendor/github.com/AvengeMedia/dgop
   ref: be2471fa68790b0306ba49d3d0d479225430ede5d124af7a08749ce13c1bebc9
   base-dir: "*/*/*"

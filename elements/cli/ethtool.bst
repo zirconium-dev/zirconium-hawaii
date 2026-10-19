@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: kernel:network/ethtool/ethtool.git
   track: v*
-  ref: v7.1-0-g6fa84088e117490cfc45df52bc6e9113d5932703
+  ref: v7.2-0-gd54c8bd1d0da950280a34484026f3b3b7bdf9a19
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-autotools.bst
