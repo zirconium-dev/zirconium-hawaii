@@ -4,6 +4,9 @@ sources:
 - kind: git_repo
   url: freedesktop:xdg/xdg-utils
   track: 'v*.*.*'
+  exclude:
+  - '*beta*'
+  - '*rc*'
   ref: v1.2.1-0-g356c380ad6fecc9ce6bea1f6a77986ba67402c80
 
 build-depends:
