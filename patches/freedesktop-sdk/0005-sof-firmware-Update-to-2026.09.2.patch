@@ -1,0 +1,24 @@
+From 6c89faea12f143a5ae75db974fa03b0c988a24f2 Mon Sep 17 00:00:00 2001
+From: Valentin David <me@valentindavid.com>
+Date: Sun, 18 Oct 2026 10:11:24 +0200
+Subject: [PATCH 5/5] sof-firmware: Update to 2026.09.2
+
+---
+ elements/components/sof-firmware.bst | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/elements/components/sof-firmware.bst b/elements/components/sof-firmware.bst
+index 730216e9c..8fd9ee1fc 100644
+--- a/elements/components/sof-firmware.bst
++++ b/elements/components/sof-firmware.bst
+@@ -30,5 +30,5 @@ config:
+ 
+ sources:
+ - kind: tar
+-  url: github_files:thesofproject/sof-bin/releases/download/v2025.12.2/sof-bin-2025.12.2.tar.gz
+-  ref: 533f63e3a6d94c09ce05a782657b675fa683ff20787c0979226cf563ec79f517
++  url: github_files:thesofproject/sof-bin/releases/download/v2026.09.2/sof-bin-2026.09.2.tar.gz
++  ref: 5f7bc30b2b5c1e6b0da55a33fc44e2b7f56ae9b06952edcde614f51ef6b943e1
+-- 
+2.56.0
+
