@@ -1,0 +1,69 @@
+From 2326551a583941831804a58d0dba5eec86b5d8c7 Mon Sep 17 00:00:00 2001
+From: Qu Wenruo <wqu@suse.com>
+Date: Sat, 10 Oct 2026 16:59:49 +1030
+Subject: [PATCH] btrfs: fix the fsverity callback where unexpected range is
+ verified
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+[BUG]
+There is a bug report that on v7.2 kernel, compressed extents with
+fsverity enabled can lead to warnings like the following:
+
+ fs-verity (dm-3, inode 257): FILE CORRUPTED! pos=7471104, level=-1, want_hash=sha256:bedf0e7bc93b48694db719001a8d3e79229cc58ee638b41d4149193505090774, real_hash=sha256:ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7
+
+The read itself eventually succeeds, and no read error is returned to
+user space.
+
+[CAUSE]
+Since v7.2 btrfs has enabled large data folio support, now a folio can
+contain multiple blocks even if the page size matches the fs block size.
+And even before that, btrfs already has block size < page size support,
+thus all involved code should assume a folio can contain multiple
+blocks.
+
+However the function btrfs_verify_folio() calls fsverity_verify_folio(),
+which verifies the whole folio, even if the read range only covers part
+of the folio.
+
+This forces fsverity to verify garbage data that is not yet read from
+disk, and causes verification failure.
+
+This is a long-standing bug, but previously it only affected bs < ps
+cases which is not that common.
+Now with the large folio support, it's much easier to trigger with bs ==
+ps cases.
+
+[FIX]
+Instead of calling fsverity_verify_folio(), call
+fsverity_verify_blocks() to verify only the read range.
+
+Reported-by: Roger Alasà <vonbloom@gmail.com>
+Link: https://lore.kernel.org/linux-btrfs/CAELqY9==Ter2XQPRp=gjW5T75T+7kcZCXpn5roF2L6tY6mQNxw@mail.gmail.com/
+Fixes: 146054090b08 ("btrfs: initial fsverity support")
+Tested-by: Roger Alasà <vonbloom@gmail.com>
+Signed-off-by: Qu Wenruo <wqu@suse.com>
+Reviewed-by: Eric Biggers <ebiggers@kernel.org>
+Tested-by: Tito Duarte <duartito@gmail.com>
+Link: https://patch.msgid.link/15f4ef9f50e1f4af375e45cf976717041f1a96d4.1791613764.git.wqu@suse.com
+---
+ fs/btrfs/extent_io.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/fs/btrfs/extent_io.c b/fs/btrfs/extent_io.c
+index ae6294fedd2d..ae186189f940 100644
+--- a/fs/btrfs/extent_io.c
++++ b/fs/btrfs/extent_io.c
+@@ -504,7 +504,7 @@ static bool btrfs_verify_folio(struct fsverity_info *vi, struct folio *folio,
+ 
+ 	if (!vi || btrfs_folio_test_uptodate(fs_info, folio, start, len))
+ 		return true;
+-	return fsverity_verify_folio(vi, folio);
++	return fsverity_verify_blocks(vi, folio, len, offset_in_folio(folio, start));
+ }
+ 
+ static void end_folio_read(struct fsverity_info *vi, struct folio *folio,
+-- 
+2.56.0
+

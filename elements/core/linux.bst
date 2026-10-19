@@ -8,15 +8,15 @@ sources:
   track: v*
   exclude:
   - '*-rc*'
-  ref: v7.2.9-0-g5fce161649b4d779d1b76d9fcd52dc77779774b8
+  ref: v7.2.11-0-ga2de78ee6ed8bf8cd99d177c74865a6e8c3cb6ea
 - kind: patch_queue
   path: patches/linux/fdsdk
 - kind: remote_patch
   url: github_files:OpenGamingCollective/linux/releases/download/v%{ogc-patchset-version}/monolithic.patch
-  ref: dcd4a4d57763a931858f85bbfb08d0d3582aa08051b6099cab761c2ddaab7e80
-# Needed for the ogc patchset to compile with fdsdk's config
+  ref: 4ed8ca8ed6c46631d99bffb039bd8fa7bb52d49d45fd6985d754059255a20f9c
+# fixes btrfs fsverity issues on bootc composefs backend
 - kind: patch
-  path: patches/linux/remove-DEVICE_ATTR-macros-in-ayn-ec.c.patch
+  path: patches/linux/btrfs-fix-the-fsverity-callback-where-unexpected-ran.patch
 - kind: local
   path: files/linux/config-utils.sh
 - kind: local
@@ -44,7 +44,7 @@ build-depends:
 #   strict: true
 
 variables:
-  ogc-patchset-version: 7.2.9-ogc1
+  ogc-patchset-version: 7.2.11-ogc2
   extra-version: '-ogc.zirc-edge'
   bootdir: /boot
   kernel_arch: '%{arch}'
