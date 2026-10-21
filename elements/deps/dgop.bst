@@ -3,16 +3,15 @@ kind: make
 sources:
 - kind: git_repo
   directory: dgop_git
-  url: github:AvengeMedia/dgop.git
+  url: github:duxlabs-dev/dux-gop.git
   track: 'v*.*.*'
-  ref: v1.6.2-0-g56a43ff5b8c6b14c5a7c190a69eec43f2297d76b
+  ref: v2.0.0-0-g43a29526bb651c372c3291eb62c3e0cec3bca6e0
 - kind: anitya
   project-id: 388379
-  url: github_files:AvengeMedia/dgop/releases/download/v{version}/dgop-{version}.tar.gz
+  url: github_files:duxlabs-dev/dux-gop/releases/download/v{version}/dgop-{version}.tar.gz
   ref:
-    version: 1.6.2
-    sha256sum: 45571e79799dc4d583e04cc2ff1051c2ccba501daeed378dec29b3ddda4e42a2
-
+    version: 2.0.0
+    sha256sum: 532cb956a336245c62aadc81cde52c8bfeed8fd479aea850ae4ddbef73397b40
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-make.bst
 - freedesktop-sdk.bst:components/git.bst

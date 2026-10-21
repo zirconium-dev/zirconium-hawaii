@@ -2,16 +2,16 @@ kind: make
 
 sources:
 - kind: git_repo
-  directory: danksearch_git
-  url: github:AvengeMedia/danksearch.git
+  directory: duxsearch_git
+  url: github:duxlabs-dev/dux-search.git
   track: 'v*.*.*'
-  ref: v1.6.0-0-g984f86e644a93d2a366d960e3c56233260a501de
+  ref: v2.0.0-0-g9f706cad94f23dd2fd8642a2c06796fa0786e60d
 - kind: anitya
   project-id: 106455
-  url: github_files:AvengeMedia/danksearch/releases/download/v{version}/dsearch-{version}.tar.gz
+  url: github_files:duxlabs-dev/dux-search/releases/download/v{version}/dsearch-{version}.tar.gz
   ref:
-    version: 1.6.0
-    sha256sum: 4e63abb6f352fd9a0d7846aeab8fa115b12eb90ed47d54c765070f6831f9707b
+    version: 2.0.0
+    sha256sum: 4a1740ef16412619ba4457868db947058a3bacb8c39480bbcceed741b67921cb
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-make.bst
 - freedesktop-sdk.bst:components/git.bst
@@ -28,8 +28,8 @@ config:
   configure-commands:
   # This is a hack to get dgop to show the version information for us; we still want the important stuff from the tarball
   # but we only want the .git file from the git repo
-  - mv danksearch_git/.git .
-  - rm -rf danksearch_git
+  - mv duxsearch_git/.git .
+  - rm -rf duxsearch_git
   # The service is hardcoded to use /usr/local, for some reason.
   - |
     sed -i 's|/usr/local|/usr|g' assets/dsearch.service

@@ -3,8 +3,8 @@ kind: stack
 depends:
   - desktop/niri.bst
   - desktop/quickshell.bst
-  - desktop/dms-shell.bst
-  - desktop/dms-greeter.bst
+  - desktop/dux-shell.bst
+  - desktop/dux-greeter.bst
   - desktop/foot.bst
   - desktop/satty.bst
   - desktop/brlaser.bst

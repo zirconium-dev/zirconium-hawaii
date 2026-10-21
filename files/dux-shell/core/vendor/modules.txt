@@ -2,39 +2,7 @@
 ## explicit; go 1.24.0
 filippo.io/edwards25519
 filippo.io/edwards25519/field
-# github.com/AvengeMedia/dankgo v1.6.3-0.20261019011452-dbde56fb9274
-## explicit; go 1.27
-github.com/AvengeMedia/dankgo/boottimer
-github.com/AvengeMedia/dankgo/dbusutil
-github.com/AvengeMedia/dankgo/desktop
-github.com/AvengeMedia/dankgo/errdefs
-github.com/AvengeMedia/dankgo/files
-github.com/AvengeMedia/dankgo/ipc
-github.com/AvengeMedia/dankgo/ipc/params
-github.com/AvengeMedia/dankgo/log
-github.com/AvengeMedia/dankgo/lyrics
-github.com/AvengeMedia/dankgo/material/color
-github.com/AvengeMedia/dankgo/material/contrast
-github.com/AvengeMedia/dankgo/material/dislike
-github.com/AvengeMedia/dankgo/material/dynamic
-github.com/AvengeMedia/dankgo/material/num
-github.com/AvengeMedia/dankgo/material/palettes
-github.com/AvengeMedia/dankgo/material/quantizer
-github.com/AvengeMedia/dankgo/material/temperature
-github.com/AvengeMedia/dankgo/paths
-github.com/AvengeMedia/dankgo/shellapp
-github.com/AvengeMedia/dankgo/shellapp/shellfs
-github.com/AvengeMedia/dankgo/syncmap
-github.com/AvengeMedia/dankgo/trash
-github.com/AvengeMedia/dankgo/wayland/client
-github.com/AvengeMedia/dankgo/wayland/ext_data_control
-github.com/AvengeMedia/dankgo/wayland/xdg_shell
-github.com/AvengeMedia/dankgo/wlclipboard
-# github.com/AvengeMedia/dgop v1.6.3-0.20261015133851-bf93d6b75cf2
-## explicit; go 1.26.0
-github.com/AvengeMedia/dgop/gops
-github.com/AvengeMedia/dgop/models
-# github.com/Microsoft/go-winio v0.6.3
+# github.com/Microsoft/go-winio v0.6.4
 ## explicit; go 1.26.0
 github.com/Microsoft/go-winio
 github.com/Microsoft/go-winio/internal/fs
@@ -169,12 +137,44 @@ github.com/danielgtaylor/huma/v2/yaml
 # github.com/dblohm7/wingoes v0.0.0-20260526185140-fb298caac7ca
 ## explicit; go 1.25.0
 github.com/dblohm7/wingoes
-# github.com/dlclark/regexp2/v2 v2.8.4
+# github.com/dlclark/regexp2/v2 v2.9.1
 ## explicit; go 1.25
 github.com/dlclark/regexp2/v2
 github.com/dlclark/regexp2/v2/helpers
 github.com/dlclark/regexp2/v2/syntax
-# github.com/ebitengine/purego v0.11.1
+# github.com/duxlabs-dev/dux-go v1.6.3-0.20261020163124-e2ca52bdf500
+## explicit; go 1.27
+github.com/duxlabs-dev/dux-go/boottimer
+github.com/duxlabs-dev/dux-go/dbusutil
+github.com/duxlabs-dev/dux-go/desktop
+github.com/duxlabs-dev/dux-go/errdefs
+github.com/duxlabs-dev/dux-go/files
+github.com/duxlabs-dev/dux-go/ipc
+github.com/duxlabs-dev/dux-go/ipc/params
+github.com/duxlabs-dev/dux-go/log
+github.com/duxlabs-dev/dux-go/lyrics
+github.com/duxlabs-dev/dux-go/material/color
+github.com/duxlabs-dev/dux-go/material/contrast
+github.com/duxlabs-dev/dux-go/material/dislike
+github.com/duxlabs-dev/dux-go/material/dynamic
+github.com/duxlabs-dev/dux-go/material/num
+github.com/duxlabs-dev/dux-go/material/palettes
+github.com/duxlabs-dev/dux-go/material/quantizer
+github.com/duxlabs-dev/dux-go/material/temperature
+github.com/duxlabs-dev/dux-go/paths
+github.com/duxlabs-dev/dux-go/shellapp
+github.com/duxlabs-dev/dux-go/shellapp/shellfs
+github.com/duxlabs-dev/dux-go/syncmap
+github.com/duxlabs-dev/dux-go/trash
+github.com/duxlabs-dev/dux-go/wayland/client
+github.com/duxlabs-dev/dux-go/wayland/ext_data_control
+github.com/duxlabs-dev/dux-go/wayland/xdg_shell
+github.com/duxlabs-dev/dux-go/wlclipboard
+# github.com/duxlabs-dev/dux-gop v1.6.3-0.20261020163819-0e4888f1fcea
+## explicit; go 1.27
+github.com/duxlabs-dev/dux-gop/gops
+github.com/duxlabs-dev/dux-gop/models
+# github.com/ebitengine/purego v0.11.2
 ## explicit; go 1.25.0
 github.com/ebitengine/purego
 github.com/ebitengine/purego/internal/cgo
@@ -295,7 +295,7 @@ github.com/go-logfmt/logfmt
 ## explicit; go 1.12
 github.com/go-ole/go-ole
 github.com/go-ole/go-ole/oleutil
-# github.com/godbus/dbus/v5 v5.2.2
+# github.com/godbus/dbus/v5 v5.2.4
 ## explicit; go 1.20
 github.com/godbus/dbus/v5
 github.com/godbus/dbus/v5/introspect
@@ -327,7 +327,7 @@ github.com/jsimonetti/rtnetlink/internal/unix
 # github.com/kevinburke/ssh_config v1.6.0
 ## explicit; go 1.18
 github.com/kevinburke/ssh_config
-# github.com/klauspost/compress v1.20.1
+# github.com/klauspost/compress v1.20.3
 ## explicit; go 1.25
 github.com/klauspost/compress/flate
 github.com/klauspost/compress/internal/le
@@ -351,7 +351,7 @@ github.com/mattn/go-runewidth
 ## explicit; go 1.25.0
 github.com/mdlayher/netlink
 github.com/mdlayher/netlink/nlenc
-# github.com/mdlayher/socket v0.7.0
+# github.com/mdlayher/socket v0.8.0
 ## explicit; go 1.26.0
 github.com/mdlayher/socket
 # github.com/mitchellh/go-ps v1.0.0
@@ -427,8 +427,8 @@ github.com/srwiley/oksvg
 # github.com/srwiley/rasterx v0.0.0-20220730225603-2ab79fcdd4ef
 ## explicit; go 1.17
 github.com/srwiley/rasterx
-# github.com/stretchr/objx v0.5.3
-## explicit; go 1.20
+# github.com/stretchr/objx v0.8.0
+## explicit; go 1.25
 github.com/stretchr/objx
 # github.com/stretchr/testify v1.12.1
 ## explicit; go 1.17
@@ -497,7 +497,7 @@ go4.org/mem
 # go4.org/netipx v0.0.0-20260823151212-3075585bcbeb
 ## explicit; go 1.18
 go4.org/netipx
-# golang.org/x/crypto v0.57.0
+# golang.org/x/crypto v0.58.0
 ## explicit; go 1.26.0
 golang.org/x/crypto/argon2
 golang.org/x/crypto/blake2b
@@ -519,7 +519,7 @@ golang.org/x/crypto/ssh
 golang.org/x/crypto/ssh/agent
 golang.org/x/crypto/ssh/internal/bcrypt_pbkdf
 golang.org/x/crypto/ssh/knownhosts
-# golang.org/x/exp v0.0.0-20261007192929-f45ad48fbe92
+# golang.org/x/exp v0.0.0-20261014143641-f0251eb4aa3e
 ## explicit; go 1.26.0
 golang.org/x/exp/constraints
 golang.org/x/exp/maps
@@ -527,7 +527,7 @@ golang.org/x/exp/slices
 golang.org/x/exp/slog
 golang.org/x/exp/slog/internal
 golang.org/x/exp/slog/internal/buffer
-# golang.org/x/image v0.46.0
+# golang.org/x/image v0.47.0
 ## explicit; go 1.26.0
 golang.org/x/image/bmp
 golang.org/x/image/ccitt
@@ -545,7 +545,7 @@ golang.org/x/image/vector
 golang.org/x/image/vp8
 golang.org/x/image/vp8l
 golang.org/x/image/webp
-# golang.org/x/net v0.60.0
+# golang.org/x/net v0.61.0
 ## explicit; go 1.26.0
 golang.org/x/net/bpf
 golang.org/x/net/html
@@ -566,7 +566,7 @@ golang.org/x/sys/windows
 golang.org/x/sys/windows/registry
 golang.org/x/sys/windows/svc
 golang.org/x/sys/windows/svc/mgr
-# golang.org/x/text v0.42.0
+# golang.org/x/text v0.43.0
 ## explicit; go 1.26.0
 golang.org/x/text/cases
 golang.org/x/text/collate
