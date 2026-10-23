@@ -5,7 +5,7 @@ depends:
   - stacks/jackrabbit.bst
   - stacks/nvidia.bst
   - core/linux.bst
-  - core/nvidia-initramfs.bst
+  - core/initramfs.bst
   - gamerslop/valve-hw-audio.bst
   - gamerslop/xonedo-dkms.bst
   - gamerslop/xonedo-firmware.bst

@@ -4,7 +4,7 @@ depends:
   - stacks/zirconium.bst
   - stacks/nvidia.bst
   - core/linux.bst
-  - core/nvidia-initramfs.bst
+  - core/initramfs.bst
 
 public:
   bst:
