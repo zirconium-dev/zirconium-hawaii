@@ -3,14 +3,8 @@ kind: manual
 
 public:
   bst:
-    integration-commands:
-    - rm /etc/containers/policy.json   # this gets replaced by the one in zirconium/common.bst
-    - mv /etc/containers/registries.conf /usr/share/containers/regstries.conf
-    - mkdir -p /usr/share/containers/registries.d
-    - mkdir -p /usr/share/containers/registries.conf.d
-    - mv /etc/containers/registries.d/* /usr/share/containers/registries.d
-    - mv /etc/containers/registries.conf.d/* /usr/share/containers/registries.conf.d
     overlap-whitelist:
+    - /usr/share/containers/policy.json
     - /usr/share/xdg-terminal-exec/xdg-terminals.list
 
 # This is pulling from zirconium-dev/zirconium for various services and shell configurations.
