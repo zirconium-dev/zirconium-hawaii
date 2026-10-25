@@ -38,8 +38,6 @@ sources:
 
 - kind: local
   path: files/gamescope
-- kind: patch
-  path: patches/gamescope/Use-system-stb-glm.patch
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-meson.bst
