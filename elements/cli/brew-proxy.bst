@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: codeberg:HastD/brew-proxy
   track: v*
-  ref: v0.3.7-0-g34bf601b464c09b41f79265ebf72bb2d65a3dc42
+  ref: v0.3.8-0-g2a1cd711852bca445286ed84b85e4da44ec87939
 - kind: local
   path: files/brew-proxy/brew.env
 - kind: cargo2
@@ -175,8 +175,8 @@ sources:
     sha: 985e7ec9bb745e6ce6535b544d84d6cd6f7ad8bd711c398938ae983b91a766d9
   - kind: registry
     name: pty-process
-    version: 0.5.3
-    sha: 71cec9e2670207c5ebb9e477763c74436af3b9091dd550b9fb3c1bec7f3ea266
+    version: 0.5.4
+    sha: 5f0cff49b5194f464ce14bfaef7d6dba180889934e9bfa37ca5f2528ea515c0b
   - kind: registry
     name: quote
     version: 1.0.47
@@ -255,8 +255,8 @@ sources:
     sha: 1ad99c4c6d32803332c548b1af0540b357b3f5fc0be8f6c6bfe8b2e6ae784070
   - kind: registry
     name: tokio
-    version: 1.53.3
-    sha: ce3335fa71841cda333a58d7615b03901380ecf09d59b3296d21f8bbac0dde4e
+    version: 1.54.1
+    sha: b52fd3255258d26fac7264ab5a76b53c13367136dc011d3d6ad4f8ed070396a3
   - kind: registry
     name: tokio-macros
     version: 2.7.2
@@ -303,8 +303,8 @@ sources:
     sha: a2c754d6c33795a1c324727428e5a7dedb5b06195f9890bdbcba760d3e246563
   - kind: registry
     name: uuid
-    version: 1.28.0
-    sha: 7cc1186384beb7dd8eedea376413fd654937285ea6c9cfbb928dc3043ea4b606
+    version: 1.29.0
+    sha: 4a0e2d11620c50695fe12bbbfde96b3477fe606e7284c22d505c12ce51214514
   - kind: registry
     name: wasi
     version: 0.11.1+wasi-snapshot-preview1

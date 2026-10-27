@@ -30,10 +30,10 @@ sources:
   kind: zip
   url: golang-proxy:github.com/dlclark/regexp2/v2/@v/v2.9.1.zip
 - directory: core/vendor/github.com/duxlabs-dev/dux-go
-  ref: 8a77b2c94b91ad8607dafe2f8cda33b8232aaf5affb48c9468b539120060595d
+  ref: 281aebfe7b6ac193162368454e0357b460b0fd9c9e12040a6aa553e54ff5a21f
   base-dir: "*/*/*"
   kind: zip
-  url: golang-proxy:github.com/duxlabs-dev/dux-go/@v/v1.6.3-0.20261023041949-220eb5ff21dc.zip
+  url: golang-proxy:github.com/duxlabs-dev/dux-go/@v/v1.6.3-0.20261024072205-827c879f557a.zip
 - directory: core/vendor/github.com/duxlabs-dev/dux-gop
   ref: 47450cdaafad25c3060ef9a32bb70ed84296b97e35bc6485568780924a5b1069
   base-dir: "*/*/*"
