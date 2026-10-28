@@ -13,11 +13,11 @@ sources:
   - kind: git_repo
     url: github:duxlabs-dev/dux-shell.git
     track: master
-    ref: v2.0.0-77-gfc7c92f8b279096f446b84cfb121716bae9e451a
+    ref: v2.0.0-105-geac4ae8414df86702525a4df992389b63f097b81
   - kind: git_module
     url: github:duxlabs-dev/dux-qml-common
     path: dux-qml-common
-    ref: 08efce90fd4b2aa90c4064b57e48b14720bbe255
+    ref: b602c9e1b7521bab36e3b5fb0f9485dd5ef6f531
   - kind: local
     path: files/dux-shell
 
