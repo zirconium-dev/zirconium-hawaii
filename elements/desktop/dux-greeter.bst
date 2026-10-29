@@ -13,11 +13,11 @@ sources:
   - kind: git_repo
     url: github:duxlabs-dev/dux-greeter.git
     track: master
-    ref: v2.0.0-11-g0f5de0577cc118091cab9ed8d7976919f0161251
+    ref: v2.0.0-13-g59db55aabf545b02208e36212ace0d2e1ddddd0b
   - kind: git_module
     url: github:duxlabs-dev/dux-qml-common
     path: dux-qml-common
-    ref: 08efce90fd4b2aa90c4064b57e48b14720bbe255
+    ref: 09ac4aba511f10636c273e11028fe092196c78ba
   - kind: local
     path: files/dux-greeter
 
