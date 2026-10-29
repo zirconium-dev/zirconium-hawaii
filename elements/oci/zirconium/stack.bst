@@ -2,6 +2,7 @@ kind: stack
 
 depends:
   - stacks/zirconium.bst
+  - stacks/bootc.bst
   - core/linux.bst
   - core/initramfs.bst
 
