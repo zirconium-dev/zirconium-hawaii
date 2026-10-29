@@ -19,7 +19,7 @@ def main():
         print("xattr.json is missing, skipping attribute assigning...")
         sys.exit(0)
     else:
-        print('Assigning system files with "user.component" extended attribute as set in xattr.json...')
+        print('Assigning system files with "user.component" extended attribute as set in xattr.json...', file=sys.stderr)
         
         start = time.time()
         total_files = 0

@@ -1,8 +1,6 @@
 kind: stack
 
 depends:
-  - cli/brew.bst
-  - cli/brew-proxy.bst
   - stacks/base-system.bst
   - stacks/bootc.bst
   - stacks/codecs.bst
@@ -13,3 +11,8 @@ depends:
   - zirconium/assets.bst
   - zirconium/common.bst
   - zirconium/zdots.bst
+
+  # homebrew
+  - cli/brew.bst
+  - cli/brew-proxy.bst
+  - deps/brew-gcc/gcc.bst
