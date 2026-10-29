@@ -1,32 +1,25 @@
-kind: manual
+kind: make
 
 # uupd provides a vendors folder in their repo so I don't need to pull a thousand go modules manually! :D
 sources:
 - kind: git_repo
   url: github:ublue-os/uupd.git
   track: v*
-  ref: v1.5.3-0-g723cc7dc0288b5190ed42fd75499c536aac71539
+  ref: v1.5.5-0-g57cd88216d269c0db99edbd1a2c31cdad578f630
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-make.bst
+- freedesktop-sdk.bst:components/git.bst
 - freedesktop-sdk.bst:components/go.bst
 
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 
+variables:
+  make-args: >-
+    VERSION=$(git describe --tag)
+
 config:
   build-commands:
   - |
-    go build -v -o output/uupd
-  install-commands:
-  - |
-    install -Dm0644 uupd.service -t "%{install-root}%{indep-libdir}/systemd/system"
-    install -Dm0644 uupd-manual.service -t "%{install-root}%{indep-libdir}/systemd/system"
-    install -Dm0644 uupd.timer -t "%{install-root}%{indep-libdir}/systemd/system"
-    install -Dm0644 uupd.rules -t "%{install-root}%{sysconfdir}/polkit-1/rules.d"
-    install -Dm0644 config.json -t "%{install-root}%{sysconfdir}/uupd"
-
-    install -Dm0755 ./output/uupd -t "%{install-root}%{bindir}"
-  - |
-    %{install-extra}
-
+    %{make} build
