@@ -59,7 +59,7 @@ config:
     - |
       cd sysroot
       cp -a --parents usr/share/zirconium/just/00-start.just ../sysroot-jackrabbit
-      echo 'import "/usr/share/zirconium/just/67-gamerslop.just"' >> ../sysroot-jackrabbit/usr/share/zirconium/just/00-start.just
+      echo 'import "%{datadir}/zirconium/just/67-gamerslop.just"' >> ../sysroot-jackrabbit%{datadir}/zirconium/just/00-start.just
 
     - rm /sysroot-jackrabbit/
 

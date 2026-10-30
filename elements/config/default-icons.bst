@@ -6,4 +6,4 @@ sources:
 
 config:
   source: /
-  target: /usr/share/icons/default
+  target: %{datadir}/icons/default

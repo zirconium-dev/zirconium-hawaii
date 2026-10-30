@@ -23,7 +23,7 @@ config:
   commands:
     - mkdir -p /fakecap /tmp /var/tmp
     - |
-      /prepare-image/usr/bin/prepare-image.sh --noroot --noboot \
+      /prepare-image%{bindir}/prepare-image.sh --noroot --noboot \
                        --seed "%{uuidnamespace}" >/dev/null
 
     - |

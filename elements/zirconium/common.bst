@@ -4,14 +4,14 @@ kind: manual
 public:
   bst:
     integration-commands:
-    - rm /etc/containers/policy.json   # this gets replaced by the one in zirconium/common.bst
-    - mv /etc/containers/registries.conf /usr/share/containers/regstries.conf
-    - mkdir -p /usr/share/containers/registries.d
-    - mkdir -p /usr/share/containers/registries.conf.d
-    - mv /etc/containers/registries.d/* /usr/share/containers/registries.d
-    - mv /etc/containers/registries.conf.d/* /usr/share/containers/registries.conf.d
+    - rm %{sysconfdir}/containers/policy.json   # this gets replaced by the one in zirconium/common.bst
+    - mv %{sysconfdir}/containers/registries.conf %{datadir}/containers/regstries.conf
+    - mkdir -p %{datadir}/containers/registries.d
+    - mkdir -p %{datadir}/containers/registries.conf.d
+    - mv %{sysconfdir}/containers/registries.d/* %{datadir}/containers/registries.d
+    - mv %{sysconfdir}/containers/registries.conf.d/* %{datadir}/containers/registries.conf.d
     overlap-whitelist:
-    - /usr/share/xdg-terminal-exec/xdg-terminals.list
+    - %{datadir}/xdg-terminal-exec/xdg-terminals.list
 
 # This is pulling from zirconium-dev/zirconium for various services and shell configurations.
 sources:
@@ -38,25 +38,25 @@ config:
   install-commands:
   - |
     install -dm0755 "%{install-root}%{datadir}/zirconium"
-    cp -r mkosi.extra/usr/share/zirconium/./ "%{install-root}%{datadir}/zirconium/"
+    cp -r mkosi.extra%{datadir}/zirconium/./ "%{install-root}%{datadir}/zirconium/"
 
     # executables!
-    install -Dm0755 mkosi.extra/usr/bin/* -t "%{install-root}%{bindir}"
-    install -Dm0755 mkosi.profiles/bootc-ostree/mkosi.extra/usr/bin/* -t "%{install-root}%{bindir}"
+    install -Dm0755 mkosi.extra%{bindir}/* -t "%{install-root}%{bindir}"
+    install -Dm0755 mkosi.profiles/bootc-ostree/mkosi.extra%{bindir}/* -t "%{install-root}%{bindir}"
 
     # blehhh
-    install -Dm0644 mkosi.extra/usr/share/flatpak/preinstall.d/*.preinstall -t "%{install-root}%{datadir}/flatpak/preinstall.d"
-    install -Dm0644 mkosi.extra/usr/share/fish/vendor_conf.d/*.fish -t "%{install-root}%{datadir}/fish/vendor_conf.d"
-    install -Dm0644 mkosi.extra/usr/share/pki/containers/*.pub -t "%{install-root}%{datadir}/pki/containers"
+    install -Dm0644 mkosi.extra%{datadir}/flatpak/preinstall.d/*.preinstall -t "%{install-root}%{datadir}/flatpak/preinstall.d"
+    install -Dm0644 mkosi.extra%{datadir}/fish/vendor_conf.d/*.fish -t "%{install-root}%{datadir}/fish/vendor_conf.d"
+    install -Dm0644 mkosi.extra%{datadir}/pki/containers/*.pub -t "%{install-root}%{datadir}/pki/containers"
     install -Dm0644 cosign.pub "%{install-root}%{datadir}/pki/containers/zirconium.pub"
-    install -Dm0644 mkosi.extra/usr/share/factory/etc/profile.d/*.sh -t "%{install-root}%{sysconfdir}/profile.d"
-    install -Dm0644 mkosi.extra/usr/share/factory/etc/kmscon/kmscon.conf -t "%{install-root}%{sysconfdir}/kmscon"
-    install -Dm0644 mkosi.extra/usr/share/xdg-terminal-exec/xdg-terminals.list -t "%{install-root}%{datadir}/xdg-terminal-exec"
+    install -Dm0644 mkosi.extra%{datadir}/factory/etc/profile.d/*.sh -t "%{install-root}%{sysconfdir}/profile.d"
+    install -Dm0644 mkosi.extra%{datadir}/factory/etc/kmscon/kmscon.conf -t "%{install-root}%{sysconfdir}/kmscon"
+    install -Dm0644 mkosi.extra%{datadir}/xdg-terminal-exec/xdg-terminals.list -t "%{install-root}%{datadir}/xdg-terminal-exec"
     install -Dm0644 policy.json -t "%{install-root}%{datadir}/containers"
-    install -Dm0644 mkosi.profiles/zirconium-bootc-ostree/mkosi.extra/usr/share/containers/registries.d/zirconium-dev.yaml -t "%{install-root}%{datadir}/containers/registries.d"
+    install -Dm0644 mkosi.profiles/zirconium-bootc-ostree/mkosi.extra%{datadir}/containers/registries.d/zirconium-dev.yaml -t "%{install-root}%{datadir}/containers/registries.d"
 
     # pam stuff
-    install -Dm0644 mkosi.extra/usr/share/greetd/greetd-spawn.pam_env.conf -t "%{install-root}%{datadir}/greetd"
+    install -Dm0644 mkosi.extra%{datadir}/greetd/greetd-spawn.pam_env.conf -t "%{install-root}%{datadir}/greetd"
     install -Dm0644 mkosi.extra/usr/lib/pam.d/greetd-spawn -t "%{install-root}%{indep-libdir}/pam.d"
 
     # systemd services / tmpfiles
