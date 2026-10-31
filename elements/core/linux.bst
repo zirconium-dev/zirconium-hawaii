@@ -5,15 +5,15 @@ description: Linux kernel with patches from OpenGamingCollective applied
 sources:
 - kind: git_repo
   url: kernel:linux/kernel/git/stable/linux.git
-  track: v*
+  track: v7.2.*
   exclude:
   - '*-rc*'
-  ref: v7.2.11-0-ga2de78ee6ed8bf8cd99d177c74865a6e8c3cb6ea
+  ref: v7.2.14-0-ge09610b541f2725a6382137c168e4efe208917c3
 - kind: patch_queue
   path: patches/linux/fdsdk
 - kind: remote_patch
   url: github_files:OpenGamingCollective/linux/releases/download/v%{ogc-patchset-version}/monolithic.patch
-  ref: 4ed8ca8ed6c46631d99bffb039bd8fa7bb52d49d45fd6985d754059255a20f9c
+  ref: d0ca4348eb8bd0e698e674148577efbee0695f6beb4b2067129b9283a0d9b2c2
 # fixes btrfs fsverity issues on bootc composefs backend
 - kind: patch
   path: patches/linux/btrfs-fix-the-fsverity-callback-where-unexpected-ran.patch
@@ -44,7 +44,7 @@ build-depends:
 #   strict: true
 
 variables:
-  ogc-patchset-version: 7.2.11-ogc2
+  ogc-patchset-version: 7.2.14-ogc3
   extra-version: '-ogc.zirc-edge'
   bootdir: /boot
   kernel_arch: '%{arch}'
