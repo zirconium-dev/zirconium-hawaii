@@ -92,7 +92,7 @@ config:
   configure-commands:
   - |
     # Replace spirv-headers include with the system directory
-    sed -i 's^../thirdparty/SPIRV-Headers/include/spirv/^/usr/include/spirv/^' src/meson.build
+    sed -i 's^../thirdparty/SPIRV-Headers/include/spirv/^%{includedir}/spirv/^' src/meson.build
     %{meson}
 
 variables:

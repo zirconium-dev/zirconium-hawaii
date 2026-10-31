@@ -19,10 +19,10 @@ config:
   build-commands:
   - |
     # We don't need fortran or objc or lto-dump for homebrew.
-    find /buildstream-install -type f \( -name 'lto-dump*' -o -name 'f951*' -o -name 'cc1obj*' -o -name '*fortran*' \) -exec rm -f {} +
+    find %{install-root} -type f \( -name 'lto-dump*' -o -name 'f951*' -o -name 'cc1obj*' -o -name '*fortran*' \) -exec rm -f {} +
   - |
     # frees up about 100MB of space. I don't know why FDSDK's stripper doesn't work properly here, but...?
-    find /buildstream-install -type f -name '*.a' -exec strip --strip-unneeded {} +
+    find %{install-root} -type f -name '*.a' -exec strip --strip-unneeded {} +
 
 # This should be the same as filter.bst in the same directory
 public:

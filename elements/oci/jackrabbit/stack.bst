@@ -40,4 +40,4 @@ public:
 
       - echo 'uninitialized' > /etc/machine-id
 
-      - echo 'import "/usr/share/zirconium/just/67-gamerslop.just"' >> /usr/share/zirconium/just/00-start.just
+      - echo 'import "%{datadir}/zirconium/just/67-gamerslop.just"' >> %{datadir}/zirconium/just/00-start.just

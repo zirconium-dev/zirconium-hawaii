@@ -20,7 +20,7 @@ config:
     sed 's/INSTALL = install/LDFLAGS := -s ${LDFLAGS}\nINSTALL = install/' Makefile
   install-commands:
   - |
-    %{make-install} sbindir=/usr/bin
+    %{make-install} sbindir=%{bindir}
   - |
     install -Dm0755 contrib/{idectl,ultrabayd} -t "%{install-root}%{bindir}"
   - |

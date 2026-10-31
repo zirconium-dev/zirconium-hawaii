@@ -35,29 +35,29 @@ config:
 
     - |
       # We use our own issue in core/os-release.bst
-      rm /layer/usr/share/factory/etc/issue
-      cp /layer/etc/issue /layer/usr/share/factory/etc/issue
+      rm /layer%{datadir}/factory/etc/issue
+      cp /layer/etc/issue /layer%{datadir}/factory/etc/issue
 
     - |
       # Start with en_US.UTF-8 instead of C.UTF-8
-      rm /layer/usr/share/factory/etc/locale.conf
+      rm /layer%{datadir}/factory/etc/locale.conf
 
     - |
       # Neither of these line up with anything in /etc
-      rm /layer/usr/share/factory/etc/pam.d/other
-      rm /layer/usr/share/factory/etc/pam.d/system-auth
+      rm /layer%{datadir}/factory/etc/pam.d/other
+      rm /layer%{datadir}/factory/etc/pam.d/system-auth
 
     - |
       # A footgun.
       # https://tim.siosm.fr/blog/2023/12/22/dont-change-defaut-login-shell/
-      rm /layer/usr/bin/chsh
+      rm /layer%{bindir}/chsh
 
     - |
       # pam_securetty breaks root login with kmscon
       sed -i '/pam_securetty.so/d' /layer/etc/pam.d/* /layer/usr/lib/pam.d/*
 
     - |
-      glib-compile-schemas /layer/usr/share/glib-2.0/schemas
+      glib-compile-schemas /layer%{datadir}/glib-2.0/schemas
 
     - |
       cd "%{install-root}"

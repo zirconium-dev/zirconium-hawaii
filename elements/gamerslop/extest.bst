@@ -6,10 +6,10 @@ public:
     (?):
     - arch == "x86_64":
         integration-commands:
-        - sed -i '12a export LD_PRELOAD="/usr/%{lib32}/libextest.so:/usr/%{lib}/libextest.so"' /usr/bin/steam
+        - sed -i '12a export LD_PRELOAD="%{prefix}/%{lib32}/libextest.so:%{prefix}/%{lib}/libextest.so"' %{bindir}/steam
     - arch == "aarch64":
         integration-commands:
-        - sed -i '12a export LD_PRELOAD="/usr/%{lib}/libextest.so"' /usr/bin/steam
+        - sed -i '12a export LD_PRELOAD="%{prefix}/%{lib}/libextest.so"' %{bindir}/steam
 
 depends:
 - gamerslop/_private/extest.bst
