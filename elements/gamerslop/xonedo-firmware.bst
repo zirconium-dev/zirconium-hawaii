@@ -44,7 +44,7 @@ config:
   install-commands:
   - |
     for f in */*.bin; do
-      install -Dm0644 "$f" "/buildstream-install/usr/lib/firmware/xone_dongle_$(dirname $f).bin"
+      install -Dm0644 "$f" "%{install-root}%{indep-libdir}/firmware/xone_dongle_$(dirname $f).bin"
     done
   - |
     %{install-extra}

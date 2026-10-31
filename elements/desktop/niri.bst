@@ -1966,8 +1966,8 @@ config:
   - |
     install -Dm755 target/release/niri resources/niri-session -t "%{install-root}%{bindir}"
     install -Dm644 resources/niri.service  resources/niri-shutdown.target -t "%{install-root}/usr/lib/systemd/user/"
-    install -Dm644 resources/niri.desktop -t "%{install-root}/usr/share/wayland-sessions/"
-    install -Dm644 resources/niri-portals.conf -t "%{install-root}/usr/share/xdg-desktop-portal/"
+    install -Dm644 resources/niri.desktop -t "%{install-root}%{datadir}/wayland-sessions/"
+    install -Dm644 resources/niri-portals.conf -t "%{install-root}%{datadir}/xdg-desktop-portal/"
   - |
     mkdir -p %{install-root}%{bash-completions-dir} \
       %{install-root}%{fish-completions-dir} \

@@ -233,4 +233,4 @@ depends:
 config:
   configure-commands:
   - |
-    ./configure.sh --prefix=/usr --use-system-pyzstd --use-system-urllib
+    ./configure.sh --prefix=%{prefix} --use-system-pyzstd --use-system-urllib

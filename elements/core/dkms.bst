@@ -18,6 +18,6 @@ runtime-depends:
 config:
   install-commands:
   - |
-    make DESTDIR="%{install-root}" SBIN=/usr/bin MODDIR=/usr/lib/modules install
+    make DESTDIR="%{install-root}" SBIN=%{bindir} MODDIR=/usr/lib/modules install
   - |
     %{install-extra}
