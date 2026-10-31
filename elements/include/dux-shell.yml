@@ -30,15 +30,15 @@ sources:
   kind: zip
   url: golang-proxy:github.com/dlclark/regexp2/v2/@v/v2.9.1.zip
 - directory: core/vendor/github.com/duxlabs-dev/dux-go
-  ref: 281aebfe7b6ac193162368454e0357b460b0fd9c9e12040a6aa553e54ff5a21f
+  ref: 1678e5421a278de065470ea644a2e1dbe0dad168b06bcbd07fcd7dfe8b340b5f
   base-dir: "*/*/*"
   kind: zip
-  url: golang-proxy:github.com/duxlabs-dev/dux-go/@v/v1.6.3-0.20261024072205-827c879f557a.zip
+  url: golang-proxy:github.com/duxlabs-dev/dux-go/@v/v1.6.3-0.20261031181736-024402301dff.zip
 - directory: core/vendor/github.com/duxlabs-dev/dux-gop
-  ref: 47450cdaafad25c3060ef9a32bb70ed84296b97e35bc6485568780924a5b1069
+  ref: 2f3b155052a96c1e7ac7df8596bcc29b68a64637b6a3109d4b3c53b6cc792eea
   base-dir: "*/*/*"
   kind: zip
-  url: golang-proxy:github.com/duxlabs-dev/dux-gop/@v/v1.6.3-0.20261020163819-0e4888f1fcea.zip
+  url: golang-proxy:github.com/duxlabs-dev/dux-gop/@v/v1.6.3-0.20261031021448-854e306ff3e4.zip
 - directory: core/vendor/github.com/fsnotify/fsnotify
   ref: b2c6a334e0d518da2e046066bdd9da34cb26bad6df9f17701802d3de522ab016
   base-dir: "*/*/*"
@@ -59,6 +59,11 @@ sources:
   base-dir: "*/*/*"
   kind: zip
   url: golang-proxy:github.com/holoplot/go-evdev/@v/v0.0.0-20260909133534-d873ed210bda.zip
+- directory: core/vendor/github.com/kevinburke/ssh_config
+  ref: cb3e2a23c10382dac238ea51ed1162c75cb7e986532d1ce92a2051469ca24e44
+  base-dir: "*/*/*"
+  kind: zip
+  url: golang-proxy:github.com/kevinburke/ssh_config/@v/v1.6.0.zip
 - directory: core/vendor/github.com/klauspost/compress
   ref: 1eb710a814c44bf21332a512a19f496fb5c489ca8eb72244bb9c49f80900848f
   base-dir: "*/*/*"
@@ -139,6 +144,11 @@ sources:
   base-dir: "*/*"
   kind: zip
   url: golang-proxy:go4.org/mem/@v/v0.0.0-20240501181205-ae6ca9944745.zip
+- directory: core/vendor/golang.org/x/crypto
+  ref: b0a45594cda20ddb4264d84aeff9b588b8570bf6a2833c51a0b821734a298d95
+  base-dir: "*/*/*"
+  kind: zip
+  url: golang-proxy:golang.org/x/crypto/@v/v0.58.0.zip
 - directory: core/vendor/golang.org/x/image
   ref: 3666e9fe5b8d6110471d649641e680bb117c86495d0aa2c4d8673e87d9ac6c3c
   base-dir: "*/*/*"
@@ -324,11 +334,6 @@ sources:
   base-dir: "*/*/*"
   kind: zip
   url: golang-proxy:github.com/jsimonetti/rtnetlink/@v/v1.4.2.zip
-- directory: core/vendor/github.com/kevinburke/ssh_config
-  ref: cb3e2a23c10382dac238ea51ed1162c75cb7e986532d1ce92a2051469ca24e44
-  base-dir: "*/*/*"
-  kind: zip
-  url: golang-proxy:github.com/kevinburke/ssh_config/@v/v1.6.0.zip
 - directory: core/vendor/github.com/lufia/plan9stats
   ref: be33d7e60615fc90395330977aada694c8821d0c8e45095b59e017167691bb0c
   base-dir: "*/*/*"
@@ -454,11 +459,6 @@ sources:
   base-dir: "*/*"
   kind: zip
   url: golang-proxy:go4.org/netipx/@v/v0.0.0-20260823151212-3075585bcbeb.zip
-- directory: core/vendor/golang.org/x/crypto
-  ref: b0a45594cda20ddb4264d84aeff9b588b8570bf6a2833c51a0b821734a298d95
-  base-dir: "*/*/*"
-  kind: zip
-  url: golang-proxy:golang.org/x/crypto/@v/v0.58.0.zip
 - directory: core/vendor/golang.org/x/exp
   ref: 59f56c3ee46a87131794a9ccd90d9f6430702377e76bdeed0b5a726ab0dce59e
   base-dir: "*/*/*"

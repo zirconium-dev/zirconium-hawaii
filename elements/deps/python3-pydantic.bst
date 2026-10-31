@@ -8,7 +8,7 @@ sources:
   - "core-v*"
   - "*b*"
   - "*a*"
-  ref: v2.14.1-0-gb2212c787fb5c73386dc770681ec49cd09da8e73
+  ref: v2.14.2-0-gaa540acc29960fb394312cf97d888c99f9686814
 - kind: cargo2
   cargo-lock: pydantic-core/Cargo.lock
   ref:
@@ -20,6 +20,10 @@ sources:
     name: aho-corasick
     version: 1.1.3
     sha: 8e60d3430d3a69478ad0993f19238d2df97c507009a52b3c10addcd7f6bcb916
+  - kind: registry
+    name: arrayvec
+    version: 0.7.8
+    sha: d3fb67a6e08acf24fdeccbac2cb6ac4305825bd1f117462e0e6f2f193345ad56
   - kind: registry
     name: autocfg
     version: 1.3.0
@@ -52,6 +56,10 @@ sources:
     name: enum_dispatch
     version: 0.3.13
     sha: aa18ce2bc66555b3218614519ac839ddb759a7d6720732f979ef8d13be147ecd
+  - kind: registry
+    name: equivalent
+    version: 1.0.3
+    sha: 00d174d5400e5e8fd687ad1049e2f578285fa914201b1af7e8b112a4546bd826
   - kind: registry
     name: foldhash
     version: 0.2.0
@@ -129,29 +137,33 @@ sources:
     version: 1.2.0
     sha: daca1df1c957320b2cf139ac61e7bd64fed304c5040df000a745aa1de3b4ef71
   - kind: registry
+    name: indexmap
+    version: 2.14.0
+    sha: d466e9454f08e4a911e14806c24e16fba1b4c121d1ea474396f396069cf949d9
+  - kind: registry
     name: itoa
     version: 1.0.11
     sha: 49f1f14873335454500d59611f1cf4a4b0f786f9ac11f4312a78e4cf2566695b
   - kind: registry
     name: jiter
-    version: 0.16.0
-    sha: 820ddcacd75c9782308d3fa594f3885630ea3f49adba78a8a29abdfe4b81630c
+    version: 0.18.0
+    sha: 49e31424b61d85292bd805dbf643c3ccc44f5f3871fb751209b889ee70585029
   - kind: registry
     name: js-sys
     version: 0.3.77
     sha: 1cfaf33c695fc6e08064efbc1f72ec937429614f25eef83af942d0e227c3a28f
   - kind: registry
     name: lexical-parse-float
-    version: 1.0.5
-    sha: de6f9cb01fb0b08060209a057c048fcbab8717b4c1ecd2eac66ebfe39a65b0f2
+    version: 1.0.6
+    sha: 52a9f232fbd6f550bc0137dcb5f99ab674071ac2d690ac69704593cb4abbea56
   - kind: registry
     name: lexical-parse-integer
-    version: 1.0.5
-    sha: 72207aae22fc0a121ba7b6d479e42cbfea549af1479c3f3a4f12c70dd66df12e
+    version: 1.0.6
+    sha: 9a7a039f8fb9c19c996cd7b2fcce303c1b2874fe1aca544edc85c4a5f8489b34
   - kind: registry
     name: lexical-util
-    version: 1.0.6
-    sha: 5a82e24bf537fd24c177ffbbdc6ebcc8d54732c35b50a3f28cc3f4e4c949a0b3
+    version: 1.0.7
+    sha: 2604dd126bb14f13fb5d1bd6a66155079cb9fa655b37f875b3a742c705dbed17
   - kind: registry
     name: libc
     version: 0.2.185
@@ -202,24 +214,24 @@ sources:
     sha: 985e7ec9bb745e6ce6535b544d84d6cd6f7ad8bd711c398938ae983b91a766d9
   - kind: registry
     name: pyo3
-    version: 0.29.2
-    sha: 4688ddedf473e32662b9b067670129a8afb8c18e351482c70d62ba4a88171e8b
+    version: 0.30.1
+    sha: 229ca13b8a15bb0d1487b81ab975bfcd97513416499a8312011b6036e42e0de4
   - kind: registry
     name: pyo3-build-config
-    version: 0.29.2
-    sha: f41027e41b4bd03f6e60f9f417fe24a6341a6bb744edd62b6f709f2a52ea30e9
+    version: 0.30.1
+    sha: 70130e2b6dd1ee589a8788026a429561ca5c40fa7a2fa7914c2282eddae24700
   - kind: registry
     name: pyo3-ffi
-    version: 0.29.2
-    sha: e591a95526fead067432c3b3a33fc74770b87b1e04e73671090d9c2055a2b327
+    version: 0.30.1
+    sha: 5e7ff73c555c286d212d4ce7e5fbda845a973c4f61bd5f160f5f2c3c2a04d1c4
   - kind: registry
     name: pyo3-macros
-    version: 0.29.2
-    sha: 73225868fc1cd84eef2c3c230ddb91273bf1de46aeb8a4248da76d32a0924a1c
+    version: 0.30.1
+    sha: c46d2e5862c7bb8207e3b639f713dda3c499933444784154c11d013c5a691b60
   - kind: registry
     name: pyo3-macros-backend
-    version: 0.29.2
-    sha: 571575aa3749fa6216757dd47d2a3e7ef360f329a40f0666a9fbd14889024952
+    version: 0.30.1
+    sha: 38b89f066f2ae72a2aef52d1537ca2fcd104440ebfadee06e97aa90738a25b9b
   - kind: registry
     name: quote
     version: 1.0.44
@@ -266,24 +278,20 @@ sources:
     sha: f9395f0f0eee849a9b707b2f06bb92a6a422090e2123bb2ef8e87a0e61892a8e
   - kind: registry
     name: speedate
-    version: 0.17.0
-    sha: aba069c070b5e213f2a094deb7e5ed50ecb092be36102a4f4042e8d2056d060e
+    version: 0.18.0
+    sha: da8f8c5f7f7ea2811a17f99bca4fec7f9ef0b0734713a5cbfc9baee203eba8eb
   - kind: registry
     name: stable_deref_trait
     version: 1.2.0
     sha: a8f112729512f8e442d81f95a8a7ddf2b7c6b8a1a6f509a95864142b30cab2d3
   - kind: registry
-    name: static_assertions
-    version: 1.1.0
-    sha: a2eb9349b6444b326872e140eb1cf5e7c522154d69e7a0ffb0fb81c06b37543f
-  - kind: registry
     name: strum
-    version: 0.27.2
-    sha: af23d6f6c1a224baef9d3f61e287d2761385a5b88fdab4eb4c6f11aeb54c4bcf
+    version: 0.28.0
+    sha: 9628de9b8791db39ceda2b119bbe13134770b56c138ec1d3af810d045c04f9bd
   - kind: registry
     name: strum_macros
-    version: 0.27.2
-    sha: 7695ce3845ea4b33927c055a39dc438a45b059f7c1b3d91d38d10355fb8cbca7
+    version: 0.28.0
+    sha: ab85eea0270ee17587ed4156089e10b9e6880ee688791d45a905f5b1ca36f664
   - kind: registry
     name: syn
     version: 2.0.82
