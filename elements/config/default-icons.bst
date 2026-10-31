@@ -6,4 +6,4 @@ sources:
 
 config:
   source: /
-  target: %{datadir}/icons/default
+  target: '%{datadir}/icons/default'

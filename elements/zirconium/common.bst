@@ -11,7 +11,7 @@ public:
     - mv %{sysconfdir}/containers/registries.d/* %{datadir}/containers/registries.d
     - mv %{sysconfdir}/containers/registries.conf.d/* %{datadir}/containers/registries.conf.d
     overlap-whitelist:
-    - %{datadir}/xdg-terminal-exec/xdg-terminals.list
+    - '%{datadir}/xdg-terminal-exec/xdg-terminals.list'
 
 # This is pulling from zirconium-dev/zirconium for various services and shell configurations.
 sources:
