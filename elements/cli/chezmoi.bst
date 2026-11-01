@@ -34,8 +34,8 @@ config:
       %{install-root}%{zsh-completions-dir}
 
     ./bin/chezmoi completion bash > "%{install-root}%{bash-completions-dir}/chezmoi"
-    ./bin/chezmoi completion fish > "%{install-root}%{fish-completions-dir}/_chezmoi"
-    ./bin/chezmoi completion zsh > "%{install-root}%{zsh-completions-dir}/chezmoi.fish"
+    ./bin/chezmoi completion fish > "%{install-root}%{fish-completions-dir}/chezmoi.fish"
+    ./bin/chezmoi completion zsh > "%{install-root}%{zsh-completions-dir}/_chezmoi"
 
     install -Dm0755 ./bin/chezmoi "%{install-root}%{bindir}/chezmoi"
   - |
