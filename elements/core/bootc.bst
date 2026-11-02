@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: github:bootc-dev/bootc.git
   track: v*
-  ref: v1.17.2-0-ge1860b4d45f4acb98cacddf5efe54b8a710680dd
+  ref: v1.17.3-0-g6d7893f2dbdd289a4a04a5727e4df29433d43024
   exclude:
   - v1.16.7 # running bootc upgrade hangs at the GC stage on composefs-rs systems
 - kind: local
