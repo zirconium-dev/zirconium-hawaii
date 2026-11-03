@@ -35,10 +35,10 @@ sources:
   kind: zip
   url: golang-proxy:github.com/duxlabs-dev/dux-go/@v/v1.6.3-0.20261031181736-024402301dff.zip
 - directory: core/vendor/github.com/duxlabs-dev/dux-gop
-  ref: 2f3b155052a96c1e7ac7df8596bcc29b68a64637b6a3109d4b3c53b6cc792eea
+  ref: c2a16a80c01912af7603738f0c5da13e325d611f0dd0c4e06e99751ede0ac36e
   base-dir: "*/*/*"
   kind: zip
-  url: golang-proxy:github.com/duxlabs-dev/dux-gop/@v/v1.6.3-0.20261031021448-854e306ff3e4.zip
+  url: golang-proxy:github.com/duxlabs-dev/dux-gop/@v/v1.6.3-0.20261102194112-c0cab544c0f8.zip
 - directory: core/vendor/github.com/fsnotify/fsnotify
   ref: b2c6a334e0d518da2e046066bdd9da34cb26bad6df9f17701802d3de522ab016
   base-dir: "*/*/*"
