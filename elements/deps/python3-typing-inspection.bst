@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: github:pydantic/typing-inspection.git
   track: "v*.*.*"
-  ref: v0.4.4-0-g83d4dbb74fc367db4403c76be8c0f83cd4b63fbe
+  ref: v0.4.5-0-gac51ff60a324975c2217a977362f99f28e2d9993
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-python-hatchling.bst

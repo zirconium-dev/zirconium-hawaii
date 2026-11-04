@@ -12,7 +12,7 @@ sources:
 - kind: git_repo
   url: github:zirconium-dev/zirconium.git
   track: main
-  ref: 6bf0faf66526c68aaea803511ff9d6b3d112434c
+  ref: 9412ad63c44b60132fab1d0c270fc6bdea64a8c1
 - kind: local
   path: files/zirconium/policy.json
 

@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: github:duxlabs-dev/dux-search.git
   track: 'v*.*.*'
-  ref: v2.0.0-0-g9f706cad94f23dd2fd8642a2c06796fa0786e60d
+  ref: v2.1.0-0-gd9495f1ddf05e9269923b166d9422a5db97527d6
 - kind: go_mod_vendor
   ref:
   - module: github.com/AvengeMedia/dankgo
