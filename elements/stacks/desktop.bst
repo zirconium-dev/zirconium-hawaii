@@ -41,6 +41,7 @@ depends:
   - gnome-build-meta.bst:core/gvfs-daemon.bst
   - gnome-build-meta.bst:sdk/gvfs-client.bst
   - gnome-build-meta.bst:sdk/pinentry.bst
+  - cli/tailscale.bst
   - freedesktop-sdk.bst:components/noto-cjk.bst
   - freedesktop-sdk.bst:components/noto-emoji.bst
   - freedesktop-sdk.bst:components/noto-fonts.bst
