@@ -5,6 +5,7 @@ depends:
   - desktop/quickshell.bst
   - desktop/dux-shell.bst
   - desktop/dux-greeter.bst
+  - desktop/dux-files.bst
   - desktop/foot.bst
   - desktop/satty.bst
   - desktop/brlaser.bst
