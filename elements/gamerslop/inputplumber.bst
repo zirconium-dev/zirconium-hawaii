@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: github:ShadowBlip/InputPlumber.git
   track: v*
-  ref: v0.83.1-0-gb2fb40900506d329925d5a3f1bca54adf85f1279
+  ref: v0.84.0-0-g117cb04e949f842397b96178bcc0d7fc7ba23acf
 - kind: cargo2
   ref:
   - kind: registry

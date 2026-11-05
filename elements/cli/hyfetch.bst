@@ -8,7 +8,7 @@ sources:
   - "*-beta*"
   - "*-rc*"
   - "*-alpha*"
-  ref: 2.1.0-0-g0fd343e6d54a231673bc6d3ae2fd0c1fc102cebe
+  ref: 2.1.1-0-g0151630a356e3b8ec9ce4f9f188921e13b614a7c
 - kind: cargo2
   ref:
   - kind: registry
@@ -285,8 +285,8 @@ sources:
     sha: dc897dd8d9e8bd1ed8cdad82b5966c3e0ecae09fb1907d58efaa013543185d0a
   - kind: registry
     name: rustix
-    version: 1.1.4
-    sha: b6fe4565b9518b83ef4f91bb47ce29620ca828bd32cb7e408f0062e9930ba190
+    version: 1.1.5
+    sha: 891efababe418670775f199f0d233d84843c227a0949a883ce15b37c78d6629d
   - kind: registry
     name: same-file
     version: 1.0.6
