@@ -3,12 +3,12 @@ kind: manual
 sources:
 - kind: git_repo
   url: github:pydantic/pydantic.git
-  track: "v*.*.*"
+  # track: "v*.*.*"
   exclude:
   - "core-v*"
   - "*b*"
   - "*a*"
-  ref: v2.14.3-0-gea492e04654ab7f7a1f9287ea912419452ead4dd
+  ref: v2.14.2-0-gaa540acc29960fb394312cf97d888c99f9686814
 - kind: cargo2
   cargo-lock: pydantic-core/Cargo.lock
   ref:
