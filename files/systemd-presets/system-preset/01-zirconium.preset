@@ -23,3 +23,7 @@ disable bootc-publish-rhsm-facts.service
 disable avahi-daemon.service
 disable avahi-daemon.socket
 disable avahi-dnsconfd.service
+
+# Most people aren't using tailscale, disable it by default
+disable tailscaled.service
+disable tailscale-wait-online.service
