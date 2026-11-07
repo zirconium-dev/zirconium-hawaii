@@ -39,9 +39,6 @@ github.com/ProtonMail/go-crypto/openpgp/x448
 # github.com/Wifx/gonetworkmanager/v2 v2.2.0
 ## explicit; go 1.12
 github.com/Wifx/gonetworkmanager/v2
-# github.com/akutz/memconn v0.1.0
-## explicit
-github.com/akutz/memconn
 # github.com/alecthomas/chroma/v2 v2.27.0
 ## explicit; go 1.25
 github.com/alecthomas/chroma/v2
@@ -120,13 +117,6 @@ github.com/cloudflare/circl/sign/slhdsa
 github.com/cloudflare/circl/simd/keccakf1600
 github.com/cloudflare/circl/xof
 github.com/cloudflare/circl/xof/k12
-# github.com/coder/websocket v1.8.15
-## explicit; go 1.23
-github.com/coder/websocket
-github.com/coder/websocket/internal/bpool
-github.com/coder/websocket/internal/errd
-github.com/coder/websocket/internal/util
-github.com/coder/websocket/internal/wsjs
 # github.com/danielgtaylor/huma/v2 v2.39.1
 ## explicit; go 1.25.0
 github.com/danielgtaylor/huma/v2
@@ -134,9 +124,6 @@ github.com/danielgtaylor/huma/v2/casing
 github.com/danielgtaylor/huma/v2/negotiation
 github.com/danielgtaylor/huma/v2/validation
 github.com/danielgtaylor/huma/v2/yaml
-# github.com/dblohm7/wingoes v0.0.0-20260526185140-fb298caac7ca
-## explicit; go 1.25.0
-github.com/dblohm7/wingoes
 # github.com/dlclark/regexp2/v2 v2.9.1
 ## explicit; go 1.25
 github.com/dlclark/regexp2/v2
@@ -169,8 +156,9 @@ github.com/duxlabs-dev/dux-go/trash
 github.com/duxlabs-dev/dux-go/wayland/client
 github.com/duxlabs-dev/dux-go/wayland/ext_data_control
 github.com/duxlabs-dev/dux-go/wayland/xdg_shell
+github.com/duxlabs-dev/dux-go/weather
 github.com/duxlabs-dev/dux-go/wlclipboard
-# github.com/duxlabs-dev/dux-gop v1.6.3-0.20261102194112-c0cab544c0f8
+# github.com/duxlabs-dev/dux-gop v1.6.3-0.20261104203851-b2331e7fc9b7
 ## explicit; go 1.27
 github.com/duxlabs-dev/dux-gop/gops
 github.com/duxlabs-dev/dux-gop/models
@@ -304,13 +292,6 @@ github.com/godbus/dbus/v5/prop
 ## explicit
 github.com/golang/freetype/raster
 github.com/golang/freetype/truetype
-# github.com/google/go-cmp v0.7.0
-## explicit; go 1.21
-github.com/google/go-cmp/cmp
-github.com/google/go-cmp/cmp/internal/diff
-github.com/google/go-cmp/cmp/internal/flags
-github.com/google/go-cmp/cmp/internal/function
-github.com/google/go-cmp/cmp/internal/value
 # github.com/hdevalence/ed25519consensus v0.2.0
 ## explicit; go 1.19
 github.com/hdevalence/ed25519consensus
@@ -320,10 +301,6 @@ github.com/holoplot/go-evdev
 # github.com/inconshreveable/mousetrap v1.1.0
 ## explicit; go 1.18
 github.com/inconshreveable/mousetrap
-# github.com/jsimonetti/rtnetlink v1.4.2
-## explicit; go 1.20
-github.com/jsimonetti/rtnetlink
-github.com/jsimonetti/rtnetlink/internal/unix
 # github.com/kevinburke/ssh_config v1.6.0
 ## explicit; go 1.18
 github.com/kevinburke/ssh_config
@@ -347,16 +324,6 @@ github.com/mattn/go-localereader
 # github.com/mattn/go-runewidth v0.0.31
 ## explicit; go 1.23
 github.com/mattn/go-runewidth
-# github.com/mdlayher/netlink v1.11.2
-## explicit; go 1.25.0
-github.com/mdlayher/netlink
-github.com/mdlayher/netlink/nlenc
-# github.com/mdlayher/socket v0.8.0
-## explicit; go 1.26.0
-github.com/mdlayher/socket
-# github.com/mitchellh/go-ps v1.0.0
-## explicit; go 1.13
-github.com/mitchellh/go-ps
 # github.com/muesli/ansi v0.0.0-20230316100256-276c6243b2f6
 ## explicit; go 1.17
 github.com/muesli/ansi
@@ -438,13 +405,6 @@ github.com/stretchr/testify/internal/difflib
 github.com/stretchr/testify/internal/spew
 github.com/stretchr/testify/mock
 github.com/stretchr/testify/require
-# github.com/tailscale/go-winio v0.0.0-20231025203758-c4f33415bf55
-## explicit; go 1.17
-github.com/tailscale/go-winio
-github.com/tailscale/go-winio/internal/fs
-github.com/tailscale/go-winio/internal/socket
-github.com/tailscale/go-winio/internal/stringbuffer
-github.com/tailscale/go-winio/pkg/guid
 # github.com/tklauser/go-sysconf v0.4.0
 ## explicit; go 1.25.0
 github.com/tklauser/go-sysconf
@@ -494,9 +454,6 @@ go.yaml.in/yaml/v3
 # go4.org/mem v0.0.0-20240501181205-ae6ca9944745
 ## explicit; go 1.14
 go4.org/mem
-# go4.org/netipx v0.0.0-20260823151212-3075585bcbeb
-## explicit; go 1.18
-go4.org/netipx
 # golang.org/x/crypto v0.58.0
 ## explicit; go 1.26.0
 golang.org/x/crypto/argon2
@@ -522,7 +479,6 @@ golang.org/x/crypto/ssh/knownhosts
 # golang.org/x/exp v0.0.0-20261014143641-f0251eb4aa3e
 ## explicit; go 1.26.0
 golang.org/x/exp/constraints
-golang.org/x/exp/maps
 golang.org/x/exp/slices
 golang.org/x/exp/slog
 golang.org/x/exp/slog/internal
@@ -547,13 +503,11 @@ golang.org/x/image/vp8l
 golang.org/x/image/webp
 # golang.org/x/net v0.61.0
 ## explicit; go 1.26.0
-golang.org/x/net/bpf
 golang.org/x/net/html
 golang.org/x/net/html/atom
 golang.org/x/net/html/charset
 golang.org/x/net/internal/socks
 golang.org/x/net/proxy
-golang.org/x/net/route
 # golang.org/x/sync v0.24.0
 ## explicit; go 1.26.0
 golang.org/x/sync/errgroup
@@ -564,8 +518,6 @@ golang.org/x/sys/cpu
 golang.org/x/sys/unix
 golang.org/x/sys/windows
 golang.org/x/sys/windows/registry
-golang.org/x/sys/windows/svc
-golang.org/x/sys/windows/svc/mgr
 # golang.org/x/text v0.43.0
 ## explicit; go 1.26.0
 golang.org/x/text/cases
@@ -590,9 +542,6 @@ golang.org/x/text/language
 golang.org/x/text/runes
 golang.org/x/text/transform
 golang.org/x/text/unicode/norm
-# golang.zx2c4.com/wireguard/windows v1.1.1
-## explicit; go 1.25.0
-golang.zx2c4.com/wireguard/windows/tunnel/winipcfg
 # gopkg.in/yaml.v3 v3.0.1
 ## explicit
 gopkg.in/yaml.v3
@@ -600,81 +549,36 @@ gopkg.in/yaml.v3
 ## explicit; go 1.27.1
 tailscale.com
 tailscale.com/atomicfile
-tailscale.com/client/local
-tailscale.com/client/tailscale/apitype
-tailscale.com/drive
 tailscale.com/envknob
-tailscale.com/feature
 tailscale.com/feature/buildfeatures
-tailscale.com/feature/favorites/pintype
-tailscale.com/feature/serviceclientprefs/serviceclient
-tailscale.com/health
-tailscale.com/hostinfo
-tailscale.com/ipn
 tailscale.com/ipn/ipnstate
 tailscale.com/kube/kubetypes
-tailscale.com/metrics
-tailscale.com/net/netaddr
-tailscale.com/net/netmon
-tailscale.com/net/netutil
-tailscale.com/net/routecheck
-tailscale.com/net/routecheck/peernode
-tailscale.com/net/traffic
-tailscale.com/net/tsaddr
-tailscale.com/net/udprelay/status
-tailscale.com/paths
-tailscale.com/safesocket
 tailscale.com/syncs
 tailscale.com/tailcfg
 tailscale.com/tailcfg/nodecap
 tailscale.com/tailcfg/peercap
 tailscale.com/tka
-tailscale.com/tsconst
 tailscale.com/tstime
-tailscale.com/tsweb
-tailscale.com/tsweb/varz
-tailscale.com/types/appctype
 tailscale.com/types/dnstype
-tailscale.com/types/empty
 tailscale.com/types/ipproto
 tailscale.com/types/key
 tailscale.com/types/lazy
 tailscale.com/types/logger
-tailscale.com/types/netmap
 tailscale.com/types/opt
-tailscale.com/types/persist
-tailscale.com/types/preftype
 tailscale.com/types/result
 tailscale.com/types/structs
 tailscale.com/types/tkatype
 tailscale.com/types/views
 tailscale.com/util/bufiox
-tailscale.com/util/cibuild
-tailscale.com/util/clientmetric
-tailscale.com/util/cloudenv
 tailscale.com/util/ctxkey
-tailscale.com/util/deephash
-tailscale.com/util/dirwalk
 tailscale.com/util/dnsname
-tailscale.com/util/eventbus
-tailscale.com/util/hashx
 tailscale.com/util/lineiter
 tailscale.com/util/mak
 tailscale.com/util/nocasemaps
-tailscale.com/util/rands
 tailscale.com/util/set
 tailscale.com/util/slicesx
-tailscale.com/util/syspolicy/internal
-tailscale.com/util/syspolicy/pkey
-tailscale.com/util/syspolicy/policyclient
-tailscale.com/util/syspolicy/ptype
-tailscale.com/util/syspolicy/setting
 tailscale.com/util/testenv
-tailscale.com/util/usermetric
 tailscale.com/util/vizerror
-tailscale.com/util/winutil
-tailscale.com/util/winutil/winenv
 tailscale.com/version
 tailscale.com/version/distro
-tailscale.com/wgengine/filter/filtertype
 # github.com/mattn/go-localereader v0.0.1 => github.com/mattn/go-localereader v0.0.2-0.20220822084749-2491eb6c1c75

@@ -35,10 +35,10 @@ sources:
   kind: zip
   url: golang-proxy:github.com/duxlabs-dev/dux-go/@v/v1.6.3-0.20261104145443-699311effba8.zip
 - directory: core/vendor/github.com/duxlabs-dev/dux-gop
-  ref: c2a16a80c01912af7603738f0c5da13e325d611f0dd0c4e06e99751ede0ac36e
+  ref: 71f0b6807e8dc03fab965920c4ef493c89b70f4697f0e626bf807606dc205d0f
   base-dir: "*/*/*"
   kind: zip
-  url: golang-proxy:github.com/duxlabs-dev/dux-gop/@v/v1.6.3-0.20261102194112-c0cab544c0f8.zip
+  url: golang-proxy:github.com/duxlabs-dev/dux-gop/@v/v1.6.3-0.20261104203851-b2331e7fc9b7.zip
 - directory: core/vendor/github.com/fsnotify/fsnotify
   ref: b2c6a334e0d518da2e046066bdd9da34cb26bad6df9f17701802d3de522ab016
   base-dir: "*/*/*"
@@ -189,11 +189,6 @@ sources:
   base-dir: "*/*/*"
   kind: zip
   url: golang-proxy:github.com/!proton!mail/go-crypto/@v/v1.5.2.zip
-- directory: core/vendor/github.com/akutz/memconn
-  ref: d56211ea9afd0c85f84231fb33dfad0ab2687e0ff6b34b8a6b37e57af4f64196
-  base-dir: "*/*/*"
-  kind: zip
-  url: golang-proxy:github.com/akutz/memconn/@v/v0.1.0.zip
 - directory: core/vendor/github.com/atotto/clipboard
   ref: d67b2c36c662751309fd2ec351df3651584bea840bd27be9a90702c3a238b43f
   base-dir: "*/*/*"
@@ -244,21 +239,11 @@ sources:
   base-dir: "*/*/*"
   kind: zip
   url: golang-proxy:github.com/cloudflare/circl/@v/v1.6.5.zip
-- directory: core/vendor/github.com/coder/websocket
-  ref: 4f1d890bc5131f335737bbb6241e3958758c8774b3e6d1c905f713f604af6209
-  base-dir: "*/*/*"
-  kind: zip
-  url: golang-proxy:github.com/coder/websocket/@v/v1.8.15.zip
 - directory: core/vendor/github.com/danielgtaylor/huma/v2
   ref: 1a1d36528096e0660312ae467f803ac623087e9a9236a23b957f904b6f9fb301
   base-dir: "*/*/*/*"
   kind: zip
   url: golang-proxy:github.com/danielgtaylor/huma/v2/@v/v2.39.1.zip
-- directory: core/vendor/github.com/dblohm7/wingoes
-  ref: 8bfe1edec4b4b37e4d4ded63ab79a1e8f613a520e3abe2cd9c12add78fe4aa02
-  base-dir: "*/*/*"
-  kind: zip
-  url: golang-proxy:github.com/dblohm7/wingoes/@v/v0.0.0-20260526185140-fb298caac7ca.zip
 - directory: core/vendor/github.com/ebitengine/purego
   ref: 7e2ff99dfccb8b74a35fbe06da88c2ec47f280cd20ca50f8f3233e1b086990f5
   base-dir: "*/*/*"
@@ -314,11 +299,6 @@ sources:
   base-dir: "*/*/*"
   kind: zip
   url: golang-proxy:github.com/golang/freetype/@v/v0.0.0-20170609003504-e2365dfdc4a0.zip
-- directory: core/vendor/github.com/google/go-cmp
-  ref: 64a9ce046f2c320e3783fba0d1f4a15f8a18f0b009b67bf27f7630919db3f539
-  base-dir: "*/*/*"
-  kind: zip
-  url: golang-proxy:github.com/google/go-cmp/@v/v0.7.0.zip
 - directory: core/vendor/github.com/hdevalence/ed25519consensus
   ref: 111cafade3ba9c7c3adf66b6a424386e30829c46c60b80dabe288e1837d30e33
   base-dir: "*/*/*"
@@ -329,11 +309,6 @@ sources:
   base-dir: "*/*/*"
   kind: zip
   url: golang-proxy:github.com/inconshreveable/mousetrap/@v/v1.1.0.zip
-- directory: core/vendor/github.com/jsimonetti/rtnetlink
-  ref: 08662e20c1a178734d79053305748f108c49f07fb8eae1a60b034165d21bd709
-  base-dir: "*/*/*"
-  kind: zip
-  url: golang-proxy:github.com/jsimonetti/rtnetlink/@v/v1.4.2.zip
 - directory: core/vendor/github.com/lufia/plan9stats
   ref: be33d7e60615fc90395330977aada694c8821d0c8e45095b59e017167691bb0c
   base-dir: "*/*/*"
@@ -349,21 +324,6 @@ sources:
   base-dir: "*/*/*"
   kind: zip
   url: golang-proxy:github.com/mattn/go-runewidth/@v/v0.0.31.zip
-- directory: core/vendor/github.com/mdlayher/netlink
-  ref: 2fbb8a5962c22dfdeaecd18bc2a1215e863bfcfa2ba1a28a3703ce0ae014ba4a
-  base-dir: "*/*/*"
-  kind: zip
-  url: golang-proxy:github.com/mdlayher/netlink/@v/v1.11.2.zip
-- directory: core/vendor/github.com/mdlayher/socket
-  ref: 6e13014a2a6704f8b216b55071ce565415b90d44234b4b2c63be3ed057242efb
-  base-dir: "*/*/*"
-  kind: zip
-  url: golang-proxy:github.com/mdlayher/socket/@v/v0.8.0.zip
-- directory: core/vendor/github.com/mitchellh/go-ps
-  ref: f2f0400b1d5e136419daed275c27a930b0f5447ac12bb8acd3ddbe39547b2834
-  base-dir: "*/*/*"
-  kind: zip
-  url: golang-proxy:github.com/mitchellh/go-ps/@v/v1.0.0.zip
 - directory: core/vendor/github.com/muesli/ansi
   ref: 59c0d420908d51df3c701510337fbe42bfb4d48fcc5f490b5eb2f36fc25f91b9
   base-dir: "*/*/*"
@@ -414,11 +374,6 @@ sources:
   base-dir: "*/*/*"
   kind: zip
   url: golang-proxy:github.com/stretchr/objx/@v/v0.8.0.zip
-- directory: core/vendor/github.com/tailscale/go-winio
-  ref: 0433037071e067ec3cc0600db97a31b2296b852ade8688b4aad990f7ecbd1a37
-  base-dir: "*/*/*"
-  kind: zip
-  url: golang-proxy:github.com/tailscale/go-winio/@v/v0.0.0-20231025203758-c4f33415bf55.zip
 - directory: core/vendor/github.com/tklauser/go-sysconf
   ref: 61e89253bc4d7091170601be12633dc02e94a3bc30470b081a2449944fa18784
   base-dir: "*/*/*"
@@ -454,11 +409,6 @@ sources:
   base-dir: "*/*/*"
   kind: zip
   url: golang-proxy:go.yaml.in/yaml/v3/@v/v3.0.5.zip
-- directory: core/vendor/go4.org/netipx
-  ref: 6d0c289f57693a2a5b7a64b4a7f79f0954ce8f7d451528fe602ea594fbcdffff
-  base-dir: "*/*"
-  kind: zip
-  url: golang-proxy:go4.org/netipx/@v/v0.0.0-20260823151212-3075585bcbeb.zip
 - directory: core/vendor/golang.org/x/exp
   ref: 59f56c3ee46a87131794a9ccd90d9f6430702377e76bdeed0b5a726ab0dce59e
   base-dir: "*/*/*"
@@ -474,8 +424,3 @@ sources:
   base-dir: "*/*/*"
   kind: zip
   url: golang-proxy:golang.org/x/sync/@v/v0.24.0.zip
-- directory: core/vendor/golang.zx2c4.com/wireguard/windows
-  ref: b4c3807f39a6c063bb8d07e12ee8e863a5da5b4de72cda6614f579d41fea0f0b
-  base-dir: "*/*/*"
-  kind: zip
-  url: golang-proxy:golang.zx2c4.com/wireguard/windows/@v/v1.1.1.zip

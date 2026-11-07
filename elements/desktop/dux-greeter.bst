@@ -8,11 +8,11 @@ sources:
 - kind: git_repo
   url: github:duxlabs-dev/dux-greeter.git
   track: 'master'
-  ref: v2.1.0-1-g2b1ee65322ef3504daf3fc13b8b9ead3f4c42cfd
+  ref: v2.1.0-7-gf68ff1eb33c2db09cbfe6b146cf2a0bfe96f21aa
 - kind: git_module
   url: github:duxlabs-dev/dux-qml-common
   path: dux-qml-common
-  ref: be3e16ca62866a749b34cfefe1aaed81cfe21e94
+  ref: 76277f04bf526164150efa857e3f225dc54cb090
 - kind: local
   path: files/dux-greeter
 - kind: go_mod_vendor

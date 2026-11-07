@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: github:duxlabs-dev/dux-gop.git
   track: 'v*.*.*'
-  ref: v2.1.0-0-g88d03ba765ba7fa3c27859d61377df36fcb29702
+  ref: v2.1.1-0-g151af284e748fe59aa8096b69aa1e1828bdac269
 - kind: go_mod_vendor
   ref:
   - module: github.com/aymanbagabas/go-osc52/v2

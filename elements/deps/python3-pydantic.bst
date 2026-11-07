@@ -8,7 +8,7 @@ sources:
   - "core-v*"
   - "*b*"
   - "*a*"
-  ref: v2.14.3-0-g4f4a33fe18e4bdf5ba35c01d86adcebc236f4703
+  ref: v2.14.3-0-gea492e04654ab7f7a1f9287ea912419452ead4dd
 - kind: cargo2
   cargo-lock: pydantic-core/Cargo.lock
   ref:

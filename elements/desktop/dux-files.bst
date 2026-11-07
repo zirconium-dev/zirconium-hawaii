@@ -4,11 +4,11 @@ sources:
 - kind: git_repo
   url: github:duxlabs-dev/dux-files.git
   track: 'v*.*.*'
-  ref: v2.1.0-0-gbb784ed9b3d90b262ba64661a38c1b0f6fb72365
+  ref: v2.1.1-0-g1c1501a271f8111fa46cc75fc326ce9991f41946
 - kind: git_module
   url: github:duxlabs-dev/dux-qml-common
   path: dux-qml-common
-  ref: 69971fe7203deaca031d04c434b3fcc016a2fb9e
+  ref: 76277f04bf526164150efa857e3f225dc54cb090
 - kind: go_mod_vendor
   directory: core
   ref:
@@ -58,8 +58,8 @@ sources:
     version: v0.7.0
     sha256sum: 601684f1d3cfc8391cbaf7e5973b0485db6a5037426d9cccf47935ca0a4d65dd
   - module: github.com/duxlabs-dev/dux-go
-    version: v1.6.3-0.20261031181736-024402301dff
-    sha256sum: 1678e5421a278de065470ea644a2e1dbe0dad168b06bcbd07fcd7dfe8b340b5f
+    version: v1.6.3-0.20261106152240-dc9b388fdc6f
+    sha256sum: c7e356a869b41870b366b8622580bfe6112a63352b4318ab9fe4e479cdc32bd4
   - module: github.com/fsnotify/fsnotify
     version: v1.10.1
     sha256sum: b2c6a334e0d518da2e046066bdd9da34cb26bad6df9f17701802d3de522ab016
@@ -192,7 +192,6 @@ sources:
   - module: gopkg.in/yaml.v3
     version: v3.0.1
     sha256sum: aab8fbc4e6300ea08e6afe1caea18a21c90c79f489f52c53e2f20431f1a9a015
-
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-make.bst
 - freedesktop-sdk.bst:components/git.bst
