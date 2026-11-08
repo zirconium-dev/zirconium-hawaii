@@ -1,0 +1,27 @@
+From 8f3ef24e3bb1fcf5c679682fe7f74d63b86a2871 Mon Sep 17 00:00:00 2001
+From: Hec <hec@heccraft.com>
+Date: Sat, 7 Nov 2026 10:44:12 -0500
+Subject: [PATCH] gnomeos-deps/nvidia-drivers.bst: update to 620.70.06
+
+---
+ elements/gnomeos-deps/nvidia-drivers.bst | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/elements/gnomeos-deps/nvidia-drivers.bst b/elements/gnomeos-deps/nvidia-drivers.bst
+index 987b133e3..b60cb5537 100644
+--- a/elements/gnomeos-deps/nvidia-drivers.bst
++++ b/elements/gnomeos-deps/nvidia-drivers.bst
+@@ -4,8 +4,8 @@ sources:
+ - kind: remote
+   # Find the latest version from here https://www.nvidia.com/en-us/drivers/unix/ 
+   # or https://download.nvidia.com/XFree86/Linux-x86_64/latest.txt for the "production" branch
+-  url: nvidia:XFree86/Linux-x86_64/615.78.08/NVIDIA-Linux-x86_64-615.78.08.run
+-  ref: 3e3f6dddc2ee767a08185300af7be3cb286ece76698d2dde3524599782d07ffe
++  url: nvidia:XFree86/Linux-x86_64/620.70.06/NVIDIA-Linux-x86_64-620.70.06.run
++  ref: 29118e3abd08c07559bcca3d9c76238d039490af0362a2e5bcfcbe7204afd4b1
+ - kind: local
+   path: files/nvidia-config/modprobe.conf
+   directory: local-config
+-- 
+2.56.0
+
