@@ -1745,8 +1745,6 @@ variables:
 
 config:
   install-commands:
-  - |
-    %{make-install}
-
-  - |
-    install -Dm0644 01-systemd.conf 20-bootc.conf -t "%{install-root}%{indep-libdir}/dracut/dracut.conf.d"
+    (>):
+    - |
+      install -Dm0644 01-systemd.conf 20-bootc.conf -t "%{install-root}%{indep-libdir}/dracut/dracut.conf.d"

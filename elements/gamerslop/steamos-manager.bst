@@ -886,9 +886,9 @@ config:
   - cargo build --release --frozen --offline --jobs "${MAXJOBS}"
 
   install-commands:
-  - |
-    %{make-install}
-    rm %{install-root}%{indep-libdir}/systemd/system/sddm.service.d/reset-oneshot-boot.conf
-    rm %{install-root}%{indep-libdir}/systemd/user/orca.service
-    install -d %{install-root}%{indep-libdir}/systemd/user/gamescope-session-plus.service.wants/steamos-manager.service
-    ln -s %{indep-libdir}/systemd/user/steamos-manager.service %{install-root}%{indep-libdir}/systemd/user/gamescope-session-plus.service.wants/steamos-manager.service
+    (>):
+    - |
+      rm %{install-root}%{indep-libdir}/systemd/system/sddm.service.d/reset-oneshot-boot.conf
+      rm %{install-root}%{indep-libdir}/systemd/user/orca.service
+      install -d %{install-root}%{indep-libdir}/systemd/user/gamescope-session-plus.service.wants/steamos-manager.service
+      ln -s %{indep-libdir}/systemd/user/steamos-manager.service %{install-root}%{indep-libdir}/systemd/user/gamescope-session-plus.service.wants/steamos-manager.service
