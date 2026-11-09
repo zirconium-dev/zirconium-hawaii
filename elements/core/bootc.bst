@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: github:bootc-dev/bootc.git
   track: v*
-  ref: v1.17.3-0-g6d7893f2dbdd289a4a04a5727e4df29433d43024
+  ref: v1.17.4-0-g7cde7bbe233ee45a40cff3d89d4f42b68a258d46
   exclude:
   - v1.16.7 # running bootc upgrade hangs at the GC stage on composefs-rs systems
 - kind: local
@@ -800,8 +800,8 @@ sources:
     sha: 224399e74b87b5f3557511d98dff8b14089b3dadafcab6bb93eab67d3aace965
   - kind: registry
     name: log
-    version: 0.4.34
-    sha: f9f8bd3e56ce4dfc153cf470fffbfa98c7620958b312ca5c3a4b8d5181fd13c6
+    version: 0.4.35
+    sha: 5d15f86d12da44cd8d4ec3c73984537eb7f4cadcb9776a575a0a8a05ca11005c
   - kind: registry
     name: mandown
     version: 1.1.1
@@ -908,16 +908,16 @@ sources:
     sha: 351339c4d45e6bdf2defef3ef1ce0b153810bd59b171b92b6a42e7bb0f32a4ad
   - kind: registry
     name: openssl
-    version: 0.10.81
-    sha: 77823a27f0babb03091cb9ed9ef80af3b39dbc82f97e8fa530374b7dafd87a45
+    version: 0.10.82
+    sha: 4de8111e94a56adca7ebfe6c365b6d42f99deb69b74b6becacd4204e2f193aa2
   - kind: registry
     name: openssl-macros
     version: 0.1.1
     sha: a948666b637a0f465e8564c73e89d4dde00d72d4d473cc972f390fc3dcee7d9c
   - kind: registry
     name: openssl-sys
-    version: 0.9.117
-    sha: b47e7e6bb2c38cd930d25a23b40fa52e068c10e85f3e03a7f5ba5aaca5713695
+    version: 0.9.118
+    sha: 19c413d6ec9ebaf5e1c829d355cb3e9f783778d700f135be0921d52fce3c60ae
   - kind: registry
     name: ostree
     version: 0.20.5
@@ -1012,8 +1012,8 @@ sources:
     sha: 8fd00f0bb2e90d81d1044c2b32617f68fcb9fa3bb7640c23e9c748e53fb30934
   - kind: registry
     name: pulldown-cmark
-    version: 0.13.5
-    sha: 278e9268c93b9e498a2da46c34d90ba93a3255eb99009646398f34bc73ab36eb
+    version: 0.13.6
+    sha: 3db2be46835f013dd3f4fa7f5f7402c537787b54ebb6fe2b94bbdd7e2669bb7b
   - kind: registry
     name: pulldown-cmark-escape
     version: 0.11.0
@@ -1108,8 +1108,8 @@ sources:
     sha: cfcb3a22ef46e85b45de6ee7e79d063319ebb6594faafcf1c225ea92ab6e9b92
   - kind: registry
     name: rustix
-    version: 1.1.5
-    sha: 891efababe418670775f199f0d233d84843c227a0949a883ce15b37c78d6629d
+    version: 1.1.6
+    sha: e5e76742e5294153d4dde1207dbec5bdd81eef6fabdc0d2118babadabfd858aa
   - kind: registry
     name: rustix-linux-procfs
     version: 0.1.1
@@ -1416,8 +1416,8 @@ sources:
     sha: 9629274872b2bfaf8d66f5f15725007f635594914870f65218920345aa11aa8c
   - kind: registry
     name: unicode-width
-    version: 0.2.2
-    sha: b4ac048d71ede7ee76d585517add45da530660ef4390e49b098733c6e897f254
+    version: 0.2.3
+    sha: ca718471876992059f251e33aafc334346ada08042b7661dd1fe313a9bced557
   - kind: registry
     name: unicode-xid
     version: 0.2.6
