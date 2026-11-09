@@ -90,10 +90,10 @@ depends:
 
 config:
   configure-commands:
-  - |
-    # Replace spirv-headers include with the system directory
-    sed -i 's^../thirdparty/SPIRV-Headers/include/spirv/^%{includedir}/spirv/^' src/meson.build
-    %{meson}
+    (<):
+    - |
+      # Replace spirv-headers include with the system directory
+      sed -i 's^../thirdparty/SPIRV-Headers/include/spirv/^%{includedir}/spirv/^' src/meson.build
 
 variables:
   meson-local: >-

@@ -53,3 +53,5 @@ config:
     rm -rv "%{install-root}%{datadir}"/tuned/ui
     rm -v "%{install-root}%{datadir}"/icons/hicolor/scalable/apps/tuned.svg
     rm -v "%{install-root}%{datadir}"/applications/tuned-gui.desktop
+  - |
+    %{install-extra}

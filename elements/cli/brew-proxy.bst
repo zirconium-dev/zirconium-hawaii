@@ -390,7 +390,6 @@ variables:
 
 config:
   install-commands:
-  - |
-    %{meson-install}
-  - |
-    install -Dm0644 brew.env -t "%{install-root}%{sysconfdir}/homebrew/"
+    (>):
+    - |
+      install -Dm0644 brew.env -t "%{install-root}%{sysconfdir}/homebrew/"

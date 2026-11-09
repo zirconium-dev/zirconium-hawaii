@@ -14,7 +14,6 @@ depends:
 - freedesktop-sdk.bst:components/openssl.bst
 - freedesktop-sdk.bst:components/zlib.bst
 
-
 variables:
   conf-local: >-
     --disable-w3mmailer
