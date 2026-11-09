@@ -4,7 +4,7 @@ sources:
 - kind: docker
   url: ghcr:ublue-os/brew
   track: latest
-  ref: 130848582eed433e85af6fa8c829ddec12ddaa6b18bc037a610b4b8da3c97458
+  ref: a0ee6f2a9c64d476d06e6750d02dc847293a81c1eedfe9848eda1b7a79cf1cb8
 
 config:
   source: /system_files
