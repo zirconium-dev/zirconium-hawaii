@@ -6,7 +6,7 @@ sources:
   track: v*
   exclude:
   - "*-pre"
-  ref: v1.104.5-0-g73a48057aaf5f60e4f770b398e9b7af576b01dbe
+  ref: v1.104.6-0-gc54807352ae196919497b3f8fddc3cedf88368b9
 - kind: go_mod_vendor
   ref:
   - module: 4d63.com/gocheckcompilerdirectives
@@ -1555,8 +1555,8 @@ sources:
     version: v0.0.0-20240214030419-6fbb0a674ee6
     sha256sum: 4c3b4bd7e0866fa7004f911da3a0a57693fbf641b5f397ed55805ff604a98547
   - module: github.com/tailscale/wireguard-go
-    version: v0.0.0-20260928213032-417aef361226
-    sha256sum: 605f0926477b953bb6a0ee13d7baad9a3b3eab5bb17ae26bfff245df80fe19b6
+    version: v0.0.0-20261106233718-9e0ab45c16ca
+    sha256sum: f4ccfba2206bd554e178b98de941ec327ba66f39b34bdedc1f4eadc62fa521ff
   - module: github.com/tailscale/xnet
     version: v0.0.0-20240729143630-8497ac4dab2e
     sha256sum: 438abf28ce5fb03adf529c2cb57a451f9b243c4a2a181d9d06cdb61bb10960e7
@@ -1980,7 +1980,6 @@ sources:
   - module: tailscale.com/client/tailscale/v2
     version: v2.10.1
     sha256sum: b77b965aace5776c93a0b227c0cd1fa30beebf8afe4073813d1cd63b8b5fcff9
-
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-make.bst
 - freedesktop-sdk.bst:components/git.bst
