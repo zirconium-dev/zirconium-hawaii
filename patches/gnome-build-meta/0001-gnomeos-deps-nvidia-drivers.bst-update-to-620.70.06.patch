@@ -1,14 +1,14 @@
-From 8f3ef24e3bb1fcf5c679682fe7f74d63b86a2871 Mon Sep 17 00:00:00 2001
+From caa5fe73b2c7ae159b493c570749d93281699465 Mon Sep 17 00:00:00 2001
 From: Hec <hec@heccraft.com>
 Date: Sat, 7 Nov 2026 10:44:12 -0500
 Subject: [PATCH] gnomeos-deps/nvidia-drivers.bst: update to 620.70.06
 
 ---
- elements/gnomeos-deps/nvidia-drivers.bst | 4 ++--
- 1 file changed, 2 insertions(+), 2 deletions(-)
+ elements/gnomeos-deps/nvidia-drivers.bst | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
 
 diff --git a/elements/gnomeos-deps/nvidia-drivers.bst b/elements/gnomeos-deps/nvidia-drivers.bst
-index 987b133e3..b60cb5537 100644
+index fc3c960a8..346e4a829 100644
 --- a/elements/gnomeos-deps/nvidia-drivers.bst
 +++ b/elements/gnomeos-deps/nvidia-drivers.bst
 @@ -4,8 +4,8 @@ sources:
@@ -22,6 +22,15 @@ index 987b133e3..b60cb5537 100644
  - kind: local
    path: files/nvidia-config/modprobe.conf
    directory: local-config
+@@ -238,6 +238,8 @@ config:
+     install -Dm644 -t "%{install-root}%{libdir}/GL/default/lib/" libnvidia-ngx.so*
+     install -Dm644 -t "%{install-root}%{libdir}/GL/default/lib/nvidia/wine/" _nvngx.dll*
+     install -Dm644 -t "%{install-root}%{libdir}/GL/default/lib/nvidia/wine/" nvngx*.dll*
++    install -Dm644 -t "%{install-root}%{libdir}/GL/default/lib/nvidia/wine/" nvngx_dlssg.dll*
++    install -Dm644 -t "%{install-root}%{libdir}/GL/default/lib/nvidia/wine/ngx-builtins/" ngx-builtins/*.dll
+ 
+   # nvfbc
+   - |
 -- 
 2.56.0
 
