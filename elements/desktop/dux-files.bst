@@ -3,12 +3,12 @@ kind: make
 sources:
 - kind: git_repo
   url: github:duxlabs-dev/dux-files.git
-  track: 'v*.*.*'
-  ref: v2.1.2-0-g994e99772f78e52dc4b8cb9b947c95159252be10
+  track: master
+  ref: v2.1.0-24-g6b221b0d4c7762b6f438c031afa8f104f0fbe05d
 - kind: git_module
   url: github:duxlabs-dev/dux-qml-common
   path: dux-qml-common
-  ref: 2eb518fa47397d9b06d5ab1fd49bf045e16018e0
+  ref: 0e924de9e3282143cfa7f30e4ac55382b711882c
 - kind: go_mod_vendor
   directory: core
   ref:
@@ -58,8 +58,11 @@ sources:
     version: v0.7.0
     sha256sum: 601684f1d3cfc8391cbaf7e5973b0485db6a5037426d9cccf47935ca0a4d65dd
   - module: github.com/duxlabs-dev/dux-go
-    version: v1.6.3-0.20261106152240-dc9b388fdc6f
-    sha256sum: c7e356a869b41870b366b8622580bfe6112a63352b4318ab9fe4e479cdc32bd4
+    version: v1.6.3-0.20261110155217-26b745ee0afd
+    sha256sum: 5b3b225a545a2846c0fb230710e0fb7042d8fe55f680afdda107b0de8b0e9530
+  - module: github.com/ebitengine/purego
+    version: v0.11.3
+    sha256sum: 794b433246c662b29a0b48f2f07b1814bfe15ca61744de88f05d18d7795f77c2
   - module: github.com/fsnotify/fsnotify
     version: v1.10.1
     sha256sum: b2c6a334e0d518da2e046066bdd9da34cb26bad6df9f17701802d3de522ab016
