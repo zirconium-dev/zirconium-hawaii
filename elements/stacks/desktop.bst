@@ -2,7 +2,6 @@ kind: stack
 
 depends:
   - desktop/niri.bst
-  - desktop/quickshell.bst
   - desktop/dux-shell.bst
   - desktop/dux-greeter.bst
   - desktop/dux-files.bst

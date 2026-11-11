@@ -8,11 +8,11 @@ sources:
 - kind: git_repo
   url: github:duxlabs-dev/dux-greeter.git
   track: 'master'
-  ref: v2.1.0-10-ga3aa55f7269a36bed66dcf3e0d244da83244d3a2
+  ref: v2.1.0-13-g83f318bf94600b61cb37880160e2f827c8f4be64
 - kind: git_module
   url: github:duxlabs-dev/dux-qml-common
   path: dux-qml-common
-  ref: b78c6fc861bcf1955d3db0c016779886add1f207
+  ref: 0e924de9e3282143cfa7f30e4ac55382b711882c
 - kind: local
   path: files/dux-greeter
 - kind: go_mod_vendor
@@ -49,8 +49,11 @@ sources:
     version: v1.1.1
     sha256sum: 6b44a843951f371b7010c754ecc3cabefe815d5ced1c5b9409fb2d697e8a890d
   - module: github.com/duxlabs-dev/dux-go
-    version: v1.6.3-0.20261020163124-e2ca52bdf500
-    sha256sum: e034b77eaf9c77d722a4e0252b3f64f11b3f63db1141c512c4572ff807291692
+    version: v1.6.3-0.20261110155217-26b745ee0afd
+    sha256sum: 5b3b225a545a2846c0fb230710e0fb7042d8fe55f680afdda107b0de8b0e9530
+  - module: github.com/ebitengine/purego
+    version: v0.11.3
+    sha256sum: 794b433246c662b29a0b48f2f07b1814bfe15ca61744de88f05d18d7795f77c2
   - module: github.com/go-logfmt/logfmt
     version: v0.6.1
     sha256sum: 20f61151ffe33e64602b3a0db4eaed9ef60a84398a4a495a7434ffb90635751b
@@ -102,7 +105,6 @@ sources:
   - module: gopkg.in/yaml.v3
     version: v3.0.1
     sha256sum: aab8fbc4e6300ea08e6afe1caea18a21c90c79f489f52c53e2f20431f1a9a015
-
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-make.bst
 - freedesktop-sdk.bst:components/git.bst
@@ -110,7 +112,7 @@ build-depends:
 - freedesktop-sdk.bst:components/tar.bst
 
 depends:
-- desktop/quickshell.bst
+- deps/dux-qt-base.bst
 
 runtime-depends:
 - core/greetd.bst

@@ -2,9 +2,9 @@ kind: cmake
 
 sources:
 - kind: git_repo
-  url: outfoxxed:quickshell/quickshell
+  url: github:duxlabs-dev/dux-qt-base.git
   track: v*
-  ref: v0.3.2-0-g4f508be500dea6e5732cc3d50382a0048b17e7b1
+  ref: v0.3.9-0-g5f41fd516e33e37e9723aef54e5630ff07080bf0
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst
@@ -20,8 +20,6 @@ depends:
 - freedesktop-sdk.bst:components/linux-pam.bst
 - freedesktop-sdk.bst:components/pipewire.bst
 - freedesktop-sdk.bst:components/polkit.bst
-- deps/cpptrace.bst
-- deps/jemalloc.bst
 - deps/qt6-qtwayland.bst
 
 variables:
@@ -29,5 +27,3 @@ variables:
     -DCMAKE_BUILD_TYPE=Release
     -DDISTRIBUTOR='Zirconium'
     -DDISTRIBUTOR_DEBUGINFO_AVAILABLE=YES
-    -DCRASH_HANDLER=ON
-    -DINSTALL_QML_PREFIX=%{lib}/qt6/qml

@@ -13,11 +13,11 @@ sources:
   - kind: git_repo
     url: github:duxlabs-dev/dux-shell.git
     track: master
-    ref: v2.1.0-85-ge919c08f040e8109fcfe33593cb4e4ade24e8a7d
+    ref: v2.1.0-101-gba74d0c074219d9a6ca32fec3d1ddc30f74b3982
   - kind: git_module
     url: github:duxlabs-dev/dux-qml-common
     path: dux-qml-common
-    ref: 0877466a25b8e191a865bf75d0e500de6351ae04
+    ref: 0e924de9e3282143cfa7f30e4ac55382b711882c
   - kind: local
     path: files/dux-shell
 
@@ -28,7 +28,7 @@ build-depends:
 - freedesktop-sdk.bst:components/tar.bst
 
 depends:
-- desktop/quickshell.bst
+- deps/dux-qt-base.bst
 - deps/qt6-qtmultimedia.bst
 
 runtime-depends:

@@ -203,7 +203,7 @@ build-depends:
 - freedesktop-sdk.bst:components/tar.bst
 
 depends:
-- desktop/quickshell.bst
+- deps/dux-qt-base.bst
 
 variables:
   make-args: >-
