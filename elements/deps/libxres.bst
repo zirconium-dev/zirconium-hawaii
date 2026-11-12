@@ -22,5 +22,5 @@ config:
   configure-commands:
   - |
     chmod +x ./configure
-    ./configure --prefix=%{prefix} --sysconfdir=%{sysconfdir} --libdir=%{prefix}/%{lib} --disable-static
+    ./configure --prefix=%{prefix} --sysconfdir=%{sysconfdir} --libdir=%{libdir} --disable-static
 

@@ -15,5 +15,5 @@ runtime-depends:
 
 variables:
   make-args: >-
-    libdir="%{prefix}/%{lib}"
+    libdir="%{libdir}"
     prefix="%{prefix}"
