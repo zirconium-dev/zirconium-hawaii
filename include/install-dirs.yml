@@ -5,3 +5,4 @@ variables:
   nushell-completions-dir: "%{datadir}/nushell/completions"
   zsh-completions-dir: "%{datadir}/zsh/site-functions"
   lib32: "lib/i386-linux-gnu"
+  lib32dir: "%{prefix}/%{lib32}"
