@@ -166,6 +166,7 @@ case "$arch" in
 
         # Steam Machine
         module LEDS_VALVE
+        module CEC_CROS_EC
 
         # Framework Laptops/Desktop
         module CROS_EC_CHARDEV
@@ -179,6 +180,9 @@ case "$arch" in
         module CROS_EC_WATCHDOG
         module CROS_TYPEC_SWITCH
         module CROS_USBPD_NOTIFY
+
+        # Zotac Zone
+        module ZOTAC_ZONE_HID
     ;;
 esac
 
