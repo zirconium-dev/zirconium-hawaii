@@ -10,6 +10,8 @@ sources:
   - "*-alpha*"
   - "*-lts*"
   ref: v6.12.0-0-g025bdad181de241e81bf853c8a2d7bf3d19261a9
+- kind: patch_queue
+  path: patches/qt6-qtbase
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst
