@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: github:duxlabs-dev/dux-files.git
   track: master
-  ref: v2.1.0-24-g6b221b0d4c7762b6f438c031afa8f104f0fbe05d
+  ref: v2.1.0-25-g2b32ed0709422c042c6f82af57324fb9e2b4a681
 - kind: git_module
   url: github:duxlabs-dev/dux-qml-common
   path: dux-qml-common
