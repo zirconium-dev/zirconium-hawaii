@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -xeuo pipefail
+
+# Run initial scripts; needed for setuid and other things
+for f in /initial_scripts/*; do
+  $f /
+done
+rm -rf /initial_scripts
