@@ -3,10 +3,10 @@ kind: manual
 sources:
 - kind: git_repo
   url: github:tailscale/tailscale.git
-  track: v*
+  # track: v*
   exclude:
   - "*-pre"
-  ref: v1.104.7-0-gcbc74fe48ef1b1649f69a4d9a602319427e25102
+  ref: v1.104.6-0-gc54807352ae196919497b3f8fddc3cedf88368b9
 - kind: go_mod_vendor
   ref:
   - module: 4d63.com/gocheckcompilerdirectives
