@@ -5,6 +5,8 @@ sources:
   url: github:uutils/coreutils.git
   track: "*"
   ref: 0.12.0-0-gdc1efd89948a9ca4c78c3a4b9a6ac891019a8c69
+- kind: patch_queue
+  path: patches/uutils-coreutils
 - kind: cargo2
   ref:
   - kind: registry
