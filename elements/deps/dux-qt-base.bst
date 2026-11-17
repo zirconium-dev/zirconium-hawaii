@@ -3,7 +3,7 @@ kind: cmake
 sources:
 - kind: git_repo
   url: github:duxlabs-dev/dux-qt-base.git
-  track: v*
+  track: master
   ref: v0.4.4-0-g7734c4cd423ef14eaf23c6f39d6c47480dd4bb5a
 
 build-depends:
