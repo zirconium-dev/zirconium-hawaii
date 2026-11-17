@@ -4,11 +4,11 @@ sources:
 - kind: git_repo
   url: github:duxlabs-dev/dux-files.git
   track: master
-  ref: v2.1.0-35-g547475effa8696a9229cd4e3a83e510ac1ef4183
+  ref: v2.1.0-46-g681fbe0ff6e91cb54f272dd86de2bd86e5e70641
 - kind: git_module
   url: github:duxlabs-dev/dux-qml-common
   path: dux-qml-common
-  ref: dab0772dc8bf4aa29868048ef8a6b969d04d2b1a
+  ref: a772fff561b331d3c440cb717528e28d4437b68a
 - kind: go_mod_vendor
   directory: core
   ref:

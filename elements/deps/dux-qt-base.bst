@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: github:duxlabs-dev/dux-qt-base.git
   track: master
-  ref: v0.4.4-0-g7734c4cd423ef14eaf23c6f39d6c47480dd4bb5a
+  ref: v0.4.7-2-gf7e8816e85b25b6d258bb828c02bdae04ad51756
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst
