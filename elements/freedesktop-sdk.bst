@@ -34,10 +34,6 @@ config:
     components/zenity.bst: gnome-build-meta.bst:void/zenity.bst
 
     components/linux-module-cert.bst: core/linux-module-cert.bst
-    components/_private/systemd-base.bst: gnome-build-meta.bst:core-deps/systemd-base.bst
-    components/systemd.bst: gnome-build-meta.bst:core-deps/systemd.bst
-    components/systemd-ukify.bst: gnome-build-meta.bst:core-deps/systemd-ukify.bst
-    components/systemd-libs.bst: gnome-build-meta.bst:core-deps/systemd-libs.bst
 
     # swick has signed up for dealing with all the issues from building these from git
     components/_private/xdg-desktop-portal-base.bst: gnome-build-meta.bst:core-deps/xdg-desktop-portal-base.bst
