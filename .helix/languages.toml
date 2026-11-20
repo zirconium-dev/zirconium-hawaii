@@ -21,3 +21,29 @@ file-types = [
 ]
 scope = "source.yaml"
 indent = { tab-width = 2, unit = "  " }
+
+[[language]]
+name = "ini"
+scope = "source.ini"
+file-types = [
+  "ini",
+  "desktop",
+  { glob = "mimeapps.list" },
+  # Podman quadlets
+  "container",
+  "volume",
+  "kube",
+  "network",
+  { glob = "mkosi*.conf" },
+  { glob = ".editorconfig" },
+  { glob = ".npmrc" },
+  { glob = "hgrc" },
+  { glob = "npmrc" },
+  { glob = "rclone.conf" },
+  "properties",
+  "cfg",
+  "directory"
+]
+injection-regex = "ini"
+comment-token = "#"
+indent = { tab-width = 4, unit = " " }
