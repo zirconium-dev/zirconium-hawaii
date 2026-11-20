@@ -24,6 +24,7 @@ depends:
   - freedesktop-sdk.bst:components/flatpak.bst
   - freedesktop-sdk.bst:components/pipewire-daemon.bst
   - freedesktop-sdk.bst:components/cups-daemon.bst
+  - desktop/gutenprint.bst
   - freedesktop-sdk.bst:vm/config/flathub.bst
   - freedesktop-sdk.bst:vm/mesa-default.bst
   - gnome-build-meta.bst:gnomeos-deps/alsa-ucm-conf.bst
@@ -33,6 +34,7 @@ depends:
   - freedesktop-sdk-extra.bst:components/speech-dispatcher.bst
   - gnome-build-meta.bst:core-deps/xdg-desktop-portal-gnome.bst
   - gnome-build-meta.bst:core-deps/xdg-desktop-portal-gtk.bst
+  - desktop/xdg-native-messaging-proxy.bst
   - gnome-build-meta.bst:core-deps/boltd.bst
   - gnome-build-meta.bst:core/gnome-disk-utility.bst
   - gnome-build-meta.bst:gnomeos-deps/oo7-cli.bst
