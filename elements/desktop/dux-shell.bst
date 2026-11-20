@@ -346,7 +346,7 @@ runtime-depends:
 - gnome-build-meta.bst:core-deps/cups-pk-helper.bst
 
 variables:
-  make-args: build GOFLAGS="" BUILD_TIME=2011-11-10_15:00:00
+  make-args: build GOFLAGS="${GOFLAGS}" BUILD_TIME=2011-11-10_15:00:00
 
 config:
   configure-commands:
