@@ -129,7 +129,7 @@ github.com/danielgtaylor/huma/v2/yaml
 github.com/dlclark/regexp2/v2
 github.com/dlclark/regexp2/v2/helpers
 github.com/dlclark/regexp2/v2/syntax
-# github.com/duxlabs-dev/dux-go v1.6.3-0.20261116173333-ff492b8311e2
+# github.com/duxlabs-dev/dux-go v1.6.3-0.20261118091927-e4b83830a19d
 ## explicit; go 1.27
 github.com/duxlabs-dev/dux-go/atomicfile
 github.com/duxlabs-dev/dux-go/boottimer
@@ -308,9 +308,16 @@ github.com/inconshreveable/mousetrap
 github.com/kevinburke/ssh_config
 # github.com/klauspost/compress v1.20.3
 ## explicit; go 1.25
+github.com/klauspost/compress
 github.com/klauspost/compress/flate
+github.com/klauspost/compress/fse
+github.com/klauspost/compress/huff0
+github.com/klauspost/compress/internal/cpuinfo
 github.com/klauspost/compress/internal/le
 github.com/klauspost/compress/internal/regmask
+github.com/klauspost/compress/internal/snapref
+github.com/klauspost/compress/zstd
+github.com/klauspost/compress/zstd/internal/xxhash
 # github.com/lucasb-eyer/go-colorful v1.4.1
 ## explicit; go 1.12
 github.com/lucasb-eyer/go-colorful

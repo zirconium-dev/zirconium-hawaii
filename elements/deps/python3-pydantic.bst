@@ -8,7 +8,7 @@ sources:
   - "core-v*"
   - "*b*"
   - "*a*"
-  ref: v2.14.3-0-gea492e04654ab7f7a1f9287ea912419452ead4dd
+  ref: v2.14.4-0-g1642a816171707dd8c58da6fff8061a59348402c
 - kind: cargo2
   cargo-lock: pydantic-core/Cargo.lock
   ref:
@@ -146,8 +146,8 @@ sources:
     sha: 49f1f14873335454500d59611f1cf4a4b0f786f9ac11f4312a78e4cf2566695b
   - kind: registry
     name: jiter
-    version: 0.18.0
-    sha: 49e31424b61d85292bd805dbf643c3ccc44f5f3871fb751209b889ee70585029
+    version: 0.19.0
+    sha: 4027f86130c7a1997f880ed407580e58514b867af49e7ce44370f80fa6ff999f
   - kind: registry
     name: js-sys
     version: 0.3.77
