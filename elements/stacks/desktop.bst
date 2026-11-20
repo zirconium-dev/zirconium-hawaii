@@ -1,60 +1,59 @@
 kind: stack
 
 depends:
-  - desktop/niri.bst
-  - desktop/quickshell.bst
-  - desktop/dux-shell.bst
-  - desktop/dux-greeter.bst
-  - desktop/foot.bst
-  - desktop/satty.bst
-  - desktop/brlaser.bst
   - cli/chezmoi.bst
-  - core/greetd.bst
-  - core/pam-u2f.bst
-  - core/xdg-utils.bst
-  - desktop/iio-niri.bst
-  - desktop/xdg-terminal-exec.bst
+  - cli/tailscale.bst
   - config/default-icons.bst
   - config/ld-config.bst
   - config/plymouth.bst
-  - desktop/input-remapper.bst
+  - core/greetd.bst
+  - core/pam-u2f.bst
+  - core/xdg-utils.bst
+  - desktop/brlaser.bst
   - desktop/cardwire.bst
-  - freedesktop-sdk.bst:components/desktop-file-utils.bst
-  - freedesktop-sdk.bst:components/xwayland.bst
-  - freedesktop-sdk.bst:components/flatpak.bst
-  - freedesktop-sdk.bst:components/pipewire-daemon.bst
-  - freedesktop-sdk.bst:components/cups-daemon.bst
-  - desktop/gutenprint.bst
-  - freedesktop-sdk.bst:vm/config/flathub.bst
-  - freedesktop-sdk.bst:vm/mesa-default.bst
-  - gnome-build-meta.bst:gnomeos-deps/alsa-ucm-conf.bst
-  - freedesktop-sdk-extra.bst:components/wl-clipboard.bst
-  - gnome-build-meta.bst:gnomeos-deps/fprintd.bst
-  - desktop/xwayland-satellite.bst
-  - freedesktop-sdk-extra.bst:components/speech-dispatcher.bst
-  - gnome-build-meta.bst:core-deps/xdg-desktop-portal-gnome.bst
-  - gnome-build-meta.bst:core-deps/xdg-desktop-portal-gtk.bst
-  - desktop/xdg-native-messaging-proxy.bst
-  - gnome-build-meta.bst:core-deps/boltd.bst
-  - gnome-build-meta.bst:core/gnome-disk-utility.bst
-  - gnome-build-meta.bst:core/gnome-keyring.bst
-  - gnome-build-meta.bst:core/nautilus.bst
-  - desktop/xdg-terminal-exec-nautilus.bst
-  - gnome-build-meta.bst:core/gvfs-daemon.bst
-  - gnome-build-meta.bst:sdk/gvfs-client.bst
-  - gnome-build-meta.bst:sdk/pinentry.bst
-  - cli/tailscale.bst
-  - freedesktop-sdk.bst:components/noto-cjk.bst
-  - freedesktop-sdk.bst:components/noto-emoji.bst
-  - freedesktop-sdk.bst:components/noto-fonts.bst
-  - freedesktop-sdk.bst:components/tex-gyre-fonts.bst
-  - freedesktop-sdk.bst:components/google-crosextra-caladea.bst
-  - freedesktop-sdk.bst:components/google-crosextra-carlito.bst
-  - gnome-build-meta.bst:sdk/cantarell-fonts.bst
-  - gnome-build-meta.bst:sdk/adwaita-fonts.bst
+  - desktop/dux-greeter.bst
+  - desktop/dux-shell.bst
   - desktop/fonts/jetbrains-mono.bst
   - desktop/fonts/jetbrains-mono-nerd-font.bst
   - desktop/fonts/maple-mono.bst
-
-  - freedesktop-sdk.bst:components/vulkan-icd-loader.bst
+  - desktop/foot.bst
+  - desktop/gutenprint.bst
+  - desktop/iio-niri.bst
+  - desktop/input-remapper.bst
+  - desktop/niri.bst
+  - desktop/quickshell.bst
+  - desktop/satty.bst
+  - desktop/xdg-native-messaging-proxy.bst
+  - desktop/xdg-terminal-exec.bst
+  - desktop/xdg-terminal-exec-nautilus.bst
+  - desktop/xwayland-satellite.bst
   - freedesktop-sdk.bst:components/compat-vulkan-link.bst
+  - freedesktop-sdk.bst:components/cups-daemon.bst
+  - freedesktop-sdk.bst:components/desktop-file-utils.bst
+  - freedesktop-sdk.bst:components/flatpak.bst
+  - freedesktop-sdk.bst:components/google-crosextra-caladea.bst
+  - freedesktop-sdk.bst:components/google-crosextra-carlito.bst
+  - freedesktop-sdk.bst:components/noto-cjk.bst
+  - freedesktop-sdk.bst:components/noto-emoji.bst
+  - freedesktop-sdk.bst:components/noto-fonts.bst
+  - freedesktop-sdk.bst:components/pipewire-daemon.bst
+  - freedesktop-sdk.bst:components/tex-gyre-fonts.bst
+  - freedesktop-sdk.bst:components/vulkan-icd-loader.bst
+  - freedesktop-sdk.bst:components/xwayland.bst
+  - freedesktop-sdk.bst:vm/config/flathub.bst
+  - freedesktop-sdk.bst:vm/mesa-default.bst
+  - freedesktop-sdk-extra.bst:components/speech-dispatcher.bst
+  - freedesktop-sdk-extra.bst:components/wl-clipboard.bst
+  - gnome-build-meta.bst:core-deps/boltd.bst
+  - gnome-build-meta.bst:core-deps/xdg-desktop-portal-gnome.bst
+  - gnome-build-meta.bst:core-deps/xdg-desktop-portal-gtk.bst
+  - gnome-build-meta.bst:core/gnome-disk-utility.bst
+  - gnome-build-meta.bst:core/gnome-keyring.bst
+  - gnome-build-meta.bst:core/gvfs-daemon.bst
+  - gnome-build-meta.bst:core/nautilus.bst
+  - gnome-build-meta.bst:gnomeos-deps/alsa-ucm-conf.bst
+  - gnome-build-meta.bst:gnomeos-deps/fprintd.bst
+  - gnome-build-meta.bst:sdk/adwaita-fonts.bst
+  - gnome-build-meta.bst:sdk/cantarell-fonts.bst
+  - gnome-build-meta.bst:sdk/gvfs-client.bst
+  - gnome-build-meta.bst:sdk/pinentry.bst

@@ -12,11 +12,9 @@ depends:
   - gamerslop/powerbuttond.bst
   - gamerslop/powerstation.bst
   - gamerslop/scopebuddy.bst
+  - gamerslop/scx-scheds.bst
+  - gamerslop/scx-tools.bst
   - gamerslop/steam.bst
   - gamerslop/steamos-manager.bst
   - gamerslop/umu-launcher.bst
-
-  - gamerslop/scx-scheds.bst
-  - gamerslop/scx-tools.bst
-
   - sysext/jackrabbit/lib32-filter.bst
