@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: github:duxlabs-dev/dux-files.git
   track: master
-  ref: v2.1.0-57-g975c987951c7768d5b43f8a616dd265af617929d
+  ref: v2.1.0-62-g9b38ccb0c47ab0b205697dcc71ce8e4c4280363c
 - kind: git_module
   url: github:duxlabs-dev/dux-qml-common
   path: dux-qml-common
@@ -58,8 +58,8 @@ sources:
     version: v0.7.0
     sha256sum: 601684f1d3cfc8391cbaf7e5973b0485db6a5037426d9cccf47935ca0a4d65dd
   - module: github.com/duxlabs-dev/dux-go
-    version: v1.6.3-0.20261119162216-5f1bc59420a8
-    sha256sum: 99653da914ca48f1e69f30d50af44d5c709f53b2fa6954727604c62053632f67
+    version: v1.6.3-0.20261120082559-3c9e1e8b53f6
+    sha256sum: 95c8619732041aefacfc133f3bb35e8b43d8fdcebf993a03ef7dab55c6040f58
   - module: github.com/ebitengine/purego
     version: v0.11.3
     sha256sum: 794b433246c662b29a0b48f2f07b1814bfe15ca61744de88f05d18d7795f77c2

@@ -8,11 +8,11 @@ sources:
 - kind: git_repo
   url: github:duxlabs-dev/dux-shell.git
   track: master
-  ref: v2.1.0-238-gf37c03208165b269a5673718df8362de985941ee
+  ref: v2.1.0-265-g393ee2b3e0cc16ab52df65bf34f5de500da515fb
 - kind: git_module
   url: github:duxlabs-dev/dux-qml-common
   path: dux-qml-common
-  ref: 5749b336a3458ba716d6615a0e1d950bbcdba341
+  ref: 12f5e4457e0ca14b6a5f9a283ab581ce28c92855
 - kind: go_mod_vendor
   directory: core
   ref:
