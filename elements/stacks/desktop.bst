@@ -13,6 +13,7 @@ depends:
   - desktop/cardwire.bst
   - desktop/dux-files.bst
   - desktop/dux-greeter.bst
+  - desktop/dux-icons.bst
   - desktop/dux-shell.bst
   - desktop/fonts/jetbrains-mono.bst
   - desktop/fonts/jetbrains-mono-nerd-font.bst
