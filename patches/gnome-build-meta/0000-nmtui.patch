@@ -1,7 +1,7 @@
 From e27a534c6e4b9faaefd5ea23b5158e34c1889847 Mon Sep 17 00:00:00 2001
 From: Hec <hec@heccraft.com>
 Date: Mon, 21 Sep 2026 14:19:03 -0400
-Subject: [PATCH 1/4] nmtui
+Subject: [PATCH] nmtui
 
 ---
  elements/core-deps/NetworkManager.bst | 2 +-
