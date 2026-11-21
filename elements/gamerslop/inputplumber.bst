@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: github:ShadowBlip/InputPlumber.git
   track: v*
-  ref: v0.84.0-0-g117cb04e949f842397b96178bcc0d7fc7ba23acf
+  ref: v0.85.0-0-g0f4b1995e9427463ac8af68ddcf316d07ca8a4dd
 - kind: cargo2
   ref:
   - kind: registry
@@ -458,14 +458,6 @@ sources:
     name: indoc
     version: 2.0.7
     sha: 79cf5c93f93228cf8efb3ba362535fb11199ac548a09ce117c9b1adc3030d706
-  - kind: registry
-    name: inotify
-    version: 0.11.0
-    sha: f37dccff2791ab604f9babef0ba14fbe0be30bd368dc541e2b08d07c8aa908f3
-  - kind: registry
-    name: inotify-sys
-    version: 0.1.5
-    sha: e05c02b5e89bff3b946cedeca278abc628fe811e604f027c45a8aa3cf793d0eb
   - kind: registry
     name: instability
     version: 0.3.10

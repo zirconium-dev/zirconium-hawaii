@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: github:bootc-dev/bootc.git
   track: v*
-  ref: v1.17.4-0-g7cde7bbe233ee45a40cff3d89d4f42b68a258d46
+  ref: v1.17.5-0-gddac66f78d36769b568cd46fd3fc90c0489508a9
   exclude:
   - v1.16.7 # running bootc upgrade hangs at the GC stage on composefs-rs systems
 - kind: local
@@ -248,36 +248,36 @@ sources:
     sha: 55b672471b4e9f9e95499ea597ff64941a309b2cdbffcc46f2cc5e2d971fd335
   - kind: registry
     name: composefs
-    version: 0.9.4
-    sha: 7678ceb9ed3a1cd466aac8cae1d055d77336c7698fc3d7c8b8cbc5a3a3d33e42
+    version: 0.10.0
+    sha: 4d7e1513737dcf10ea93c116fe1de51f5160d782cdb78cd4399895069338f47b
   - kind: registry
     name: composefs-boot
-    version: 0.9.4
-    sha: c61074a193dda9270830d3598d26b618b0181726c8cf61ab59d3f66924875d5e
+    version: 0.10.0
+    sha: 5cae88df3ad0f69be4b615b4921fd639c6a1fd1519209f780fd61a8c692fa5ca
   - kind: registry
     name: composefs-ctl
-    version: 0.9.4
-    sha: 32bf730c9fe70c9d0a3b9f013547520c2d6d0ebb966a538ac73700a576114532
+    version: 0.10.0
+    sha: d0bf6a54f7f6e3db14b83f035a2f8625ad9826de188c861be5c9307e3e503314
   - kind: registry
     name: composefs-fuse
-    version: 0.9.4
-    sha: a795d7cd30c58b9245122c3a41409c35ca3bf30dc313cfac700662f3a6e6e176
+    version: 0.10.0
+    sha: 93d031d10f125a677778f3c359295e5046b19a96cb7cf64915a79b24b2da12a7
   - kind: registry
     name: composefs-ioctls
-    version: 0.9.4
-    sha: 6aad17a5f5c2c2f667c1c5cb543f6d6a5b5984fab651178eecc62b83008ebe6d
+    version: 0.10.0
+    sha: 1d1e1dbf64a4a2dda8db3cbdb3109d29274b0cbeedc1ee68fdc8ccfdefc17cb9
   - kind: registry
     name: composefs-oci
-    version: 0.9.4
-    sha: e4f7302aba57a0663087356e3df39d0bf43adf7304d845f5873b5b62974a4123
+    version: 0.10.0
+    sha: 6402e698c01b839294a2787128a2357c47886054d6d249136a54c80693fdad22
   - kind: registry
     name: composefs-splitdirfdstream
-    version: 0.9.4
-    sha: abe821055dd88f7c2d7e3ee8ac1e54be8b646f676d568c1f37e53c606b911f09
+    version: 0.10.0
+    sha: 0d9847c8dd85e017d2615c41c46b9af9e7ce3e4f4021b841c6603cc62e184083
   - kind: registry
     name: composefs-storage
-    version: 0.9.4
-    sha: 999579b801c75fec30b73eb416f40eff07725432ea704b1fb646ad709a1664ba
+    version: 0.10.0
+    sha: 390fac98c3953f41ec4e65aefc303b1a3e5a2c0e739898471b9ea0cc478f5152
   - kind: registry
     name: compression-codecs
     version: 0.4.38
@@ -476,8 +476,8 @@ sources:
     sha: 5baebc0774151f905a1a2cc41989300b1e6fbb29aff0ceffa1064fdd3088d582
   - kind: registry
     name: flate2
-    version: 1.1.10
-    sha: 6e634e2e0ebac1ee034020da1ca582e17ffe4e0f5e985823721e168928136dcb
+    version: 1.1.11
+    sha: 626d4928326b646e70f65ed36fc7cf9f206bdb68a0019ee7c6b4709da4e084c4
   - kind: registry
     name: fn-error-context
     version: 0.2.1
@@ -776,12 +776,12 @@ sources:
     sha: fc3a226e576f50782b3305c5ccf458698f92798987f551c6a02efe8276721e22
   - kind: registry
     name: linkme
-    version: 0.3.37
-    sha: 3045e122bd98aef8ec3ad58ce84f0791f64e70163d1a02710af4aa11a4d54cc5
+    version: 0.3.38
+    sha: 10a4e12fd3f6b22d5bc28beccac0f53bb35db4a897c6ddb709c4a0161f72eb6e
   - kind: registry
     name: linkme-impl
-    version: 0.3.37
-    sha: 77060ebe535362c3da75682cd17b0431017b6e7c5661e714fc69a7ad017d1301
+    version: 0.3.38
+    sha: 22cd04c256b1cd686a45898c8fd150c79b801d96a3eb7bae1075f9eb3b4b85c1
   - kind: registry
     name: linux-kernel-cmdline
     version: 0.1.1
@@ -1036,8 +1036,8 @@ sources:
     sha: f8dcc9c7d52a811697d2151c701e0d08956f92b0e24136cf4cf27b57a6a0d9bf
   - kind: registry
     name: rand
-    version: 0.10.3
-    sha: 65c9fb96cbc91e3478eaae79a69fcd3f1ae4ad052e471fe6732fff548984b4af
+    version: 0.10.4
+    sha: 8f6fa277c67e6ea590466f04c3fe82cb509f0864fe470643e5570de9514a9b11
   - kind: registry
     name: rand
     version: 0.9.4
@@ -1180,8 +1180,8 @@ sources:
     sha: 175ee3e80ae9982737ca543e96133087cbd9a485eecc3bc4de9c1a37b47ea59c
   - kind: registry
     name: serde_spanned
-    version: 1.1.2
-    sha: 4e7523beb55eece201a2356bee0bbca0d1ab466c14c07703b2e0ee6d42cb0c2c
+    version: 1.1.3
+    sha: 9c187e0a369471c550af028cba56d4f4fa2a489ad28151ae95a4d340a2a8b782
   - kind: registry
     name: serde_yaml
     version: 0.9.34+deprecated
@@ -1344,12 +1344,12 @@ sources:
     sha: e464cf451ba96ebfc6f9b6542f17ee8b8956e33f1e40d9690624e59d7a7f8a4b
   - kind: registry
     name: toml
-    version: 1.1.8+spec-1.1.0
-    sha: 20489e00e4d8741d6be680764cc12e270655e375a20d1011e844a9c3379e678d
+    version: 1.2.1+spec-1.1.0
+    sha: d5755c51863cdac711f1956baf8eb9588e060755f7d3c4c979e70ea1e1f32cd7
   - kind: registry
     name: toml_datetime
-    version: 1.1.2+spec-1.1.0
-    sha: 2b86d767906c6c42421dcba507eb9d203e779497710a47782a224bb871653053
+    version: 1.1.3+spec-1.1.0
+    sha: 173f25c883cd2176a2d8212155638c0a60d484a9d84546d270866f40f56b6e49
   - kind: registry
     name: toml_edit
     version: 0.25.11+spec-1.1.0
@@ -1360,8 +1360,8 @@ sources:
     sha: baa693a8032d7e1cada7d0041e96126df243179ff061456783ac7f12bda4744c
   - kind: registry
     name: toml_writer
-    version: 1.1.3+spec-1.1.0
-    sha: 06bdbd8cfc056b8d2e2e85f29b56a3bdbecb527cef81eb39e3e7b98af4652770
+    version: 1.2.0+spec-1.1.0
+    sha: 009dbb7700f11c55ef83aebbe4c0e9cf1f1ac0844bd8d6f00dc38f302026e13a
   - kind: registry
     name: tracing
     version: 0.1.44
@@ -1436,8 +1436,8 @@ sources:
     sha: 06abde3611657adf66d383f00b093d7faecc7fa57071cce2578660c9f1010821
   - kind: registry
     name: uuid
-    version: 1.29.0
-    sha: 4a0e2d11620c50695fe12bbbfde96b3477fe606e7284c22d505c12ce51214514
+    version: 1.29.2
+    sha: bed99139f7dac9b5cfe5f17be4d66dc7079a34dee1d74bcc77217119240e267c
   - kind: registry
     name: uzers
     version: 0.12.2
@@ -1659,6 +1659,10 @@ sources:
     version: 0.8.15
     sha: fdd20c5420375476fbd4394763288da7eb0cc0b8c11deed431a91562af7335d3
   - kind: registry
+    name: zcheapstr
+    version: 1.2.0
+    sha: 939f186d9ecebe044315a5cb6d6f78568bbc21152adc954d5a0c2f58bdbc9920
+  - kind: registry
     name: zerocopy
     version: 0.8.48
     sha: eed437bf9d6692032087e337407a86f04cd8d6a16a37199ed57949d415bd68e9
@@ -1676,28 +1680,32 @@ sources:
     sha: b268e58e7c693d7c271f93ffc4ba3b380412554231c85bf61ca7af91042a4112
   - kind: registry
     name: zlink
-    version: 0.7.0
-    sha: dd5961645cac87b613e8b3c6fb1743a567e6459bc8c1d00f7bf9884020fc98d4
+    version: 0.8.0
+    sha: 198be428106fe2987e3c014daadf976120909f4a765587341c9d4c2624912d61
   - kind: registry
     name: zlink-core
-    version: 0.7.0
-    sha: 0314bb8bc5a5693f4625a6ea9681731a5f4bcc0a952bfca28184f268db15dcc2
+    version: 0.8.0
+    sha: 24a314bfe2e205db0b9cc286abc09b08f34837a06dd709b10ef7cf28bd622e4f
   - kind: registry
     name: zlink-idl
-    version: 0.7.0
-    sha: a7990f15bd88a2b37d55c5fc13a1dd662ee98674ec9c6ac904fe46066523932a
+    version: 0.8.0
+    sha: 9beafa91ab0672e1a2adc828cac4163152156d54046a0cad298807e290153ccf
   - kind: registry
     name: zlink-macros
-    version: 0.7.0
-    sha: 2fc623b8323797bf2d48333e7633e143077dd92cc66d9cca170014b66c43b1b5
+    version: 0.8.0
+    sha: ad68b7baceb8afe7b0b21e408961f6a9d28fe5f10e02b19ef15b7ac3be39fc90
+  - kind: registry
+    name: zlink-names
+    version: 0.8.0
+    sha: 3e2019f3c1186761aee19689ba2f99e659ec7f0d637ad1ee96f22a54434e743a
   - kind: registry
     name: zlink-smol
-    version: 0.7.0
-    sha: 4bc4150b8af92eb0ae7007e0ced3eb2bcf8a7fa49457de2f30b11752ea538f46
+    version: 0.8.0
+    sha: 43f8b15370cace714c53983a91688004407f897eb1cf9b877b3e9df9330a26aa
   - kind: registry
     name: zlink-tokio
-    version: 0.7.0
-    sha: 4c4fe0f232dd656bcb0594e9646b86c69f6257e3d5194f28715a044c4d10c8fa
+    version: 0.8.0
+    sha: a46c4f9f765ecac29e50b21dc5c73185a2c2885a3d1ca1485ff1a97d96bc1538
   - kind: registry
     name: zmij
     version: 1.0.21
@@ -1708,20 +1716,20 @@ sources:
     sha: e91ee311a569c327171651566e07972200e76fcfe2242a4fa446149a3881c08a
   - kind: registry
     name: zstd
-    version: 0.14.3
-    sha: db3ae9bf90af6e40197bef767eeefc46ad6397420fe873830bd85e5fbbfb3c70
+    version: 0.14.4
+    sha: ad5020ab8f27bfc0024ad0a07aed6bf022a16208f479686fbed4fdd0c85eb0b3
   - kind: registry
     name: zstd-safe
     version: 7.2.4
     sha: 8f49c4d5f0abb602a93fb8736af2a4f4dd9512e36f7f570d66e65ff867ed3b9d
   - kind: registry
     name: zstd-safe
-    version: 8.2.0
-    sha: ded520f16b29e1a9b771c722221b2b0a0398c2316d9bb3c42b458a5414d7434b
+    version: 8.3.0
+    sha: 5a9ea9cc2576c2fcc104e9cec04f46e3ede564f4fbc206831e4ef7e859a4140d
   - kind: registry
     name: zstd-sys
-    version: 2.1.2+zstd.1.5.7
-    sha: 481ada9c543b2323cbb7bbdbb5249177fbf0188ed959ed2c15e4b22421c84ed3
+    version: 2.1.3+zstd.1.5.7
+    sha: f729a06d0257428fd9d997ac8db7e1407bd0262ab016b085b36bc52957c0052d
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-make.bst
 - freedesktop-sdk.bst:components/go-md2man.bst
