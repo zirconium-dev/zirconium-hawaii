@@ -8,7 +8,7 @@ sources:
 - kind: git_repo
   url: github:duxlabs-dev/dux-shell.git
   track: master
-  ref: v2.1.0-265-g393ee2b3e0cc16ab52df65bf34f5de500da515fb
+  ref: v2.1.0-280-ge2c3e2c6475d2f2ebf0bff1a1d2bbffd27402e30
 - kind: git_module
   url: github:duxlabs-dev/dux-qml-common
   path: dux-qml-common
