@@ -8,12 +8,12 @@ sources:
   track: v7.3.*
   exclude:
   - '*-rc*'
-  ref: v7.3.4-0-g7595a62d45ee1a2297eafa5f2ef5d0a45142d84d
+  ref: v7.3.5-0-g988117cc1bb17338c586a4e21ade88b5397eac33
 - kind: patch_queue
   path: patches/linux/fdsdk
 - kind: remote_patch
   url: github_files:OpenGamingCollective/linux/releases/download/v%{ogc-patchset-version}/monolithic.patch
-  ref: 4241ee2b142c73258aedae9fa152ceaf4588da32df200bb9c08addc256feae4a
+  ref: b828a5a00f90c60b20cc3315519cb3cbde1e25b6edd9117bc7337a0272b1eee7
 # fixes btrfs fsverity issues on bootc composefs backend
 - kind: patch
   path: patches/linux/btrfs-fix-the-fsverity-callback-where-unexpected-ran.patch
@@ -44,7 +44,7 @@ build-depends:
 #   strict: true
 
 variables:
-  ogc-patchset-version: 7.3.4-ogc8
+  ogc-patchset-version: 7.3.5-ogc1
   extra-version: '-ogc.zirc-edge'
   bootdir: /boot
   kernel_arch: '%{arch}'
