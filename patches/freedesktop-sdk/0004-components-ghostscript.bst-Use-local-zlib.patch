@@ -1,0 +1,36 @@
+From 9bc89445aa6de51d31e1a79157b3f21de9052f66 Mon Sep 17 00:00:00 2001
+From: Valentin David <me@valentindavid.com>
+Date: Sun, 22 Nov 2026 17:43:21 +0100
+Subject: [PATCH] components/ghostscript.bst: Use local zlib
+
+It turns out that zlib-ng is compatible with ghostpdl. Allocations do
+not use multiples of the size of CPU registers used by zlib-ng
+optimizations. This causes serious memory bugs and breaks printing.
+
+(cherry picked from commit 2336a6b93b22ec505cda757894b7dec86c0800c5)
+---
+ elements/components/ghostscript.bst | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+diff --git a/elements/components/ghostscript.bst b/elements/components/ghostscript.bst
+index a9d7e8732..612c12420 100644
+--- a/elements/components/ghostscript.bst
++++ b/elements/components/ghostscript.bst
+@@ -19,10 +19,13 @@ depends:
+ - components/xorg-lib-xt.bst
+ 
+ variables:
++  # Note thate zlib-ng does not seem to be compatible with ghostpdl.
++  # Allocation does not use multiples of the size of CPU registers
++  # used by zlib-ng optimizations.
+   conf-local: >-
+     --with-drivers=ALL
+     --with-system-libtiff=yes
+-    --with-local-zlib=no
++    --with-local-zlib=yes
+ 
+ config:
+   configure-commands:
+-- 
+2.56.1
+
