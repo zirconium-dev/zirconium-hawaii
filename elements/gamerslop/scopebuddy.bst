@@ -4,13 +4,14 @@ sources:
 - kind: git_repo
   url: github:OpenGamingCollective/ScopeBuddy.git
   track: "*"
-  ref: 1.5.0-0-g8c517a4c1b2fb9ed3fe43a95e1c5630cdecc4678
+  ref: 1.5.1-0-g44ab54e0fe9b16d54da65eeb9e1e535a5085189e
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/runtime-gnu.bst
 
 runtime-depends:
 - gamerslop/gamescope.bst
+- freedesktop-sdk.bst:components/gawk.bst
 - freedesktop-sdk.bst:components/grep.bst
 - freedesktop-sdk.bst:components/procps.bst
 - freedesktop-sdk.bst:components/perl.bst
