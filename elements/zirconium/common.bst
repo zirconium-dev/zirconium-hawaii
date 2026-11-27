@@ -48,6 +48,8 @@ config:
     install -Dm0644 mkosi.extra%{datadir}/xdg-terminal-exec/xdg-terminals.list -t "%{install-root}%{datadir}/xdg-terminal-exec"
     install -Dm0644 policy.json -t "%{install-root}%{datadir}/containers"
     install -Dm0644 mkosi.profiles/zirconium-bootc-ostree/mkosi.extra%{datadir}/containers/registries.d/zirconium-dev.yaml -t "%{install-root}%{datadir}/containers/registries.d"
+    install -Dm0644 mkosi.extra%{datadir}/dms/cli-policy.json -t "%{install-root}%{datadir}/dms"
+    install -Dm0644 mkosi.profiles/bootc-ostree/mkosi.extra%{indep-libdir}/uupd/config.json -t "%{install-root}%{indep-libdir}/uupd"
 
     # pam stuff
     install -Dm0644 mkosi.extra%{datadir}/greetd/greetd-spawn.pam_env.conf -t "%{install-root}%{datadir}/greetd"
