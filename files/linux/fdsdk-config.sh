@@ -1797,6 +1797,9 @@ if has HAVE_PCI; then
     enable PCI_PASID
     enable HOTPLUG_PCI
     enable HOTPLUG_PCI_PCIE
+    if has ACPI; then
+        enable HOTPLUG_PCI_ACPI
+    fi
     enable PCIEPORTBUS
     #enable PCIE_PME
     enable PCIE_PTM
@@ -2362,8 +2365,11 @@ if has SPI; then
     enable TCG_TIS_SPI
 fi
 
-# BPF
+# BPF and sched_ext
 enable FTRACE
+if has HAVE_SYSCALL_TRACEPOINTS; then
+    enable FTRACE_SYSCALLS
+fi
 enable FUNCTION_TRACER
 if has HAVE_KPROBES; then
     enable KPROBES
@@ -2376,6 +2382,10 @@ enable CGROUP_BPF
 if has HAVE_CBPF_JIT || has HAVE_EBPF_JIT; then
     enable BPF_JIT
     enable BPF_LSM
+    enable SCHED_CLASS_EXT
+fi
+if has HAVE_EBPF_JIT; then
+    enable BPF_JIT_ALWAYS_ON
 fi
 
 remove DEBUG_INFO_SPLIT
@@ -2385,6 +2395,13 @@ enable DEBUG_INFO_BTF
 
 # Ramdisk
 module BLK_DEV_RAM
+
+# BFQ IO Scheduler
+enable IOSCHED_BFQ
+
+# MGLRU
+enable LRU_GEN
+enable LRU_GEN_ENABLED
 
 # ZSWAP
 enable ZSWAP
@@ -2635,6 +2652,13 @@ esac
 # Scheduler
 if has ARCH_HAS_PREEMPT_LAZY; then
     enable PREEMPT_LAZY
+fi
+enable SCHED_AUTOGROUP
+if has SCHED_SMT; then
+    enable SCHED_CORE
+fi
+if has ARCH_SUPPORTS_NUMA_BALANCING; then
+    enable NUMA_BALANCING
 fi
 
 # Platforms

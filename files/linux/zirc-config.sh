@@ -111,6 +111,8 @@ enable VIRT_CPU_ACCOUNTING_GEN
 ## OGC configs ##
 #################
 
+module IKHEADERS
+
 case "$arch" in
     x86_64)
         # ASUS Ally
@@ -190,11 +192,3 @@ esac
 module AYN_EC
 module AYANEO_EC
 module SND_SOC_AW87XXX
-
-# Enable sched_ext schedulers
-enable DEBUG_INFO
-enable BPF_JIT_ALWAYS_ON
-enable BPF_JIT_DEFAULT_ON
-enable SCHED_CORE
-enable SCHED_CLASS_EXT
-module IKHEADERS
