@@ -6,6 +6,7 @@ public:
     overlap-whitelist:
     - '%{datadir}/containers/policy.json'
     - '%{datadir}/xdg-terminal-exec/xdg-terminals.list'
+    - '%{indep-libdir}/uupd/config.json'
 
 # This is pulling from zirconium-dev/zirconium for various services and shell configurations.
 sources:
