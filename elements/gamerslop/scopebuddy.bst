@@ -11,6 +11,7 @@ build-depends:
 
 runtime-depends:
 - gamerslop/gamescope.bst
+- freedesktop-sdk.bst:components/gawk.bst
 - freedesktop-sdk.bst:components/grep.bst
 - freedesktop-sdk.bst:components/procps.bst
 - freedesktop-sdk.bst:components/perl.bst
